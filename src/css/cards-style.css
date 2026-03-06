@@ -1,0 +1,585 @@
+@import './../../assets/constants/variables.css';
+
+/* ---------- games page (.card) ---------- */
+.card {
+    background: transparent;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card:nth-child(2) {
+    margin-right: 20px;
+}
+
+.card:nth-child(1) img {
+    object-fit: cover;
+    object-position: -115px center;
+}
+
+.card:nth-child(2) img {
+    object-fit: cover;
+    object-position: -100px center;
+}
+
+.card .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+    z-index: 4;
+    pointer-events: none;
+    border-radius: 10px 0 0 10px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.card-3 img.game-img {
+    object-position: -42px center;
+}
+
+.card-4 img.game-img {
+    object-position: -50px center;
+}
+
+.card .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 4;
+    pointer-events: none;
+    border-radius: 0 10px 10px 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover .left {
+    transform: translateX(0);
+}
+
+.card:hover .right {
+    transform: translateX(0);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover img {
+    box-shadow: none;
+}
+
+.buttons-actions {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .buttons-actions {
+    opacity: 1;
+}
+
+/* ---------- home / search results cards (.game-card & .result-card) ---------- */
+
+.game-card,
+.result-card {
+    background-color: transparent;
+    border-radius: 10px;
+    width: 180px;
+    min-height: 240px;
+    color: white;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    flex: 0 0 auto;
+    text-decoration: none;
+}
+
+body:not(.dark-theme) .game-card .game {
+    box-shadow: 0 0 10px var(--clr-txt-dev);
+}
+
+.game-card:not(.game-card.more-games) .game-details:hover,
+.result-card:not(.more-games) .result-card-details:hover {
+    filter: drop-shadow(0 0 6px var(--color-text-primary));
+    transform: translateY(-5px);
+}
+
+.game-card img,
+.result-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    transition: filter 0.3s ease;
+    background: transparent;
+}
+
+.game-card .title,
+.result-card .title {
+    font-weight: bold;
+    padding: 5px 10px 0 10px;
+    color: var(--color-text-primary);
+    transition: text-shadow 0.3s ease;
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.game-details:hover .title,
+.result-card-details:hover .title {
+    text-shadow: 0 0 10px;
+}
+
+.game-card .publisher,
+.result-card .publisher {
+    font-size: 12px;
+    color: var(--clr-txt-dev);
+    padding: 0 10px 5px 10px;
+    margin: 0;
+}
+
+.game-card .price {
+    padding: 5px 10px 10px 10px;
+    font-weight: bold;
+}
+
+.game-card .price .old {
+    text-decoration: line-through;
+    color: #888;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.game-card .price .discount {
+    background-color: #e74c3c;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* related more-games cards (still card styles) */
+
+.game-card.more-games .game-details,
+.result-card.more-games .result-card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: auto;
+    padding: 0;
+    background: none;
+    margin: 0;
+}
+
+.more-games {
+    width: 180px;
+    min-height: 240px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-primary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.grid .game-details {
+    background-color: var(--card-clr);
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-details i,
+.game-details .title {
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+.game-details:hover i,
+.game-details:hover .title {
+    color: #fff;
+    text-shadow: 0 0 10px var(--text-clr-shadow);
+}
+
+/* Games Main */
+
+.store-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.store-games-list {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.store-game-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--card-clr);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.store-game-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.store-game-card img {
+    width: 130px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.store-game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+    padding-top: 4px;
+}
+
+.store-game-info h3 {
+    margin: 0;
+    font-size: 19px;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.store-game-info span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.store-popular-sidebar {
+    flex: 1;
+    background: var(--bg-pop-5);
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.store-popular-sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.store-popular-sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 135px;
+    height: 3px;
+    background: var(--color-hover-primary);
+    border-radius: 5px;
+}
+
+/* العنصر نفسه */
+.store-popular-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    background: var(--bg-pop-4);
+}
+
+.store-popular-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.store-popular-item:hover {
+    background: rgba(77, 163, 255, 0.1);
+}
+
+/* الصورة */
+.store-popular-item img {
+    width: 85px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.store-popular-item:hover img {
+    transform: scale(1.05);
+}
+
+/* النص */
+.store-popular-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-popular-info span {
+    color: var(--color-text-primary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.store-popular-info small {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.game-info span {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.store-desc {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+
+
+    display: -webkit-box;
+    width: 500px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.store-popular-info small,
+.store-popular-info p {
+
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.4;
+    display: -webkit-box;
+    width: 300px;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.store-game-card:last-child {
+    margin-bottom: 20px;
+}
+
+/* ===== Sections Sidebar ===== */
+
+.store-sections {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sections-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--color-text-primary);
+}
+
+#store-sections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.store-sections h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50px;
+    height: 3px;
+    background: var(--color-hover-primary);
+    border-radius: 5px;
+}
+
+.section-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.section-item:hover {
+    background: rgba(77, 163, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.section-item i {
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+.section-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.section::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- الشاشات المتوسطة (Tablets - Max 1024px) --- */
+@media (max-width: 1024px) {
+    .store-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .store-games-list {
+        width: 100%;
+        flex: none;
+    }
+
+    .store-popular-sidebar {
+        width: 100%;
+        flex: none;
+    }
+
+    .store-desc {
+        width: 100%;
+    }
+}
+
+/* --- الشاشات الصغيرة (Mobile - Max 768px) --- */
+@media (max-width: 768px) {
+    .store-game-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .store-game-card img {
+        width: 180px;
+        /* تكبير الصورة شوية لما بقت لوحدها فوق */
+        margin-bottom: 15px;
+    }
+
+    .store-game-info {
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .store-desc {
+        width: 100%;
+        -webkit-line-clamp: 2;
+        /* تقليل الوصف جداً في الموبايل */
+        text-align: center;
+    }
+
+    /* 2. ضبط السايدبار الشعبي (Popular Items) */
+    .store-popular-item {
+        gap: 15px;
+    }
+
+    .store-popular-info p,
+    .store-popular-info small {
+        width: 100%;
+        /* إلغاء الـ 300px الثابتة */
+    }
+
+    /* 3. ضبط الـ Grid الخاص بالـ game-card (الكروت الصغيرة) */
+    .news-grid,
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        /* كارتين جنب بعض */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    /* 4. الـ Sections Sidebar */
+    #store-sections-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .store-layout {
+        margin-bottom: 60px;
+        margin-right: 20px;
+    }
+
+}
+
+/* --- شاشات الموبايل الصغيرة جداً (Max 480px) --- */
+@media (max-width: 480px) {
+
+    .news-grid,
+    .grid {
+        grid-template-columns: 1fr;
+        /* كارت واحد في السطر */
+    }
+
+    #store-sections-list {
+        grid-template-columns: 1fr;
+        /* الأقسام تحت بعض */
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    .card img {
+        height: 300px;
+    }
+}

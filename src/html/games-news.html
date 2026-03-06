@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
+    <title>GameOnix | Request Game</title>
+    <link rel="stylesheet" href="../css/sidebar-style.css">
+    <link rel="stylesheet" href="../css/section-page.css">
+    <link rel="stylesheet" href="../css/search-style.css">
+    <link rel="stylesheet" href="../css/cards-style.css">
+    <link rel="stylesheet" href="../css/news-style.css">
+    <link rel="stylesheet" href="../css/theme-btn.css">
+</head>
+
+<body class="dark-theme">
+    <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="container">
+        <aside class="sb closed">
+            <header class="sb-h">
+                <a href="../index.html" rel="noopener noreferrer">
+                    <img src="../../assets/images/Logo.png" alt="Logo" class="logo" loading="lazy" decoding="async">
+                    <h2 class="sb-text">GameOnix</h2>
+                </a>
+                <button class="sb-toggle"><span class="material-symbols-rounded">chevron_left</span></button>
+            </header>
+
+            <div class="sb-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">home</span>
+                            <span class="menu-label">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="menu-label">Games</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games-news.html" class="menu-link active" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">newspaper</span>
+                            <span class="menu-label">Games News</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="request-game.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">person_raised_hand</span>
+                            <span class="menu-label">Request Game</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sb-footer">
+                <ul class="menu-list" style="list-style: none;">
+                    <li class="menu-item">
+                        <a href="https://ipn.eg/S/mahmoudpro123/instapay/7uIXkH" class="menu-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">volunteer_activism</span>
+                            <span class="menu-label">InstaPay Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+            <main class="news-container">
+                <div class="img-news-wrapper scroll-reveal">
+                    <img class="news-img" src="../../assets/content/images/gta-vi.png" alt="GTA VI">
+
+                    <div class="overlay"></div>
+
+                    <div class="info">
+                        <div class="info-left">
+                            <h2 class="news-game-title">Grand Theft Auto VI</h2>
+                            <p class="pub">Rockstar Games</p>
+                            <p class="desc">Grand Theft Auto VI is an upcoming action-adventure video game developed by
+                                Rockstar North and published by Rockstar Games.</p>
+                        </div>
+
+                        <div class="split"></div>
+
+                        <div class="info-right">
+                            <span class="time-label">RELEASING IN</span>
+                            <div class="time-val" id="gta-countdown">
+                                <div class="unit"><span id="days">000</span><small>D</small></div>
+                                <span class="sep">:</span>
+                                <div class="unit"><span id="hours">00</span><small>H</small></div>
+                                <span class="sep">:</span>
+                                <div class="unit"><span id="minutes">00</span><small>M</small></div>
+                                <span class="sep">:</span>
+                                <div class="unit"><span id="seconds">00</span><small>S</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="news-grid" class="news-grid"></div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+<script src="../js/sidebar-script.js"></script>
+<script src="../js/icon.js"></script>
+<script src="../js/news.js"></script>
+
+</html>

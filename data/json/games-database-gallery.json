@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "slug": "gta-v",
+        "title": "Grand Theft Auto V",
+        "desc": "Grand Theft Auto V is an exciting open-world adventure set in Los Santos. Play as three different criminals, take on thrilling missions, explore a massive city, and dive into fast-paced chaos with complete freedom.",
+        "pub": "Rockstar Games",
+        "heroImage": "../../assets/content/images/gta5.mp4",
+        "type": "video",
+        "thumb": "../../assets/content/images/gta-v-poster.png"
+    },
+    {
+        "id": 2,
+        "slug": "forza-horizon-4",
+        "title": "Forza Horizon 4",
+        "desc": "Forza Horizon 4 is an open-world racing game set in beautiful Britain, featuring dynamic seasons that completely change the driving experience. Explore stunning landscapes, collect hundreds of cars, and compete in exciting races across cities, countryside roads, and off-road terrain. With smooth gameplay and realistic graphics, it delivers one of the best arcade racing experiences ever made.",
+        "pub": "Playground Games",
+        "heroImage": "../../assets/content/images/forza-horizon-4.mp4",
+        "type": "video",
+        "thumb": "../../assets/content/images/forza-horizon-4.png",
+        "popular": true
+    },
+    {
+        "id": 3,
+        "slug": "far-cry-5",
+        "title": "Far Cry 5",
+        "desc": "Far Cry 5 is an intense open-world adventure set in rural Montana. Explore vast landscapes, take on dangerous missions, and battle a fanatical cult. With thrilling action, dynamic environments, and endless freedom, every choice shapes your journey in this gripping story.",
+        "pub": "Ubisoft",
+        "heroImage": "../../assets/content/images/far-cry-5.mp4",
+        "type": "video",
+        "thumb": "../../assets/content/images/far-cry-5.png"
+    },
+    {
+        "id": 4,
+        "slug": "god-of-war-ragnarok",
+        "title": "God of War Ragnarok",
+        "desc": "God of War Ragnarok is the highly anticipated sequel to the critically acclaimed God of War. Follow Kratos and Atreus as they journey through the realms of Norse mythology in a thrilling adventure filled with action, emotion, and stunning visuals.",
+        "pub": "Santa Monica Studio",
+        "heroImage": "../../assets/content/images/god-of-war-ragnarok.mp4",
+        "type": "video",
+        "thumb": "../../assets/content/images/god-of-war-ragnarok.png"
+    },
+    {
+        "id": 45,
+        "slug": "rdr-2",
+        "title": "Red Dead Redemption II",
+        "desc": "Red Dead Redemption II is an epic open-world western adventure set in the American frontier. Experience the life of Arthur Morgan, a member of the Van der Linde gang, as you navigate a world of lawlessness, danger, and moral choices.",
+        "pub": "Rockstar Games",
+        "heroImage": "../../assets/content/images/rdr-2.mp4",
+        "type": "video",
+        "thumb": "../../assets/content/images/rdr-2.png"
+    }
+]

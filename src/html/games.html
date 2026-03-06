@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+    <link rel="stylesheet" href="../css/sidebar-style.css">
+    <link rel="stylesheet" href="../css/games-page.css">
+    <link rel="stylesheet" href="../css/search-style.css">
+    <link rel="stylesheet" href="../css/cards-style.css">
+    <link rel="stylesheet" href="../css/theme-btn.css">
+    <title>GameOnix | Games</title>
+</head>
+
+<body class="dark-theme">
+    <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="container">
+        <aside class="sb closed">
+            <header class="sb-h">
+                <a href="../index.html" rel="noopener noreferrer">
+                    <img src="../../assets/images/Logo.png" alt="Logo" class="logo" loading="lazy" decoding="async">
+                    <h2 class="sb-text">GameOnix</h2>
+                </a>
+                <button class="sb-toggle"><span class="material-symbols-rounded">chevron_left</span></button>
+            </header>
+
+            <div class="sb-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">home</span>
+                            <span class="menu-label">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games.html" class="menu-link active" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="menu-label">Games</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games-news.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">newspaper</span>
+                            <span class="menu-label">Games News</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="request-game.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">person_raised_hand</span>
+                            <span class="menu-label">Request Game</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sb-footer">
+                <ul class="menu-list" style="list-style: none;">
+                    <li class="menu-item">
+                        <a href="https://ipn.eg/S/mahmoudpro123/instapay/7uIXkH" class="menu-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">volunteer_activism</span>
+                            <span class="menu-label">InstaPay Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+
+            <div class="search-bar">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="searchBox" id="searchBox" placeholder="Search games...">
+            </div>
+
+            <div class="container2">
+                <div class="hero">
+                    <img class="hero-img" src="" alt="Game Hero">
+                    <div class="hero-content">
+                        <h1 id="title"></h1>
+                        <p class="desc" id="desc"></p>
+                        <p class="pub" id="pub"></p>
+
+                        <div class="buttons">
+                            <button class="buy"><i class="fa-solid fa-download"></i> Download</button>
+                            <button class="icon"><i class="fa-solid fa-bug"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar" id="sidebar"></div>
+            </div>
+
+
+            <div id="games-container">
+                <div class="game-group">
+                    <div class="games-cards">
+                        <div class="card card-1" data-slug="forza-horizon-5">
+                            <img src="../../assets/content/images/forza-horizon-5.png" alt="Forza Horizon 5"
+                                class="game-img">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="buttons-actions">
+                                <button class="buy"><i class="fa-solid fa-download"></i> Download</button>
+                                <button class="icon"><i class="fa-solid fa-bug"></i></button>
+                            </div>
+                        </div>
+                        <div class="card card-2" data-slug="ac-mirage">
+                            <img src="../../assets/content/images/ac-mirage.png" alt="Assassin's Creed Mirage"
+                                class="game-img">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="buttons-actions">
+                                <button class="buy"><i class="fa-solid fa-download"></i> Download</button>
+                                <button class="icon"><i class="fa-solid fa-bug"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="games-cards">
+                        <div class="card card-3" data-slug="cyberpunk-2077">
+                            <img src="../../assets/content/images/cyberpunk-2077.png" alt="Cyberpunk 2077"
+                                class="game-img">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="buttons-actions">
+                                <button class="buy"><i class="fa-solid fa-download"></i> Download</button>
+                                <button class="icon"><i class="fa-solid fa-bug"></i></button>
+                            </div>
+                        </div>
+                        <div class="card card-4" data-slug="ghost-of-tsushima">
+                            <img src="../../assets/content/images/ghost-of-tsushima.png" alt="Ghost of Tsushima"
+                                class="game-img">
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="buttons-actions">
+                                <button class="buy"><i class="fa-solid fa-download"></i> Download</button>
+                                <button class="icon"><i class="fa-solid fa-bug"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-layout">
+                <div id="store-game-cards" class="store-games-list"></div>
+
+                <aside id="store-popular-sidebar" class="store-popular-sidebar">
+                    <h3>Popular Games</h3>
+                    <div id="store-popular-list"></div>
+
+                    <div class="store-sections">
+                        <h3 class="sections-title">Sections</h3>
+                        <div id="store-sections-list"></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="../js/sidebar-script.js"></script>
+<script src="../js/games-page.js"></script>
+<script src="../js/icon.js"></script>
+
+</html>

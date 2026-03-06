@@ -1,0 +1,53 @@
+/* الحاوية الرئيسية */
+.grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.section-page {
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* عنوان القسم */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--color-text-primary);
+}
+
+/* شبكة الألعاب */
+#section-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
+    gap: 22px;
+    justify-content: start;
+}
+
+#section-text {
+    font-size: 40px;
+    background: none;
+    color: var(--color-text-primary);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: var(--color-hover-primary);
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}

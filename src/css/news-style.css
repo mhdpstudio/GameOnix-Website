@@ -1,0 +1,336 @@
+:root {
+    --color-bg: #0b0b0d;
+    --color-card: #131316;
+    --color-hover: #695CFE;
+    --color-text: #ffffff;
+}
+
+body {
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.news-card {
+    background: var(--card-clr);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-hr);
+    color: var(--color-text-primary);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    cursor: pointer;
+}
+
+.news-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-card:hover {
+    border-color: var(--color-hover-primary);
+}
+
+.card-pub {
+    color: var(--color-text-placeholder);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.tag {
+    background: var(--color-hover-primary);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: #F1F5F9;
+}
+
+.card-header {
+    margin: 15px 0 10px;
+}
+
+.card-body h3 {
+    color: var(--color-text-primary);
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color-hover-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* header */
+
+.img-news-wrapper {
+    position: relative;
+    width: calc(100% - 40px);
+    height: 450px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.news-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.85) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.info {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+}
+
+.info-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.news-game-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--color-hover-primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.pub {
+    color: #fff;
+    font-weight: 600;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+.desc {
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.split {
+    width: 4px;
+    height: 250px;
+    background: var(--color-hover-primary);
+    margin: 0 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--color-hover-primary);
+}
+
+.info-right {
+    text-align: center;
+    width: 420px;
+    flex-shrink: 0;
+}
+
+.time-val {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #F1F5F9;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.unit {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    width: 95px;
+}
+
+.unit span {
+    display: inline-block;
+    min-width: 1.2ch;
+    text-align: center;
+}
+
+.unit small {
+    font-size: 0.9rem;
+    color: var(--color-text-placeholder);
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.sep {
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+.time-label {
+    font-family: 'orbitron', sans-serif;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+/* --- الشاشات المتوسطة (Tablets) --- */
+@media (max-width: 1024px) {
+    .info {
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    .news-game-title {
+        font-size: 2.2rem;
+        white-space: normal;
+        /* السماح للنص بالنزول لسطر جديد */
+    }
+
+    .info-right {
+        width: 350px;
+        /* تصغير عرض العداد شوية */
+    }
+
+    .unit {
+        width: 75px;
+    }
+}
+
+/* --- الشاشات الصغيرة (Mobile) --- */
+@media (max-width: 768px) {
+    .img-news-wrapper {
+        height: auto;
+        /* خليه يكبر حسب المحتوى */
+        min-height: 600px;
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+
+    /* تغيير الـ Overlay ليصبح رأسي عشان النص يبان */
+    .overlay {
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(0, 0, 0, 0.9) 100%);
+    }
+
+    .info {
+        flex-direction: column;
+        /* العناصر تحت بعض */
+        justify-content: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .info-left {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .news-game-title {
+        font-size: 1.8rem;
+    }
+
+    .desc {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+
+    /* إخفاء الفاصل الرأسي في الموبايل أو تحويله لأفقي */
+    .split {
+        width: 100px;
+        height: 3px;
+        margin: 20px auto;
+    }
+
+    .info-right {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .time-val {
+        font-size: 1.5rem;
+        /* تصغير حجم العداد */
+    }
+
+    .unit {
+        width: 60px;
+    }
+
+    .unit small {
+        font-size: 0.7rem;
+    }
+
+    /* ضبط الـ Grid للأخبار */
+    .news-grid {
+        grid-template-columns: 1fr;
+        /* كارت واحد في السطر */
+        gap: 20px;
+    }
+}
+
+/* الحالة الافتراضية لأي عنصر واخد scroll-reveal */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* الحالة لما العنصر يظهر (الـ JS هيضيف كلاس active) */
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* تخصيص للهيدر بالذات لو عايز حركته تكون "أفخم" */
+.img-news-wrapper.scroll-reveal {
+    transition-duration: 1.2s;
+    /* أبطأ شوية عشان عنصر كبير */
+}
+
+/* تأثير اختياري: خليه يبدأ بـ Scale صغير ويرجع لحجمه الطبيعي */
+.img-news-wrapper.scroll-reveal {
+    transform: translateY(30px) scale(0.98);
+}
+
+.img-news-wrapper.scroll-reveal.active {
+    transform: translateY(0) scale(1);
+}

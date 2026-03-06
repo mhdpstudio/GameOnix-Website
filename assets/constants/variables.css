@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Light Mode */
+    --color-text-primary: #1F2936;
+    --color-text-placeholder: #798EAE;
+    --color-bg-primary: #f9fafb;
+    --color-bg-secondary: #ECECFD;
+    --color-bg-sidebar: #FFFFFF;
+    --color-border-hr: #E2E8F0;
+    --color-hover-primary: #695CFE;
+    --color-hover-primary-btn: #584ED3;
+    --color-hover-secondary: #e2e2fb;
+    --color-scroll-btns: #F1F5F9;
+    --color-more-games-card: rgba(0, 0, 0, 0.1);
+    --color-side-panel-details: #5e5e5e;
+    --color-bg-tag: #dddddd;
+    --color-tag: #6e6e6e;
+    --color-shadow: rgba(0, 0, 0, 0.05);
+    --card-clr: #e2e2fb;
+    --text-clr-shadow: #F1F5F9;
+    --clr-txt-dev: #808080;
+    --scroll-clr: #e2e2fb;
+    --height-nav-value: 55px;
+    --color-text-primary-2: #646464;
+    --color-text-primary-3: #5a5a5a;
+    --bg-pop-5: #e2e2fb;
+    --bg-pop-4: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-theme {
+    /* Dark Mode */
+    --color-text-primary: #F1F5F9;
+    --color-text-placeholder: #A6B7D2;
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #3D4859;
+    --color-bg-sidebar: #1f2937;
+    --color-border-hr: #3B475C;
+    --color-hover-secondary: #48566a;
+    --color-scroll-btns: #1F2936;
+    --color-more-games-card: rgba(0, 0, 0, 0.3);
+    --color-side-panel-details: #888;
+    --color-bg-tag: #1f2937;
+    --color-tag: #c5c5c5;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --card-clr: #1e1e1e;
+    --clr-txt-dev: #bbb;
+    --scroll-clr: #28303b;
+    --height-nav-value: 55px;
+    --border-raduis-value: 8px;
+    --color-text-primary-2: #ccc;
+    --color-text-primary-3: #eee;
+    --bg-pop-5: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+    --bg-pop-4: rgba(255, 255, 255, 0.02);
+}

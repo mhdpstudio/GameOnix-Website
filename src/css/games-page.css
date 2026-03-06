@@ -1,0 +1,332 @@
+@import './../../assets/constants/variables.css';
+
+.container2 {
+    display: flex;
+    height: 450px;
+    max-height: 450px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* HERO */
+
+.hero {
+    flex: 1;
+    position: relative;
+    background: radial-gradient(circle at center, #1a1d26, #0b0d14);
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    overflow: hidden;
+    border-top-left-radius: var(--border-raduis-value);
+    border-bottom-left-radius: var(--border-raduis-value);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+.hero-content {
+    max-width: 420px;
+    z-index: 3;
+}
+
+.hero-content>* {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+#title {
+    white-space: nowrap;
+}
+
+.available {
+    color: #9fb0ff;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.desc {
+    color: #e4e4e4;
+    line-height: 1.5;
+}
+
+.pub {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buy {
+    background: var(--color-hover-primary);
+    color: var(--color-text-primary);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buy:hover {
+    background: var(--color-hover-primary-btn);
+}
+
+.icon {
+    background: var(--card-clr);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.icon:hover {
+    background: var(--color-hover-primary);
+}
+
+.game-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.games-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.games-cards:first-child {
+    margin-top: 20px;
+}
+
+.games-cards:last-child {
+    margin-bottom: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: fit-content;
+    background: #0e1018;
+    padding: 20px;
+    overflow-y: auto;
+    border-top-right-radius: var(--border-raduis-value);
+    border-bottom-right-radius: var(--border-raduis-value);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.game .fill-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1;
+    pointer-events: none;
+    transition: width 0ms linear;
+}
+
+.title-side {
+    white-space: nowrap;
+    user-select: none;
+}
+
+.game img {
+    width: 45px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: transparent;
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+/* animate image when its game is clicked */
+.game.clicked img {
+    transform: scale(1.15);
+}
+
+.game:hover {
+    background: #1a1d26;
+}
+
+.game.active {
+    background: #1a1d26;
+}
+
+.game-info h3{
+    color: var(--color-text-primary);
+}
+
+/* --- الشاشات الكبيرة والمتوسطة (Tablets & Laptops) --- */
+@media (max-width: 1100px) {
+    .container2 {
+        flex-direction: column;
+        /* الـ Sidebar ينزل تحت الـ Hero */
+        height: auto;
+        max-height: none;
+        padding: 0 10px;
+        /* مسافة بسيطة من الأجناب */
+    }
+
+    .hero {
+        border-radius: var(--border-raduis-value);
+        padding: 40px;
+        min-height: 450px;
+        width: 100%;
+        border-bottom-right-radius: var(--border-raduis-value);
+        /* تدوير كل الزوايا */
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+        border-radius: var(--border-raduis-value);
+        display: flex;
+        /* تفعيل الفليكس */
+        flex-direction: row;
+        /* رص الألعاب بالعرض */
+        gap: 15px;
+        padding: 15px;
+        overflow-x: auto;
+        /* تفعيل السكرول الأفقي */
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        /* سكرول ناعم للموبايل */
+
+        /* إخفاء السكرول بار */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+    }
+
+    /* إخفاء السكرول بار لـ Chrome/Safari */
+    .sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .game {
+        flex-shrink: 0;
+        /* يمنع انكماش كروت الألعاب */
+        min-width: 200px;
+        /* عرض ثابت لكل كارت عشان الكلام ميتكتمش */
+        background: rgba(255, 255, 255, 0.05);
+        /* تمييز الكروت بسيطة */
+    }
+}
+
+/* --- الشاشات الصغيرة (Mobile - Max 768px) --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 20px;
+        align-items: flex-end;
+        /* النص ينزل لتحت عشان الصورة تبان */
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        /* تصغير حجم العنوان */
+        white-space: normal;
+        /* السماح بالنزول لسطر جديد */
+        line-height: 1.2;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        /* سنترة الكلام في الموبايل أشيك */
+    }
+
+    .buttons {
+        flex-direction: column;
+        /* الزراير فوق بعض */
+        width: 100%;
+        gap: 15px;
+    }
+
+    .buy,
+    .icon {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        padding: 15px;
+        /* تكبير منطقة الضغط */
+    }
+
+    .available {
+        margin-top: 15px;
+    }
+
+    .game {
+        min-width: 160px;
+        /* تصغير الكارت أكتر في الموبايل */
+    }
+
+    .game img {
+        width: 35px;
+        height: 50px;
+    }
+
+    .title-side {
+        font-size: 13px;
+    }
+
+    .hero .desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* يظهر 3 سطور بس */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.9rem;
+    }
+}

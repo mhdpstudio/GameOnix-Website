@@ -1,0 +1,232 @@
+#game-news-page {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.article-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* الصورة الخلفية */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* تدرج أسود من تحت لفوق عشان النص يبان */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 2;
+}
+
+/* محتوى الكلام فوق الصورة */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 40px;
+    width: 100%;
+}
+
+.article-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    margin: 15px 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.hero-info-grid {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item .label {
+    font-size: 0.75rem;
+    color: var(--color-hover);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.info-item .value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero-desc {
+    max-width: 700px;
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.article-body-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .article-hero {
+        height: 85vh;
+        border-radius: 0;
+    }
+
+    /* خليه مالى الشاشة في الموبايل */
+    .hero-info-grid {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+}
+
+/* تنسيق الحاوية الأساسية للوصف والجدول */
+.article-details-row {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    /* الوصف ياخد مساحة أكبر */
+    gap: 60px;
+    /* مسافة واسعة بيدي فخامة وشكل Clean */
+    align-items: start;
+}
+
+.description-heading {
+    font-size: 1.8rem;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.description-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text-primary-2);
+    margin-bottom: 20px;
+}
+
+.epic-table-column {
+    position: sticky;
+    top: 20px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #2a2f40;
+}
+
+.detail-label {
+    color: var(--color-side-panel-details);
+    font-size: 15px;
+}
+
+.detail-value {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* المقال الكامل اللي تحتهم */
+.article-body-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 40px;
+}
+
+.article-text-full {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--color-text-primary-3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .article-details-row {
+        grid-template-columns: 1fr;
+        /* تحت بعض في الموبايل */
+        gap: 30px;
+    }
+
+    .epic-table-column {
+        position: static;
+        order: 2;
+        /* الجدول ينزل تحت الوصف في الموبايل */
+    }
+}
+
+.hero-back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-back-btn span {
+    font-size: 24px;
+}
+
+.hero-back-btn:hover {
+    background: var(--color-hover);
+    box-shadow: 0 0 20px var(--color-hover);
+}
+
+/* تعديل للموبايل لتصغير المسافات */
+@media (max-width: 768px) {
+    .hero-back-btn {
+        top: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

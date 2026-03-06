@@ -1,0 +1,221 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--height-nav-value));
+    padding: 20px;
+}
+
+.game-request-container {
+    padding: 50px;
+    border-radius: var(--border-raduis-value, 15px);
+    max-width: 1200px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-text-primary);
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    color: var(--color-hover-primary);
+}
+
+.form-subtitle {
+    color: var(--color-side-panel-details);
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-group {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.info-group .input-group {
+    flex: 1;
+}
+
+.input-group label {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.input-group input,
+.input-group textarea {
+    background-color: var(--color-bg-primary);
+    border: 2px solid var(--color-border-hr);
+    color: var(--color-text-primary);
+    padding: 16px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group textarea {
+    resize: none;
+    max-width: 80%;
+    height: 180px;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: var(--color-text-placeholder);
+    font-size: 0.95rem;
+}
+
+.input-group input:hover,
+.input-group textarea:hover {
+    border-color: var(--color-tag);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--color-hover-primary);
+    background-color: var(--color-bg-sidebar);
+}
+
+.submit-btn {
+    background-color: var(--color-hover-primary);
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-hover-primary-btn);
+    box-shadow: 0 0px 10px rgba(105, 92, 254, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .game-request-container {
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+
+    .form-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .info-group {
+        flex-direction: column;
+    }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: var(--color-bg-sidebar);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid var(--color-hover-primary);
+    box-shadow: 0 0 30px var(--color-hover-primary);
+    transform: translateY(-50px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Icon & Typography */
+.modal-icon span {
+    font-size: 80px;
+    color: var(--color-hover-primary);
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.modal-text {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-side-panel-details);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Close Button */
+.modal-close-btn {
+    background-color: var(--color-hover-primary);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.modal-close-btn:hover {
+    background-color: var(--color-hover-primary-btn);
+    box-shadow: 0 0 15px var(--color-hover-primary);
+    transform: scale(1.05);
+}
