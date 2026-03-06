@@ -17,7 +17,7 @@ function updateControlsPosition() {
 }
 
 // تحميل الألعاب
-fetch('./../../data/json/games.json')
+fetch('https://mhdpstudio.github.io/GameOnix-Website/data/json/games.json')
     .then(res => res.json())
     .then(data => {
         for (const sectionName in data) {
