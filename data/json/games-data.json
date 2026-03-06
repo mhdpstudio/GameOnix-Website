@@ -1272,7 +1272,35 @@
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-20.torrent",
             "mediaPrefix": "fifa20",
-            "mediaCount": 11
+            "mediaCount": 7
+        },
+        {
+            "slug": "fifa-20",
+            "title": "FIFA 20",
+            "publisher": "EA Sports",
+            "game_poster": "../../assets/images/games/logos/fifa20.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.66.8249",
+            "size": "50.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-20.torrent",
+            "mediaPrefix": "fifa20",
+            "mediaCount": 7
+        },
+        {
+            "slug": "fifa-21",
+            "title": "FIFA 21",
+            "publisher": "EA Sports",
+            "game_poster": "../../assets/images/games/logos/fifa21.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.66.8249",
+            "size": "50.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-21.torrent",
+            "mediaPrefix": "fifa21",
+            "mediaCount": 7
         }
     ]
 }
