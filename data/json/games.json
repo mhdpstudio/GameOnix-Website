@@ -765,6 +765,13 @@
                 "publisher": "EA Sports"
             },
             {
+                "slug": "pes-2006",
+                "id": 12,
+                "title": "PES 2006",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/pes2006",
+                "publisher": "Konami"
+            },
+            {
                 "slug": "pes-2009",
                 "id": 12,
                 "title": "PES 2009",
