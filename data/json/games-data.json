@@ -1295,12 +1295,40 @@
             "game_poster": "../../assets/images/games/logos/fifa21.png",
             "gameType": "Sports",
             "gameTypeIcon": "fa-solid fa-basketball",
-            "version": "1.0.66.8249",
-            "size": "50.7 GB",
+            "version": "1.0.72.32477",
+            "size": "51.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-21.torrent",
             "mediaPrefix": "fifa21",
-            "mediaCount": 7
+            "mediaCount": 4
+        },
+        {
+            "slug": "fifa-22",
+            "title": "FIFA 22",
+            "publisher": "EA Sports",
+            "game_poster": "../../assets/images/games/logos/fifa22.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.77.45722",
+            "size": "53.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-22.torrent",
+            "mediaPrefix": "fifa22",
+            "mediaCount": 8
+        },
+        {
+            "slug": "fifa-23",
+            "title": "FIFA 23",
+            "publisher": "EA Sports",
+            "game_poster": "../../assets/images/games/logos/fifa23.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.82.43747",
+            "size": "54.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-23.torrent",
+            "mediaPrefix": "fifa23",
+            "mediaCount": 10
         }
     ]
 }
