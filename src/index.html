@@ -83,36 +83,7 @@
 <script src="js/index-script.js"></script>
 <script src="js/icon.js"></script>
 
-<script>
-    // Timestamp جديد لكل تحميل صفحة
-    const version = new Date().getTime();
 
-    // CSS
-    const cssFiles = [
-        "css/sidebar-style.css",
-        "css/index-style.css",
-        "css/cards-style.css",
-        "css/theme-btn.css"
-    ];
-    cssFiles.forEach(file => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = `${file}?v=${version}`;
-        document.head.appendChild(link);
-    });
-
-    // JS
-    const jsFiles = [
-        "js/sidebar-script.js",
-        "js/index-script.js",
-        "js/icon.js"
-    ];
-    jsFiles.forEach(file => {
-        const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
-        document.body.appendChild(script);
-    });
-</script>
 
 </html>
 </html>
