@@ -1121,6 +1121,20 @@
             "mediaCount": 6
         },
         {
+            "slug": "pes-2006",
+            "title": "PES 2006",
+            "publisher": "Konami",
+            "game_poster": "../../assets/images/games/logos/pes2006.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.3.0",
+            "size": "6.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2006.torrent",
+            "mediaPrefix": "pes2006",
+            "mediaCount": 1
+        },
+        {
             "slug": "pes-2009",
             "title": "PES 2009",
             "publisher": "Konami",
@@ -1161,6 +1175,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2012.torrent",
             "mediaPrefix": "pes2012",
             "mediaCount": 4
+        },
+        {
+            "slug": "pes-2019",
+            "title": "PES 2019",
+            "publisher": "Konami",
+            "game_poster": "../../assets/images/games/logos/pes2019.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.02.0.0",
+            "size": "17.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2019.torrent",
+            "mediaPrefix": "pes2019",
+            "mediaCount": 6
         },
         {
             "slug": "fifa-12",
