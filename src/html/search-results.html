@@ -86,4 +86,36 @@
 <script src="../js/search-results.js"></script>
 <script src="../js/icon.js"></script>
 
+<script>
+    // رقم نسخة ديناميكي
+    const version = new Date().getTime();
+
+    // CSS Files
+    const cssFiles = [
+        "../css/sidebar-style.css",
+        "../css/search-results.css",
+        "../css/search-style.css",
+        "../css/cards-style.css",
+        "../css/theme-btn.css"
+    ];
+    cssFiles.forEach(file => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `${file}?v=${version}`;
+        document.head.appendChild(link);
+    });
+
+    // JS Files
+    const jsFiles = [
+        "../js/sidebar-script.js",
+        "../js/search-results.js",
+        "../js/icon.js"
+    ];
+    jsFiles.forEach(file => {
+        const script = document.createElement("script");
+        script.src = `${file}?v=${version}`;
+        document.body.appendChild(script);
+    });
+</script>
+
 </html>
