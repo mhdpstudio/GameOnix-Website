@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../css/cards-style.css">
     <link rel="stylesheet" href="../css/order-style.css">
     <link rel="stylesheet" href="../css/theme-btn.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 
 <body class="dark-theme">
@@ -155,5 +158,16 @@
         document.body.appendChild(script);
     });
 </script>
+
+<script>
+    window.addEventListener('load', () => {
+        if (!sessionStorage.getItem('pageRefreshed')) {
+            sessionStorage.setItem('pageRefreshed', 'true');
+            location.reload(true); // يجبر المتصفح على تحميل الصفحة بدون cache
+        }
+    });
+</script>
+
 </html>
+
 </html>

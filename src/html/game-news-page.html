@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../css/sidebar-style.css">
     <link rel="stylesheet" href="../css/news-page.css">
     <link rel="stylesheet" href="../css/theme-btn.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 </head>
 
 <body class="dark-theme">
@@ -110,5 +113,15 @@
     });
 </script>
 
+<script>
+    window.addEventListener('load', () => {
+        if (!sessionStorage.getItem('pageRefreshed')) {
+            sessionStorage.setItem('pageRefreshed', 'true');
+            location.reload(true); // يجبر المتصفح على تحميل الصفحة بدون cache
+        }
+    });
+</script>
+
 </html>
+
 </html>
