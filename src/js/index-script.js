@@ -1,3 +1,5 @@
+import { initGameSearch } from "./search-script.js";
+
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 
@@ -13,6 +15,18 @@ function updateControlsPosition() {
 
     document.querySelectorAll('.section').forEach(sec => {
         sec.style.paddingRight = isOpen ? "170px" : "20px";
+    });
+}
+
+const searchBox = document.getElementById('searchBox');
+if (searchBox) {
+    searchBox.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const query = searchBox.value.trim();
+            if (query) {
+                window.location.href = `html/search-results.html?q=${encodeURIComponent(query)}`;
+            }
+        }
     });
 }
 

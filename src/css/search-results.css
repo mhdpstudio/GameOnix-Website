@@ -46,6 +46,21 @@
     font-size: 0.95rem;
 }
 
+.hold-hover{
+    user-select: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.hold-hover i {
+    transition: all 0.3s ease;
+}
+
+.hold-hover:hover i {
+    transform: translateX(-5px);
+    transition: 0.3s;
+} 
+
 @media (max-width: 600px) {
     .filter-btn {
         padding: 6px 12px;

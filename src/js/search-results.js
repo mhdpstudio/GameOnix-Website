@@ -10,9 +10,18 @@ document.title = `GameOnix | Search: ${query}`;
 const searchContainer = document.getElementById('search-results');
 searchContainer.insertAdjacentHTML('beforebegin', `
     <div class="search-header">
-        <h2>Search Results for: <span class="search-query">"${query}"</span></h2>
+        <h2 class="hold-hover back-button"><i class="fa-solid fa-arrow-left"></i> Search Results for: <span class="search-query">"${query}"</span></h2>
     </div>
 `);
+
+// Add click event to go back to previous page
+const backButton = document.querySelector('.back-button');
+if (backButton) {
+    backButton.style.cursor = 'pointer';
+    backButton.addEventListener('click', () => {
+        window.history.back();
+    });
+}
 
 // Add CSS for search header if needed
 const style = document.createElement('style');
@@ -104,20 +113,20 @@ style.textContent = `
 document.head.appendChild(style);
 
 // 🔍 Search functionality for results page
-document.addEventListener('DOMContentLoaded', () => {
-    const searchBox = document.getElementById('searchBox');
-    if (searchBox) {
-        searchBox.value = query; // Pre-fill with current query
-        searchBox.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                const newQuery = searchBox.value.trim();
-                if (newQuery) {
-                    window.location.href = `search-results.html?q=${encodeURIComponent(newQuery)}`;
-                }
+// Note: Not using DOMContentLoaded because scripts are loaded dynamically
+// and may execute after DOMContentLoaded has already fired
+const searchBox = document.getElementById('searchBox');
+if (searchBox) {
+    searchBox.value = query; // Pre-fill with current query
+    searchBox.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            const newQuery = searchBox.value.trim();
+            if (newQuery) {
+                window.location.href = `search-results.html?q=${encodeURIComponent(newQuery)}`;
             }
-        });
-    }
-});
+        }
+    });
+}
 
 // Fetch and search games
 const pathsToTry = [

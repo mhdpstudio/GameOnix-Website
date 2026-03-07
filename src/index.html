@@ -69,6 +69,10 @@
         </aside>
 
         <div class="content">
+            <div class="search-bar">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="searchBox" id="searchBox" placeholder="Search games...">
+            </div>
             <div id="games-container">
 
             </div>
@@ -87,8 +91,10 @@
         "css/sidebar-style.css",
         "css/index-style.css",
         "css/cards-style.css",
+        "css/search-style.css",
         "css/theme-btn.css"
     ];
+
     cssFiles.forEach(file => {
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -96,15 +102,21 @@
         document.head.appendChild(link);
     });
 
-    // JS
+    // JS مع تحديد module
     const jsFiles = [
-        "js/sidebar-script.js",
-        "js/index-script.js",
-        "js/icon.js"
+        { src: "js/sidebar-script.js", module: false },
+        { src: "js/index-script.js", module: true },
+        { src: "js/icon.js", module: false }
     ];
+
     jsFiles.forEach(file => {
         const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
+        script.src = `${file.src}?v=${version}`;
+
+        if (file.module) {
+            script.type = "module";
+        }
+
         document.body.appendChild(script);
     });
 </script>
