@@ -78,6 +78,11 @@ ${mediaImages.map((img, i) => `
 
                     <div class="arrow" id="rightArrow"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
+                <div class="game-ads">
+                <div class="ads-row">
+    <div class="ad-box" id="gameAd1"></div>
+    <div class="ad-box" id="gameAd2"></div>
+</div></div>
                 </div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
@@ -116,6 +121,35 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
+
+        const adBox1 = document.getElementById("gameAd1");
+        const adBox2 = document.getElementById("gameAd2");
+
+        function loadAd(container) {
+            const script1 = document.createElement("script");
+            script1.innerHTML = `
+        atOptions = {
+          'key' : 'bb3a8665b8f5d517bb558a42b50db2c0',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+    `;
+
+            const script2 = document.createElement("script");
+            script2.src = "https://www.highperformanceformat.com/bb3a8665b8f5d517bb558a42b50db2c0/invoke.js";
+
+            container.appendChild(script1);
+            container.appendChild(script2);
+        }
+
+        loadAd(adBox1);
+
+        // تحميل الإعلان الثاني بعد شوية
+        setTimeout(() => {
+            loadAd(adBox2);
+        }, 1000);
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");

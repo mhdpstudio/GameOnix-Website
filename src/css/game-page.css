@@ -1,6 +1,6 @@
 @import './../../assets/constants/variables.css';
 
-body:not(.dark-theme) .game-logo-wrapper .game-poster{
+body:not(.dark-theme) .game-logo-wrapper .game-poster {
     filter: drop-shadow(0 0 20px #292929);
 }
 
@@ -86,6 +86,30 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster{
     overflow: hidden;
     background: black;
     position: relative;
+}
+
+/* Ads ======================= */
+
+.game-ads {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ads-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background: #1a1f2e;
+    padding: 10px;
+    width: fit-content;
+}
+
+.ad-box {
+    width: 320px;
+    height: 50px;
 }
 
 /* overlay */
