@@ -14,6 +14,40 @@
 </head>
 
 <body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+        position: fixed;
+        inset: 0;
+        background: #0b0b0d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    ">
+        <div style="
+            width: 60px;
+            height: 60px;
+            border: 4px solid #1a1a2e;
+            border-top: 4px solid #695CFE;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+        <p style="
+            color: #fff;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        ">Loading...</p>
+    </div>
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
     <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
     <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
 
@@ -119,11 +153,35 @@
 </script>
 
 <script>
+    // Hide loading screen when page is fully loaded (with 1 second delay)
+    // Skip loading screen if page is loaded from bfcache (back-forward cache)
     window.addEventListener('load', () => {
-        if (!sessionStorage.getItem('pageRefreshed')) {
-            sessionStorage.setItem('pageRefreshed', 'true');
-            location.reload(true);
+        // Check if page was loaded from bfcache (back-forward cache)
+        if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
+            // Page loaded from bfcache - skip loading screen immediately
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.remove();
+            }
+            return;
         }
+        
+        // Normal page load - show loading screen with 1 second delay
+        setTimeout(() => {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+                setTimeout(() => {
+                    loadingScreen.remove();
+                }, 500);
+            }
+            
+            if (!sessionStorage.getItem('pageRefreshed')) {
+                sessionStorage.setItem('pageRefreshed', 'true');
+                location.reload(true);
+            }
+        }, 1000);
     });
 </script>
 

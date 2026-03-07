@@ -1343,6 +1343,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-23.torrent",
             "mediaPrefix": "fifa23",
             "mediaCount": 10
+        },
+        {
+            "slug": "cod1",
+            "title": "Call of Duty 1",
+            "publisher": "Activision",
+            "game_poster": "../../assets/images/games/logos/cod-1.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.0.0",
+            "size": "421.3 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-1.torrent",
+            "mediaPrefix": "cod1",
+            "mediaCount": 10
         }
     ]
 }
