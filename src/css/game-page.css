@@ -539,6 +539,13 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     }
 }
 
+@media (max-width: 1165px){
+    .ads-row{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* --- الشاشات الأقل من 992px (السايد بار ينزل تحت) --- */
 @media (max-width: 992px) {
     .media-row {
@@ -605,6 +612,11 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
 
     .detail-row {
         padding: 12px 0;
+    }
+
+    .ads-row {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
