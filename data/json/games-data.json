@@ -1121,20 +1121,6 @@
             "mediaCount": 6
         },
         {
-            "slug": "pes-2006",
-            "title": "PES 2006",
-            "publisher": "Konami",
-            "game_poster": "../../assets/images/games/logos/pes2006.png",
-            "gameType": "Sports",
-            "gameTypeIcon": "fa-solid fa-basketball",
-            "version": "1.0.0.0",
-            "size": "1.36 GB",
-            "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2006-1.torrent",
-            "mediaPrefix": "pes2006",
-            "mediaCount": 1
-        },
-        {
             "slug": "pes-2009",
             "title": "PES 2009",
             "publisher": "Konami",
