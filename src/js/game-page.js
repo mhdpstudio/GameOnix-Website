@@ -85,7 +85,9 @@ ${mediaImages.map((img, i) => `
                     </div>
     
                     <div class="commands-btns">
-                        <a href="${game.gameLink}" class="fa-download-good-for-now" target="_blank" rel="noopener noreferrer"><button class="btn download-btn"><i class="fa-solid fa-download"></i> Download</button></a>
+                        <button class="btn download-btn" id="downloadBtn">
+<i class="fa-solid fa-download"></i> Download
+</button>
                         <button class="btn bug-btn"> <i class="fa-solid fa-bug"></i> </button>
                         </div>
                     <button class="btn share-btn"><i class="fa-solid fa-share"></i> Share</button>
@@ -116,6 +118,38 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
+
+        const downloadBtn = document.getElementById("downloadBtn");
+        const popup2 = document.getElementById("downloadPopup");
+        const countdownText = document.getElementById("countdown");
+        const realDownload = document.getElementById("realDownload");
+        const downloadButton = realDownload.querySelector("button");
+
+        downloadBtn.addEventListener("click", () => {
+
+            popup2.style.display = "flex";
+
+            realDownload.href = game.gameLink;
+
+            let time = 5;
+
+            const timer = setInterval(() => {
+
+                time--;
+                countdownText.textContent = time;
+
+                if (time <= 0) {
+                    clearInterval(timer);
+
+                    downloadButton.disabled = false;
+                    downloadButton.classList.add("active");
+
+                    countdownText.textContent = "Ready!";
+                }
+
+            }, 1000);
+
+        });
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");

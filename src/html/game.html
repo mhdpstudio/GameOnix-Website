@@ -7,6 +7,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
+
     <title></title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -87,6 +88,30 @@
         </div>
     </div>
 
+    <div id="downloadPopup" class="download-popup">
+
+        <div class="popup-box">
+
+            <h2>Preparing Download...</h2>
+
+            <div class="ads-box">
+                <!-- Google Adsense -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX"
+                    data-ad-format="auto"></ins>
+            </div>
+
+            <div class="countdown">
+                Download will start in <span id="countdown">5</span> seconds
+            </div>
+
+            <a id="realDownload" href="#" target="_blank">
+                <button class="btn download-btn" disabled>Download</button>
+            </a>
+
+        </div>
+
+    </div>
+
 </body>
 
 <script>
@@ -96,7 +121,8 @@
     const cssFiles = [
         "../css/sidebar-style.css",
         "../css/game-page.css",
-        "../css/theme-btn.css"
+        "../css/theme-btn.css",
+        "../css/popup-ads.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");
