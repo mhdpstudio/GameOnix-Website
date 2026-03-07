@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+(function() {
+    // Get elements immediately when script loads
     const form = document.querySelector('.game-form');
     const modal = document.getElementById('successModal');
     const closeModal = document.getElementById('closeModal');
@@ -24,7 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     // فتح الـ Popup ومسح الفورم
-                    modal.classList.add('active');
+                    if (modal) {
+                        modal.classList.add('active');
+                    }
                     this.reset();
                 } else {
                     alert('Error: Submission failed.');
@@ -38,8 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // إغلاق الـ Popup
-    closeModal.addEventListener('click', () => {
-        modal.classList.remove('active');
-    });
-});
+    // إغلاق الـ Popup - with null check
+    if (closeModal && modal) {
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Also close when clicking outside the modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
+})();
