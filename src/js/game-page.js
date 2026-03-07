@@ -118,40 +118,6 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
-
-        const downloadBtn = document.getElementById("downloadBtn");
-        const popup2 = document.getElementById("downloadPopup");
-        const countdownText = document.getElementById("countdown");
-        const realDownload = document.getElementById("realDownload");
-
-        // مهم جداً: تأكد إن الزرار موجود قبل ما تضيف الـ Click
-        if (downloadBtn && popup2) {
-            downloadBtn.addEventListener("click", () => {
-                console.log("Download Clicked!"); // للتأكد في الـ Console
-                popup2.style.display = "flex"; // أو popup2.classList.add("active") حسب الـ CSS بتاعك
-
-                let time = 5;
-                // تصفير العداد عشان لو فتح الـ popup كذا مرة
-                countdownText.textContent = time;
-
-                const downloadButtonElement = realDownload.querySelector("button");
-                downloadButtonElement.disabled = true;
-                downloadButtonElement.classList.remove("active");
-
-                const timer = setInterval(() => {
-                    time--;
-                    countdownText.textContent = time;
-
-                    if (time <= 0) {
-                        clearInterval(timer);
-                        downloadButtonElement.disabled = false;
-                        downloadButtonElement.classList.add("active");
-                        countdownText.textContent = "Ready!";
-                    }
-                }, 1000);
-            });
-        }
-
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
         const popup = document.getElementById("sharePopup");

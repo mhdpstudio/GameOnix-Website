@@ -86,38 +86,6 @@
             <button class="close-share">Close</button>
         </div>
     </div>
-
-    <div id="downloadPopup" class="download-popup">
-
-        <div class="popup-box">
-
-            <h2>Preparing Download...</h2>
-
-            <div class="ads-box">
-                <script>
-                    atOptions = {
-                        'key': 'bb3a8665b8f5d517bb558a42b50db2c0',
-                        'format': 'iframe',
-                        'height': 50,
-                        'width': 320,
-                        'params': {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/bb3a8665b8f5d517bb558a42b50db2c0/invoke.js"></script>
-            </div>
-
-            <div class="countdown">
-                Download will start in <span id="countdown">5</span> seconds
-            </div>
-
-            <a id="realDownload" href="#" target="_blank">
-                <button class="btn download-btn" disabled>Download</button>
-            </a>
-
-        </div>
-
-    </div>
-
 </body>
 
 <script>
@@ -127,8 +95,7 @@
     const cssFiles = [
         "../css/sidebar-style.css",
         "../css/game-page.css",
-        "../css/theme-btn.css",
-        "../css/popup-ads.css"
+        "../css/theme-btn.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");
@@ -154,7 +121,7 @@
     window.addEventListener('load', () => {
         if (!sessionStorage.getItem('pageRefreshed')) {
             sessionStorage.setItem('pageRefreshed', 'true');
-            location.reload(true); // يجبر المتصفح على تحميل الصفحة بدون cache
+            location.reload(true);
         }
     });
 </script>
