@@ -105,6 +105,7 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     background: #1a1f2e;
     padding: 10px;
     width: fit-content;
+    border-radius: 8px;
 }
 
 .ad-box {
@@ -371,9 +372,6 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     text-decoration: none;
 }
 
-.ad-1 {
-    margin: 20px;
-}
 
 /* ================= */
 
