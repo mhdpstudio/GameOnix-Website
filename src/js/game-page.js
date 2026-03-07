@@ -85,9 +85,7 @@ ${mediaImages.map((img, i) => `
                     </div>
     
                     <div class="commands-btns">
-                        <button class="btn download-btn" id="downloadBtn">
-<i class="fa-solid fa-download"></i> Download
-</button>
+                        <a href="${game.gameLink}" class="fa-download-good-for-now" target="_blank" rel="noopener noreferrer"><button class="btn download-btn"><i class="fa-solid fa-download"></i> Download</button></a>
                         <button class="btn bug-btn"> <i class="fa-solid fa-bug"></i> </button>
                         </div>
                     <button class="btn share-btn"><i class="fa-solid fa-share"></i> Share</button>
@@ -118,6 +116,7 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
+
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
         const popup = document.getElementById("sharePopup");
