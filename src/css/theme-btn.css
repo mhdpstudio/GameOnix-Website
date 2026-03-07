@@ -1,7 +1,7 @@
 .theme-changer{
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     width: 50px;
     height: 50px;
     border: none;
@@ -11,11 +11,39 @@
     z-index: 1000;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 0 10px var(--color-hover-primary-btn);
+    box-shadow: 0 4px 15px rgba(105, 92, 254, 0.4);
     transition: transform 0.2s ease;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-changer:hover{
-    transform: scale(1.01);
+    transform: scale(1.1);
+}
+
+.theme-changer:active {
+    transform: scale(0.95);
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+    .theme-changer {
+        bottom: 70px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-changer {
+        bottom: 60px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
 }

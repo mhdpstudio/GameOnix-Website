@@ -565,6 +565,20 @@
                 "title": "The Last of Us Part II Remastered",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/the-last-of-us-2",
                 "publisher": "Naughty Dog"
+            },
+            {
+                "slug": "cof1",
+                "id": 73,
+                "title": "Call of Duty 1",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-1",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cof2",
+                "id": 74,
+                "title": "Call of Duty 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-2",
+                "publisher": "Activision"
             }
         ]
     },
