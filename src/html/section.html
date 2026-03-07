@@ -93,6 +93,7 @@
         "../css/cards-style.css",
         "../css/theme-btn.css"
     ];
+
     cssFiles.forEach(file => {
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -100,15 +101,21 @@
         document.head.appendChild(link);
     });
 
-    // JS Files
+    // JS Files مع تحديد إذا كان module أو لا
     const jsFiles = [
-        "../js/section-page.js",
-        "../js/sidebar-script.js",
-        "../js/icon.js"
+        { src: "../js/section-page.js", module: true },
+        { src: "../js/sidebar-script.js", module: false },
+        { src: "../js/icon.js", module: false }
     ];
+
     jsFiles.forEach(file => {
         const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
+        script.src = `${file.src}?v=${version}`;
+
+        if (file.module) {
+            script.type = "module";
+        }
+
         document.body.appendChild(script);
     });
 </script>

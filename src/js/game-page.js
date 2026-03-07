@@ -79,11 +79,11 @@ ${mediaImages.map((img, i) => `
                     <div class="arrow" id="rightArrow"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
                 <div class="game-ads">
+                </div>
                 <div class="ads-row">
     <div class="ad-box" id="gameAd1"></div>
     <div class="ad-box" id="gameAd2"></div>
 </div></div>
-                </div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
                         <img class="game-poster" src="${game.game_poster}" alt="${game.title}">
@@ -128,17 +128,17 @@ ${mediaImages.map((img, i) => `
         function loadAd(container) {
             const script1 = document.createElement("script");
             script1.innerHTML = `
-        atOptions = {
-          'key' : 'bb3a8665b8f5d517bb558a42b50db2c0',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
+         atOptions = {
+    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
     `;
 
             const script2 = document.createElement("script");
-            script2.src = "https://www.highperformanceformat.com/bb3a8665b8f5d517bb558a42b50db2c0/invoke.js";
+            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
 
             container.appendChild(script1);
             container.appendChild(script2);
