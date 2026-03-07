@@ -79,7 +79,7 @@ function animateHeroChange(game, instant = false) {
 }
 
 // ✨ إنشاء sidebar مع overlay fill
-fetch("../../data/json/games-database-gallery.json")
+fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-database-gallery.json")
     .then(res => res.json())
     .then(data => {
         allGames = data;
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardsContainer = document.getElementById("store-game-cards");
 const popularContainer = document.getElementById("store-popular-list");
 
-fetch("../../data/json/games-main.json")
+fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-main.json")
     .then(res => res.json())
     .then(data => {
 
@@ -315,7 +315,7 @@ fetch("../../data/json/games-main.json")
 
 const sectionsContainer = document.getElementById("store-sections-list");
 
-fetch("../../data/json/games.json")
+fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games.json")
     .then(res => res.json())
     .then(data => {
 

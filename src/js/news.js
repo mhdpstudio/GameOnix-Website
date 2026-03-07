@@ -30,11 +30,11 @@ function startGTACountdown() {
 // 2. دالة تحميل الأخبار من الـ JSON
 async function loadNews() {
     try {
-        const response = await fetch('../../data/json/news-data.json');
+        const response = await fetch('https://mhdpstudio.github.io/GameOnix-Website/data/json/news-data.json');
         const newsData = await response.json();
         const grid = document.getElementById('news-grid');
 
-        if (!grid) return; // حماية لو العنصر مش موجود
+        if (!grid) return;
 
         newsData.forEach(item => {
             const card = document.createElement('div');
@@ -79,9 +79,8 @@ function reveal() {
     });
 }
 
-// 4. تشغيل كل شيء عند تحميل النافذة
 window.addEventListener('scroll', reveal);
 window.onload = () => {
-    loadNews();         // تحميل الكروت
-    startGTACountdown(); // تشغيل العداد
+    loadNews();    
+    startGTACountdown();
 };
