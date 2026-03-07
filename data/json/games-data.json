@@ -1349,14 +1349,28 @@
             "title": "Call of Duty 1",
             "publisher": "Activision",
             "game_poster": "../../assets/images/games/logos/cod-1.png",
-            "gameType": "Sports",
+            "gameType": "Action",
             "gameTypeIcon": "fa-solid fa-basketball",
             "version": "1.0.0.0",
             "size": "421.3 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-1.torrent",
             "mediaPrefix": "cod1",
-            "mediaCount": 10
+            "mediaCount": 1
+        },
+        {
+            "slug": "cod2",
+            "title": "Call of Duty 2",
+            "publisher": "Activision",
+            "game_poster": "../../assets/images/games/logos/cod-2.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-basketball",
+            "version": "1.0.0.0",
+            "size": "2.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-2.torrent",
+            "mediaPrefix": "cod2",
+            "mediaCount": 1
         }
     ]
 }
