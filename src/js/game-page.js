@@ -123,33 +123,34 @@ ${mediaImages.map((img, i) => `
         const popup2 = document.getElementById("downloadPopup");
         const countdownText = document.getElementById("countdown");
         const realDownload = document.getElementById("realDownload");
-        const downloadButton = realDownload.querySelector("button");
 
-        downloadBtn.addEventListener("click", () => {
+        // مهم جداً: تأكد إن الزرار موجود قبل ما تضيف الـ Click
+        if (downloadBtn && popup2) {
+            downloadBtn.addEventListener("click", () => {
+                console.log("Download Clicked!"); // للتأكد في الـ Console
+                popup2.style.display = "flex"; // أو popup2.classList.add("active") حسب الـ CSS بتاعك
 
-            popup2.style.display = "flex";
-
-            realDownload.href = game.gameLink;
-
-            let time = 5;
-
-            const timer = setInterval(() => {
-
-                time--;
+                let time = 5;
+                // تصفير العداد عشان لو فتح الـ popup كذا مرة
                 countdownText.textContent = time;
 
-                if (time <= 0) {
-                    clearInterval(timer);
+                const downloadButtonElement = realDownload.querySelector("button");
+                downloadButtonElement.disabled = true;
+                downloadButtonElement.classList.remove("active");
 
-                    downloadButton.disabled = false;
-                    downloadButton.classList.add("active");
+                const timer = setInterval(() => {
+                    time--;
+                    countdownText.textContent = time;
 
-                    countdownText.textContent = "Ready!";
-                }
-
-            }, 1000);
-
-        });
+                    if (time <= 0) {
+                        clearInterval(timer);
+                        downloadButtonElement.disabled = false;
+                        downloadButtonElement.classList.add("active");
+                        countdownText.textContent = "Ready!";
+                    }
+                }, 1000);
+            });
+        }
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
