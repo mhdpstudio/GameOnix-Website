@@ -148,7 +148,7 @@
 
 <script>
     // Hide loading screen when page is fully loaded (with 1 second delay)
-    // Skip loading screen if page is loaded from bfcache (back-forward cache)
+    // Skip loading screen if page is loaded from bfcache or if there's already a search query (subsequent search)
     window.addEventListener('load', () => {
         // Check if page was loaded from bfcache (back-forward cache)
         if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
@@ -160,7 +160,18 @@
             return;
         }
         
-        // Normal page load - show loading screen with 1 second delay
+        // Check if there's already a search query in URL (subsequent search, not initial load)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('q') || urlParams.has('query')) {
+            // There's already a search query - skip loading screen
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.remove();
+            }
+            return;
+        }
+        
+        // Normal page load (first time) - show loading screen with 1 second delay
         setTimeout(() => {
             const loadingScreen = document.getElementById('loading-screen');
             if (loadingScreen) {
