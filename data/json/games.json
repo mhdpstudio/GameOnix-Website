@@ -954,6 +954,13 @@
                 "title": "Neighbours from Hell 2",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/neighbours-from-hell-2",
                 "publisher": "JoWooD"
+            },
+            {
+                "slug": "sudeen-strike-4",
+                "id": 4,
+                "title": "Sudeen Strike 4",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/sudeen-strike-4",
+                "publisher": "Kite Games"
             }
         ]
     }
