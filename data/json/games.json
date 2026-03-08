@@ -911,5 +911,17 @@
                 "publisher": ""
             }
         ]
+    },
+    "Simulation": {
+        "icon": "fa-solid fa-gamepad-modern",
+        "games": [
+            {
+                "slug": "stray",
+                "id": 1,
+                "title": "Stray",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/stray",
+                "publisher": "BlueTwelve"
+            }
+        ]
     }
 }

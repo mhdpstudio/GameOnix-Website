@@ -1567,6 +1567,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-6.torrent",
             "mediaPrefix": "bf-6",
             "mediaCount": 8
+        },
+        {
+            "slug": "stray",
+            "title": "Stray",
+            "publisher": "BlueTwelve",
+            "game_poster": "../../assets/images/games/logos/stray.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.2.0.0",
+            "size": "84.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stray.torrent",
+            "mediaPrefix": "stray",
+            "mediaCount": 7
         }
     ]
 }
