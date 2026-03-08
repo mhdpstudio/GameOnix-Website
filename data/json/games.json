@@ -581,43 +581,99 @@
                 "publisher": "Activision"
             },
             {
-                "slug": "bf-1",
+                "slug": "cod-waw",
                 "id": 75,
+                "title": "Call of Duty: World at War",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-waw",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-4",
+                "id": 76,
+                "title": "Call of Duty 4: Modern Warfare",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-4",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-mw-2",
+                "id": 77,
+                "title": "Call of Duty: Modern Warfare 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-mw-2",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-mw-3",
+                "id": 78,
+                "title": "Call of Duty: Modern Warfare 3",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-mw-3",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-bo1",
+                "id": 79,
+                "title": "Call of Duty: Black Ops 1",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-bo-1",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-bo2",
+                "id": 80,
+                "title": "Call of Duty: Black Ops 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-bo-2",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-bo3",
+                "id": 81,
+                "title": "Call of Duty: Black Ops 3",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-bo-3",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "cod-bo-cw",
+                "id": 82,
+                "title": "Call of Duty: Black Ops Cold War",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-bo-cw",
+                "publisher": "Activision"
+            },
+            {
+                "slug": "bf-1",
+                "id": 83,
                 "title": "Battlefield 1",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-1",
                 "publisher": "Electronic Arts"
             },
             {
                 "slug": "bf-2",
-                "id": 76,
+                "id": 84,
                 "title": "Battlefield 2",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-2",
                 "publisher": "Electronic Arts"
             },
             {
                 "slug": "bf-3",
-                "id": 77,
+                "id": 85,
                 "title": "Battlefield 3",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-3",
                 "publisher": "Electronic Arts"
             },
             {
                 "slug": "bf-4",
-                "id": 78,
+                "id": 86,
                 "title": "Battlefield 4",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-4",
                 "publisher": "Electronic Arts"
             },
             {
                 "slug": "bf-v",
-                "id": 79,
+                "id": 87,
                 "title": "Battlefield 5",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-5",
                 "publisher": "Electronic Arts"
             },
             {
                 "slug": "bf-6",
-                "id": 80,
+                "id": 88,
                 "title": "Battlefield 6",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-6",
                 "publisher": "Electronic Arts"
