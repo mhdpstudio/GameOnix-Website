@@ -1384,21 +1384,7 @@
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-waw.torrent",
             "mediaPrefix": "cod-waw",
-            "mediaCount": 8
-        },
-        {
-            "slug": "cod-waw",
-            "title": "Call of Duty: World at War",
-            "publisher": "Activision",
-            "game_poster": "../../assets/images/games/logos/cod-waw.png",
-            "gameType": "Action",
-            "gameTypeIcon": "fa-solid fa-gun",
-            "version": "1.7.1263.0",
-            "size": "4.8 GB",
-            "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-waw.torrent",
-            "mediaPrefix": "cod-waw",
-            "mediaCount": 8
+            "mediaCount": 7
         },
         {
             "slug": "cod-4",
