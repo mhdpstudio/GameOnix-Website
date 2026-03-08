@@ -579,6 +579,48 @@
                 "title": "Call of Duty 2",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/cof-2",
                 "publisher": "Activision"
+            },
+            {
+                "slug": "bf-1",
+                "id": 75,
+                "title": "Battlefield 1",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-1",
+                "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "bf-2",
+                "id": 76,
+                "title": "Battlefield 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-2",
+                "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "bf-3",
+                "id": 77,
+                "title": "Battlefield 3",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-3",
+                "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "bf-4",
+                "id": 78,
+                "title": "Battlefield 4",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-4",
+                "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "bf-v",
+                "id": 79,
+                "title": "Battlefield V",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-5",
+                "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "bf-6",
+                "id": 80,
+                "title": "Battlefield 6",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-6",
+                "publisher": "Electronic Arts"
             }
         ]
     },
