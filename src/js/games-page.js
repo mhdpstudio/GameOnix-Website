@@ -177,6 +177,19 @@ function step(timestamp) {
         return;
     }
 
+    // Stop hero animation while loading screen is visible
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        const loadingStyle = window.getComputedStyle(loadingScreen);
+        const isLoadingVisible = loadingStyle.display !== 'none' && 
+                                  loadingStyle.visibility !== 'hidden' && 
+                                  loadingStyle.opacity !== '0';
+        if (isLoadingVisible) {
+            lastFrameTime = timestamp;
+            return;
+        }
+    }
+
     // compute frame time; but if we just became visible ignore large gap
     let delta = timestamp - lastFrameTime;
     if (justUnhidden) {
