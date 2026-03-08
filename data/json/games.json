@@ -930,5 +930,17 @@
                 "publisher": "BlueTwelve"
             }
         ]
+    },
+    "Old Games": {
+        "icon": "fa-solid fa-scroll-old",
+        "games": [
+            {
+                "slug": "red-alert-2-expansion",
+                "id": 1,
+                "title": "Red Alert 2 Expansion",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/red-alert-2-ex",
+                "publisher": "EA Games"
+            }
+        ]
     }
 }
