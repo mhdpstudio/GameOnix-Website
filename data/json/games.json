@@ -677,6 +677,13 @@
                 "title": "Battlefield 6",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/bf-6",
                 "publisher": "Electronic Arts"
+            },
+            {
+                "slug": "mount-blade-sails",
+                "id": 89,
+                "title": "Mount & Blade: War Sails",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/mount-blade-sails",
+                "publisher": "TaleWorlds Entertainment"
             }
         ]
     },

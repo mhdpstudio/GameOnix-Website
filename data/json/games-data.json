@@ -1581,6 +1581,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stray.torrent",
             "mediaPrefix": "stray",
             "mediaCount": 7
+        },
+        {
+            "slug": "mount-blade-sails",
+            "title": "Mount & Blade: War Sails",
+            "publisher": "TaleWorlds Entertainment",
+            "game_poster": "../../assets/images/games/logos/mount-blade-sails.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.3.4.0",
+            "size": "73.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mount-blade-sails.torrent",
+            "mediaPrefix": "mount-blade-sails",
+            "mediaCount": 3
         }
     ]
 }
