@@ -940,6 +940,20 @@
                 "title": "Red Alert 2 Expansion",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/red-alert-2-ex",
                 "publisher": "EA Games"
+            },
+            {
+                "slug": "neighbours-from-hell-1",
+                "id": 2,
+                "title": "Neighbours from Hell",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/neighbours-from-hell-1",
+                "publisher": "JoWooD"
+            },
+            {
+                "slug": "neighbours-from-hell-2",
+                "id": 3,
+                "title": "Neighbours from Hell 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/neighbours-from-hell-2",
+                "publisher": "JoWooD"
             }
         ]
     }

@@ -1609,6 +1609,34 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/red-alert-2-ex.torrent",
             "mediaPrefix": "red-alert-2-ex",
             "mediaCount": 3
+        },
+        {
+            "slug": "neighbours-from-hell-1",
+            "title": "Neighbours from Hell",
+            "publisher": "JoWooD",
+            "game_poster": "../../assets/images/games/logos/neighbours-from-hell-1.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.2.0",
+            "size": "662.6 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/neighbours-from-hell-1.torrent",
+            "mediaPrefix": "neighbours-from-hell-1",
+            "mediaCount": 2
+        },
+        {
+            "slug": "neighbours-from-hell-2",
+            "title": "Neighbours from Hell 2",
+            "publisher": "JoWooD",
+            "game_poster": "../../assets/images/games/logos/neighbours-from-hell-2.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.0.0",
+            "size": "223.0 MB",
+            "ico": "windows",
+            "gameLink": "https://up.downloadcomputergames.net/2020/12/neighbours-from-hell-2/Neighbours-from-Hell-2.zip",
+            "mediaPrefix": "neighbours-from-hell-2",
+            "mediaCount": 2
         }
     ]
 }
