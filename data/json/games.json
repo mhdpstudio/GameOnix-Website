@@ -684,6 +684,13 @@
                 "title": "Mount & Blade: War Sails",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/mount-blade-sails",
                 "publisher": "TaleWorlds Entertainment"
+            },
+            {
+                "slug": "stronghold-crusader-de",
+                "id": 90,
+                "title": "Stronghold Crusader: Definitive Edition",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/scde",
+                "publisher": "Firefly Studios"
             }
         ]
     },
@@ -961,6 +968,13 @@
                 "title": "Sudden Strike 4",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/sudden-strike-4",
                 "publisher": "Kite Games"
+            },
+            {
+                "slug": "stronghold-crusader",
+                "id": 5,
+                "title": "Stronghold Crusader",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/stronghold-crusader",
+                "publisher": "Firefly Studios"
             }
         ]
     }

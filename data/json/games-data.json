@@ -1651,6 +1651,34 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/sudden-strike-4.torrent",
             "mediaPrefix": "sudden-strike-4",
             "mediaCount": 5
+        },
+        {
+            "slug": "stronghold-crusader",
+            "title": "Stronghold Crusader",
+            "publisher": "Firefly Studios",
+            "game_poster": "../../assets/images/games/logos/stronghold-1.png",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.0.0",
+            "size": "654.8 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stronghold-1.torrent",
+            "mediaPrefix": "stronghold-crusader",
+            "mediaCount": 1
+        },
+        {
+            "slug": "stronghold-crusader-de",
+            "title": "Stronghold Crusader: Definitive Edition",
+            "publisher": "Firefly Studios",
+            "game_poster": "../../assets/images/games/logos/stronghold-de.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "2.6.2.0",
+            "size": "5.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stronghold-de.torrent",
+            "mediaPrefix": "stronghold-crusader-de",
+            "mediaCount": 6
         }
     ]
 }
