@@ -691,6 +691,13 @@
                 "title": "Stronghold Crusader: Definitive Edition",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/scde",
                 "publisher": "Firefly Studios"
+            },
+            {
+                "slug": "uncharted",
+                "id": 91,
+                "title": "Uncharted: Legacy of Thieves Collection",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/uncharted",
+                "publisher": "Naughty Dog"
             }
         ]
     },
@@ -935,6 +942,20 @@
                 "title": "Stray",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/stray",
                 "publisher": "BlueTwelve"
+            },
+            {
+                "slug": "pc-building-sim-1",
+                "id": 2,
+                "title": "PC Building Simulator",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/pc-building-sim-1",
+                "publisher": "Claudiu Kiss"
+            },
+            {
+                "slug": "pc-building-sim-2",
+                "id": 3,
+                "title": "PC Building Simulator 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/pc-building-sim-2",
+                "publisher": "Claudiu Kiss"
             }
         ]
     },
@@ -996,6 +1017,13 @@
                 "title": "Grand Theft Auto Vice City",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gtavc",
                 "publisher": "Rockstar Games"
+            },
+            {
+                "slug": "crazy-taxi",
+                "id": 9,
+                "title": "Crazy Taxi",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/crazy-taxi",
+                "publisher": "Sega"
             }
         ]
     }

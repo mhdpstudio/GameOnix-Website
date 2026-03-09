@@ -33,6 +33,10 @@ fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-data.json")
         // 🎯 بناء الصفحة
         page.innerHTML = `
     <div class="game-container">
+        <div class="ads-row">
+    <div class="ad-box" id="gameAd1"></div>
+    <div class="ad-box" id="gameAd2"></div>
+</div>
 
         <div class="game-title">
             <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left"></i> ${game.title}</div>
@@ -81,8 +85,8 @@ ${mediaImages.map((img, i) => `
                 <div class="game-ads">
                 </div>
                 <div class="ads-row">
-    <div class="ad-box" id="gameAd1"></div>
-    <div class="ad-box" id="gameAd2"></div>
+    <div class="ad-box" id="gameAd3"></div>
+    <div class="ad-box" id="gameAd4"></div>
 </div></div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
@@ -124,6 +128,8 @@ ${mediaImages.map((img, i) => `
 
         const adBox1 = document.getElementById("gameAd1");
         const adBox2 = document.getElementById("gameAd2");
+        const adBox3 = document.getElementById("gameAd3");
+        const adBox4 = document.getElementById("gameAd4");
 
         function loadAd(container) {
             const script1 = document.createElement("script");
@@ -146,10 +152,17 @@ ${mediaImages.map((img, i) => `
 
         loadAd(adBox1);
 
-        // تحميل الإعلان الثاني بعد شوية
         setTimeout(() => {
             loadAd(adBox2);
         }, 1000);
+
+        setTimeout(() => {
+            loadAd(adBox3);
+        }, 2000);
+
+        setTimeout(() => {
+            loadAd(adBox4);
+        }, 3000);
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
