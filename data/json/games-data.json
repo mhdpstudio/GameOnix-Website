@@ -1602,7 +1602,7 @@
             "publisher": "Sega",
             "game_poster": "../../assets/images/games/logos/house-of-the-dead.png",
             "gameType": "Action | Old Games",
-            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "gameTypeIcon": "fa-solid fa-scroll-old",
             "version": "1.0.0.0",
             "size": "124.0 MB",
             "ico": "windows",
