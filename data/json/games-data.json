@@ -1499,6 +1499,20 @@
             "mediaCount": 10
         },
         {
+            "slug": "cod-ad",
+            "title": "Call of Duty: Advanced Warfare",
+            "publisher": "Activision",
+            "game_poster": "../../assets/images/games/logos/cod-ad.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.3.0.6297",
+            "size": "27.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-ad.torrent",
+            "mediaPrefix": "cod-ad",
+            "mediaCount": 9
+        },
+        {
             "slug": "bf-1",
             "title": "Battlefield 1",
             "publisher": "Electronic Arts",
@@ -1585,7 +1599,7 @@
         {
             "slug": "resident-evil-requiem",
             "title": "Resident Evil Requiem",
-            "publisher": "Electronic Arts",
+            "publisher": "Capcom",
             "game_poster": "../../assets/images/games/logos/resident-evil-requiem.png",
             "gameType": "Action",
             "gameTypeIcon": "fa-solid fa-gun",
@@ -1819,6 +1833,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/jazz-rabbit-1.torrent",
             "mediaPrefix": "jazz-rabbit",
             "mediaCount": 4
+        },
+        {
+            "slug": "ghost-recon-future-soldier",
+            "title": "Tom Clancy's Ghost Recon: Future Soldier",
+            "publisher": "Ubisoft",
+            "game_poster": "../../assets/images/games/logos/ghost-recon-future-soldier.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.8.5.0",
+            "size": "10.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ghost-recon-future-soldier.torrent",
+            "mediaPrefix": "ghost-recon-future-soldier",
+            "mediaCount": 8
         }
     ]
 }
