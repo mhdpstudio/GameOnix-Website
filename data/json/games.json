@@ -1005,6 +1005,13 @@
                 "title": "Zoo Tycoon",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/zoo-tycoon-1",
                 "publisher": "Blue Fang Games"
+            },
+            {
+                "slug": "food-delivery-sim",
+                "id": 5,
+                "title": "Food Delivery Simulator",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/food-delivery-sim",
+                "publisher": "creative assembly sofia"
             }
         ]
     },

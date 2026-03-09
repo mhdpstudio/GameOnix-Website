@@ -1625,6 +1625,20 @@
             "mediaCount": 7
         },
         {
+            "slug": "food-delivery-sim",
+            "title": "Food Delivery Simulator",
+            "publisher": "Creative Assembly Sofia",
+            "game_poster": "../../assets/images/games/logos/food-delivery-sim.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.2.0.0",
+            "size": "847.9 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/food-delivery-sim.torrent",
+            "mediaPrefix": "food-delivery-sim",
+            "mediaCount": 7
+        },
+        {
             "slug": "house-flipper-2",
             "title": "House Flipper 2",
             "publisher": "Frozen District",
