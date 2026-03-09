@@ -1611,6 +1611,20 @@
             "mediaCount": 8
         },
         {
+            "slug": "zoo-tycoon-1",
+            "title": "Zoo Tycoon",
+            "publisher": "Blue Fang Games",
+            "game_poster": "../../assets/images/games/logos/zoo-tycoon.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.6.4.0",
+            "size": "562.4 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/zoo-tycoon-1.torrent",
+            "mediaPrefix": "zoo-tycoon",
+            "mediaCount": 3
+        },
+        {
             "slug": "pc-building-sim-1",
             "title": "PC Building Simulator",
             "publisher": "Claudiu Kiss",

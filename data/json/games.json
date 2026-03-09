@@ -970,6 +970,13 @@
                 "title": "House Flipper 2",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/house-flipper-2",
                 "publisher": "Frozen District"
+            },
+            {
+                "slug": "zoo-tycoon-1",
+                "id": 5,
+                "title": "Zoo Tycoon",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/zoo-tycoon-1",
+                "publisher": "Blue Fang Games"
             }
         ]
     },
