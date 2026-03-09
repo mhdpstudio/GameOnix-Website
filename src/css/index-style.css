@@ -69,6 +69,10 @@ i:nth-child(2) {
     overflow: hidden;
 }
 
+#games-container .section-container:first-child .section .game-card:first-child .game-details:first-child {
+    box-shadow: 0 0 8px rgb(245, 197, 75);
+}
+
 .section-wrapper {
     position: relative;
 }
@@ -112,7 +116,8 @@ i:nth-child(2) {
         gap: 15px;
     }
 
-    .section-controls i:nth-child(1) , .section-controls i:nth-child(2) {
+    .section-controls i:nth-child(1),
+    .section-controls i:nth-child(2) {
         display: none;
     }
 
@@ -121,7 +126,7 @@ i:nth-child(2) {
         margin-left: 10px;
     }
 
-    .game-card:first-child{
+    .game-card:first-child {
         margin-left: 20px;
         margin-top: 10px;
     }

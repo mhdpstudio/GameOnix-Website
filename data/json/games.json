@@ -3,29 +3,36 @@
         "icon": "fa-solid fa-fire-flame-curved",
         "games": [
             {
-                "slug": "gta-v",
+                "slug": "resident-evil-requiem",
                 "id": 1,
+                "title": "Resident Evil Requiem",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/resident-evil-requiem",
+                "publisher": "Capcom"
+            },
+            {
+                "slug": "gta-v",
+                "id": 2,
                 "title": "Grand Theft Auto V",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gta5",
                 "publisher": "Rockstar Games"
             },
             {
                 "slug": "gta-iv",
-                "id": 2,
+                "id": 3,
                 "title": "Grand Theft Auto IV: The Complete Edition",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gta4",
                 "publisher": "Rockstar Games"
             },
             {
                 "slug": "ac-2",
-                "id": 3,
+                "id": 4,
                 "title": "Assassin's Creed II",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/ac-2",
                 "publisher": "Ubisoft"
             },
             {
                 "slug": "nfs-most-wanted-2012",
-                "id": 4,
+                "id": 5,
                 "title": "Need For Speed: Most Wanted 2012",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/nfs-2012",
                 "publisher": "Electronic Arts"
@@ -705,6 +712,13 @@
                 "title": "Marvel's Spider-Man: Miles Morales",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/spiderman-miles-morals",
                 "publisher": "Insomniac Games"
+            },
+            {
+                "slug": "resident-evil-requiem",
+                "id": 93,
+                "title": "Resident Evil Requiem",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/resident-evil-requiem",
+                "publisher": "Capcom"
             }
         ]
     },

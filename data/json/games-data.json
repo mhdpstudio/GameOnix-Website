@@ -1583,6 +1583,20 @@
             "mediaCount": 8
         },
         {
+            "slug": "resident-evil-requiem",
+            "title": "Resident Evil Requiem",
+            "publisher": "Electronic Arts",
+            "game_poster": "../../assets/images/games/logos/resident-evil-requiem.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "Build 21960597",
+            "size": "58.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/resident-evil-requiem.torrent",
+            "mediaPrefix": "r-e-r",
+            "mediaCount": 12
+        },
+        {
             "slug": "stray",
             "title": "Stray",
             "publisher": "BlueTwelve",
