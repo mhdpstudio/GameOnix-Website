@@ -88,31 +88,47 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     position: relative;
 }
 
-/* Ads ======================= */
+/* ================= ADS ================= */
 
 .game-ads {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
 }
 
+/* container */
 .ads-row {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
+    background: #1a1f2e;
+    padding: 15px;
+    border-radius: 10px;
+
+    /* تعديل جديد */
+    grid-auto-rows: 1fr; /* كل الصفوف هتملىء مساحة متساوية */
+}
+
+/* ad */
+.ad-box {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
-    background: #1a1f2e;
-    padding: 10px;
-    width: fit-content;
-    border-radius: 8px;
+    overflow: hidden;
 }
 
-.ad-box {
-    width: 728px;
-    height: 90px;
+/* ad content */
+.ad-box iframe,
+.ad-box img,
+.ad-box ins {
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
 }
-
+/* ================== End of Ads ====================== */
 /* overlay */
 .media-overlay {
     position: absolute;
