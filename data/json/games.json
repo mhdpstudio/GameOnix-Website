@@ -1059,6 +1059,20 @@
                 "title": "Crazy Taxi",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/crazy-taxi",
                 "publisher": "Sega"
+            },
+            {
+                "slug": "alien-shooter",
+                "id": 10,
+                "title": "Alien Shooter",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/alien-shooter",
+                "publisher": "Sigma Team"
+            },
+            {
+                "slug": "jazz-rabbit-1",
+                "id": 11,
+                "title": "Jazz Jackrabbit",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/jazz-jackrabbit",
+                "publisher": "Epic MegaGames"
             }
         ]
     }

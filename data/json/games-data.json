@@ -1791,6 +1791,34 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/crazy-taxi.torrent",
             "mediaPrefix": "crazy-texy",
             "mediaCount": 4
+        },
+        {
+            "slug": "alien-shooter",
+            "title": "Alien Shooter",
+            "publisher": "Sigma Team",
+            "game_poster": "../../assets/images/games/logos/crazy-taxi.png",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-solid fa-scroll-old",
+            "version": "1.0.0.0",
+            "size": "81.3 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/alien-shooter.torrent",
+            "mediaPrefix": "alien-shooter",
+            "mediaCount": 4
+        },
+        {
+            "slug": "jazz-rabbit-1",
+            "title": "Jazz Jackrabbit",
+            "publisher": "Epic MegaGames",
+            "game_poster": "../../assets/images/games/logos/jazz-rabbit-1.png",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-solid fa-scroll-old",
+            "version": "1.0.0.0",
+            "size": "22.6 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/jazz-rabbit-1.torrent",
+            "mediaPrefix": "jazz-rabbit",
+            "mediaCount": 4
         }
     ]
 }
