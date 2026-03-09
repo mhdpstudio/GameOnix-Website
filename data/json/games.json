@@ -733,6 +733,48 @@
                 "title": "Tom Clancy's Ghost Recon: Future Soldier",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/ghost-recon-future-soldier",
                 "publisher": "Ubisoft"
+            },
+            {
+                "slug": "wwe-2k15",
+                "id": 96,
+                "title": "WWE 2K15",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k15",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k16",
+                "id": 97,
+                "title": "WWE 2K16",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k16",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k17",
+                "id": 98,
+                "title": "WWE 2K17",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k17",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k18",
+                "id": 99,
+                "title": "WWE 2K18",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k18",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k19",
+                "id": 100,
+                "title": "WWE 2K19",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k19",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k20",
+                "id": 101,
+                "title": "WWE 2K20",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k20",
+                "publisher": "Yuke's"
             }
         ]
     },
