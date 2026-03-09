@@ -975,6 +975,27 @@
                 "title": "Stronghold Crusader",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/stronghold-1",
                 "publisher": "Firefly Studios"
+            },
+            {
+                "slug": "gta-sa",
+                "id": 6,
+                "title": "Grand Theft Auto San Andreas",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gtasa",
+                "publisher": "Rockstar Games"
+            },
+            {
+                "slug": "gta-3",
+                "id": 7,
+                "title": "Grand Theft Auto III",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gta3",
+                "publisher": "Rockstar Games"
+            },
+            {
+                "slug": "gta-vc",
+                "id": 8,
+                "title": "Grand Theft Auto Vice City",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/gtavc",
+                "publisher": "Rockstar Games"
             }
         ]
     }
