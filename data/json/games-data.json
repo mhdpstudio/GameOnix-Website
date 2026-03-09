@@ -1597,6 +1597,20 @@
             "mediaCount": 8
         },
         {
+            "slug": "house-of-the-dead",
+            "title": "House of the Dead",
+            "publisher": "Sega",
+            "game_poster": "../../assets/images/games/logos/house-of-the-dead.png",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.0.0",
+            "size": "124.0 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/house-of-the-dead.torrent",
+            "mediaPrefix": "house-of-the-dead",
+            "mediaCount": 1
+        },
+        {
             "slug": "resident-evil-requiem",
             "title": "Resident Evil Requiem",
             "publisher": "Capcom",
