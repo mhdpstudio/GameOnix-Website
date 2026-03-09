@@ -1597,6 +1597,20 @@
             "mediaCount": 7
         },
         {
+            "slug": "house-flipper-2",
+            "title": "House Flipper 2",
+            "publisher": "Frozen District",
+            "game_poster": "../../assets/images/games/logos/house-flipper-2.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.5.0",
+            "size": "3.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/house-flipper-2.torrent",
+            "mediaPrefix": "house-flipper-2",
+            "mediaCount": 8
+        },
+        {
             "slug": "pc-building-sim-1",
             "title": "PC Building Simulator",
             "publisher": "Claudiu Kiss",

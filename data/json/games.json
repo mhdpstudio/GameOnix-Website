@@ -963,6 +963,13 @@
                 "title": "PC Building Simulator 2",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/pc-building-sim-2",
                 "publisher": "Claudiu Kiss"
+            },
+            {
+                "slug": "house-flipper-2",
+                "id": 4,
+                "title": "House Flipper 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/pc-building-sim-2",
+                "publisher": "Frozen District"
             }
         ]
     },
