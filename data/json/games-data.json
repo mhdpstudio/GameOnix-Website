@@ -771,6 +771,20 @@
             "mediaCount": 6
         },
         {
+            "slug": "marvels-spiderman-Miles-morales",
+            "title": "Marvel's Spider-Man: Miles Morales",
+            "publisher": "Insomniac Games",
+            "game_poster": "../../assets/images/games/logos/spiderman-miles-morals.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.5.86.0",
+            "size": "39.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/spider-man-miles-morales.torrent",
+            "mediaPrefix": "spiderman-miles-morales",
+            "mediaCount": 6
+        },
+        {
             "slug": "the-last-of-us-part-I",
             "title": "The Last of Us Part I",
             "publisher": "Naughty Dog",
