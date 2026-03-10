@@ -164,6 +164,37 @@ ${mediaImages.map((img, i) => `
             loadAd(adBox4);
         }, 3000);
 
+        // Prevent redirects from ads - intercept clicks on ad elements
+        document.addEventListener('click', function(e) {
+            const adContainers = document.querySelectorAll('.ad-box, .game-ads, iframe');
+            adContainers.forEach(ad => {
+                if (ad.contains(e.target)) {
+                    // Allow the click but prevent navigation away
+                    e.preventDefault();
+                    // Optionally show a message
+                    console.log('Ad click blocked - redirect prevented');
+                }
+            });
+        }, true);
+
+        // Block pop-up windows
+        window.open = function() {
+            console.log('Pop-up blocked - redirect prevented');
+            return null;
+        };
+
+        // Block navigation redirects
+        let blockedUrls = ['highperformanceformat.com', 'redirect', 'click'];
+        const originalPushState = history.pushState;
+        history.pushState = function() {
+            const newUrl = arguments[2];
+            if (newUrl && blockedUrls.some(url => newUrl.includes(url))) {
+                console.log('Navigation blocked');
+                return;
+            }
+            return originalPushState.apply(this, arguments);
+        };
+
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
         const popup = document.getElementById("sharePopup");
