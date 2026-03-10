@@ -2045,6 +2045,20 @@
             "mediaCount": 6
         },
         {
+            "slug": "the-walking-dead-the-telltale-definitive-series",
+            "title": "The Walking Dead: The Telltale Definitive Series",
+            "publisher": "Telltale Games",
+            "game_poster": "../../assets/images/games/logos/the-walking-dead-the-telltale-definitive-series.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.5.24.0",
+            "size": "17.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-walking-dead-the-telltale-definitive-series.torrent",
+            "mediaPrefix": "the-walking-dead-the-telltale-definitive-series",
+            "mediaCount": 5
+        },
+        {
             "slug": "crazy-taxi",
             "title": "Crazy Taxi",
             "publisher": "Sega",

@@ -810,6 +810,13 @@
                 "title": "Tekken 8",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/tekken-8",
                 "publisher": "Bandai Namco"
+            },
+            {
+                "slug": "the-walking-dead-the-telltale-definitive-series",
+                "id": 107,
+                "title": "The Walking Dead: The Telltale Definitive Series",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/the-walking-dead",
+                "publisher": "Telltale Games"
             }
         ]
     },
