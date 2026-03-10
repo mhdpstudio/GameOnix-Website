@@ -1814,11 +1814,25 @@
             "gameType": "Simulation",
             "gameTypeIcon": "fa-solid fa-gamepad-modern",
             "version": "1.2.0.0",
-            "size": "1.1 GB",
+            "size": "1.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fuel-harvest-together.torrent",
             "mediaPrefix": "fuel-harvest-together",
             "mediaCount": 9
+        },
+        {
+            "slug": "drive-beyond-horizons",
+            "title": "Drive Beyond Horizons",
+            "publisher": "Tacty Studio",
+            "game_poster": "../../assets/images/games/logos/drive-beyond-horizons.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "2025.04.20.0",
+            "size": "7.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fuel-harvest-together.torrent",
+            "mediaPrefix": "drive-beyond-horizons",
+            "mediaCount": 10
         },
         {
             "slug": "house-flipper-2",

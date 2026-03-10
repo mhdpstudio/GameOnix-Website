@@ -1103,6 +1103,13 @@
                 "title": "Fuel Harvest Together",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/fuel-harvest-together",
                 "publisher": "Say2Sun"
+            },
+            {
+                "slug": "drive-beyond-horizons",
+                "id": 9,
+                "title": "Drive Beyond Horizons",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/drive-beyond-horizons",
+                "publisher": "Tacty Studio"
             }
         ]
     },
