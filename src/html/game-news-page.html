@@ -107,6 +107,61 @@
             <div id="game-news-page"></div>
         </div>
     </div>
+<!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
+<script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable keyboard shortcuts for viewing source and developer tools
+    document.addEventListener('keydown', function(e) {
+        // Disable Ctrl+U (View Source)
+        if (e.ctrlKey && e.key === 'u') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable F12 (Developer Tools)
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+I (Developer Tools)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+Shift+C (Inspector)
+        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+S (Save)
+        if (e.ctrlKey && e.key === 's') {
+            e.preventDefault();
+            return false;
+        }
+        // Disable Ctrl+P (Print)
+        if (e.ctrlKey && e.key === 'p') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Additional protection: Clear selection on mousedown to prevent text selection
+    document.addEventListener('mousedown', function(e) {
+        if (e.button === 0) { // Left click
+            // Allow normal left click functionality
+        }
+    });
+</script>
+
 </body>
 
 <script>
