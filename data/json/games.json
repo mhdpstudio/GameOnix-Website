@@ -1096,6 +1096,13 @@
                 "title": "Food Truck Simulator",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/food-truck-sim",
                 "publisher": "Drago Entertainment"
+            },
+            {
+                "slug": "fuel-harvest-together",
+                "id": 8,
+                "title": "Fuel Harvest Together",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/fuel-harvest-together",
+                "publisher": "Say2Sun"
             }
         ]
     },

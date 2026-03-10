@@ -1807,6 +1807,20 @@
             "mediaCount": 7
         },
         {
+            "slug": "fuel-harvest-together",
+            "title": "Fuel Harvest Together",
+            "publisher": "Say2Sun",
+            "game_poster": "../../assets/images/games/logos/fuel-harvest-together.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.2.0.0",
+            "size": "1.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fuel-harvest-together.torrent",
+            "mediaPrefix": "fuel-harvest-together",
+            "mediaCount": 9
+        },
+        {
             "slug": "house-flipper-2",
             "title": "House Flipper 2",
             "publisher": "Frozen District",
