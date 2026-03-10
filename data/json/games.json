@@ -775,6 +775,27 @@
                 "title": "WWE 2K20",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k20",
                 "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k22",
+                "id": 102,
+                "title": "WWE 2K22",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k22",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k23",
+                "id": 103,
+                "title": "WWE 2K23",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k23",
+                "publisher": "Yuke's"
+            },
+            {
+                "slug": "wwe-2k24",
+                "id": 104,
+                "title": "WWE 2K24",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/wwe-2k24",
+                "publisher": "Yuke's"
             }
         ]
     },
