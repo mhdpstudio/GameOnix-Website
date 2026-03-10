@@ -1110,6 +1110,20 @@
                 "title": "Drive Beyond Horizons",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/drive-beyond-horizons",
                 "publisher": "Tacty Studio"
+            },
+            {
+                "slug": "internet-cafe-sim-1",
+                "id": 10,
+                "title": "Internet Cafe Simulator",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/internet-cafe-sim-1",
+                "publisher": "Cheesecake Dev"
+            },
+            {
+                "slug": "internet-cafe-sim-2",
+                "id": 11,
+                "title": "Internet Cafe Simulator 2",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/internet-cafe-sim-2",
+                "publisher": "Cheesecake Dev"
             }
         ]
     },

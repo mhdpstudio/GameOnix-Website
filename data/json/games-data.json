@@ -1835,6 +1835,34 @@
             "mediaCount": 10
         },
         {
+            "slug": "internet-cafe-sim-1",
+            "title": "Internet Cafe Simulator",
+            "publisher": "Cheesecake Dev",
+            "game_poster": "../../assets/images/games/logos/internet-cafe-sim-1.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "Build 12.09.2020",
+            "size": "1.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/internet-cafe-sim-1.torrent",
+            "mediaPrefix": "internet-cafe-sim-1",
+            "mediaCount": 9
+        },
+        {
+            "slug": "internet-cafe-sim-2",
+            "title": "Internet Cafe Simulator 2",
+            "publisher": "Cheesecake Dev",
+            "game_poster": "../../assets/images/games/logos/internet-cafe-sim-2.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "Build 12.09.2023",
+            "size": "1.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/internet-cafe-sim-2.torrent",
+            "mediaPrefix": "internet-cafe-sim-2",
+            "mediaCount": 8
+        },
+        {
             "slug": "house-flipper-2",
             "title": "House Flipper 2",
             "publisher": "Frozen District",
