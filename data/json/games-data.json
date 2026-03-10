@@ -1751,6 +1751,34 @@
             "mediaCount": 12
         },
         {
+            "slug": "tekken-7",
+            "title": "Tekken 7",
+            "publisher": "Bandai Namco Entertainment",
+            "game_poster": "../../assets/images/games/logos/tekken-7.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "4.22.0.0",
+            "size": "39.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/tekken-7.torrent",
+            "mediaPrefix": "tekken-7",
+            "mediaCount": 7
+        },
+        {
+            "slug": "tekken-8",
+            "title": "Tekken 8",
+            "publisher": "Bandai Namco Entertainment",
+            "game_poster": "../../assets/images/games/logos/tekken-8.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.01.03.0",
+            "size": "66.0 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/tekken-8.torrent",
+            "mediaPrefix": "tekken-8",
+            "mediaCount": 10
+        },
+        {
             "slug": "stray",
             "title": "Stray",
             "publisher": "BlueTwelve",
