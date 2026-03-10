@@ -1071,10 +1071,17 @@
             },
             {
                 "slug": "food-delivery-sim",
-                "id": 5,
+                "id": 6,
                 "title": "Food Delivery Simulator",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/food-delivery-sim",
                 "publisher": "creative assembly sofia"
+            },
+            {
+                "slug": "food-truck-sim",
+                "id": 7,
+                "title": "Food Truck Simulator",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/food-truck-sim",
+                "publisher": "Drago Entertainment"
             }
         ]
     },

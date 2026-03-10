@@ -1827,12 +1827,26 @@
             "game_poster": "../../assets/images/games/logos/pc-building-sim-2.png",
             "gameType": "Simulation",
             "gameTypeIcon": "fa-solid fa-gamepad-modern",
-            "version": "1.00.12.0",
+            "version": "1.0.12.0",
             "size": "5.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pc-building-sim-2.torrent",
             "mediaPrefix": "pc-building-sim-2",
             "mediaCount": 8
+        },
+        {
+            "slug": "food-truck-sim",
+            "title": "Food Truck Simulator",
+            "publisher": "Drago Entertainment",
+            "game_poster": "../../assets/images/games/logos/food-trick-sim.png",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-solid fa-gamepad-modern",
+            "version": "1.0.0.0",
+            "size": "2.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/food-truck-sim.torrent",
+            "mediaPrefix": "food-truck-sim",
+            "mediaCount": 9
         },
         {
             "slug": "mount-blade-sails",
