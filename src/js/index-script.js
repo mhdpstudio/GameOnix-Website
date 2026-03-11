@@ -115,13 +115,7 @@ fetch('https://mhdpstudio.github.io/GameOnix-Website/data/json/games.json')
             const btnRight = sectionDiv.querySelector(".scroll-btn.right");
             const controls = sectionDiv.querySelector(".section-controls");
 
-            slider.addEventListener("wheel", (evt) => {
-                if (evt.deltaY !== 0) {
-                    evt.preventDefault();
-                    // ضربنا في 1.5 لو عايز السكرول يكون أسرع شوية، أو سيبها زي ما هي
-                    slider.scrollLeft += evt.deltaY;
-                }
-            }, { passive: false });
+
 
             const cardWidth = slider.querySelector(".game-card").offsetWidth;
             const gap = 15;
