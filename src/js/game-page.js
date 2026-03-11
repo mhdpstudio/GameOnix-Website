@@ -33,10 +33,7 @@ fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-data.json")
         // 🎯 بناء الصفحة
         page.innerHTML = `
     <div class="game-container">
-        <div class="ads-row">
-    <div class="ad-box" id="gameAd1"></div>
-    <div class="ad-box" id="gameAd2"></div>
-</div>
+
 
         <div class="game-title">
             <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left"></i> ${game.title}</div>
@@ -84,10 +81,7 @@ ${mediaImages.map((img, i) => `
                 </div>
                 <div class="game-ads">
                 </div>
-                <div class="ads-row">
-    <div class="ad-box" id="gameAd3"></div>
-    <div class="ad-box" id="gameAd4"></div>
-</div></div>
+                </div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
                         <img class="game-poster" src="${game.game_poster}" alt="${game.title}">
@@ -126,74 +120,6 @@ ${mediaImages.map((img, i) => `
     </div>
     `;
 
-        const adBox1 = document.getElementById("gameAd1");
-        const adBox2 = document.getElementById("gameAd2");
-        const adBox3 = document.getElementById("gameAd3");
-        const adBox4 = document.getElementById("gameAd4");
-
-        function loadAd(container) {
-            const script1 = document.createElement("script");
-            script1.innerHTML = `
-         atOptions = {
-    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-    `;
-
-            const script2 = document.createElement("script");
-            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
-
-            container.appendChild(script1);
-            container.appendChild(script2);
-        }
-
-        loadAd(adBox1);
-
-        setTimeout(() => {
-            loadAd(adBox2);
-        }, 1000);
-
-        setTimeout(() => {
-            loadAd(adBox3);
-        }, 2000);
-
-        setTimeout(() => {
-            loadAd(adBox4);
-        }, 3000);
-
-        // Prevent redirects from ads - intercept clicks on ad elements
-        document.addEventListener('click', function(e) {
-            const adContainers = document.querySelectorAll('.ad-box, .game-ads, iframe');
-            adContainers.forEach(ad => {
-                if (ad.contains(e.target)) {
-                    // Allow the click but prevent navigation away
-                    e.preventDefault();
-                    // Optionally show a message
-                    console.log('Ad click blocked - redirect prevented');
-                }
-            });
-        }, true);
-
-        // Block pop-up windows
-        window.open = function() {
-            console.log('Pop-up blocked - redirect prevented');
-            return null;
-        };
-
-        // Block navigation redirects
-        let blockedUrls = ['highperformanceformat.com', 'redirect', 'click'];
-        const originalPushState = history.pushState;
-        history.pushState = function() {
-            const newUrl = arguments[2];
-            if (newUrl && blockedUrls.some(url => newUrl.includes(url))) {
-                console.log('Navigation blocked');
-                return;
-            }
-            return originalPushState.apply(this, arguments);
-        };
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
