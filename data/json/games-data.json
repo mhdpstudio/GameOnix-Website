@@ -785,6 +785,34 @@
             "mediaCount": 6
         },
         {
+            "slug": "marvels-spiderman-1-re",
+            "title": "Marvel's Spider-Man Remastered",
+            "publisher": "Insomniac Games",
+            "game_poster": "../../assets/images/games/logos/mar-spider-man-1-re.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.812.1.0",
+            "size": "50.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mar-spider-man-1-re.torrent",
+            "mediaPrefix": "marvels-spiderman-1-re",
+            "mediaCount": 8
+        },
+        {
+            "slug": "marvels-spiderman-2",
+            "title": "Marvel's Spider-Man 2",
+            "publisher": "Insomniac Games",
+            "game_poster": "../../assets/images/games/logos/mar-spider-man-2.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-solid fa-gun",
+            "version": "1.130.1.0",
+            "size": "94.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mar-spider-man-2.torrent",
+            "mediaPrefix": "marvels-spiderman-2",
+            "mediaCount": 6
+        },
+        {
             "slug": "the-last-of-us-part-I",
             "title": "The Last of Us Part I",
             "publisher": "Naughty Dog",
