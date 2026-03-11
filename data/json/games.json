@@ -1220,6 +1220,13 @@
                 "title": "House of the Dead",
                 "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/house-of-the-dead",
                 "publisher": "Sega"
+            },
+            {
+                "slug": "adventures-of-robinson-crusoe",
+                "id": 13,
+                "title": "Adventures of Robinson Crusoe",
+                "poster": "https://mhdpstudio.github.io/GameOnix-Website/assets/images/games/posters/adventures-of-robinson-crusoe",
+                "publisher": "MagicIndie Softworks"
             }
         ]
     }

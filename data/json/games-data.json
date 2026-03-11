@@ -2059,6 +2059,20 @@
             "mediaCount": 5
         },
         {
+            "slug": "adventures-of-robinson-crusoe",
+            "title": "Adventures of Robinson Crusoe",
+            "publisher": "MagicIndie Softworks",
+            "game_poster": "../../assets/images/games/logos/adventures-of-robinson-crusoe.png",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-solid fa-scroll-old",
+            "version": "1.0.0.0",
+            "size": "110.1 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/adventures-of-robinson-crusoe.torrent",
+            "mediaPrefix": "adventures-of-robinson-crusoe",
+            "mediaCount": 1
+        },
+        {
             "slug": "crazy-taxi",
             "title": "Crazy Taxi",
             "publisher": "Sega",
