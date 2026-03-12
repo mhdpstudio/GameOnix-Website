@@ -31,7 +31,7 @@ if (searchBox) {
 }
 
 // تحميل الألعاب
-fetch('https://mhdpstudio.github.io/GameOnix-Website/data/json/games.json')
+fetch('http://gameonix.shop/data/json/games.json')
     .then(res => res.json())
     .then(data => {
         for (const sectionName in data) {
