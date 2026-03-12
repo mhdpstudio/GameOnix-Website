@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardsContainer = document.getElementById("store-game-cards");
 const popularContainer = document.getElementById("store-popular-list");
 
-fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-main.json")
+fetch("http://gameonix.shop/data/json/games-main.json")
     .then(res => res.json())
     .then(data => {
 
