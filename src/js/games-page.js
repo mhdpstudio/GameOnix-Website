@@ -242,15 +242,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. لما تضغط على الصورة يفتح صفحة اللعبة
         if (gameImg) {
             gameImg.style.cursor = "pointer";
-            gameImg.addEventListener('click', () => {
+gameImg.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Card img click:', slug);
                 window.location.href = `game.html?game=${encodeURIComponent(slug)}`;
             });
         }
 
         // 2. تفعيل زرار الـ Download اللي جوه الكارت
         if (downloadBtn) {
-            downloadBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // عشان ميتداخلش مع أي ضغطات تانية
+downloadBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Card download click:', slug);
                 window.location.href = `game.html?game=${encodeURIComponent(slug)}`;
             });
         }

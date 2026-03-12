@@ -244,12 +244,13 @@
         }
     });
 
-    // Additional protection: Clear selection on mousedown to prevent text selection
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 0) { // Left click
-            // Allow normal left click functionality
-        }
-    });
+    // Fixed: Remove mousedown interference with card clicks
+    // document.addEventListener('mousedown', function(e) {
+    //     if (e.button === 0) { // Left click
+    //         // Allow normal left click functionality
+    //     }
+    // });
+
 </script>
 
 </body>
@@ -276,7 +277,8 @@
     const jsFiles = [
         "../js/sidebar-script.js",
         "../js/games-page.js",
-        "../js/icon.js"
+        "../js/icon.js",
+        "../js/card-handlers.js"
     ];
     jsFiles.forEach(file => {
         const script = document.createElement("script");
@@ -310,10 +312,11 @@
                 }, 500);
             }
             
-            if (!sessionStorage.getItem('pageRefreshed')) {
-                sessionStorage.setItem('pageRefreshed', 'true');
-                location.reload(true);
-            }
+            // Disabled infinite reload causing DOMContentLoaded issues
+            // if (!sessionStorage.getItem('pageRefreshed')) {
+            //     sessionStorage.setItem('pageRefreshed', 'true');
+            //     location.reload(true);
+            // }
         }, 1000);
     });
 </script>
