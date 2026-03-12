@@ -4,7 +4,7 @@ const gameSlug = params.get("game");
 
 const page = document.getElementById("game-page");
 
-fetch("https://gameonix.shop/data/json/games-data.json")
+fetch("https://www.gameonix.shop/data/json/games-data.json")
     .then(res => res.json())
     .then(data => {
 
