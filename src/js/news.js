@@ -30,7 +30,7 @@ function startGTACountdown() {
 // 2. دالة تحميل الأخبار من الـ JSON
 async function loadNews() {
     try {
-        const response = await fetch('https://mhdpstudio.github.io/GameOnix-Website/data/json/news-data.json');
+        const response = await fetch('http://gameonix.shop/data/json/news-data.json');
         const newsData = await response.json();
         const grid = document.getElementById('news-grid');
 

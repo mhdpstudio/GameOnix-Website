@@ -79,7 +79,7 @@ function animateHeroChange(game, instant = false) {
 }
 
 // ✨ إنشاء sidebar مع overlay fill
-fetch("https://mhdpstudio.github.io/GameOnix-Website/data/json/games-database-gallery.json")
+fetch("http://gameonix.shop/data/json/games-database-gallery.json")
     .then(res => res.json())
     .then(data => {
         allGames = data;
