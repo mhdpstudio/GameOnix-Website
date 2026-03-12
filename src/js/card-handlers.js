@@ -43,6 +43,71 @@
           window.location.href = `game.html?game=${encodeURIComponent(slug)}`;
         }
       };
+
+      // Bug button handler
+      const bugBtn = card.querySelector('.icon');
+      if (bugBtn) {
+        bugBtn.onclick = e => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Fetch game data to get version
+          fetch("https://www.gameonix.shop/data/json/games-data.json")
+              .then(res => res.json())
+              .then(data => {
+                  const game = data.games.find(g => g.slug === slug);
+                  const version = game ? game.version : "Unknown";
+                  
+                  const subject = encodeURIComponent(`Bug Report: ${slug}`);
+                  const body = encodeURIComponent(
+                      `
+Game: ${slug}
+Version: ${version}
+_______________________________________________________________________________________________________
+
+Describe the problem:
+`
+                  );
+
+                  const gmailURL =
+                      `https://mail.google.com/mail/?view=cm&fs=1&to=gameonix.website@gmail.com&su=${subject}&body=${body}`;
+
+                  if (window.electronAPI) {
+                    // Electron environment - open in default browser
+                    window.electronAPI.openExternal(gmailURL);
+                  } else {
+                    // Web environment - open in new tab
+                    window.open(gmailURL, "_blank");
+                  }
+              })
+              .catch(err => {
+                  console.error('Error fetching game data:', err);
+                  
+                  // Fallback to basic bug report without version
+                  const subject = encodeURIComponent(`Bug Report: ${slug}`);
+                  const body = encodeURIComponent(
+                      `
+Game: ${slug}
+Version: Unknown
+_______________________________________________________________________________________________________
+
+Describe the problem:
+`
+                  );
+
+                  const gmailURL =
+                      `https://mail.google.com/mail/?view=cm&fs=1&to=gameonix.website@gmail.com&su=${subject}&body=${body}`;
+
+                  if (window.electronAPI) {
+                    // Electron environment - open in default browser
+                    window.electronAPI.openExternal(gmailURL);
+                  } else {
+                    // Web environment - open in new tab
+                    window.open(gmailURL, "_blank");
+                  }
+              });
+        };
+      }
     });
   }
   
