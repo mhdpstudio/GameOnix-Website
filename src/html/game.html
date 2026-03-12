@@ -11,6 +11,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1531408819768027"
+        crossorigin="anonymous"></script>
 </head>
 
 <body class="dark-theme">
@@ -43,8 +45,13 @@
     </div>
     <style>
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
@@ -104,6 +111,11 @@
         </aside>
 
         <div class="content">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1531408819768027"
+                data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
             <div id="game-page"></div>
 
         </div>
@@ -121,60 +133,60 @@
             <button class="close-share">Close</button>
         </div>
     </div>
-<!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
-<script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+    <!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
 
-    // Disable keyboard shortcuts for viewing source and developer tools
-    document.addEventListener('keydown', function(e) {
-        // Disable Ctrl+U (View Source)
-        if (e.ctrlKey && e.key === 'u') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable F12 (Developer Tools)
-        if (e.key === 'F12') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+I (Developer Tools)
-        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+J (Console)
-        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+C (Inspector)
-        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+S (Save)
-        if (e.ctrlKey && e.key === 's') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+P (Print)
-        if (e.ctrlKey && e.key === 'p') {
-            e.preventDefault();
-            return false;
-        }
-    });
+        // Disable keyboard shortcuts for viewing source and developer tools
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspector)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
 
-    // Additional protection: Clear selection on mousedown to prevent text selection
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 0) { // Left click
-            // Allow normal left click functionality
-        }
-    });
-</script>
+        // Additional protection: Clear selection on mousedown to prevent text selection
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 0) { // Left click
+                // Allow normal left click functionality
+            }
+        });
+    </script>
 
 </body>
 
@@ -220,7 +232,7 @@
             }
             return;
         }
-        
+
         // Normal page load - show loading screen with 1 second delay
         setTimeout(() => {
             const loadingScreen = document.getElementById('loading-screen');
@@ -231,7 +243,7 @@
                     loadingScreen.remove();
                 }, 500);
             }
-            
+
             if (!sessionStorage.getItem('pageRefreshed')) {
                 sessionStorage.setItem('pageRefreshed', 'true');
                 location.reload(true);
@@ -242,11 +254,11 @@
 
 <!-- Service Worker for automatic cache busting -->
 <script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../sw.js')
-        .then(reg => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker registration failed:', err));
-}
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../../sw.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    }
 </script>
 
 </html>
