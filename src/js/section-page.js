@@ -5,7 +5,7 @@ const sectionName = params.get("section");
 const sectionLabel = document.getElementById("section-text");
 const WebsiteName = "GameOnix";
 
-fetch("http://gameonix.shop/data/json/games.json")
+fetch("https://gameonix.shop/data/json/games.json")
     .then(res => res.json())
     .then(data => {
 

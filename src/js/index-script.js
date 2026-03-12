@@ -31,7 +31,7 @@ if (searchBox) {
 }
 
 // تحميل الألعاب
-fetch('http://gameonix.shop/data/json/games.json')
+fetch('https://gameonix.shop/data/json/games.json')
     .then(res => res.json())
     .then(data => {
         for (const sectionName in data) {

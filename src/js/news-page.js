@@ -9,7 +9,7 @@ async function generateArticle() {
     }
 
     try {
-        const response = await fetch('http://gameonix.shop/data/json/news-data-main.json');
+        const response = await fetch('https://gameonix.shop/data/json/news-data-main.json');
         const data = await response.json();
         const article = data.find(item => item.slug === slug);
 
