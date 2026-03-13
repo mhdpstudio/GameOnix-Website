@@ -1,1 +1,2 @@
 assets/apps/*.exe filter=lfs diff=lfs merge=lfs -text
+assets/apps/GameOnix-Setup-1.0.0.exe filter=lfs diff=lfs merge=lfs -text
