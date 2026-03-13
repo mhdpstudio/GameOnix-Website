@@ -5,9 +5,9 @@
         "title": "Resident Evil Requiem",
         "desc": "Resident Evil Requiem is a survival horror game from the famous Resident Evil. The story takes place in a world affected by dangerous viruses that turn people into terrifying creatures. Players must survive, explore different locations, solve puzzles, and uncover the secrets behind the outbreak while facing many deadly enemies.",
         "pub": "Capcom",
-        "heroImage": "../../assets/content/images/re.mp4",
+        "heroImage": "https://www.gameonix.shop/assets/content/images/re.mp4",
         "type": "video",
-        "thumb": "../../assets/content/images/resident-evil-requiem.png"
+        "thumb": "https://www.gameonix.shop/assets/content/images/resident-evil-requiem.png"
     },
     {
         "id": 2,
@@ -15,9 +15,9 @@
         "title": "Forza Horizon 4",
         "desc": "Forza Horizon 4 is an open-world racing game set in beautiful Britain, featuring dynamic seasons that completely change the driving experience. Explore stunning landscapes, collect hundreds of cars, and compete in exciting races across cities, countryside roads, and off-road terrain. With smooth gameplay and realistic graphics, it delivers one of the best arcade racing experiences ever made.",
         "pub": "Playground Games",
-        "heroImage": "../../assets/content/images/forza-horizon-4.mp4",
+        "heroImage": "https://www.gameonix.shop/assets/content/images/forza-horizon-4.mp4",
         "type": "video",
-        "thumb": "../../assets/content/images/forza-horizon-4.png",
+        "thumb": "https://www.gameonix.shop/assets/content/images/forza-horizon-4.png",
         "popular": true
     },
     {
@@ -26,9 +26,9 @@
         "title": "Far Cry 5",
         "desc": "Far Cry 5 is an intense open-world adventure set in rural Montana. Explore vast landscapes, take on dangerous missions, and battle a fanatical cult. With thrilling action, dynamic environments, and endless freedom, every choice shapes your journey in this gripping story.",
         "pub": "Ubisoft",
-        "heroImage": "../../assets/content/images/far-cry-5.mp4",
+        "heroImage": "https://www.gameonix.shop/assets/content/images/far-cry-5.mp4",
         "type": "video",
-        "thumb": "../../assets/content/images/far-cry-5.png"
+        "thumb": "https://www.gameonix.shop/assets/content/images/far-cry-5.png"
     },
     {
         "id": 4,
@@ -36,9 +36,9 @@
         "title": "God of War Ragnarok",
         "desc": "God of War Ragnarok is the highly anticipated sequel to the critically acclaimed God of War. Follow Kratos and Atreus as they journey through the realms of Norse mythology in a thrilling adventure filled with action, emotion, and stunning visuals.",
         "pub": "Santa Monica Studio",
-        "heroImage": "../../assets/content/images/god-of-war-ragnarok.mp4",
+        "heroImage": "https://www.gameonix.shop/assets/content/images/god-of-war-ragnarok.mp4",
         "type": "video",
-        "thumb": "../../assets/content/images/god-of-war-ragnarok.png"
+        "thumb": "https://www.gameonix.shop/assets/content/images/god-of-war-ragnarok.png"
     },
     {
         "id": 5,
@@ -46,8 +46,8 @@
         "title": "Red Dead Redemption II",
         "desc": "Red Dead Redemption II is an epic open-world western adventure set in the American frontier. Experience the life of Arthur Morgan, a member of the Van der Linde gang, as you navigate a world of lawlessness, danger, and moral choices.",
         "pub": "Rockstar Games",
-        "heroImage": "../../assets/content/images/rdr-2.mp4",
+        "heroImage": "https://www.gameonix.shop/assets/content/images/rdr-2.mp4",
         "type": "video",
-        "thumb": "../../assets/content/images/rdr-2.png"
+        "thumb": "https://www.gameonix.shop/assets/content/images/rdr-2.png"
     }
 ]

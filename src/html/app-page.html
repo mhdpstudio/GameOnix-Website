@@ -7,7 +7,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
-    <title></title>
+    <title>App Details</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -43,8 +43,13 @@
     </div>
     <style>
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
@@ -76,7 +81,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="games-news.html" class="menu-link active" rel="noopener noreferrer">
+                        <a href="games-news.html" class="menu-link" rel="noopener noreferrer">
                             <span class="material-symbols-rounded">newspaper</span>
                             <span class="menu-label">Games News</span>
                         </a>
@@ -110,63 +115,77 @@
         </aside>
 
         <div class="content">
-            <div id="game-news-page"></div>
+            <div id="app-page"></div>
         </div>
     </div>
-<!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
-<script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
 
-    // Disable keyboard shortcuts for viewing source and developer tools
-    document.addEventListener('keydown', function(e) {
-        // Disable Ctrl+U (View Source)
-        if (e.ctrlKey && e.key === 'u') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable F12 (Developer Tools)
-        if (e.key === 'F12') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+I (Developer Tools)
-        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+J (Console)
-        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+C (Inspector)
-        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+S (Save)
-        if (e.ctrlKey && e.key === 's') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+P (Print)
-        if (e.ctrlKey && e.key === 'p') {
-            e.preventDefault();
-            return false;
-        }
-    });
+    <div id="sharePopup" class="share-popup">
+        <div class="share-box">
+            <h3>Share this app</h3>
 
-    // Additional protection: Clear selection on mousedown to prevent text selection
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 0) { // Left click
-            // Allow normal left click functionality
-        }
-    });
-</script>
+            <div class="share-input">
+                <input id="shareLink" readonly>
+                <button id="copyBtn">Copy</button>
+            </div>
+
+            <button class="close-share">Close</button>
+        </div>
+    </div>
+
+    <!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable keyboard shortcuts for viewing source and developer tools
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspector)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Additional protection: Clear selection on mousedown to prevent text selection
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 0) { // Left click
+                // Allow normal left click functionality
+            }
+        });
+    </script>
 
 </body>
 
@@ -176,8 +195,8 @@
     // CSS Files
     const cssFiles = [
         "../css/sidebar-style.css",
-        "../css/news-page.css",
-        "../css/theme-btn.css"
+        "../css/theme-btn.css",
+        "../css/apps-style.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");
@@ -190,7 +209,7 @@
     const jsFiles = [
         "../js/sidebar-script.js",
         "../js/icon.js",
-        "../js/news-page.js"
+        "../js/app-page.js"
     ];
     jsFiles.forEach(file => {
         const script = document.createElement("script");
@@ -212,7 +231,7 @@
             }
             return;
         }
-        
+
         // Normal page load - show loading screen with 1 second delay
         setTimeout(() => {
             const loadingScreen = document.getElementById('loading-screen');
@@ -223,7 +242,7 @@
                     loadingScreen.remove();
                 }, 500);
             }
-            
+
             if (!sessionStorage.getItem('pageRefreshed')) {
                 sessionStorage.setItem('pageRefreshed', 'true');
                 location.reload(true);
@@ -234,11 +253,11 @@
 
 <!-- Service Worker for automatic cache busting -->
 <script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../sw.js')
-        .then(reg => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker registration failed:', err));
-}
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../../sw.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    }
 </script>
 
 </html>

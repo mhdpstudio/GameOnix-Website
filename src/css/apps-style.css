@@ -1,0 +1,346 @@
+@import './../../assets/constants/variables.css';
+
+/* ---------- App Cards Styles ---------- */
+
+.app-card {
+    background: var(--card-clr);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--color-border-hr);
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(105, 92, 254, 0.25);
+    border-color: var(--color-hover-primary);
+}
+
+/* App Icon Container */
+.app-icon-container {
+    position: relative;
+    height: 180px;
+    background: var(--card-clr) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.app-ico{
+    width: 250px;
+    height: 200px;
+    font-size: 50px;
+    color: var(--color-text-primary);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* App Info Section */
+.app-info {
+    padding: 20px;
+    background: var(--color-bg-primary);
+}
+
+.app-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.app-category {
+    font-size: 0.85rem;
+    color: var(--color-tag);
+    background: var(--color-bg-tag);
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.app-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* App Actions */
+.app-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.app-download-btn {
+    flex: 1;
+    background: var(--color-hover-primary);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-download-btn:hover {
+    background: var(--color-hover-primary-btn);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(105, 92, 254, 0.4);
+}
+
+.app-more-info {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-hr);
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.app-more-info:hover {
+    background: var(--color-hover-secondary);
+    border-color: var(--color-hover-primary);
+    color: var(--color-text-primary);
+}
+
+/* App Rating */
+.app-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.app-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.app-stars i {
+    color: #f39c12;
+    font-size: 14px;
+}
+
+.app-rating-text {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}
+
+/* App Size and Version */
+.app-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: var(--color-text-placeholder);
+    margin-top: 10px;
+}
+
+.app-meta span {
+    background: var(--color-bg-secondary);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-hr);
+}
+
+/* Special App Categories */
+.app-card.productivity {
+    border-left: 4px solid #3498db;
+}
+
+.app-card.entertainment {
+    border-left: 4px solid #e74c3c;
+}
+
+.app-card.creative {
+    border-left: 4px solid #9b59b6;
+}
+
+.app-card.utilities {
+    border-left: 4px solid #2ecc71;
+}
+
+.app-card.education {
+    border-left: 4px solid #f1c40f;
+}
+
+/* Grid Layout for App Cards */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* App Page Header */
+.app-page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.app-page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--color-text-primary), var(--color-hover-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.app-page-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Loading Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.app-card.skeleton {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .apps-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .app-card {
+        max-width: 100%;
+    }
+    
+    .app-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+    }
+    
+    .app-icon-container {
+        height: 150px;
+    }
+    
+    .app-title {
+        font-size: 1.2rem;
+    }
+    
+    .app-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-page-title {
+        font-size: 2rem;
+    }
+    
+    .app-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+    
+    .app-icon-container {
+        height: 130px;
+    }
+    
+    .app-actions {
+        gap: 8px;
+    }
+    
+    .app-download-btn, .app-more-info {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Dark Theme Enhancements */
+body.dark-theme .app-card {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .app-card:hover {
+    box-shadow: 0 15px 30px rgba(105, 92, 254, 0.35);
+}
+
+/* Light Theme Enhancements */
+body:not(.dark-theme) .app-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-theme) .app-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Accessibility Improvements */
+.app-card:focus-within {
+    outline: 3px solid var(--color-hover-primary);
+    outline-offset: 2px;
+}
+
+.app-card .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

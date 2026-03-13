@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
+    <title>GameOnix | Apps</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" style="
+        position: fixed;
+        inset: 0;
+        background: #0b0b0d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    ">
+        <div style="
+            width: 60px;
+            height: 60px;
+            border: 4px solid #1a1a2e;
+            border-top: 4px solid #695CFE;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        "></div>
+        <p style="
+            color: #fff;
+            margin-top: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        ">Loading...</p>
+    </div>
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
+    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+
+    <div class="container">
+        <aside class="sb closed">
+            <header class="sb-h">
+                <a href="../index.html" rel="noopener noreferrer">
+                    <img src="../../assets/images/Logo.png" alt="Logo" class="logo" loading="lazy" decoding="async">
+                    <h2 class="sb-text">GameOnix</h2>
+                </a>
+                <button class="sb-toggle"><span class="material-symbols-rounded">chevron_left</span></button>
+            </header>
+
+            <div class="sb-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">home</span>
+                            <span class="menu-label">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="menu-label">Games</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games-news.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">newspaper</span>
+                            <span class="menu-label">Games News</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="apps.html" class="menu-link active" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">apps</span>
+                            <span class="menu-label">Applications</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="request-game.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">person_raised_hand</span>
+                            <span class="menu-label">Request Game</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sb-footer">
+                <ul class="menu-list" style="list-style: none;">
+                    <li class="menu-item">
+                        <a href="https://ipn.eg/S/mahmoudpro123/instapay/7uIXkH" class="menu-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">volunteer_activism</span>
+                            <span class="menu-label">InstaPay Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+            <div class="app-page-header">
+                <h1 class="app-page-title">Applications</h1>
+                <p class="app-page-subtitle">Discover powerful applications designed to enhance your productivity,
+                    creativity, and entertainment experience. All apps are carefully curated and optimized for the best
+                    performance.</p>
+            </div>
+
+            <div class="apps-grid" id="apps-grid">
+                <!-- App cards will be generated here -->
+            </div>
+        </div>
+    </div>
+    <!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable keyboard shortcuts for viewing source and developer tools
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspector)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Additional protection: Clear selection on mousedown to prevent text selection
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 0) { // Left click
+                // Allow normal left click functionality
+            }
+        });
+    </script>
+
+</body>
+
+<script>
+    const version = new Date().getTime(); // رقم نسخة ديناميكي
+
+    // CSS Files
+    const cssFiles = [
+        "../css/sidebar-style.css",
+        "../css/theme-btn.css",
+        "../css/apps-style.css"
+    ];
+    cssFiles.forEach(file => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `${file}?v=${version}`;
+        document.head.appendChild(link);
+    });
+
+    // JS Files
+    const jsFiles = [
+        "../js/sidebar-script.js",
+        "../js/icon.js",
+        "../js/app-handlers.js",
+        "../js/apps-page.js"
+    ];
+    jsFiles.forEach(file => {
+        const script = document.createElement("script");
+        script.src = `${file}?v=${version}`;
+        document.body.appendChild(script);
+    });
+</script>
+
+<script>
+    // Hide loading screen when page is fully loaded (with 1 second delay)
+    // Skip loading screen if page is loaded from bfcache (back-forward cache)
+    window.addEventListener('load', () => {
+        // Check if page was loaded from bfcache (back-forward cache)
+        if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
+            // Page loaded from bfcache - skip loading screen immediately
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.remove();
+            }
+            return;
+        }
+
+        // Normal page load - show loading screen with 1 second delay
+        setTimeout(() => {
+            const loadingScreen = document.getElementById('loading-screen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.visibility = 'hidden';
+                setTimeout(() => {
+                    loadingScreen.remove();
+                }, 500);
+            }
+
+            if (!sessionStorage.getItem('pageRefreshed')) {
+                sessionStorage.setItem('pageRefreshed', 'true');
+                location.reload(true);
+            }
+        }, 1000);
+    });
+</script>
+
+<!-- Service Worker for automatic cache busting -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../../sw.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    }
+</script>
+
+</html>

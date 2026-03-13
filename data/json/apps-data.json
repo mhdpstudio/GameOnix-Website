@@ -1,0 +1,23 @@
+{
+    "apps": [
+        {
+            "slug": "productivity-pro",
+            "title": "GameOnix Store",
+            "category": "Games Store",
+            "description": "GameOnix is your go-to app for all things gaming. Dive into a vast library of games, from the latest releases to timeless classics. Stay updated with game reviews, news, and exclusive updates. Whether you’re into action, adventure, or strategy games, GameOnix offers a seamless and immersive gaming experience. With an intuitive interface and user-friendly design, GameOnix makes every gaming session more enjoyable.",
+            "publisher": "GameOnix Inc.",
+            "version": "1.0.0",
+            "size": "211.3 MB",
+            "appType": "Desktop Application",
+            "appTypeIcon": "fa-solid fa-desktop",
+            "app_poster": "https://www.gameonix.shop/assets/images/Logo.png",
+            "appLink": "https://example.com/download/productivity-pro",
+            "media": [
+                "https://www.gameonix.shop/assets/images/apps/p-1.png",
+                "https://www.gameonix.shop/assets/images/apps/p-2.png",
+                "https://www.gameonix.shop/assets/images/apps/p-3.png"
+            ],
+            "content": "GameOnix is your ultimate gaming companion, bringing together a vast library of games from the latest releases to timeless classics. Stay updated with game reviews, news, and exclusive updates. Whether you love action, adventure, or strategy games, GameOnix provides a seamless and immersive experience. With its intuitive interface and user-friendly design, it makes exploring, discovering, and enjoying games easier and more enjoyable for every gamer."
+        }
+    ]
+}
