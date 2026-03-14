@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
+
     <title>App Details</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -53,8 +53,8 @@
         }
     </style>
 
-    <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
-    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+<button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
+<button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
 
     <div class="container">
         <aside class="sb closed">
@@ -196,7 +196,7 @@
     const cssFiles = [
         "../css/sidebar-style.css",
         "../css/theme-btn.css",
-        "../css/apps-style.css"
+        "../css/app-page.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");
@@ -209,7 +209,8 @@
     const jsFiles = [
         "../js/sidebar-script.js",
         "../js/icon.js",
-        "../js/app-page.js"
+        "../js/app-page.js",
+        "../js/app-page-events.js"
     ];
     jsFiles.forEach(file => {
         const script = document.createElement("script");

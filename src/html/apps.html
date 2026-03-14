@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.2.0/css/all.css">
-    <title>GameOnix | Apps</title>
+
+    <title>GameOnix | Applications</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -53,8 +53,8 @@
         }
     </style>
 
-    <button class="theme-changer"><i class="fa-solid fa-moon"></i></button>
-    <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
+    <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
 
     <div class="container">
         <aside class="sb closed">
@@ -117,13 +117,43 @@
         <div class="content">
             <div class="app-page-header">
                 <h1 class="app-page-title">Applications</h1>
-                <p class="app-page-subtitle">Discover powerful applications designed to enhance your productivity,
+                <p class="app-page-subtitle">Discover powerful applications designed to enhance your playing,
                     creativity, and entertainment experience. All apps are carefully curated and optimized for the best
                     performance.</p>
             </div>
 
             <div class="apps-grid" id="apps-grid">
-                <!-- App cards will be generated here -->
+                <div class="app-card productivity-pro" data-slug="productivity-pro" data-category="games store">
+                    <div class="app-icon-container">
+                        <div class="app-icon">
+                            <img class="app-ico-img" src="../../assets/images/Logo.png" alt="APP Icon">
+                        </div>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-title">GameOnix Store</h3>
+                        <span class="app-category"><span class="material-symbols-rounded">desktop_windows</span> Games Store</span>
+                            <div class="app-rating">
+                        </div>
+                        <p class="app-description">GameOnix is ​​a free application from which you can download all
+                            games for free without any cost.</p>
+                        <div class="app-meta" style="margin-bottom: 20px;">
+                            <span class="bt"><span class="material-symbols-rounded">code</span>V 1.0.0</span>
+                            <span class="bt"><span class="material-symbols-rounded">storage</span> 245.3 MB</span>
+                        </div>
+                        <div class="app-actions">
+                            <a style="text-decoration: none;"
+                                href="https://drive.usercontent.google.com/download?id=1oSM-O3t3hZ1cfiQ9lCdlrGoAj4q-KQ4c&export=download&authuser=3&confirm=t&uuid=14508e3f-9556-4b8b-b8ef-aed78a7907b5&at=AGN2oQ04jzdnYInHaU4sNbdjcY4j:1773433026139"
+                                target="_blank" class="app-download-btn btn5">
+                                <span class="material-symbols-rounded">download</span>
+                                Download
+                            </a>
+                            <button class="app-more-info btn4">
+                                <span class="material-symbols-rounded">info</span>
+                                More Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -255,5 +285,6 @@
             .catch(err => console.log('Service Worker registration failed:', err));
     }
 </script>
+
 
 </html>
