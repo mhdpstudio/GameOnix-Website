@@ -2101,6 +2101,20 @@
             "mediaCount": 7
         },
         {
+            "slug": "days-gone",
+            "title": "Days Gone",
+            "publisher": "SCE Bend Studio",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/days-gone.png",
+            "gameType": "Action",
+            "gameTypeIcon": "target",
+            "version": "1.08.0.0",
+            "size": "38.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/days-gone.torrent",
+            "mediaPrefix": "days-gone",
+            "mediaCount": 8
+        },
+        {
             "slug": "adventures-of-robinson-crusoe",
             "title": "Adventures of Robinson Crusoe",
             "publisher": "MagicIndie Softworks",

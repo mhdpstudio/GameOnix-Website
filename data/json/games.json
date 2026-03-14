@@ -838,6 +838,13 @@
                 "title": "It Takes Two",
                 "poster": "https://gameonix.shop/assets/images/games/posters/it-takes-two",
                 "publisher": "Heslight Studios"
+            },
+            {
+                "slug": "days-gone",
+                "id": 111,
+                "title": "Days Gone",
+                "poster": "https://gameonix.shop/assets/images/games/posters/days-gone",
+                "publisher": "SCE Bend Studio"
             }
         ]
     },
