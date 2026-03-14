@@ -2155,6 +2155,20 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ghost-recon-future-soldier.torrent",
             "mediaPrefix": "ghost-recon-future-soldier",
             "mediaCount": 8
+        },
+        {
+            "slug": "it-takes-two",
+            "title": "It Takes Two",
+            "publisher": "Heslight Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/it-takes-two.png",
+            "gameType": "Action",
+            "gameTypeIcon": "target",
+            "version": "0.1.0.0",
+            "size": "28.0 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/it-takes-two.torrent",
+            "mediaPrefix": "it-takes-two",
+            "mediaCount": 7
         }
     ]
 }

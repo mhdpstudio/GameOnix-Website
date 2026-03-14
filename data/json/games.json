@@ -831,6 +831,13 @@
                 "title": "The Walking Dead: The Telltale Definitive Series",
                 "poster": "https://gameonix.shop/assets/images/games/posters/the-walking-dead",
                 "publisher": "Telltale Games"
+            },
+            {
+                "slug": "it-takes-two",
+                "id": 110,
+                "title": "It Takes Two",
+                "poster": "https://gameonix.shop/assets/images/games/posters/it-takes-two",
+                "publisher": "Heslight Studios"
             }
         ]
     },
