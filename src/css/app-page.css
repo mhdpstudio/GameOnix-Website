@@ -1,0 +1,492 @@
+@import './../../assets/constants/variables.css';
+
+body:not(.dark-theme) .game-logo-wrapper .game-poster {
+    filter: drop-shadow(0 0 20px #292929);
+}
+
+/* layout */
+.game-container {
+    max-width: 1600px;
+    min-height: 100vh;
+    margin: auto;
+    padding: clamp(20px, 4vw, 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.media-row {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 420px);
+    gap: 30px;
+    align-items: start;
+}
+
+.media-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-name {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: fit-content;
+    user-select: none;
+}
+
+.game-name i {
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.game-name:hover i {
+    transform: translateX(-5px);
+}
+
+.game-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--color-text-primary);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.game-title span{
+    transition: all 0.3s ease;
+}
+
+.game-title .game-name:hover span{
+    transform: translateX(-3px);
+}
+
+.details {
+    display: flex;
+    gap: 8px;
+}
+
+.game-publisher,
+.game-type {
+    font-size: 14px;
+    color: var(--color-tag);
+    margin-left: 4px;
+    background: var(--color-bg-tag);
+    padding: 5px 8px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.game-publisher {
+    display: flex;
+    justify-content: center;
+}
+
+/* main media */
+.main-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: black;
+    position: relative;
+}
+
+.game-ads {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* ===== Share Popup ===== */
+
+.share-btn {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary)
+}
+
+.share-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.share-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.share-box {
+    background: var(--color-bg-sidebar);
+    padding: 30px;
+    border-radius: 18px;
+    width: 560px;
+    box-shadow: 0 20px 40px var(--color-shadow);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    animation: popIn .3s ease;
+}
+
+.share-box h3 {
+    margin-bottom: 18px;
+    color: var(--color-text-primary);
+}
+
+.share-input {
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-hr);
+}
+
+.share-input input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.share-input button {
+    background: var(--color-hover-primary);
+    color: white;
+    border: none;
+    padding: 0 18px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.share-input button:hover {
+    background: var(--color-hover-primary-btn);
+}
+
+.close-share {
+    margin-top: 15px;
+    border: none;
+    background: var(--color-hover-secondary);
+    color: var(--color-text-primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.close-share:hover {
+    background: var(--color-hover-primary);
+    color: white;
+}
+
+.pl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ads-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    background: #1a1f2e;
+    padding: 15px;
+    border-radius: 10px;
+    grid-auto-rows: 1fr;
+}
+
+.ad-box {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ad-box iframe,
+.ad-box img,
+.ad-box ins {
+    width: 100% !important;
+    max-width: 100%;
+    display: block;
+}
+
+/* overlay */
+.media-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.media-overlay::before,
+.media-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all .35s ease;
+}
+
+.media-overlay::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.media-overlay::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent);
+    transform: translateX(30px);
+}
+
+.media-arrow {
+    position: relative;
+    z-index: 2;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transform: scale(.8);
+    opacity: 0;
+    transition: all .25s ease;
+}
+
+.media-arrow:hover {
+    transform: scale(1.1);
+}
+
+.main-media:hover .media-overlay {
+    opacity: 1;
+}
+
+.main-media:hover .media-overlay::before,
+.main-media:hover .media-overlay::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.main-media:hover .media-arrow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.main-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    animation: fadeIn .4s ease;
+}
+
+.thumb-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.thumb-slider {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    width: calc(130px * 4);
+}
+
+.thumb-slider-inner {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.35s ease;
+}
+
+.thumb {
+    width: 120px;
+    height: 70px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.95;
+    transition: all 0.3s ease;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.thumb:not(.active):hover img {
+    transform: scale(1.2);
+    filter: contrast(1.2);
+}
+
+.thumb.active {
+    opacity: 1;
+    border: 2px solid var(--color-hover-primary);
+}
+
+.arrow {
+    background: #1a1f2e;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.side-panel {
+    background: none;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.game-logo-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.game-poster {
+    width: 230px;
+}
+
+.commands-btns {
+    display: flex;
+    gap: 8px;
+}
+
+.commands-btns .btn:nth-child(2) {
+    flex: 0 0 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: var(--color-hover-primary);
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.commands-btns .btn:nth-child(1):hover,
+.commands-btns .btn:nth-child(2):hover {
+    background: var(--color-hover-primary-btn);
+}
+
+.share-btn {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary)
+}
+
+.epic-details-table {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #2a2f40;
+}
+
+.detail-label {
+    color: var(--color-side-panel-details);
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.detail-value {
+    color: var(--color-text-primary);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-value i {
+    font-size: 15px;
+    opacity: 1;
+    font-style: normal;
+}
+
+.fa-download-good-for-now {
+    width: 100%;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

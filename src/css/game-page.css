@@ -41,12 +41,12 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     user-select: none;
 }
 
-.game-name i {
+.game-name span {
     font-size: 30px;
     transition: transform 0.3s ease;
 }
 
-.game-name:hover i {
+.game-name:hover span {
     transform: translateX(-5px);
 }
 
@@ -71,6 +71,10 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     padding: 5px 8px;
     border-radius: 5px;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .game-publisher {
@@ -106,7 +110,8 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     border-radius: 10px;
 
     /* تعديل جديد */
-    grid-auto-rows: 1fr; /* كل الصفوف هتملىء مساحة متساوية */
+    grid-auto-rows: 1fr;
+    /* كل الصفوف هتملىء مساحة متساوية */
 }
 
 /* ad */
@@ -128,6 +133,7 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     max-width: 100%;
     display: block;
 }
+
 /* ================== End of Ads ====================== */
 /* overlay */
 .media-overlay {
@@ -367,6 +373,10 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     color: var(--color-side-panel-details);
     font-size: 15px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .detail-value {
@@ -402,6 +412,10 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     color: #fff;
     background: var(--color-hover-primary);
     transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .commands-btns .btn:nth-child(1):hover,
@@ -553,8 +567,8 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     }
 }
 
-@media (max-width: 1165px){
-    .ads-row{
+@media (max-width: 1165px) {
+    .ads-row {
         flex-direction: column;
         gap: 15px;
     }

@@ -96,6 +96,10 @@
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .buy:hover {
@@ -110,6 +114,10 @@
     color: var(--color-text-primary);
     cursor: pointer;
     transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .icon:hover {
