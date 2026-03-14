@@ -352,7 +352,7 @@ fetch("https://www.gameonix.shop/data/json/games.json")
             sectionItem.className = "section-item";
 
             sectionItem.innerHTML = `
-                ${section.icon ? `<i class="${section.icon}"></i>` : ""}
+                ${section.icon ? `<span class="material-symbols-rounded">${section.icon}</span>` : ""}
                 <span>${sectionName}</span>
             `;
 

@@ -42,7 +42,7 @@ export function initGameSearch({
         }
 
         container.innerHTML = list.map(game => `
-            <div class="game-card" data-slug="${game.slug}">
+        <div class="game-card" data-slug="${game.slug}">
                 <div class="game-details">
                     <img src="${game.poster}.jpg"
                          alt="${game.title}"

@@ -19,7 +19,7 @@ fetch("https://www.gameonix.shop/data/json/games.json")
 
         // عنوان الصفحة
         document.title = `${WebsiteName} | ${sectionName}`;
-        sectionLabel.innerHTML = `<i class="${section.icon}"></i> ${sectionName} Games`;
+        sectionLabel.innerHTML = `<span class="material-symbols-rounded">${section.icon}</span> ${sectionName} Games`;
 
         // عرض الألعاب وتشغيل البحث مباشرة
         initGameSearch({

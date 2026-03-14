@@ -3,7 +3,7 @@ const sbToggleBtn = document.querySelectorAll(".sb-toggle");
 const menuToggle = document.querySelector(".menu-toggle");
 
 const themeBtn = document.querySelector(".theme-changer");
-const themeIco = themeBtn?.querySelector("i");
+const themeIco = themeBtn?.querySelector("span");
 
 const themeLabel = document.querySelector(".theme-text");
 const searchForm = document.querySelector(".search-form");
@@ -11,7 +11,7 @@ const searchForm = document.querySelector(".search-form");
 const modeBtn = document.getElementById("modeBtn");
 const modeMenu = document.getElementById("modeMenu");
 const modeText = document.getElementById("modeText");
-const modeIcon = modeBtn?.querySelector(".mode-icon");
+    const modeIcon = modeBtn?.querySelector(".mode-icon");
 
 const savedTheme = localStorage.getItem("theme");
 const sysPrefersDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
@@ -23,13 +23,7 @@ const updateThemeIco = () => {
 
     const isDark = document.body.classList.contains("dark-theme");
 
-    if (isDark) {
-        themeIco.classList.remove("fa-moon");
-        themeIco.classList.add("fa-sun");
-    } else {
-        themeIco.classList.remove("fa-sun");
-        themeIco.classList.add("fa-moon");
-    }
+    themeIco.textContent = isDark ? "light_mode" : "dark_mode";
 };
 
 const applyMode = (mode) => {
@@ -39,9 +33,9 @@ const applyMode = (mode) => {
 
     if (modeText) modeText.textContent = isDark ? "Dark" : "Light";
 
-    if (modeIcon) {
-        modeIcon.textContent = isDark ? "dark_mode" : "light_mode";
-    }
+        if (modeIcon) {
+            modeIcon.textContent = isDark ? "dark_mode" : "light_mode";
+        }
 
     updateThemeIco();
 };

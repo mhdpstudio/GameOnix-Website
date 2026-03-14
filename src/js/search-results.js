@@ -10,7 +10,7 @@ document.title = `GameOnix | Search: ${query}`;
 const searchContainer = document.getElementById('search-results');
 searchContainer.insertAdjacentHTML('beforebegin', `
     <div class="search-header">
-        <h2 class="hold-hover back-button"><i class="fa-solid fa-arrow-left"></i> Search Results for: <span class="search-query">"${query}"</span></h2>
+        <h2 class="hold-hover back-button" style="display: flex; align-items: center; justify-content: center; gap: 10px;"><span style="font-size: 35px;" class="material-symbols-rounded">arrow_left_alt</span> Search Results for: <span class="search-query">"${query}"</span></h2>
     </div>
 `);
 
@@ -73,7 +73,15 @@ style.textContent = `
         object-fit: cover;
         border-radius: 8px 8px 0 0;
         transition: filter 0.3s ease;
-        background: transparent;
+        background: var(--card-clr);
+        background-image: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%);
+    }
+    .result-card img.loading-img {
+        filter: blur(2px);
+        opacity: 0.7;
+    }
+    .result-card img.error-img {
+        filter: grayscale(0.3) brightness(1.1);
     }
     .result-card .title {
         font-weight: bold;
@@ -128,39 +136,18 @@ if (searchBox) {
     });
 }
 
-// Fetch and search games
-const pathsToTry = [
-    '../../data/json/games.json',
-    '/data/json/games.json',
-    '../../../data/json/games.json'
-];
-
-let fetchSuccessful = false;
-
-async function tryFetch() {
-    // Prevent multiple processing
-    if (fetchSuccessful) return;
-
-    for (const path of pathsToTry) {
-        try {
-            console.log(`Trying to fetch from: ${path}`);
-            const response = await fetch(path);
-            if (response.ok) {
-                console.log(`✓ Successfully fetched from: ${path}`);
-                const data = await response.json();
-                fetchSuccessful = true;
-                processGames(data);
-                return;
-            }
-        } catch (error) {
-            console.warn(`✗ Failed to fetch from ${path}:`, error);
-        }
-    }
-
-    // If no path worked, show error
-    if (!fetchSuccessful) {
-        console.error('Failed to fetch games.json from all paths');
-        searchContainer.innerHTML = '<div class="no-results"><p>Error loading search results. Please navigate to the games page and try searching again.</p></div>';
+// Fetch local games.json (more reliable)
+async function loadGames() {
+    try {
+        console.log('Fetching local data/json/games.json');
+        const response = await fetch('../../data/json/games.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        console.log('✓ Local games loaded:', Object.keys(data).length, 'categories');
+        processGames(data);
+    } catch (error) {
+        console.error('Failed to load local games.json:', error);
+        searchContainer.innerHTML = '<div class="no-results"><p>Error loading games data. <a href="../games.html">Go to Games page</a></p></div>';
     }
 }
 
@@ -180,85 +167,87 @@ function processGames(data) {
     // Search for matching games
     const searchQuery = query.toLowerCase();
     const results = allGames.filter(game => {
-
         const title = (game.title || '').toLowerCase();
         const publisher = (game.publisher || '').toLowerCase();
         const slug = (game.slug || '').toLowerCase();
 
-        // ❌ تجاهل كارد More Games
-        if (slug === "more-games" || title === "more games") {
+        // Skip "More Games" cards
+        if (slug === "more-games" || title.toLowerCase().includes("more games")) {
             return false;
         }
 
         return title.includes(searchQuery) ||
-            publisher.includes(searchQuery) ||
-            slug.includes(searchQuery);
-
+               publisher.includes(searchQuery) ||
+               slug.includes(searchQuery);
     });
 
-    // Remove duplicate games (same slug)
+    // Remove duplicates by slug
     const seen = new Set();
     const uniqueResults = results.filter(game => {
-        if (seen.has(game.slug)) {
-            return false;
-        }
+        if (seen.has(game.slug)) return false;
         seen.add(game.slug);
         return true;
     });
 
-    console.log('Search results before dedup:', results.length);
-    console.log('Search results after dedup:', uniqueResults.length);
+    console.log(`Search "${query}": ${uniqueResults.length} unique results`);
 
-    // Clear previous results
+    // Clear container
     searchContainer.innerHTML = '';
 
-    // Display results
     if (uniqueResults.length === 0) {
-        searchContainer.innerHTML = '<div class="no-results"><p>No games found matching your search.</p></div>';
+        searchContainer.innerHTML = '<div class="no-results"><p>No games found matching "<strong>${query}</strong>". Try different keywords.</p></div>';
         return;
     }
 
-    // Function to check if image exists
-    async function getValidImageUrl(posterPath) {
-        if (!posterPath) return '../../assets/images/game.jpg';
-
-        const fullUrl = `${posterPath}.jpg`;
-        try {
-            const response = await fetch(fullUrl, { method: 'HEAD' });
-            if (response.ok) {
-                console.log(`✓ Image found: ${fullUrl}`);
-                return fullUrl;
-            }
-        } catch (error) {
-            console.log(`✗ Image not found: ${fullUrl}`);
-        }
-
-        return '../../assets/images/game.jpg';
-    }
-
-    // Load all images with validation
-    uniqueResults.forEach(async (game) => {
+    // Create all cards with loading state first
+    uniqueResults.forEach(game => {
         const card = document.createElement('a');
         card.href = `game.html?game=${encodeURIComponent(game.slug)}`;
         card.className = 'result-card';
-
-        // Get valid image URL
-        const imageUrl = await getValidImageUrl(game.poster);
-        console.log(`Game: ${game.title}, Using URL: ${imageUrl}`);
-
         card.innerHTML = `
             <div class="result-card-details">
                 <img 
-                    src="${imageUrl}" 
+                    src="assets/images/game.jpg" 
+                    data-poster="${game.poster || ''}"
                     alt="${game.title}"
+                    class="loading-img"
+                    loading="lazy"
                 >
-                <p class="publisher">${game.publisher}</p>
+                <p class="publisher">${game.publisher || 'Unknown'}</p>
                 <h3 class="title">${game.title}</h3>
             </div>
         `;
         searchContainer.appendChild(card);
     });
+
+    // Then set actual poster srcs with error fallback
+    const imgs = searchContainer.querySelectorAll('img[data-poster]');
+    imgs.forEach((img, i) => {
+        const posterBase = img.dataset.poster;
+        if (posterBase) {
+            // Try remote first (matching JSON format)
+            const remoteUrl = `${posterBase}.jpg`;
+            img.src = remoteUrl;
+            img.onerror = () => {
+                console.log(`Image failed: ${remoteUrl}, trying local`);
+                // Fallback to local poster if exists
+                const localPoster = `assets/images/games/posters/${posterBase.split('/').pop()}.jpg`;
+                img.src = localPoster;
+                img.onerror = () => {
+                    console.log(`Local also failed, using placeholder`);
+                    img.src = 'assets/images/game.jpg';
+                    img.classList.add('error-img');
+                };
+            };
+            img.onload = () => {
+                console.log(`✓ Image loaded: ${img.src}`);
+                img.classList.remove('loading-img');
+            };
+        } else {
+            img.src = 'assets/images/game.jpg';
+        }
+    });
 }
 
-// Start the fetch
-tryFetch();
+// Start loading local data
+loadGames();

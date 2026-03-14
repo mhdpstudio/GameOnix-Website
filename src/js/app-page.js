@@ -5,7 +5,7 @@ const appSlug = params.get("app");
 
 const page = document.getElementById("app-page");
 
-fetch("https://www.gameonix.shop/data/json/apps-data.json")
+fetch("./../../data/json/apps-data.json")
     .then(res => res.json())
     .then(data => {
 
@@ -24,10 +24,10 @@ fetch("https://www.gameonix.shop/data/json/apps-data.json")
         page.innerHTML = `
     <div class="game-container">
         <div class="game-title">
-            <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left"></i> ${app.title}</div>
+            <div class="game-name" id="goBack"><span style="font-size: 40px;" class="material-symbols-rounded">arrow_left_alt</span> ${app.title}</div>
             <div class="details">
-                <div class="game-publisher"> ${app.publisher}</div>
-                <div class="game-type"><i class="${app.appTypeIcon}"></i> ${app.appType}</div>
+                <div class="game-publisher pl"> ${app.publisher}</div>
+                <div class="game-type pl"><span class="material-symbols-rounded">${app.appTypeIcon}</span> ${app.appType}</div>
             </div>
         </div>
 
@@ -40,17 +40,17 @@ fetch("https://www.gameonix.shop/data/json/apps-data.json")
 
                             <div class="media-overlay">
                                 <div class="media-arrow left" id="mainLeft">
-                                    <i class="fa-solid fa-chevron-left"></i>
+                                    <span class="material-symbols-rounded">arrow_back_ios_new</span>
                                 </div>
 
                                 <div class="media-arrow right" id="mainRight">
-                                    <i class="fa-solid fa-chevron-right"></i>
+                                    <span class="material-symbols-rounded">arrow_forward_ios</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="thumb-wrapper">
-                            <div class="arrow" id="leftArrow"><i class="fa-solid fa-chevron-left"></i></div>
+                            <div class="arrow" id="leftArrow"><span class="material-symbols-rounded">arrow_back_ios_new</span></div>
 
                             <div class="thumb-slider">
                                 <div class="thumb-slider-inner" id="thumbSlider">
@@ -62,7 +62,7 @@ fetch("https://www.gameonix.shop/data/json/apps-data.json")
                                 </div>
                             </div>
 
-                            <div class="arrow" id="rightArrow"><i class="fa-solid fa-chevron-right"></i></div>
+                            <div class="arrow" id="rightArrow"><span class="material-symbols-rounded">arrow_forward_ios</span></div>
                         </div>
                         <div class="game-ads">
                         </div>
@@ -75,29 +75,29 @@ fetch("https://www.gameonix.shop/data/json/apps-data.json")
 
                         <div class="commands-btns">
                             <a href="${app.appLink}" class="fa-download-good-for-now" target="_blank" rel="noopener noreferrer">
-                                <button class="btn download-btn"><i class="fa-solid fa-download"></i> Download</button>
+                                <button class="btn download-btn"><span class="material-symbols-rounded">download</span> Download</button>
                             </a>
-                            <button class="btn bug-btn"> <i class="fa-solid fa-bug"></i> </button>
+                            <button class="btn bug-btn"> <span class="material-symbols-rounded">bug_report</span> </button>
                         </div>
                         
-                        <button class="btn share-btn"><i class="fa-solid fa-share"></i> Share</button>
+                        <button class="btn share-btn"><span class="material-symbols-rounded">share</span> Share</button>
 
                         <div class="epic-details-table">
                             <div class="detail-row">
-                                <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Version</span>
-                                <span class="detail-value">${app.version}</span>
+                                <span class="detail-label"><span class="material-symbols-rounded">commit</span> Version</span>
+                                <span class="detail-value"> ${app.version}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><i class="fa-solid fa-database"></i> Size</span>
+                                <span class="detail-label"><span class="material-symbols-rounded">data_usage</span> Size</span>
                                 <span class="detail-value">${app.size}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><i class="fa-solid fa-display-code"></i> Developer</span>
+                                <span class="detail-label"><span class="material-symbols-rounded">code_xml</span> Developer</span>
                                 <span class="detail-value">${app.publisher}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Platform</span>
-                                <span class="detail-value"><i class="fa-brands fa-windows"></i></span>
+                                <span class="detail-label"><span class="material-symbols-rounded">layers</span> Platform</span>
+                                <span class="detail-value"><span class="material-symbols-rounded">desktop_windows</span></span>
                             </div>
                         </div>
                     </div>
@@ -121,7 +121,6 @@ App: ${app.title}
 Version: ${app.version}
 Page: ${window.location.href}
 _______________________________________________________________________________________________________
-
 Describe the problem:
 `);
 

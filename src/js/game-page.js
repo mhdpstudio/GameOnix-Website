@@ -36,10 +36,10 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
 
 
         <div class="game-title">
-            <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left"></i> ${game.title}</div>
+            <div class="game-name" id="goBack"><span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}</div>
             <div class="details">
                 <div class="game-publisher"> ${game.publisher}</div>
-                <div class="game-type"><i class="${game.gameTypeIcon}"></i> ${game.gameType}</div>
+                <div class="game-type"><span class="material-symbols-rounded">${game.gameTypeIcon}</span> ${game.gameType}</div>
             </div>
         </div>
 
@@ -54,17 +54,17 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
 
                     <div class="media-overlay">
                         <div class="media-arrow left" id="mainLeft">
-                            <i class="fa-solid fa-chevron-left"></i>
+                            <span class="material-symbols-rounded">chevron_left</span>
                         </div>
 
                         <div class="media-arrow right" id="mainRight">
-                            <i class="fa-solid fa-chevron-right"></i>
+                            <span class="material-symbols-rounded">chevron_right</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="thumb-wrapper">
-                    <div class="arrow" id="leftArrow"><i class="fa-solid fa-chevron-left"></i></div>
+                    <div class="arrow" id="leftArrow"><span class="material-symbols-rounded">chevron_left</span></div>
 
                     <div class="thumb-slider">
                         <div class="thumb-slider-inner" id="thumbSlider">
@@ -77,7 +77,10 @@ ${mediaImages.map((img, i) => `
                         </div>
                     </div>
 
-                    <div class="arrow" id="rightArrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="arrow" id="rightArrow" style="    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;"><span class="material-symbols-rounded">chevron_right</span></div>
                 </div>
                 <div class="game-ads">
                 </div>
@@ -95,20 +98,20 @@ ${mediaImages.map((img, i) => `
 
                     <div class="epic-details-table">
                     <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Version</span>
+                        <span class="detail-label"><span class="material-symbols-rounded">commit</span> Version</span>
                         <span class="detail-value">${game.version}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-database"></i> Size</span>
+                        <span class="detail-label"><span class="material-symbols-rounded">data_usage</span> Size</span>
                         <span class="detail-value">${game.size}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-display-code"></i> Developer</span>
+                        <span class="detail-label"><span class="material-symbols-rounded">code_xml</span> Developer</span>
                         <span class="detail-value">${game.publisher}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Platform</span>
-                        <span class="detail-value"><i class="fa-brands fa-windows"></i></span>
+                        <span class="detail-label"><span class="material-symbols-rounded">layers</span> Platform</span>
+                        <span class="detail-value"><span class="material-symbols-rounded">desktop_windows</span></span>
                     </div>
                 </div>
                 </div>
