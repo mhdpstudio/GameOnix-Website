@@ -1,6 +1,6 @@
 {
     "Popular": {
-        "icon": "fa-solid fa-fire-flame-curved",
+        "icon": "mode_heat",
         "games": [
             {
                 "slug": "resident-evil-requiem",
@@ -110,7 +110,7 @@
         ]
     },
     "Action": {
-        "icon": "fa-solid fa-gun",
+        "icon": "target",
         "games": [
             {
                 "slug": "ac-valhalla",
@@ -835,7 +835,7 @@
         ]
     },
     "Racing": {
-        "icon": "fa-solid fa-car",
+        "icon": "sports_motorsports",
         "games": [
             {
                 "slug": "nfs-most-wanted-2012",
@@ -951,7 +951,7 @@
         ]
     },
     "Sports": {
-        "icon": "fa-solid fa-basketball",
+        "icon": "sports_soccer",
         "games": [
             {
                 "slug": "fifa-12",
@@ -1067,7 +1067,7 @@
         ]
     },
     "Simulation": {
-        "icon": "fa-solid fa-gamepad-modern",
+        "icon": "gamepad_circle_down",
         "games": [
             {
                 "slug": "stray",
@@ -1149,7 +1149,7 @@
         ]
     },
     "Old Games": {
-        "icon": "fa-solid fa-scroll-old",
+        "icon": "save",
         "games": [
             {
                 "slug": "red-alert-2-expansion",
