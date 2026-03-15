@@ -24,14 +24,11 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', (event) => {
 
-    // مهم جدا: لا تتعامل مع الملفات المحلية في Electron
-    if (self.location.protocol === 'file:') {
-        return;
-    }
+    if (self.location.protocol === 'file:') return;
 
-    if (!event.request.url.startsWith(self.location.origin)) {
-        return;
-    }
+    if (event.request.method !== "GET") return;
+
+    if (!event.request.url.startsWith(self.location.origin)) return;
 
     event.respondWith(
         fetch(event.request)
