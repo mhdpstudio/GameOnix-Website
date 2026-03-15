@@ -1,6 +1,6 @@
 // Service Worker for automatic cache busting
 
-const CACHE_NAME = 'xhyper-v2';
+const CACHE_NAME = 'xhyper-v3';
 
 self.addEventListener('install', (event) => {
     self.skipWaiting();

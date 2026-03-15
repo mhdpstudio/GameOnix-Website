@@ -1,1261 +1,1273 @@
 {
-    "Popular": {
-        "icon": "mode_heat",
-        "games": [
-            {
-                "slug": "resident-evil-requiem",
-                "id": 1,
-                "title": "Resident Evil Requiem",
-                "poster": "https://gameonix.shop/assets/images/games/posters/resident-evil-requiem",
-                "publisher": "Capcom"
-            },
-            {
-                "slug": "gta-v",
-                "id": 2,
-                "title": "Grand Theft Auto V",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta5",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-iv",
-                "id": 3,
-                "title": "Grand Theft Auto IV: The Complete Edition",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta4",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "ac-2",
-                "id": 4,
-                "title": "Assassin's Creed II",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-2",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "nfs-most-wanted-2012",
-                "id": 5,
-                "title": "Need For Speed: Most Wanted 2012",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2012",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "far-cry-3",
-                "id": 6,
-                "title": "Far Cry 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-3",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "stronghold-crusader-de",
-                "id": 7,
-                "title": "Stronghold Crusader DE",
-                "poster": "https://gameonix.shop/assets/images/games/posters/scde",
-                "publisher": "Firefly Studios"
-            },
-            {
-                "slug": "the-witcher-2",
-                "id": 8,
-                "title": "The Witcher 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-2",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "ac-odyssey",
-                "id": 9,
-                "title": "Assassin's Creed Odyssey",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-odyssey",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "mad-max",
-                "id": 10,
-                "title": "Mad Max",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mad-max",
-                "publisher": "Avalanche Studios"
-            },
-            {
-                "slug": "the-amazing-spider-man-1",
-                "id": 11,
-                "title": "The Amazing Spider-Man",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm",
-                "publisher": "Beenox"
-            },
-            {
-                "slug": "the-witcher-3",
-                "id": 12,
-                "title": "The Witcher 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-3",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "dying-light-2",
-                "id": 13,
-                "title": "Dying light 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-2",
-                "publisher": "Tencent"
-            },
-            {
-                "slug": "max-payne-2",
-                "id": 14,
-                "title": "Max Payne 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/m-p-2",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "forza-horizon-5",
-                "id": 15,
-                "title": "Forza Horizon 5",
-                "poster": "https://gameonix.shop/assets/images/games/posters/f-h-5",
-                "publisher": "Playground Games"
-            }
-        ]
+    "PC Games": {
+        "icon": "fa-computer",
+        "Popular": {
+            "icon": "fa-fire",
+            "games": [
+                {
+                    "slug": "resident-evil-requiem",
+                    "id": 1,
+                    "title": "Resident Evil Requiem",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/resident-evil-requiem",
+                    "publisher": "Capcom"
+                },
+                {
+                    "slug": "gta-v",
+                    "id": 2,
+                    "title": "Grand Theft Auto V",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta5",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-iv",
+                    "id": 3,
+                    "title": "Grand Theft Auto IV: The Complete Edition",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta4",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "ac-2",
+                    "id": 4,
+                    "title": "Assassin's Creed II",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-2",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "nfs-most-wanted-2012",
+                    "id": 5,
+                    "title": "Need For Speed: Most Wanted 2012",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2012",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "far-cry-3",
+                    "id": 6,
+                    "title": "Far Cry 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-3",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "stronghold-crusader-de",
+                    "id": 7,
+                    "title": "Stronghold Crusader DE",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/scde",
+                    "publisher": "Firefly Studios"
+                },
+                {
+                    "slug": "the-witcher-2",
+                    "id": 8,
+                    "title": "The Witcher 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-2",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "ac-odyssey",
+                    "id": 9,
+                    "title": "Assassin's Creed Odyssey",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-odyssey",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "mad-max",
+                    "id": 10,
+                    "title": "Mad Max",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mad-max",
+                    "publisher": "Avalanche Studios"
+                },
+                {
+                    "slug": "the-amazing-spider-man-1",
+                    "id": 11,
+                    "title": "The Amazing Spider-Man",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm",
+                    "publisher": "Beenox"
+                },
+                {
+                    "slug": "the-witcher-3",
+                    "id": 12,
+                    "title": "The Witcher 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-3",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "dying-light-2",
+                    "id": 13,
+                    "title": "Dying light 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-2",
+                    "publisher": "Tencent"
+                },
+                {
+                    "slug": "max-payne-2",
+                    "id": 14,
+                    "title": "Max Payne 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/m-p-2",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "forza-horizon-5",
+                    "id": 15,
+                    "title": "Forza Horizon 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/f-h-5",
+                    "publisher": "Playground Games"
+                }
+            ]
+        },
+        "Action": {
+            "icon": "fa-gun",
+            "games": [
+                {
+                    "slug": "ac-valhalla",
+                    "id": 1,
+                    "title": "Assassin's Creed Valhalla",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-v",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "batman-arkham-city",
+                    "id": 2,
+                    "title": "Batman: Arkham City",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bat-ark",
+                    "publisher": "Rocksteady Studios"
+                },
+                {
+                    "slug": "max-payne-3",
+                    "id": 3,
+                    "title": "Max Payne 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/m-p-3",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "spider-man-web-of-shadows",
+                    "id": 4,
+                    "title": "Spider-Man: Web of Shadows",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/spiderman-web-of-shadow",
+                    "publisher": "Beenox"
+                },
+                {
+                    "slug": "god-of-war-ragnarok",
+                    "id": 5,
+                    "title": "God of War Ragnarok",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/g-o-w-r",
+                    "publisher": "Santa Monica Studio"
+                },
+                {
+                    "slug": "far-cry-primal",
+                    "id": 6,
+                    "title": "Far Cry Primal",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-primal",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "rdr-2",
+                    "id": 7,
+                    "title": "Red Dead Redemption II",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/rdr-2",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "the-last-of-us-part-I",
+                    "id": 8,
+                    "title": "The Last of Us Part I",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-last-of-us-1",
+                    "publisher": "Naughty Dog"
+                },
+                {
+                    "slug": "the-amazing-spider-man-2",
+                    "id": 9,
+                    "title": "The Amazing Spider-Man 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm-2",
+                    "publisher": "Beenox"
+                },
+                {
+                    "slug": "doom-eternal",
+                    "id": 10,
+                    "title": "DOOM Eternal",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/doom-eternal",
+                    "publisher": "Id Software"
+                },
+                {
+                    "slug": "far-cry-5",
+                    "id": 11,
+                    "title": "Far Cry 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-5",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ghost-of-tsushima",
+                    "id": 12,
+                    "title": "Ghost of Tsushima",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/g-o-t",
+                    "publisher": "Sucker Punch"
+                },
+                {
+                    "slug": "elden-ring",
+                    "id": 14,
+                    "title": "Elden Ring",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/elden-ring",
+                    "publisher": "FromSoftware"
+                },
+                {
+                    "slug": "gta-v",
+                    "id": 15,
+                    "title": "Grand Theft Auto V",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta5",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "ac-origins",
+                    "id": 16,
+                    "title": "Assassin's Creed Origins",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-origins",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "devil-may-cry-5",
+                    "id": 17,
+                    "title": "Devil May Cry 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/devil-may-cry-5",
+                    "publisher": "Capcom"
+                },
+                {
+                    "slug": "cyberpunk-2077",
+                    "id": 18,
+                    "title": "Cyberpunk 2077",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cyberpunk-2077",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "left-4-dead",
+                    "id": 19,
+                    "title": "Left 4 Dead",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/left4dead",
+                    "publisher": "Turtle Rock Studios"
+                },
+                {
+                    "slug": "sleeping-dogs",
+                    "id": 20,
+                    "title": "Sleeping Dogs",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/sleeping-dog",
+                    "publisher": "United Front Games"
+                },
+                {
+                    "slug": "world-war-z",
+                    "id": 21,
+                    "title": "World War Z",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/world-war-z",
+                    "publisher": "Saber Interactive"
+                },
+                {
+                    "slug": "mafia-2",
+                    "id": 22,
+                    "title": "Mafia II",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mafia-2",
+                    "publisher": "2K Czech"
+                },
+                {
+                    "slug": "ac-unity",
+                    "id": 23,
+                    "title": "Assassin's Creed Unity",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-unity",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "id": "",
+                    "title": "More Games",
+                    "poster": "",
+                    "publisher": ""
+                },
+                {
+                    "slug": "gta-iv",
+                    "id": 24,
+                    "title": "Grand Theft Auto IV: The Complete Edition",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta4",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "ac-2",
+                    "id": 25,
+                    "title": "Assassin's Creed II",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-2",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "far-cry-3",
+                    "id": 26,
+                    "title": "Far Cry 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-3",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "the-witcher-2",
+                    "id": 27,
+                    "title": "The Witcher 2: Assassins of Kings",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-2",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "mad-max",
+                    "id": 28,
+                    "title": "Mad Max",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mad-max",
+                    "publisher": "Avalanche Studios"
+                },
+                {
+                    "slug": "the-witcher-3",
+                    "id": 29,
+                    "title": "The Witcher 3: Wild Hunt",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-3",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "dying-light-2",
+                    "id": 30,
+                    "title": "Dying light 2: Stay Human",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-2",
+                    "publisher": "Tencent"
+                },
+                {
+                    "slug": "max-payne-2",
+                    "id": 31,
+                    "title": "Max Payne 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/m-p-2",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-sa",
+                    "id": 32,
+                    "title": "Grand Theft Auto San Andreas",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gtasa",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-3",
+                    "id": 33,
+                    "title": "Grand Theft Auto III",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta3",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-vc",
+                    "id": 34,
+                    "title": "Grand Theft Auto Vice City",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gtavc",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "the-amazing-spider-man-1",
+                    "id": 35,
+                    "title": "The Amazing Spider-Man",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm",
+                    "publisher": "Beenox"
+                },
+                {
+                    "slug": "watch-dogs",
+                    "id": 36,
+                    "title": "Watch Dogs",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-1",
+                    "id": 37,
+                    "title": "Assassin's Creed",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-revelations",
+                    "id": 38,
+                    "title": "Assassin's Creed Revelations ",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-r",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-brotherhood",
+                    "id": 39,
+                    "title": "Assassin's Creed Brotherhood",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-b",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-3",
+                    "id": 40,
+                    "title": "Assassin's Creed III",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-3",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-4",
+                    "id": 41,
+                    "title": "Assassin's Creed IV: Black Flag",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-4",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-rogue",
+                    "id": 42,
+                    "title": "Assassin's Creed Rogue",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-rogue",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-liberation-hd",
+                    "id": 43,
+                    "title": "Assassin's Creed Liberation HD",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-l",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-freedom-cry",
+                    "id": 44,
+                    "title": "Assassin's Creed Freedom Cry",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-fc",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-chronicles-india",
+                    "id": 45,
+                    "title": "Assassin's Creed Chronicles: India",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-india",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-chronicles-russia",
+                    "id": 46,
+                    "title": "Assassin's Creed Chronicles: Russia",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-russia",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-chronicles-china",
+                    "id": 47,
+                    "title": "Assassin's Creed Chronicles: China",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-china",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-syndicate",
+                    "id": 48,
+                    "title": "Assassin's Creed Syndicate",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-syndicate",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "ac-mirage",
+                    "id": 49,
+                    "title": "Assassin's Creed Mirage",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-m",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "max-payne-1",
+                    "id": 50,
+                    "title": "Max Payne",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/m-p-1",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "rdr-1",
+                    "id": 51,
+                    "title": "Red Dead Redemption",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/rdr-1",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "cs-go",
+                    "id": 52,
+                    "title": "Counter-Strike: Global Offensive",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cs-go",
+                    "publisher": "Valve"
+                },
+                {
+                    "slug": "cs-source",
+                    "id": 53,
+                    "title": "Counter-Strike: Source",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cs-source",
+                    "publisher": "Valve"
+                },
+                {
+                    "slug": "left-4-dead-2",
+                    "id": 57,
+                    "title": "Left 4 Dead 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/left4dead2",
+                    "publisher": "Turtle Rock Studios"
+                },
+                {
+                    "slug": "mafia-1",
+                    "id": 58,
+                    "title": "Mafia",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mafia-1",
+                    "publisher": "2K Czech"
+                },
+                {
+                    "slug": "the-witcher-1",
+                    "id": 62,
+                    "title": "The Witcher",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-1",
+                    "publisher": "CD Projekt"
+                },
+                {
+                    "slug": "watch-dogs-2",
+                    "id": 63,
+                    "title": "Watch Dogs 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs-2",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "watch-dogs-legion",
+                    "id": 64,
+                    "title": "Watch Dogs Legion",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs-legion",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "far-cry-2",
+                    "id": 65,
+                    "title": "Far Cry 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-2",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "far-cry-1",
+                    "id": 66,
+                    "title": "Far Cry",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-1",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "far-cry-4",
+                    "id": 67,
+                    "title": "Far Cry 4",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fc-4",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "dying-light-1",
+                    "id": 68,
+                    "title": "Dying light",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-1",
+                    "publisher": "Tencent"
+                },
+                {
+                    "slug": "ac-odyssey",
+                    "id": 69,
+                    "title": "Assassin's Creed Odyssey",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ac-odyssey",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "alan-wake",
+                    "id": 70,
+                    "title": "Alan Wake",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/alan-wake-1",
+                    "publisher": "Remedy Entertainment"
+                },
+                {
+                    "slug": "alan-wake-2",
+                    "id": 71,
+                    "title": "Alan Wake 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/alan-wake-2",
+                    "publisher": "Remedy Entertainment"
+                },
+                {
+                    "slug": "the-last-of-us-part-II",
+                    "id": 72,
+                    "title": "The Last of Us Part II Remastered",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-last-of-us-2",
+                    "publisher": "Naughty Dog"
+                },
+                {
+                    "slug": "cod1",
+                    "id": 73,
+                    "title": "Call of Duty 1",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-1",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod2",
+                    "id": 74,
+                    "title": "Call of Duty 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-2",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-waw",
+                    "id": 75,
+                    "title": "Call of Duty: World at War",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-waw",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-4",
+                    "id": 76,
+                    "title": "Call of Duty 4: Modern Warfare",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-4",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-mw-2",
+                    "id": 77,
+                    "title": "Call of Duty: Modern Warfare 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-2",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-mw-3",
+                    "id": 78,
+                    "title": "Call of Duty: Modern Warfare 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-3",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-bo1",
+                    "id": 79,
+                    "title": "Call of Duty: Black Ops 1",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-1",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-bo2",
+                    "id": 80,
+                    "title": "Call of Duty: Black Ops 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-2",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-bo3",
+                    "id": 81,
+                    "title": "Call of Duty: Black Ops 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-3",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-bo-cw",
+                    "id": 82,
+                    "title": "Call of Duty: Black Ops Cold War",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-cw",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-ad",
+                    "id": 83,
+                    "title": "Call of Duty: Advanced Warfare",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-ad",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "bf-1",
+                    "id": 84,
+                    "title": "Battlefield 1",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-1",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "bf-2",
+                    "id": 85,
+                    "title": "Battlefield 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-2",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "bf-3",
+                    "id": 86,
+                    "title": "Battlefield 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-3",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "bf-4",
+                    "id": 87,
+                    "title": "Battlefield 4",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-4",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "bf-v",
+                    "id": 88,
+                    "title": "Battlefield 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-5",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "bf-6",
+                    "id": 89,
+                    "title": "Battlefield 6",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/bf-6",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "mount-blade-sails",
+                    "id": 90,
+                    "title": "Mount & Blade: War Sails",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mount-blade-sails",
+                    "publisher": "TaleWorlds Entertainment"
+                },
+                {
+                    "slug": "stronghold-crusader-de",
+                    "id": 91,
+                    "title": "Stronghold Crusader: Definitive Edition",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/scde",
+                    "publisher": "Firefly Studios"
+                },
+                {
+                    "slug": "uncharted",
+                    "id": 92,
+                    "title": "Uncharted: Legacy of Thieves Collection",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/uncharted",
+                    "publisher": "Naughty Dog"
+                },
+                {
+                    "slug": "marvels-spiderman-Miles-morales",
+                    "id": 93,
+                    "title": "Marvel's Spider-Man: Miles Morales",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/spiderman-miles-morals",
+                    "publisher": "Insomniac Games"
+                },
+                {
+                    "slug": "marvels-spiderman-1-re",
+                    "id": 94,
+                    "title": "Marvel's Spider-Man Remastered",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mar-spider-man-1-re",
+                    "publisher": "Insomniac Games"
+                },
+                {
+                    "slug": "marvels-spiderman-2",
+                    "id": 95,
+                    "title": "Marvel's Spider-Man 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/mar-spider-man-2",
+                    "publisher": "Insomniac Games"
+                },
+                {
+                    "slug": "resident-evil-requiem",
+                    "id": 96,
+                    "title": "Resident Evil Requiem",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/resident-evil-requiem",
+                    "publisher": "Capcom"
+                },
+                {
+                    "slug": "ghost-recon-future-soldier",
+                    "id": 97,
+                    "title": "Tom Clancy's Ghost Recon: Future Soldier",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ghost-recon-future-soldier",
+                    "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "wwe-2k15",
+                    "id": 98,
+                    "title": "WWE 2K15",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k15",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k16",
+                    "id": 99,
+                    "title": "WWE 2K16",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k16",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k17",
+                    "id": 100,
+                    "title": "WWE 2K17",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k17",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k18",
+                    "id": 101,
+                    "title": "WWE 2K18",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k18",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k19",
+                    "id": 102,
+                    "title": "WWE 2K19",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k19",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k20",
+                    "id": 103,
+                    "title": "WWE 2K20",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k20",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k22",
+                    "id": 104,
+                    "title": "WWE 2K22",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k22",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k23",
+                    "id": 105,
+                    "title": "WWE 2K23",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k23",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "wwe-2k24",
+                    "id": 106,
+                    "title": "WWE 2K24",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k24",
+                    "publisher": "Yuke's"
+                },
+                {
+                    "slug": "tekken-7",
+                    "id": 107,
+                    "title": "Tekken 7",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/tekken-7",
+                    "publisher": "Bandai Namco"
+                },
+                {
+                    "slug": "tekken-8",
+                    "id": 108,
+                    "title": "Tekken 8",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/tekken-8",
+                    "publisher": "Bandai Namco"
+                },
+                {
+                    "slug": "the-walking-dead-the-telltale-definitive-series",
+                    "id": 109,
+                    "title": "The Walking Dead: The Telltale Definitive Series",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-walking-dead",
+                    "publisher": "Telltale Games"
+                },
+                {
+                    "slug": "it-takes-two",
+                    "id": 110,
+                    "title": "It Takes Two",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/it-takes-two",
+                    "publisher": "Heslight Studios"
+                },
+                {
+                    "slug": "days-gone",
+                    "id": 111,
+                    "title": "Days Gone",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/days-gone",
+                    "publisher": "SCE Bend Studio"
+                }
+            ]
+        },
+        "Racing": {
+            "icon": "fa-solid fa-flag-checkered",
+            "games": [
+                {
+                    "slug": "nfs-most-wanted-2012",
+                    "id": 1,
+                    "title": "Need For Speed: Most Wanted 2012",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2012",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "nfs-most-wanted-2005",
+                    "id": 2,
+                    "title": "Need For Speed: Most Wanted 5.1.0",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2005",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "nfs-carbon",
+                    "id": 3,
+                    "title": "Need For Speed: Carbon",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-carbon",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "need-for-speed-hot-pursuit",
+                    "id": 4,
+                    "title": "Need For Speed: Hot Pursuit",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-h-p-1",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "need-for-speed-heat",
+                    "id": 5,
+                    "title": "Need For Speed: Heat",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-heat",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "need-for-speed-rivals",
+                    "id": 6,
+                    "title": "Need for Speed: Rivals",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-rivals",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "blur",
+                    "id": 7,
+                    "title": "Blur",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/blur",
+                    "publisher": "Bizarre Creations"
+                },
+                {
+                    "slug": "burnout-paradise-Rema",
+                    "id": 8,
+                    "title": "Burnout Paradise Remastered",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/b-p-r",
+                    "publisher": "Criterion Games"
+                },
+                {
+                    "slug": "forza-horizon-3",
+                    "id": 9,
+                    "title": "Forza Horizon 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/f-h-3",
+                    "publisher": "Playground Games"
+                },
+                {
+                    "slug": "forza-horizon-4",
+                    "id": 10,
+                    "title": "Forza Horizon 4",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/f-h-4",
+                    "publisher": "Playground Games"
+                },
+                {
+                    "slug": "forza-horizon-5",
+                    "id": 11,
+                    "title": "Forza Horizon 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/f-h-5",
+                    "publisher": "Playground Games"
+                },
+                {
+                    "id": "",
+                    "title": "More Games",
+                    "poster": "",
+                    "publisher": ""
+                },
+                {
+                    "slug": "nfs-underground",
+                    "id": 12,
+                    "title": "Need For Speed: Underground",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-underground-1",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "nfs-underground-2",
+                    "id": 13,
+                    "title": "Need For Speed: Underground 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-underground-2",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "nfs-prostreet",
+                    "id": 14,
+                    "title": "Need For Speed: ProStreet",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-prostreet",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "nfs-undercover",
+                    "id": 15,
+                    "title": "Need For Speed: Undercover",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-undercover",
+                    "publisher": "Electronic Arts"
+                }
+            ]
+        },
+        "Sports": {
+            "icon": "fa-basketball",
+            "games": [
+                {
+                    "slug": "fifa-12",
+                    "id": 1,
+                    "title": "FIFA 12",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa12",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-14",
+                    "id": 2,
+                    "title": "FIFA 14",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa14",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-15",
+                    "id": 3,
+                    "title": "FIFA 15",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa15",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-16",
+                    "id": 4,
+                    "title": "FIFA 16",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa16",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-17",
+                    "id": 5,
+                    "title": "FIFA 17",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa17",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-18",
+                    "id": 6,
+                    "title": "FIFA 18",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa18",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-19",
+                    "id": 7,
+                    "title": "FIFA 19",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa19",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-20",
+                    "id": 8,
+                    "title": "FIFA 20",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa20",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-21",
+                    "id": 9,
+                    "title": "FIFA 21",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa21",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-22",
+                    "id": 10,
+                    "title": "FIFA 22",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa22",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "fifa-23",
+                    "id": 11,
+                    "title": "FIFA 23",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fifa23",
+                    "publisher": "EA Sports"
+                },
+                {
+                    "slug": "pes-2009",
+                    "id": 13,
+                    "title": "PES 2009",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pes2009",
+                    "publisher": "Konami"
+                },
+                {
+                    "slug": "pes-2011",
+                    "id": 14,
+                    "title": "PES 2011",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pes2011",
+                    "publisher": "Konami"
+                },
+                {
+                    "slug": "pes-2012",
+                    "id": 15,
+                    "title": "PES 2012",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pes2012",
+                    "publisher": "Konami"
+                },
+                {
+                    "slug": "pes-2019",
+                    "id": 16,
+                    "title": "PES 2019",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pes2019",
+                    "publisher": "Konami"
+                },
+                {
+                    "id": "",
+                    "title": "More Games",
+                    "poster": "",
+                    "publisher": ""
+                }
+            ]
+        },
+        "Simulation": {
+            "icon": "fa-gamepad",
+            "games": [
+                {
+                    "slug": "stray",
+                    "id": 1,
+                    "title": "Stray",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/stray",
+                    "publisher": "BlueTwelve"
+                },
+                {
+                    "slug": "pc-building-sim-1",
+                    "id": 2,
+                    "title": "PC Building Simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pc-building-sim-1",
+                    "publisher": "Claudiu Kiss"
+                },
+                {
+                    "slug": "pc-building-sim-2",
+                    "id": 3,
+                    "title": "PC Building Simulator 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/pc-building-sim-2",
+                    "publisher": "Claudiu Kiss"
+                },
+                {
+                    "slug": "house-flipper-2",
+                    "id": 4,
+                    "title": "House Flipper 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/house-flipper-2",
+                    "publisher": "Frozen District"
+                },
+                {
+                    "slug": "zoo-tycoon-1",
+                    "id": 5,
+                    "title": "Zoo Tycoon",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/zoo-tycoon-1",
+                    "publisher": "Blue Fang Games"
+                },
+                {
+                    "slug": "food-delivery-sim",
+                    "id": 6,
+                    "title": "Food Delivery Simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/food-delivery-sim",
+                    "publisher": "creative assembly sofia"
+                },
+                {
+                    "slug": "food-truck-sim",
+                    "id": 7,
+                    "title": "Food Truck Simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/food-truck-sim",
+                    "publisher": "Drago Entertainment"
+                },
+                {
+                    "slug": "fuel-harvest-together",
+                    "id": 8,
+                    "title": "Fuel Harvest Together",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/fuel-harvest-together",
+                    "publisher": "Say2Sun"
+                },
+                {
+                    "slug": "drive-beyond-horizons",
+                    "id": 9,
+                    "title": "Drive Beyond Horizons",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/drive-beyond-horizons",
+                    "publisher": "Tacty Studio"
+                },
+                {
+                    "slug": "internet-cafe-sim-1",
+                    "id": 10,
+                    "title": "Internet Cafe Simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/internet-cafe-sim-1",
+                    "publisher": "Cheesecake Dev"
+                },
+                {
+                    "slug": "internet-cafe-sim-2",
+                    "id": 11,
+                    "title": "Internet Cafe Simulator 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/internet-cafe-sim-2",
+                    "publisher": "Cheesecake Dev"
+                }
+            ]
+        },
+        "Old Games": {
+            "icon": "fa-scroll-old",
+            "games": [
+                {
+                    "slug": "red-alert-2-expansion",
+                    "id": 1,
+                    "title": "Red Alert 2 Expansion",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/red-alert-2-ex",
+                    "publisher": "EA Games"
+                },
+                {
+                    "slug": "neighbours-from-hell-1",
+                    "id": 2,
+                    "title": "Neighbours from Hell",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/neighbours-from-hell-1",
+                    "publisher": "JoWooD"
+                },
+                {
+                    "slug": "neighbours-from-hell-2",
+                    "id": 3,
+                    "title": "Neighbours from Hell 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/neighbours-from-hell-2",
+                    "publisher": "JoWooD"
+                },
+                {
+                    "slug": "sudden-strike-4",
+                    "id": 4,
+                    "title": "Sudden Strike 4",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/sudden-strike-4",
+                    "publisher": "Kite Games"
+                },
+                {
+                    "slug": "stronghold-crusader",
+                    "id": 5,
+                    "title": "Stronghold Crusader",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/stronghold-1",
+                    "publisher": "Firefly Studios"
+                },
+                {
+                    "slug": "gta-sa",
+                    "id": 6,
+                    "title": "Grand Theft Auto San Andreas",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gtasa",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-3",
+                    "id": 7,
+                    "title": "Grand Theft Auto III",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gta3",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "gta-vc",
+                    "id": 8,
+                    "title": "Grand Theft Auto Vice City",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/gtavc",
+                    "publisher": "Rockstar Games"
+                },
+                {
+                    "slug": "crazy-taxi",
+                    "id": 9,
+                    "title": "Crazy Taxi",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/crazy-taxi",
+                    "publisher": "Sega"
+                },
+                {
+                    "slug": "alien-shooter",
+                    "id": 10,
+                    "title": "Alien Shooter",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/alien-shooter",
+                    "publisher": "Sigma Team"
+                },
+                {
+                    "slug": "jazz-rabbit-1",
+                    "id": 11,
+                    "title": "Jazz Jackrabbit",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/jazz-jackrabbit",
+                    "publisher": "Epic MegaGames"
+                },
+                {
+                    "slug": "house-of-the-dead",
+                    "id": 12,
+                    "title": "House of the Dead",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/house-of-the-dead",
+                    "publisher": "Sega"
+                },
+                {
+                    "slug": "adventures-of-robinson-crusoe",
+                    "id": 13,
+                    "title": "Adventures of Robinson Crusoe",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/adventures-of-robinson-crusoe",
+                    "publisher": "MagicIndie Softworks"
+                }
+            ]
+        }
     },
-    "Action": {
-        "icon": "target",
-        "games": [
-            {
-                "slug": "ac-valhalla",
-                "id": 1,
-                "title": "Assassin's Creed Valhalla",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-v",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "batman-arkham-city",
-                "id": 2,
-                "title": "Batman: Arkham City",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bat-ark",
-                "publisher": "Rocksteady Studios"
-            },
-            {
-                "slug": "max-payne-3",
-                "id": 3,
-                "title": "Max Payne 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/m-p-3",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "spider-man-web-of-shadows",
-                "id": 4,
-                "title": "Spider-Man: Web of Shadows",
-                "poster": "https://gameonix.shop/assets/images/games/posters/spiderman-web-of-shadow",
-                "publisher": "Beenox"
-            },
-            {
-                "slug": "god-of-war-ragnarok",
-                "id": 5,
-                "title": "God of War Ragnarok",
-                "poster": "https://gameonix.shop/assets/images/games/posters/g-o-w-r",
-                "publisher": "Santa Monica Studio"
-            },
-            {
-                "slug": "far-cry-primal",
-                "id": 6,
-                "title": "Far Cry Primal",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-primal",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "rdr-2",
-                "id": 7,
-                "title": "Red Dead Redemption II",
-                "poster": "https://gameonix.shop/assets/images/games/posters/rdr-2",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "the-last-of-us-part-I",
-                "id": 8,
-                "title": "The Last of Us Part I",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-last-of-us-1",
-                "publisher": "Naughty Dog"
-            },
-            {
-                "slug": "the-amazing-spider-man-2",
-                "id": 9,
-                "title": "The Amazing Spider-Man 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm-2",
-                "publisher": "Beenox"
-            },
-            {
-                "slug": "doom-eternal",
-                "id": 10,
-                "title": "DOOM Eternal",
-                "poster": "https://gameonix.shop/assets/images/games/posters/doom-eternal",
-                "publisher": "Id Software"
-            },
-            {
-                "slug": "far-cry-5",
-                "id": 11,
-                "title": "Far Cry 5",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-5",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ghost-of-tsushima",
-                "id": 12,
-                "title": "Ghost of Tsushima",
-                "poster": "https://gameonix.shop/assets/images/games/posters/g-o-t",
-                "publisher": "Sucker Punch"
-            },
-            {
-                "slug": "elden-ring",
-                "id": 14,
-                "title": "Elden Ring",
-                "poster": "https://gameonix.shop/assets/images/games/posters/elden-ring",
-                "publisher": "FromSoftware"
-            },
-            {
-                "slug": "gta-v",
-                "id": 15,
-                "title": "Grand Theft Auto V",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta5",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "ac-origins",
-                "id": 16,
-                "title": "Assassin's Creed Origins",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-origins",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "devil-may-cry-5",
-                "id": 17,
-                "title": "Devil May Cry 5",
-                "poster": "https://gameonix.shop/assets/images/games/posters/devil-may-cry-5",
-                "publisher": "Capcom"
-            },
-            {
-                "slug": "cyberpunk-2077",
-                "id": 18,
-                "title": "Cyberpunk 2077",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cyberpunk-2077",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "left-4-dead",
-                "id": 19,
-                "title": "Left 4 Dead",
-                "poster": "https://gameonix.shop/assets/images/games/posters/left4dead",
-                "publisher": "Turtle Rock Studios"
-            },
-            {
-                "slug": "sleeping-dogs",
-                "id": 20,
-                "title": "Sleeping Dogs",
-                "poster": "https://gameonix.shop/assets/images/games/posters/sleeping-dog",
-                "publisher": "United Front Games"
-            },
-            {
-                "slug": "world-war-z",
-                "id": 21,
-                "title": "World War Z",
-                "poster": "https://gameonix.shop/assets/images/games/posters/world-war-z",
-                "publisher": "Saber Interactive"
-            },
-            {
-                "slug": "mafia-2",
-                "id": 22,
-                "title": "Mafia II",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mafia-2",
-                "publisher": "2K Czech"
-            },
-            {
-                "slug": "ac-unity",
-                "id": 23,
-                "title": "Assassin's Creed Unity",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-unity",
-                "publisher": "Ubisoft"
-            },
-            {
-                "id": "",
-                "title": "More Games",
-                "poster": "",
-                "publisher": ""
-            },
-            {
-                "slug": "gta-iv",
-                "id": 24,
-                "title": "Grand Theft Auto IV: The Complete Edition",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta4",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "ac-2",
-                "id": 25,
-                "title": "Assassin's Creed II",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-2",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "far-cry-3",
-                "id": 26,
-                "title": "Far Cry 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-3",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "the-witcher-2",
-                "id": 27,
-                "title": "The Witcher 2: Assassins of Kings",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-2",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "mad-max",
-                "id": 28,
-                "title": "Mad Max",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mad-max",
-                "publisher": "Avalanche Studios"
-            },
-            {
-                "slug": "the-witcher-3",
-                "id": 29,
-                "title": "The Witcher 3: Wild Hunt",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-3",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "dying-light-2",
-                "id": 30,
-                "title": "Dying light 2: Stay Human",
-                "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-2",
-                "publisher": "Tencent"
-            },
-            {
-                "slug": "max-payne-2",
-                "id": 31,
-                "title": "Max Payne 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/m-p-2",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-sa",
-                "id": 32,
-                "title": "Grand Theft Auto San Andreas",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gtasa",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-3",
-                "id": 33,
-                "title": "Grand Theft Auto III",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta3",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-vc",
-                "id": 34,
-                "title": "Grand Theft Auto Vice City",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gtavc",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "the-amazing-spider-man-1",
-                "id": 35,
-                "title": "The Amazing Spider-Man",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-amazing-sm",
-                "publisher": "Beenox"
-            },
-            {
-                "slug": "watch-dogs",
-                "id": 36,
-                "title": "Watch Dogs",
-                "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-1",
-                "id": 37,
-                "title": "Assassin's Creed",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-revelations",
-                "id": 38,
-                "title": "Assassin's Creed Revelations ",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-r",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-brotherhood",
-                "id": 39,
-                "title": "Assassin's Creed Brotherhood",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-b",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-3",
-                "id": 40,
-                "title": "Assassin's Creed III",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-3",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-4",
-                "id": 41,
-                "title": "Assassin's Creed IV: Black Flag",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-4",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-rogue",
-                "id": 42,
-                "title": "Assassin's Creed Rogue",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-rogue",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-liberation-hd",
-                "id": 43,
-                "title": "Assassin's Creed Liberation HD",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-l",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-freedom-cry",
-                "id": 44,
-                "title": "Assassin's Creed Freedom Cry",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-fc",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-chronicles-india",
-                "id": 45,
-                "title": "Assassin's Creed Chronicles: India",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-india",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-chronicles-russia",
-                "id": 46,
-                "title": "Assassin's Creed Chronicles: Russia",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-russia",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-chronicles-china",
-                "id": 47,
-                "title": "Assassin's Creed Chronicles: China",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-china",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-syndicate",
-                "id": 48,
-                "title": "Assassin's Creed Syndicate",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-syndicate",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "ac-mirage",
-                "id": 49,
-                "title": "Assassin's Creed Mirage",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-m",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "max-payne-1",
-                "id": 50,
-                "title": "Max Payne",
-                "poster": "https://gameonix.shop/assets/images/games/posters/m-p-1",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "rdr-1",
-                "id": 51,
-                "title": "Red Dead Redemption",
-                "poster": "https://gameonix.shop/assets/images/games/posters/rdr-1",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "cs-go",
-                "id": 52,
-                "title": "Counter-Strike: Global Offensive",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cs-go",
-                "publisher": "Valve"
-            },
-            {
-                "slug": "cs-source",
-                "id": 53,
-                "title": "Counter-Strike: Source",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cs-source",
-                "publisher": "Valve"
-            },
-            {
-                "slug": "left-4-dead-2",
-                "id": 57,
-                "title": "Left 4 Dead 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/left4dead2",
-                "publisher": "Turtle Rock Studios"
-            },
-            {
-                "slug": "mafia-1",
-                "id": 58,
-                "title": "Mafia",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mafia-1",
-                "publisher": "2K Czech"
-            },
-            {
-                "slug": "the-witcher-1",
-                "id": 62,
-                "title": "The Witcher",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-witcher-1",
-                "publisher": "CD Projekt"
-            },
-            {
-                "slug": "watch-dogs-2",
-                "id": 63,
-                "title": "Watch Dogs 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs-2",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "watch-dogs-legion",
-                "id": 64,
-                "title": "Watch Dogs Legion",
-                "poster": "https://gameonix.shop/assets/images/games/posters/watch-dogs-legion",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "far-cry-2",
-                "id": 65,
-                "title": "Far Cry 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-2",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "far-cry-1",
-                "id": 66,
-                "title": "Far Cry",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-1",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "far-cry-4",
-                "id": 67,
-                "title": "Far Cry 4",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fc-4",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "dying-light-1",
-                "id": 68,
-                "title": "Dying light",
-                "poster": "https://gameonix.shop/assets/images/games/posters/dying-light-1",
-                "publisher": "Tencent"
-            },
-            {
-                "slug": "ac-odyssey",
-                "id": 69,
-                "title": "Assassin's Creed Odyssey",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ac-odyssey",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "alan-wake",
-                "id": 70,
-                "title": "Alan Wake",
-                "poster": "https://gameonix.shop/assets/images/games/posters/alan-wake-1",
-                "publisher": "Remedy Entertainment"
-            },
-            {
-                "slug": "alan-wake-2",
-                "id": 71,
-                "title": "Alan Wake 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/alan-wake-2",
-                "publisher": "Remedy Entertainment"
-            },
-            {
-                "slug": "the-last-of-us-part-II",
-                "id": 72,
-                "title": "The Last of Us Part II Remastered",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-last-of-us-2",
-                "publisher": "Naughty Dog"
-            },
-            {
-                "slug": "cod1",
-                "id": 73,
-                "title": "Call of Duty 1",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-1",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod2",
-                "id": 74,
-                "title": "Call of Duty 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-2",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-waw",
-                "id": 75,
-                "title": "Call of Duty: World at War",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-waw",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-4",
-                "id": 76,
-                "title": "Call of Duty 4: Modern Warfare",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-4",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-mw-2",
-                "id": 77,
-                "title": "Call of Duty: Modern Warfare 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-2",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-mw-3",
-                "id": 78,
-                "title": "Call of Duty: Modern Warfare 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-3",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-bo1",
-                "id": 79,
-                "title": "Call of Duty: Black Ops 1",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-1",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-bo2",
-                "id": 80,
-                "title": "Call of Duty: Black Ops 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-2",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-bo3",
-                "id": 81,
-                "title": "Call of Duty: Black Ops 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-3",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-bo-cw",
-                "id": 82,
-                "title": "Call of Duty: Black Ops Cold War",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-cw",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "cod-ad",
-                "id": 83,
-                "title": "Call of Duty: Advanced Warfare",
-                "poster": "https://gameonix.shop/assets/images/games/posters/cof-ad",
-                "publisher": "Activision"
-            },
-            {
-                "slug": "bf-1",
-                "id": 84,
-                "title": "Battlefield 1",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-1",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "bf-2",
-                "id": 85,
-                "title": "Battlefield 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-2",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "bf-3",
-                "id": 86,
-                "title": "Battlefield 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-3",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "bf-4",
-                "id": 87,
-                "title": "Battlefield 4",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-4",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "bf-v",
-                "id": 88,
-                "title": "Battlefield 5",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-5",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "bf-6",
-                "id": 89,
-                "title": "Battlefield 6",
-                "poster": "https://gameonix.shop/assets/images/games/posters/bf-6",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "mount-blade-sails",
-                "id": 90,
-                "title": "Mount & Blade: War Sails",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mount-blade-sails",
-                "publisher": "TaleWorlds Entertainment"
-            },
-            {
-                "slug": "stronghold-crusader-de",
-                "id": 91,
-                "title": "Stronghold Crusader: Definitive Edition",
-                "poster": "https://gameonix.shop/assets/images/games/posters/scde",
-                "publisher": "Firefly Studios"
-            },
-            {
-                "slug": "uncharted",
-                "id": 92,
-                "title": "Uncharted: Legacy of Thieves Collection",
-                "poster": "https://gameonix.shop/assets/images/games/posters/uncharted",
-                "publisher": "Naughty Dog"
-            },
-            {
-                "slug": "marvels-spiderman-Miles-morales",
-                "id": 93,
-                "title": "Marvel's Spider-Man: Miles Morales",
-                "poster": "https://gameonix.shop/assets/images/games/posters/spiderman-miles-morals",
-                "publisher": "Insomniac Games"
-            },
-            {
-                "slug": "marvels-spiderman-1-re",
-                "id": 94,
-                "title": "Marvel's Spider-Man Remastered",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mar-spider-man-1-re",
-                "publisher": "Insomniac Games"
-            },
-            {
-                "slug": "marvels-spiderman-2",
-                "id": 95,
-                "title": "Marvel's Spider-Man 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/mar-spider-man-2",
-                "publisher": "Insomniac Games"
-            },
-            {
-                "slug": "resident-evil-requiem",
-                "id": 96,
-                "title": "Resident Evil Requiem",
-                "poster": "https://gameonix.shop/assets/images/games/posters/resident-evil-requiem",
-                "publisher": "Capcom"
-            },
-            {
-                "slug": "ghost-recon-future-soldier",
-                "id": 97,
-                "title": "Tom Clancy's Ghost Recon: Future Soldier",
-                "poster": "https://gameonix.shop/assets/images/games/posters/ghost-recon-future-soldier",
-                "publisher": "Ubisoft"
-            },
-            {
-                "slug": "wwe-2k15",
-                "id": 98,
-                "title": "WWE 2K15",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k15",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k16",
-                "id": 99,
-                "title": "WWE 2K16",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k16",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k17",
-                "id": 100,
-                "title": "WWE 2K17",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k17",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k18",
-                "id": 101,
-                "title": "WWE 2K18",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k18",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k19",
-                "id": 102,
-                "title": "WWE 2K19",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k19",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k20",
-                "id": 103,
-                "title": "WWE 2K20",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k20",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k22",
-                "id": 104,
-                "title": "WWE 2K22",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k22",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k23",
-                "id": 105,
-                "title": "WWE 2K23",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k23",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "wwe-2k24",
-                "id": 106,
-                "title": "WWE 2K24",
-                "poster": "https://gameonix.shop/assets/images/games/posters/wwe-2k24",
-                "publisher": "Yuke's"
-            },
-            {
-                "slug": "tekken-7",
-                "id": 107,
-                "title": "Tekken 7",
-                "poster": "https://gameonix.shop/assets/images/games/posters/tekken-7",
-                "publisher": "Bandai Namco"
-            },
-            {
-                "slug": "tekken-8",
-                "id": 108,
-                "title": "Tekken 8",
-                "poster": "https://gameonix.shop/assets/images/games/posters/tekken-8",
-                "publisher": "Bandai Namco"
-            },
-            {
-                "slug": "the-walking-dead-the-telltale-definitive-series",
-                "id": 109,
-                "title": "The Walking Dead: The Telltale Definitive Series",
-                "poster": "https://gameonix.shop/assets/images/games/posters/the-walking-dead",
-                "publisher": "Telltale Games"
-            },
-            {
-                "slug": "it-takes-two",
-                "id": 110,
-                "title": "It Takes Two",
-                "poster": "https://gameonix.shop/assets/images/games/posters/it-takes-two",
-                "publisher": "Heslight Studios"
-            },
-            {
-                "slug": "days-gone",
-                "id": 111,
-                "title": "Days Gone",
-                "poster": "https://gameonix.shop/assets/images/games/posters/days-gone",
-                "publisher": "SCE Bend Studio"
-            }
-        ]
-    },
-    "Racing": {
-        "icon": "sports_motorsports",
-        "games": [
-            {
-                "slug": "nfs-most-wanted-2012",
-                "id": 1,
-                "title": "Need For Speed: Most Wanted 2012",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2012",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "nfs-most-wanted-2005",
-                "id": 2,
-                "title": "Need For Speed: Most Wanted 5.1.0",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-2005",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "nfs-carbon",
-                "id": 3,
-                "title": "Need For Speed: Carbon",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-carbon",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "need-for-speed-hot-pursuit",
-                "id": 4,
-                "title": "Need For Speed: Hot Pursuit",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-h-p-1",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "need-for-speed-heat",
-                "id": 5,
-                "title": "Need For Speed: Heat",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-heat",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "need-for-speed-rivals",
-                "id": 6,
-                "title": "Need for Speed: Rivals",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-rivals",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "blur",
-                "id": 7,
-                "title": "Blur",
-                "poster": "https://gameonix.shop/assets/images/games/posters/blur",
-                "publisher": "Bizarre Creations"
-            },
-            {
-                "slug": "burnout-paradise-Rema",
-                "id": 8,
-                "title": "Burnout Paradise Remastered",
-                "poster": "https://gameonix.shop/assets/images/games/posters/b-p-r",
-                "publisher": "Criterion Games"
-            },
-            {
-                "slug": "forza-horizon-3",
-                "id": 9,
-                "title": "Forza Horizon 3",
-                "poster": "https://gameonix.shop/assets/images/games/posters/f-h-3",
-                "publisher": "Playground Games"
-            },
-            {
-                "slug": "forza-horizon-4",
-                "id": 10,
-                "title": "Forza Horizon 4",
-                "poster": "https://gameonix.shop/assets/images/games/posters/f-h-4",
-                "publisher": "Playground Games"
-            },
-            {
-                "slug": "forza-horizon-5",
-                "id": 11,
-                "title": "Forza Horizon 5",
-                "poster": "https://gameonix.shop/assets/images/games/posters/f-h-5",
-                "publisher": "Playground Games"
-            },
-            {
-                "id": "",
-                "title": "More Games",
-                "poster": "",
-                "publisher": ""
-            },
-            {
-                "slug": "nfs-underground",
-                "id": 12,
-                "title": "Need For Speed: Underground",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-underground-1",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "nfs-underground-2",
-                "id": 13,
-                "title": "Need For Speed: Underground 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-underground-2",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "nfs-prostreet",
-                "id": 14,
-                "title": "Need For Speed: ProStreet",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-prostreet",
-                "publisher": "Electronic Arts"
-            },
-            {
-                "slug": "nfs-undercover",
-                "id": 15,
-                "title": "Need For Speed: Undercover",
-                "poster": "https://gameonix.shop/assets/images/games/posters/nfs-undercover",
-                "publisher": "Electronic Arts"
-            }
-        ]
-    },
-    "Sports": {
-        "icon": "sports_soccer",
-        "games": [
-            {
-                "slug": "fifa-12",
-                "id": 1,
-                "title": "FIFA 12",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa12",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-14",
-                "id": 2,
-                "title": "FIFA 14",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa14",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-15",
-                "id": 3,
-                "title": "FIFA 15",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa15",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-16",
-                "id": 4,
-                "title": "FIFA 16",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa16",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-17",
-                "id": 5,
-                "title": "FIFA 17",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa17",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-18",
-                "id": 6,
-                "title": "FIFA 18",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa18",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-19",
-                "id": 7,
-                "title": "FIFA 19",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa19",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-20",
-                "id": 8,
-                "title": "FIFA 20",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa20",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-21",
-                "id": 9,
-                "title": "FIFA 21",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa21",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-22",
-                "id": 10,
-                "title": "FIFA 22",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa22",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "fifa-23",
-                "id": 11,
-                "title": "FIFA 23",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fifa23",
-                "publisher": "EA Sports"
-            },
-            {
-                "slug": "pes-2009",
-                "id": 13,
-                "title": "PES 2009",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pes2009",
-                "publisher": "Konami"
-            },
-            {
-                "slug": "pes-2011",
-                "id": 14,
-                "title": "PES 2011",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pes2011",
-                "publisher": "Konami"
-            },
-            {
-                "slug": "pes-2012",
-                "id": 15,
-                "title": "PES 2012",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pes2012",
-                "publisher": "Konami"
-            },
-            {
-                "slug": "pes-2019",
-                "id": 16,
-                "title": "PES 2019",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pes2019",
-                "publisher": "Konami"
-            },
-            {
-                "id": "",
-                "title": "More Games",
-                "poster": "",
-                "publisher": ""
-            }
-        ]
-    },
-    "Simulation": {
-        "icon": "gamepad_circle_down",
-        "games": [
-            {
-                "slug": "stray",
-                "id": 1,
-                "title": "Stray",
-                "poster": "https://gameonix.shop/assets/images/games/posters/stray",
-                "publisher": "BlueTwelve"
-            },
-            {
-                "slug": "pc-building-sim-1",
-                "id": 2,
-                "title": "PC Building Simulator",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pc-building-sim-1",
-                "publisher": "Claudiu Kiss"
-            },
-            {
-                "slug": "pc-building-sim-2",
-                "id": 3,
-                "title": "PC Building Simulator 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/pc-building-sim-2",
-                "publisher": "Claudiu Kiss"
-            },
-            {
-                "slug": "house-flipper-2",
-                "id": 4,
-                "title": "House Flipper 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/house-flipper-2",
-                "publisher": "Frozen District"
-            },
-            {
-                "slug": "zoo-tycoon-1",
-                "id": 5,
-                "title": "Zoo Tycoon",
-                "poster": "https://gameonix.shop/assets/images/games/posters/zoo-tycoon-1",
-                "publisher": "Blue Fang Games"
-            },
-            {
-                "slug": "food-delivery-sim",
-                "id": 6,
-                "title": "Food Delivery Simulator",
-                "poster": "https://gameonix.shop/assets/images/games/posters/food-delivery-sim",
-                "publisher": "creative assembly sofia"
-            },
-            {
-                "slug": "food-truck-sim",
-                "id": 7,
-                "title": "Food Truck Simulator",
-                "poster": "https://gameonix.shop/assets/images/games/posters/food-truck-sim",
-                "publisher": "Drago Entertainment"
-            },
-            {
-                "slug": "fuel-harvest-together",
-                "id": 8,
-                "title": "Fuel Harvest Together",
-                "poster": "https://gameonix.shop/assets/images/games/posters/fuel-harvest-together",
-                "publisher": "Say2Sun"
-            },
-            {
-                "slug": "drive-beyond-horizons",
-                "id": 9,
-                "title": "Drive Beyond Horizons",
-                "poster": "https://gameonix.shop/assets/images/games/posters/drive-beyond-horizons",
-                "publisher": "Tacty Studio"
-            },
-            {
-                "slug": "internet-cafe-sim-1",
-                "id": 10,
-                "title": "Internet Cafe Simulator",
-                "poster": "https://gameonix.shop/assets/images/games/posters/internet-cafe-sim-1",
-                "publisher": "Cheesecake Dev"
-            },
-            {
-                "slug": "internet-cafe-sim-2",
-                "id": 11,
-                "title": "Internet Cafe Simulator 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/internet-cafe-sim-2",
-                "publisher": "Cheesecake Dev"
-            }
-        ]
-    },
-    "Old Games": {
-        "icon": "save",
-        "games": [
-            {
-                "slug": "red-alert-2-expansion",
-                "id": 1,
-                "title": "Red Alert 2 Expansion",
-                "poster": "https://gameonix.shop/assets/images/games/posters/red-alert-2-ex",
-                "publisher": "EA Games"
-            },
-            {
-                "slug": "neighbours-from-hell-1",
-                "id": 2,
-                "title": "Neighbours from Hell",
-                "poster": "https://gameonix.shop/assets/images/games/posters/neighbours-from-hell-1",
-                "publisher": "JoWooD"
-            },
-            {
-                "slug": "neighbours-from-hell-2",
-                "id": 3,
-                "title": "Neighbours from Hell 2",
-                "poster": "https://gameonix.shop/assets/images/games/posters/neighbours-from-hell-2",
-                "publisher": "JoWooD"
-            },
-            {
-                "slug": "sudden-strike-4",
-                "id": 4,
-                "title": "Sudden Strike 4",
-                "poster": "https://gameonix.shop/assets/images/games/posters/sudden-strike-4",
-                "publisher": "Kite Games"
-            },
-            {
-                "slug": "stronghold-crusader",
-                "id": 5,
-                "title": "Stronghold Crusader",
-                "poster": "https://gameonix.shop/assets/images/games/posters/stronghold-1",
-                "publisher": "Firefly Studios"
-            },
-            {
-                "slug": "gta-sa",
-                "id": 6,
-                "title": "Grand Theft Auto San Andreas",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gtasa",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-3",
-                "id": 7,
-                "title": "Grand Theft Auto III",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gta3",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "gta-vc",
-                "id": 8,
-                "title": "Grand Theft Auto Vice City",
-                "poster": "https://gameonix.shop/assets/images/games/posters/gtavc",
-                "publisher": "Rockstar Games"
-            },
-            {
-                "slug": "crazy-taxi",
-                "id": 9,
-                "title": "Crazy Taxi",
-                "poster": "https://gameonix.shop/assets/images/games/posters/crazy-taxi",
-                "publisher": "Sega"
-            },
-            {
-                "slug": "alien-shooter",
-                "id": 10,
-                "title": "Alien Shooter",
-                "poster": "https://gameonix.shop/assets/images/games/posters/alien-shooter",
-                "publisher": "Sigma Team"
-            },
-            {
-                "slug": "jazz-rabbit-1",
-                "id": 11,
-                "title": "Jazz Jackrabbit",
-                "poster": "https://gameonix.shop/assets/images/games/posters/jazz-jackrabbit",
-                "publisher": "Epic MegaGames"
-            },
-            {
-                "slug": "house-of-the-dead",
-                "id": 12,
-                "title": "House of the Dead",
-                "poster": "https://gameonix.shop/assets/images/games/posters/house-of-the-dead",
-                "publisher": "Sega"
-            },
-            {
-                "slug": "adventures-of-robinson-crusoe",
-                "id": 13,
-                "title": "Adventures of Robinson Crusoe",
-                "poster": "https://gameonix.shop/assets/images/games/posters/adventures-of-robinson-crusoe",
-                "publisher": "MagicIndie Softworks"
-            }
-        ]
+    "PS Games": {
+        "icon": "fa-playstation",
+        "Popular": {
+            "icon": "fa-fire",
+            "games": [
+                
+            ]
+        }
     }
 }

@@ -24,10 +24,10 @@ fetch("./../../data/json/apps-data.json")
         page.innerHTML = `
     <div class="game-container">
         <div class="game-title">
-            <div class="game-name" id="goBack"><span style="font-size: 40px;" class="material-symbols-rounded">arrow_left_alt</span> ${app.title}</div>
+            <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left" style="font-size: 40px;"></i> ${app.title}</div>
             <div class="details">
                 <div class="game-publisher pl"> ${app.publisher}</div>
-                <div class="game-type pl"><span class="material-symbols-rounded">${app.appTypeIcon}</span> ${app.appType}</div>
+                <div class="game-type pl"><i class="fa-solid fa-desktop"></i> ${app.appType}</div>
             </div>
         </div>
 
@@ -40,17 +40,17 @@ fetch("./../../data/json/apps-data.json")
 
                             <div class="media-overlay">
                                 <div class="media-arrow left" id="mainLeft">
-                                    <span class="material-symbols-rounded">arrow_back_ios_new</span>
+                                    <i class="fa-solid fa-chevron-left"></i>
                                 </div>
 
                                 <div class="media-arrow right" id="mainRight">
-                                    <span class="material-symbols-rounded">arrow_forward_ios</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </div>
                             </div>
                         </div>
 
                         <div class="thumb-wrapper">
-                            <div class="arrow" id="leftArrow"><span class="material-symbols-rounded">arrow_back_ios_new</span></div>
+                            <div class="arrow" id="leftArrow"><i class="fa-solid fa-chevron-left"></i></div>
 
                             <div class="thumb-slider">
                                 <div class="thumb-slider-inner" id="thumbSlider">
@@ -62,7 +62,7 @@ fetch("./../../data/json/apps-data.json")
                                 </div>
                             </div>
 
-                            <div class="arrow" id="rightArrow"><span class="material-symbols-rounded">arrow_forward_ios</span></div>
+                            <div class="arrow" id="rightArrow"><i class="fa-solid fa-chevron-right"></i></div>
                         </div>
                         <div class="game-ads">
                         </div>
@@ -75,29 +75,29 @@ fetch("./../../data/json/apps-data.json")
 
                         <div class="commands-btns">
                             <a href="${app.appLink}" class="fa-download-good-for-now" target="_blank" rel="noopener noreferrer">
-                                <button class="btn download-btn"><span class="material-symbols-rounded">download</span> Download</button>
+                                <button class="btn download-btn"><i class="fa-solid fa-download"></i> Download</button>
                             </a>
-                            <button class="btn bug-btn"> <span class="material-symbols-rounded">bug_report</span> </button>
+                            <button class="btn bug-btn"> <i class="fa-solid fa-bug"></i> </button>
                         </div>
                         
-                        <button class="btn share-btn"><span class="material-symbols-rounded">share</span> Share</button>
+                        <button class="btn share-btn"><i class="fa-solid fa-share"></i> Share</button>
 
                         <div class="epic-details-table">
                             <div class="detail-row">
-                                <span class="detail-label"><span class="material-symbols-rounded">commit</span> Version</span>
+                                <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Version</span>
                                 <span class="detail-value"> ${app.version}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><span class="material-symbols-rounded">data_usage</span> Size</span>
+                                <span class="detail-label"><i class="fa-solid fa-database"></i> Size</span>
                                 <span class="detail-value">${app.size}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><span class="material-symbols-rounded">code_xml</span> Developer</span>
+                                <span class="detail-label"><i class="fa-solid fa-code"></i> Developer</span>
                                 <span class="detail-value">${app.publisher}</span>
                             </div>
                             <div class="detail-row">
-                                <span class="detail-label"><span class="material-symbols-rounded">layers</span> Platform</span>
-                                <span class="detail-value"><span class="material-symbols-rounded">desktop_windows</span></span>
+                                <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Platform</span>
+                                <span class="detail-value"><i class="fa-solid fa-desktop"></i></span>
                             </div>
                         </div>
                     </div>

@@ -139,7 +139,7 @@ function createAppSkeleton() {
     skeleton.innerHTML = `
         <div class="app-icon-container">
             <div class="app-icon" style="background: #f0f0f0; color: #ccc;">
-                <span class="material-symbols-rounded">apps</span>
+                <i class="fa-solid fa-cube"></i>
             </div>
         </div>
         <div class="app-info">

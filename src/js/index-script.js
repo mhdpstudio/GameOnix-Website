@@ -48,16 +48,17 @@ fetch('https://www.gameonix.shop/data/json/games.json')
                 <div class="section-header">
                     <h2 class="sec-style">
                         <a class="sec-txt" data-section="${sectionName}">
-                            ${section.icon ? `<span style="font-size: 30px;" class="material-symbols-rounded">${section.icon}</span>` : ''}
+                            ${section.icon ? `<i class="fa-solid fa-${section.icon}"></i>` : ''}
                             ${sectionName}
-                            <span style="font-size: 30px;" class="material-symbols-rounded">arrow_right_alt</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+
                         </a>
                     </h2>
                 </div>
 
                 <div class="section-controls">
-                    <span class="material-symbols-rounded scroll-btn left">chevron_left</span>
-                    <span class="material-symbols-rounded scroll-btn right">chevron_right</span>
+                    <i class="fa-solid fa-chevron-left fa scroll-btn left"></i>
+                    <i class="fa-solid fa-chevron-right fa scroll-btn right"></i>
                 </div>
 
                 <div class="section">

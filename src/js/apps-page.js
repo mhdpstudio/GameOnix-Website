@@ -1,34 +1,41 @@
-// Apps Page JavaScript - Dynamic App Card Generation
-
-// Load Apps Data and Generate Cards
-document.addEventListener('DOMContentLoaded', () => {
-    loadApps();
-});
+setupCategoryFilters();
+setupSearchFunctionality();
+loadApps();
 
 async function loadApps() {
     const appsGrid = document.getElementById('apps-grid');
-    
+    if (!appsGrid) {
+        console.error('apps-grid element not found!');
+        return;
+    }
+
     try {
+        console.log('Loading apps...');
         // Show loading skeletons
         showLoadingSkeletons(appsGrid);
-        
-        // Fetch apps data
-        const response = await fetch("./../../data/json/apps-data.json");
+
+        // Fetch with no cache
+        const response = await fetch("../../data/json/apps-list.json?" + Date.now(), { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
         const data = await response.json();
-        
+        console.log('Apps data loaded:', data.apps?.length || 0);
+
         // Hide loading skeletons
         appsGrid.innerHTML = '';
-        
+
         // Generate app cards
         if (data.apps && data.apps.length > 0) {
+            appsGrid.innerHTML = ''; // Clear skeletons
             data.apps.forEach(app => {
                 const appCard = createAppCard(app);
                 appsGrid.appendChild(appCard);
             });
+            console.log('Cards generated:', data.apps.length);
         } else {
             showNoAppsMessage(appsGrid);
         }
-        
+
     } catch (error) {
         console.error('Error loading apps:', error);
         appsGrid.innerHTML = '';
@@ -50,82 +57,92 @@ async function loadApps() {
 
 function createAppCard(app) {
     const card = document.createElement('div');
-    card.className = `app-card ${app.category.toLowerCase()}`;
+    card.className = `app-card ${app.ITEAM.toLowerCase().replace(/\s+/g, '-')}`;
     card.dataset.slug = app.slug;
-    card.dataset.category = app.category.toLowerCase();
-    
-    // Generate star rating HTML
-    const starsHTML = generateStars(app.rating);
-    
+    card.dataset.category = app.ITEAM.toLowerCase().replace(/\s+/g, '-');
+
+    // Generate star rating HTML (using a default rating since it's not in the JSON)
+    const starsHTML = generateStars(4.5); // Default rating
+
     card.innerHTML = `
         <div class="app-icon-container">
             <div class="app-icon">
-                <span class="material-symbols-rounded">${app.appTypeIcon}</span>
+                <img class="app-icon-img" src="${app.previewImage}">
             </div>
         </div>
         
         <div class="app-info">
             <h3 class="app-title">${app.title}</h3>
-            <span class="app-category">${app.category}</span>
+            <span class="app-category"><i class="fa-solid fa-${app.categoryIcon}"></i> ${app.category}</span>
             
-            <div class="app-rating">
-                <div class="app-stars">
-                    ${starsHTML}
-                </div>
-                <span class="app-rating-text">${app.rating}/5</span>
-            </div>
             
             <p class="app-description">${app.description}</p>
             
             <div class="app-meta">
-                <span><i class="fa-solid fa-code-branch"></i> ${app.version}</span>
-                <span><i class="fa-solid fa-database"></i> ${app.size}</span>
+                <span class="bt"><i class="fa-solid fa-code-branch"></i> ${app.version}</span>
+                <span class="bt"><i class="fa-solid fa-database"></i> ${app.size}</span>
             </div>
             
             <div class="app-actions">
-                <button class="app-download-btn">
+                <a style="text-decoration: none;" href="${app.appLink}" target="_blank" class="app-download-btn btn5">
                     <i class="fa-solid fa-download"></i>
                     Download
-                </button>
-                <button class="app-more-info">
-                    <i class="fa-solid fa-info-circle"></i>
+                </a>
+                <button class="app-more-info btn4" onclick="openAppDetails('${app.slug}')">
+                    <i class="fa-solid fa-info"></i>
                     More Info
                 </button>
             </div>
         </div>
     `;
-    
+
+    // Make the entire card clickable to open app details
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (e) => {
+        // Don't trigger if clicking on buttons
+        if (e.target.closest('.app-actions') || e.target.closest('.app-download-btn')) {
+            return;
+        }
+        openAppDetails(app.slug);
+    });
+
     return card;
+}
+
+// Function to open app details page
+function openAppDetails(slug) {
+    // Navigate to app page with slug parameter
+    window.location.href = `app-page.html?slug=${slug}`;
 }
 
 function generateStars(rating) {
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
     let starsHTML = '';
-    
+
     // Full stars
     for (let i = 0; i < fullStars; i++) {
         starsHTML += '<i class="fa-solid fa-star"></i>';
     }
-    
+
     // Half star if needed
     if (hasHalfStar) {
         starsHTML += '<i class="fa-solid fa-star-half-stroke"></i>';
     }
-    
+
     // Empty stars to complete 5
     const totalStars = 5;
     const emptyStars = totalStars - fullStars - (hasHalfStar ? 1 : 0);
     for (let i = 0; i < emptyStars; i++) {
         starsHTML += '<i class="fa-regular fa-star"></i>';
     }
-    
+
     return starsHTML;
 }
 
 function showLoadingSkeletons(container) {
     container.innerHTML = '';
-    
+
     // Create 6 skeleton cards
     for (let i = 0; i < 6; i++) {
         const skeleton = document.createElement('div');
@@ -173,8 +190,125 @@ function showNoAppsMessage(container) {
     `;
 }
 
+// Category filter functionality
+function setupCategoryFilters() {
+    const categories = ['all', 'games-store', 'emulator'];
+
+    const filtersContainer = document.getElementById('app-filters');
+    if (!filtersContainer) {
+        console.error('app-filters container not found!');
+        return;
+    }
+
+    // Clear existing buttons
+    filtersContainer.innerHTML = '';
+
+    categories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = 'app-filter-btn';
+        button.dataset.category = category;
+        button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+        // Make All the default active category
+        if (category === 'all') button.classList.add('active55');
+
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.app-filter-btn').forEach(btn => btn.classList.remove('active55'));
+            button.classList.add('active55');
+            filterAppsByCategory(category);
+        });
+
+        filtersContainer.appendChild(button);
+    });
+}
+function filterAppsByCategory(category) {
+    const appsGrid = document.getElementById('apps-grid');
+    const appCards = appsGrid.querySelectorAll('.app-card');
+    const searchTerm = document.getElementById('app-search').value.toLowerCase().trim();
+
+    appCards.forEach(card => {
+        const cardCategory = card.dataset.category;
+        const cardTitle = card.querySelector('.app-title').textContent.toLowerCase();
+        const cardDescription = card.querySelector('.app-description').textContent.toLowerCase();
+        const cardCategoryText = card.querySelector('.app-category').textContent.toLowerCase();
+
+        // Check category filter
+        const categoryMatch = category === 'all' || cardCategory.includes(category);
+
+        // Check search filter (title only)
+        const searchMatch = searchTerm === '' || 
+            cardTitle.includes(searchTerm);
+
+        // Show card only if both filters match
+        if (categoryMatch && searchMatch) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// Search functionality
+function setupSearchFunctionality() {
+    const searchInput = document.getElementById('app-search');
+    const searchClear = document.getElementById('search-clear');
+
+    if (!searchInput) {
+        console.error('Search input not found!');
+        return;
+    }
+
+    // Search input event listener
+    searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        
+        // Get current active category
+        const activeCategoryBtn = document.querySelector('.app-filter-btn.active55');
+        const currentCategory = activeCategoryBtn ? activeCategoryBtn.dataset.category : 'all';
+        
+        // Apply filters
+        filterAppsByCategory(currentCategory);
+        
+        // Show/hide clear button
+        if (searchTerm) {
+            searchClear.style.display = 'block';
+        } else {
+            searchClear.style.display = 'none';
+        }
+    });
+
+    // Clear search functionality
+    if (searchClear) {
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            
+            // Get current active category and re-apply filter
+            const activeCategoryBtn = document.querySelector('.app-filter-btn.active55');
+            const currentCategory = activeCategoryBtn ? activeCategoryBtn.dataset.category : 'all';
+            filterAppsByCategory(currentCategory);
+            
+            // Focus back on search input
+            searchInput.focus();
+        });
+    }
+
+    // Clear button hover effect
+    if (searchClear) {
+        searchClear.addEventListener('mouseenter', () => {
+            searchClear.style.background = 'var(--color-bg-secondary)';
+            searchClear.style.color = 'var(--color-text-primary)';
+        });
+        
+        searchClear.addEventListener('mouseleave', () => {
+            searchClear.style.background = 'none';
+            searchClear.style.color = 'var(--color-text-secondary)';
+        });
+    }
+}
+
+
 // Add shimmer animation for loading skeletons
-const style = document.createElement('style');
 style.textContent = `
     @keyframes shimmer {
         0% {
@@ -201,62 +335,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// Category filter functionality
-function setupCategoryFilters() {
-    const categories = ['all', 'productivity', 'creative', 'entertainment', 'utilities', 'education', 'communication'];
-    
-    // Create filter buttons if they don't exist
-    const existingFilters = document.querySelector('.app-filters');
-    if (!existingFilters) {
-        const filtersContainer = document.createElement('div');
-        filtersContainer.className = 'app-filters';
-        filtersContainer.style.cssText = `
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        `;
-        
-        categories.forEach(category => {
-            const button = document.createElement('button');
-            button.className = 'app-filter-btn';
-            button.dataset.category = category;
-            button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-            button.style.cssText = `
-                padding: 8px 16px;
-                border: 1px solid var(--color-border-hr);
-                background: var(--color-bg-secondary);
-                color: var(--color-text-primary);
-                border-radius: 20px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                font-weight: 600;
-            `;
-            
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.app-filter-btn').forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                // Filter apps
-                filterAppsByCategory(category);
-            });
-            
-            filtersContainer.appendChild(button);
-        });
-        
-        // Add filters above the apps grid
-        const appsHeader = document.querySelector('.app-page-header');
-        if (appsHeader) {
-            appsHeader.parentNode.insertBefore(filtersContainer, appsHeader.nextSibling);
-        }
-    }
-}
-
-// Initialize filters when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    setupCategoryFilters();
-    loadApps();
-});

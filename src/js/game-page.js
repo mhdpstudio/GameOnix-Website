@@ -39,7 +39,7 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
             <div class="game-name" id="goBack"><span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}</div>
             <div class="details">
                 <div class="game-publisher"> ${game.publisher}</div>
-                <div class="game-type"><span class="material-symbols-rounded">${game.gameTypeIcon}</span> ${game.gameType}</div>
+                <div class="game-type"><i class="fa-solid ${game.gameTypeIcon}"></i> ${game.gameType}</div>
             </div>
         </div>
 
@@ -98,20 +98,20 @@ ${mediaImages.map((img, i) => `
 
                     <div class="epic-details-table">
                     <div class="detail-row">
-                        <span class="detail-label"><span class="material-symbols-rounded">commit</span> Version</span>
+                        <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Version</span>
                         <span class="detail-value">${game.version}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><span class="material-symbols-rounded">data_usage</span> Size</span>
+                        <span class="detail-label"><i class="fa-solid fa-database"></i> Size</span>
                         <span class="detail-value">${game.size}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><span class="material-symbols-rounded">code_xml</span> Developer</span>
+                        <span class="detail-label"><i class="fa-solid fa-code"></i> Developer</span>
                         <span class="detail-value">${game.publisher}</span>
                     </div>
                     <div class="detail-row">
-                        <span class="detail-label"><span class="material-symbols-rounded">layers</span> Platform</span>
-                        <span class="detail-value"><span class="material-symbols-rounded">desktop_windows</span></span>
+                        <span class="detail-label"><i class="fa-sharp fa-solid fa-layer-group"></i> Platform</span>
+                        <span class="detail-value"><i class="fa-brands fa-${game.ico}"></i></span>
                     </div>
                 </div>
                 </div>

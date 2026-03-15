@@ -71,10 +71,6 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     padding: 5px 8px;
     border-radius: 5px;
     width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
 }
 
 .game-publisher {
