@@ -23,8 +23,12 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
         let mediaImages = [];
 
         if (game.mediaPrefix && game.mediaCount) {
+            const basePath = game.platform === "ps"
+                ? "../../assets/images/games/ps/banners/"
+                : "../../assets/images/games/banners/";
+
             for (let i = 1; i <= game.mediaCount; i++) {
-                mediaImages.push(`../../assets/images/games/banners/${game.mediaPrefix}-${i}.png`);
+                mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.png`);
             }
         } else {
             mediaImages = game.media || [];

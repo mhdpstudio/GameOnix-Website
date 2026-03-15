@@ -11,6 +11,7 @@
             "size": "38.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/gta-v.torrent",
+            "platform": "pc",
             "mediaPrefix": "gta5",
             "mediaCount": 8
         },
@@ -25,6 +26,7 @@
             "size": "141.3 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/gta-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "gta-3",
             "mediaCount": 4
         },
@@ -39,6 +41,7 @@
             "size": "1.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/gta-vice-city.torrent",
+            "platform": "pc",
             "mediaPrefix": "gta-vice-city",
             "mediaCount": 6
         },
@@ -53,6 +56,7 @@
             "size": "12.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/gta-iv.torrent",
+            "platform": "pc",
             "mediaPrefix": "gta4",
             "mediaCount": 10
         },
@@ -67,6 +71,7 @@
             "size": "3.00 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/gta-sa.torrent",
+            "platform": "pc",
             "mediaPrefix": "gtasa",
             "mediaCount": 6
         },
@@ -81,6 +86,7 @@
             "size": "1.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac1",
             "mediaCount": 6
         },
@@ -95,6 +101,7 @@
             "size": "29.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-unity.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-unity",
             "mediaCount": 8
         },
@@ -109,6 +116,7 @@
             "size": "2.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-2",
             "mediaCount": 10
         },
@@ -123,6 +131,7 @@
             "size": "8.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-3",
             "mediaCount": 7
         },
@@ -137,6 +146,7 @@
             "size": "8.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-4.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-4",
             "mediaCount": 6
         },
@@ -151,6 +161,7 @@
             "size": "5.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-brotherhood.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-bh",
             "mediaCount": 7
         },
@@ -165,6 +176,7 @@
             "size": "5.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-revelations.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-re",
             "mediaCount": 7
         },
@@ -179,6 +191,7 @@
             "size": "22.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-mirage.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-m",
             "mediaCount": 7
         },
@@ -193,6 +206,7 @@
             "size": "38.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-origins.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-or",
             "mediaCount": 8
         },
@@ -207,6 +221,7 @@
             "size": "35.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-odyssey.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-od",
             "mediaCount": 8
         },
@@ -221,6 +236,7 @@
             "size": "1.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-liberation.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-lhd",
             "mediaCount": 6
         },
@@ -235,6 +251,7 @@
             "size": "3.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-india.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-india",
             "mediaCount": 4
         },
@@ -249,6 +266,7 @@
             "size": "2.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-china.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-china",
             "mediaCount": 4
         },
@@ -263,6 +281,7 @@
             "size": "1.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-russia.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-russia",
             "mediaCount": 4
         },
@@ -277,6 +296,7 @@
             "size": "4.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-rogue.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-rogue",
             "mediaCount": 7
         },
@@ -291,6 +311,7 @@
             "size": "4.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-freedom-cry.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-freedom",
             "mediaCount": 8
         },
@@ -305,6 +326,7 @@
             "size": "45.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-valhalla.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-valhalla",
             "mediaCount": 7
         },
@@ -319,6 +341,7 @@
             "size": "22.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ac-syndicate.torrent",
+            "platform": "pc",
             "mediaPrefix": "ac-syndicate",
             "mediaCount": 6
         },
@@ -333,6 +356,7 @@
             "size": "11.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/batman-ar-city.torrent",
+            "platform": "pc",
             "mediaPrefix": "batman-ar-city",
             "mediaCount": 5
         },
@@ -347,6 +371,7 @@
             "size": "4.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cs-go.torrent",
+            "platform": "pc",
             "mediaPrefix": "cs-go",
             "mediaCount": 5
         },
@@ -361,6 +386,7 @@
             "size": "1.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cs-source.torrent",
+            "platform": "pc",
             "mediaPrefix": "cs-source",
             "mediaCount": 4
         },
@@ -375,6 +401,7 @@
             "size": "117.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cyberpunk-2077.torrent",
+            "platform": "pc",
             "mediaPrefix": "cyberpunk-2077",
             "mediaCount": 11
         },
@@ -389,6 +416,7 @@
             "size": "30.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/devil-may-cry-5.torrent",
+            "platform": "pc",
             "mediaPrefix": "devil-may-cry-5",
             "mediaCount": 6
         },
@@ -403,6 +431,7 @@
             "size": "64.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/doom-eternal.torrent",
+            "platform": "pc",
             "mediaPrefix": "doom-eternal",
             "mediaCount": 8
         },
@@ -417,6 +446,7 @@
             "size": "20.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dying-light-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "dying-light-1",
             "mediaCount": 7
         },
@@ -431,6 +461,7 @@
             "size": "62.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dying-light-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "dying-light-2",
             "mediaCount": 7
         },
@@ -445,6 +476,7 @@
             "size": "51.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/elden-ring.torrent",
+            "platform": "pc",
             "mediaPrefix": "elden-ring",
             "mediaCount": 13
         },
@@ -459,6 +491,7 @@
             "size": "2.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-1",
             "mediaCount": 2
         },
@@ -473,6 +506,7 @@
             "size": "2.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-2",
             "mediaCount": 5
         },
@@ -487,6 +521,7 @@
             "size": "6.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-3",
             "mediaCount": 8
         },
@@ -501,6 +536,7 @@
             "size": "6.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-4.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-4",
             "mediaCount": 9
         },
@@ -515,6 +551,7 @@
             "size": "58.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-5.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-5",
             "mediaCount": 7
         },
@@ -529,6 +566,7 @@
             "size": "12.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/far-cry-primal.torrent",
+            "platform": "pc",
             "mediaPrefix": "far-cry-primal",
             "mediaCount": 8
         },
@@ -543,6 +581,7 @@
             "size": "46.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ghost-of-tsushima.torrent",
+            "platform": "pc",
             "mediaPrefix": "ghost-of-tsushima",
             "mediaCount": 9
         },
@@ -557,6 +596,7 @@
             "size": "86.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/god-of-war-ragnarok.torrent",
+            "platform": "pc",
             "mediaPrefix": "god-of-war-ragnarok",
             "mediaCount": 9
         },
@@ -571,6 +611,7 @@
             "size": "7.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/alan-wake-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "alan-wake-1",
             "mediaCount": 6
         },
@@ -585,6 +626,7 @@
             "size": "65.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/alan-wake-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "alan-wake-2",
             "mediaCount": 5
         },
@@ -599,6 +641,7 @@
             "size": "2.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/left-4-dead-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "left-4-dead-1",
             "mediaCount": 6
         },
@@ -613,6 +656,7 @@
             "size": "5.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/left-4-dead-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "left-4-dead-2",
             "mediaCount": 7
         },
@@ -627,6 +671,7 @@
             "size": "3.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mad-max.torrent",
+            "platform": "pc",
             "mediaPrefix": "mad-max",
             "mediaCount": 6
         },
@@ -641,6 +686,7 @@
             "size": "2.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mafia-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "mafia-1",
             "mediaCount": 3
         },
@@ -655,6 +701,7 @@
             "size": "6.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mafia-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "mafia-2",
             "mediaCount": 5
         },
@@ -669,6 +716,7 @@
             "size": "267.2 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/max-payne-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "max-payne-1",
             "mediaCount": 6
         },
@@ -683,6 +731,7 @@
             "size": "1.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/max-payne-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "max-payne-2",
             "mediaCount": 4
         },
@@ -697,6 +746,7 @@
             "size": "14.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/max-payne-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "max-payne-3",
             "mediaCount": 7
         },
@@ -711,6 +761,7 @@
             "size": "8.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/rdr-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "rdr-1",
             "mediaCount": 8
         },
@@ -725,6 +776,7 @@
             "size": "89.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/rdr-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "rdr-2",
             "mediaCount": 10
         },
@@ -739,6 +791,7 @@
             "size": "8.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/sleeping-dogs.torrent",
+            "platform": "pc",
             "mediaPrefix": "sleeping-dogs",
             "mediaCount": 6
         },
@@ -753,6 +806,7 @@
             "size": "5.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-amazing-spider-man-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-amazing-spider-man-1",
             "mediaCount": 6
         },
@@ -767,6 +821,7 @@
             "size": "6.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-amazing-spider-man-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-amazing-spider-man-2",
             "mediaCount": 6
         },
@@ -781,6 +836,7 @@
             "size": "39.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/spider-man-miles-morales.torrent",
+            "platform": "pc",
             "mediaPrefix": "spiderman-miles-morales",
             "mediaCount": 6
         },
@@ -795,6 +851,7 @@
             "size": "50.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mar-spider-man-1-re.torrent",
+            "platform": "pc",
             "mediaPrefix": "marvels-spiderman-1-re",
             "mediaCount": 8
         },
@@ -809,6 +866,7 @@
             "size": "94.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mar-spider-man-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "marvels-spiderman-2",
             "mediaCount": 6
         },
@@ -823,6 +881,7 @@
             "size": "53.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-last-of-us-part-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-last-of-us-1",
             "mediaCount": 7
         },
@@ -837,6 +896,7 @@
             "size": "78.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-last-of-us-part-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-last-of-us-2",
             "mediaCount": 9
         },
@@ -851,6 +911,7 @@
             "size": "3.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-witcher-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-witcher-1",
             "mediaCount": 4
         },
@@ -865,6 +926,7 @@
             "size": "14.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-witcher-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-witcher-2",
             "mediaCount": 6
         },
@@ -879,6 +941,7 @@
             "size": "62.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-witcher-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-witcher-3",
             "mediaCount": 6
         },
@@ -893,6 +956,7 @@
             "size": "4.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/spiderman-web-of-shadows.torrent",
+            "platform": "pc",
             "mediaPrefix": "spiderman-web-of-shadows",
             "mediaCount": 5
         },
@@ -907,6 +971,7 @@
             "size": "22.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/watch-dogs-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "watch-dogs",
             "mediaCount": 7
         },
@@ -921,6 +986,7 @@
             "size": "40.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/watch-dogs-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "watch-dogs-2",
             "mediaCount": 13
         },
@@ -935,6 +1001,7 @@
             "size": "84.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/watch-dogs-legion.torrent",
+            "platform": "pc",
             "mediaPrefix": "watch-dogs-legion",
             "mediaCount": 20
         },
@@ -949,6 +1016,7 @@
             "size": "15.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/world-war-z.torrent",
+            "platform": "pc",
             "mediaPrefix": "world-war-z",
             "mediaCount": 10
         },
@@ -963,6 +1031,7 @@
             "size": "5.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-mw-2012.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-most-wanted-2012",
             "mediaCount": 8
         },
@@ -977,6 +1046,7 @@
             "size": "2.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-mw-2005.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-most-wanted-2005",
             "mediaCount": 4
         },
@@ -991,6 +1061,7 @@
             "size": "3.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/blur.torrent",
+            "platform": "pc",
             "mediaPrefix": "blur",
             "mediaCount": 4
         },
@@ -1005,6 +1076,7 @@
             "size": "2.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/burnout-paradise-Remastered.torrent",
+            "platform": "pc",
             "mediaPrefix": "b-p-r",
             "mediaCount": 6
         },
@@ -1019,6 +1091,7 @@
             "size": "33.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/forza-horizon-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "f-h-3",
             "mediaCount": 8
         },
@@ -1033,6 +1106,7 @@
             "size": "56.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/forza-horizon-4.torrent",
+            "platform": "pc",
             "mediaPrefix": "f-h-4",
             "mediaCount": 10
         },
@@ -1047,6 +1121,7 @@
             "size": "101.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/forza-horizon-5.torrent",
+            "platform": "pc",
             "mediaPrefix": "f-h-5",
             "mediaCount": 6
         },
@@ -1061,6 +1136,7 @@
             "size": "2.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-carbon.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-carbon",
             "mediaCount": 7
         },
@@ -1075,6 +1151,7 @@
             "size": "3.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/need-for-speed-hot-pursuit.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-h-p-1",
             "mediaCount": 7
         },
@@ -1089,6 +1166,7 @@
             "size": "21.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-heat.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-heat",
             "mediaCount": 10
         },
@@ -1103,6 +1181,7 @@
             "size": "6.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-rivals.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-rivals",
             "mediaCount": 6
         },
@@ -1117,6 +1196,7 @@
             "size": "150.8 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-underground.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-underground",
             "mediaCount": 3
         },
@@ -1131,6 +1211,7 @@
             "size": "1.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-underground-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-underground-2",
             "mediaCount": 3
         },
@@ -1145,6 +1226,7 @@
             "size": "2.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-prostreet.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-prostreet",
             "mediaCount": 8
         },
@@ -1159,6 +1241,7 @@
             "size": "4.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nfs-undercover.torrent",
+            "platform": "pc",
             "mediaPrefix": "nfs-undercover",
             "mediaCount": 6
         },
@@ -1173,6 +1256,7 @@
             "size": "6.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2009.torrent",
+            "platform": "pc",
             "mediaPrefix": "pes2009",
             "mediaCount": 2
         },
@@ -1187,6 +1271,7 @@
             "size": "5.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2011-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "pes2011",
             "mediaCount": 7
         },
@@ -1201,6 +1286,7 @@
             "size": "6.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2012.torrent",
+            "platform": "pc",
             "mediaPrefix": "pes2012",
             "mediaCount": 4
         },
@@ -1215,6 +1301,7 @@
             "size": "17.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2019.torrent",
+            "platform": "pc",
             "mediaPrefix": "pes2019",
             "mediaCount": 6
         },
@@ -1229,6 +1316,7 @@
             "size": "6.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-12.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa12",
             "mediaCount": 5
         },
@@ -1243,6 +1331,7 @@
             "size": "4.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-14.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa14",
             "mediaCount": 6
         },
@@ -1257,6 +1346,7 @@
             "size": "12.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-15.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa15",
             "mediaCount": 6
         },
@@ -1271,6 +1361,7 @@
             "size": "15.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-16.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa16",
             "mediaCount": 8
         },
@@ -1285,6 +1376,7 @@
             "size": "29.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-17.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa17",
             "mediaCount": 7
         },
@@ -1299,6 +1391,7 @@
             "size": "32.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-18.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa18",
             "mediaCount": 10
         },
@@ -1313,6 +1406,7 @@
             "size": "43.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-19.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa19",
             "mediaCount": 11
         },
@@ -1327,6 +1421,7 @@
             "size": "50.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-20.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa20",
             "mediaCount": 7
         },
@@ -1341,6 +1436,7 @@
             "size": "50.7 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-20.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa20",
             "mediaCount": 7
         },
@@ -1355,6 +1451,7 @@
             "size": "51.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-21.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa21",
             "mediaCount": 4
         },
@@ -1369,6 +1466,7 @@
             "size": "53.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-22.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa22",
             "mediaCount": 8
         },
@@ -1383,6 +1481,7 @@
             "size": "54.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fifa-23.torrent",
+            "platform": "pc",
             "mediaPrefix": "fifa23",
             "mediaCount": 10
         },
@@ -1397,6 +1496,7 @@
             "size": "421.3 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod1",
             "mediaCount": 1
         },
@@ -1411,6 +1511,7 @@
             "size": "2.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod2",
             "mediaCount": 1
         },
@@ -1425,6 +1526,7 @@
             "size": "4.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-waw.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-waw",
             "mediaCount": 7
         },
@@ -1439,6 +1541,7 @@
             "size": "8.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof4.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-4",
             "mediaCount": 6
         },
@@ -1453,6 +1556,7 @@
             "size": "27.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-mw-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-mw-2",
             "mediaCount": 7
         },
@@ -1467,6 +1571,7 @@
             "size": "41.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-mw-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-mw-3",
             "mediaCount": 11
         },
@@ -1481,6 +1586,7 @@
             "size": "7.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-bo-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-bo1",
             "mediaCount": 11
         },
@@ -1495,6 +1601,7 @@
             "size": "15.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-bo-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-bo2",
             "mediaCount": 15
         },
@@ -1509,6 +1616,7 @@
             "size": "49.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-bo-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-bo3",
             "mediaCount": 8
         },
@@ -1523,6 +1631,7 @@
             "size": "132.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-bo-cw.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-bo-cw",
             "mediaCount": 10
         },
@@ -1537,6 +1646,7 @@
             "size": "27.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-ad.torrent",
+            "platform": "pc",
             "mediaPrefix": "cod-ad",
             "mediaCount": 9
         },
@@ -1551,6 +1661,7 @@
             "size": "25.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-1",
             "mediaCount": 8
         },
@@ -1565,6 +1676,7 @@
             "size": "1.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-2",
             "mediaCount": 1
         },
@@ -1579,6 +1691,7 @@
             "size": "13.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-3.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-3",
             "mediaCount": 6
         },
@@ -1593,6 +1706,7 @@
             "size": "23.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-4.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-4",
             "mediaCount": 10
         },
@@ -1607,6 +1721,7 @@
             "size": "33.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-5.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-5",
             "mediaCount": 9
         },
@@ -1621,6 +1736,7 @@
             "size": "84.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bf-6.torrent",
+            "platform": "pc",
             "mediaPrefix": "bf-6",
             "mediaCount": 8
         },
@@ -1635,6 +1751,7 @@
             "size": "27.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k15.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k15",
             "mediaCount": 5
         },
@@ -1649,6 +1766,7 @@
             "size": "40.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k16.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k16",
             "mediaCount": 6
         },
@@ -1663,6 +1781,7 @@
             "size": "45.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k17.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k17",
             "mediaCount": 10
         },
@@ -1677,6 +1796,7 @@
             "size": "40.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k18.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k18",
             "mediaCount": 5
         },
@@ -1691,6 +1811,7 @@
             "size": "43.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k19.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k19",
             "mediaCount": 6
         },
@@ -1705,6 +1826,7 @@
             "size": "45.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k20.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k20",
             "mediaCount": 7
         },
@@ -1719,6 +1841,7 @@
             "size": "48.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k22.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k22",
             "mediaCount": 5
         },
@@ -1733,6 +1856,7 @@
             "size": "68.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k23.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k23",
             "mediaCount": 6
         },
@@ -1747,6 +1871,7 @@
             "size": "80.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/wwe-2k24.torrent",
+            "platform": "pc",
             "mediaPrefix": "wwe-2k24",
             "mediaCount": 6
         },
@@ -1761,6 +1886,7 @@
             "size": "124.0 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/house-of-the-dead.torrent",
+            "platform": "pc",
             "mediaPrefix": "house-of-the-dead",
             "mediaCount": 1
         },
@@ -1775,6 +1901,7 @@
             "size": "58.5 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/resident-evil-requiem.torrent",
+            "platform": "pc",
             "mediaPrefix": "r-e-r",
             "mediaCount": 12
         },
@@ -1789,6 +1916,7 @@
             "size": "39.9 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/tekken-7.torrent",
+            "platform": "pc",
             "mediaPrefix": "tekken-7",
             "mediaCount": 7
         },
@@ -1803,6 +1931,7 @@
             "size": "66.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/tekken-8.torrent",
+            "platform": "pc",
             "mediaPrefix": "tekken-8",
             "mediaCount": 10
         },
@@ -1817,6 +1946,7 @@
             "size": "84.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stray.torrent",
+            "platform": "pc",
             "mediaPrefix": "stray",
             "mediaCount": 7
         },
@@ -1831,6 +1961,7 @@
             "size": "847.9 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/food-delivery-sim.torrent",
+            "platform": "pc",
             "mediaPrefix": "food-delivery-sim",
             "mediaCount": 7
         },
@@ -1845,6 +1976,7 @@
             "size": "1.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fuel-harvest-together.torrent",
+            "platform": "pc",
             "mediaPrefix": "fuel-harvest-together",
             "mediaCount": 9
         },
@@ -1859,6 +1991,7 @@
             "size": "7.6 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fuel-harvest-together.torrent",
+            "platform": "pc",
             "mediaPrefix": "drive-beyond-horizons",
             "mediaCount": 10
         },
@@ -1873,6 +2006,7 @@
             "size": "1.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/internet-cafe-sim-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "internet-cafe-sim-1",
             "mediaCount": 9
         },
@@ -1887,6 +2021,7 @@
             "size": "1.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/internet-cafe-sim-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "internet-cafe-sim-2",
             "mediaCount": 8
         },
@@ -1901,6 +2036,7 @@
             "size": "3.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/house-flipper-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "house-flipper-2",
             "mediaCount": 8
         },
@@ -1915,6 +2051,7 @@
             "size": "562.4 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/zoo-tycoon-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "zoo-tycoon",
             "mediaCount": 3
         },
@@ -1929,6 +2066,7 @@
             "size": "4.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pc-building-sim-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "pc-building-sim",
             "mediaCount": 8
         },
@@ -1943,6 +2081,7 @@
             "size": "5.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pc-building-sim-2.torrent",
+            "platform": "pc",
             "mediaPrefix": "pc-building-sim-2",
             "mediaCount": 8
         },
@@ -1957,6 +2096,7 @@
             "size": "2.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/food-truck-sim.torrent",
+            "platform": "pc",
             "mediaPrefix": "food-truck-sim",
             "mediaCount": 9
         },
@@ -1971,6 +2111,7 @@
             "size": "73.8 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mount-blade-sails.torrent",
+            "platform": "pc",
             "mediaPrefix": "mount-blade-sails",
             "mediaCount": 3
         },
@@ -1985,6 +2126,7 @@
             "size": "406.2 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/red-alert-2-ex.torrent",
+            "platform": "pc",
             "mediaPrefix": "red-alert-2-ex",
             "mediaCount": 3
         },
@@ -1999,6 +2141,7 @@
             "size": "662.6 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/neighbours-from-hell-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "neighbours-from-hell-1",
             "mediaCount": 2
         },
@@ -2013,6 +2156,7 @@
             "size": "223.0 MB",
             "ico": "windows",
             "gameLink": "https://up.downloadcomputergames.net/2020/12/neighbours-from-hell-2/Neighbours-from-Hell-2.zip",
+            "platform": "pc",
             "mediaPrefix": "neighbours-from-hell-2",
             "mediaCount": 2
         },
@@ -2027,6 +2171,7 @@
             "size": "5.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/sudden-strike-4.torrent",
+            "platform": "pc",
             "mediaPrefix": "sudden-strike-4",
             "mediaCount": 5
         },
@@ -2041,6 +2186,7 @@
             "size": "654.8 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stronghold-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "stronghold-crusader",
             "mediaCount": 1
         },
@@ -2055,6 +2201,7 @@
             "size": "5.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stronghold-de.torrent",
+            "platform": "pc",
             "mediaPrefix": "stronghold-crusader-de",
             "mediaCount": 6
         },
@@ -2069,6 +2216,7 @@
             "size": "65.2 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/uncharted-legacy-of-thieves-collection.torrent",
+            "platform": "pc",
             "mediaPrefix": "uncharted",
             "mediaCount": 6
         },
@@ -2083,6 +2231,7 @@
             "size": "17.1 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-walking-dead-the-telltale-definitive-series.torrent",
+            "platform": "pc",
             "mediaPrefix": "the-walking-dead-the-telltale-definitive-series",
             "mediaCount": 5
         },
@@ -2097,6 +2246,7 @@
             "size": "28.0 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/it-takes-two.torrent",
+            "platform": "pc",
             "mediaPrefix": "it-takes-two",
             "mediaCount": 7
         },
@@ -2111,6 +2261,7 @@
             "size": "38.4 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/days-gone.torrent",
+            "platform": "pc",
             "mediaPrefix": "days-gone",
             "mediaCount": 8
         },
@@ -2125,6 +2276,7 @@
             "size": "110.1 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/adventures-of-robinson-crusoe.torrent",
+            "platform": "pc",
             "mediaPrefix": "adventures-of-robinson-crusoe",
             "mediaCount": 1
         },
@@ -2139,6 +2291,7 @@
             "size": "300.0 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/crazy-taxi.torrent",
+            "platform": "pc",
             "mediaPrefix": "crazy-texy",
             "mediaCount": 4
         },
@@ -2153,6 +2306,7 @@
             "size": "81.3 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/alien-shooter.torrent",
+            "platform": "pc",
             "mediaPrefix": "alien-shooter",
             "mediaCount": 4
         },
@@ -2167,6 +2321,7 @@
             "size": "22.6 MB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/jazz-rabbit-1.torrent",
+            "platform": "pc",
             "mediaPrefix": "jazz-rabbit",
             "mediaCount": 4
         },
@@ -2181,8 +2336,39 @@
             "size": "10.3 GB",
             "ico": "windows",
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ghost-recon-future-soldier.torrent",
+            "platform": "pc",
             "mediaPrefix": "ghost-recon-future-soldier",
             "mediaCount": 8
+        },
+        {
+            "slug": "god-of-war-3-ps3",
+            "title": "God of War 3",
+            "publisher": "Santa Monica Studio",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/ps/logos/god-of-war-3.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.35.2.0",
+            "size": "39.1 GB",
+            "ico": "playstation",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/god-of-war-3-ps3.torrent",
+            "platform": "ps",
+            "mediaPrefix": "god-of-war-3",
+            "mediaCount": 6
+        },
+        {
+            "slug": "minecraft-ps3",
+            "title": "Minecraft",
+            "publisher": "Mojang Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/ps/logos/minecraft.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.7.12.0",
+            "size": "366.4 MB",
+            "ico": "playstation",
+            "gameLink": "https://drive.usercontent.google.com/download?id=1bdQ07jprAMHHTZbzUuNhfa-EVhxLZH-a&export=download&authuser=0",
+            "platform": "ps",
+            "mediaPrefix": "minecraft",
+            "mediaCount": 6
         }
     ]
 }

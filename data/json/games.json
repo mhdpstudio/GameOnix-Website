@@ -1252,10 +1252,10 @@
                     "publisher": "Sega"
                 },
                 {
-                    "slug": "adventures-of-robinson-crusoe",
+                    "slug": "god-of-war-3-ps",
                     "id": 13,
                     "title": "Adventures of Robinson Crusoe",
-                    "poster": "https://gameonix.shop/assets/images/games/posters/adventures-of-robinson-crusoe",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/god-of-war-3-ps",
                     "publisher": "MagicIndie Softworks"
                 }
             ]
@@ -1266,7 +1266,20 @@
         "Popular": {
             "icon": "fa-fire",
             "games": [
-                
+                {
+                    "slug": "god-of-war-3-ps3",
+                    "id": 1,
+                    "title": "God of War 3",
+                    "poster": "https://gameonix.shop/assets/images/games/ps/posters/god-of-war-3",
+                    "publisher": "Santa Monica Studio"
+                },
+                {
+                    "slug": "minecraft-ps3",
+                    "id": 2,
+                    "title": "Minecraft",
+                    "poster": "https://gameonix.shop/assets/images/games/ps/posters/minecraft",
+                    "publisher": "Mojang Studios"
+                }
             ]
         }
     }
