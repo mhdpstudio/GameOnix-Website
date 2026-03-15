@@ -49,6 +49,10 @@ i.fa-solid.fa-fire {
     color: rgb(255, 94, 0);
 }
 
+.main-section-title{
+    color: var(--color-text-primary);
+}
+
 .sec-style i:nth-child(2) {
     transition: transform 0.3s ease;
 }
