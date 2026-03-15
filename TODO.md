@@ -1,0 +1,1 @@
+✅ Task completed: Filter buttons vertically centered. Updated src/css/index-style.css (.filter height: 48px) and src/css/search-style.css (.search-bar margin-top: 0, consistent searchBox height/padding).

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title></title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -55,7 +55,6 @@
 
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
-
     <div class="container">
         <aside class="sb closed">
             <header class="sb-h">
@@ -100,6 +99,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="sb-footer">
                 <ul class="menu-list" style="list-style: none;">
                     <li class="menu-item">
@@ -114,11 +114,15 @@
         </aside>
 
         <div class="content">
-            <div class="search-bar" style="margin-top: 10px;">
+            <div class="search-bar" style="margin-top: 20px;">
                 <span class="search-icon"><span class="material-symbols-rounded">search</span></span>
-                <input type="text" class="searchBox" id="searchBox" placeholder="Search games...">
+                <input type="text" id="searchBox" placeholder="Search games...">
             </div>
-            <div id="search-results" class="grid"></div>
+            <div id="main-content">
+                <div id="section-header-container"></div>
+
+                <div id="games-container"></div>
+            </div>
         </div>
     </div>
 
@@ -186,11 +190,12 @@
     // CSS Files
     const cssFiles = [
         "../css/sidebar-style.css",
-        "../css/search-results.css",
+        "../css/section-all-page.css",
         "../css/search-style.css",
         "../css/cards-style.css",
         "../css/theme-btn.css"
     ];
+
     cssFiles.forEach(file => {
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -198,22 +203,28 @@
         document.head.appendChild(link);
     });
 
-    // JS Files
+    // JS Files مع تحديد إذا كان module أو لا
     const jsFiles = [
-        "../js/sidebar-script.js",
-        "../js/search-results.js",
-        "../js/icon.js"
+        { src: "../js/section-all-page.js", module: true },
+        { src: "../js/sidebar-script.js", module: false },
+        { src: "../js/icon.js", module: false }
     ];
+
     jsFiles.forEach(file => {
         const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
+        script.src = `${file.src}?v=${version}`;
+
+        if (file.module) {
+            script.type = "module";
+        }
+
         document.body.appendChild(script);
     });
 </script>
 
 <script>
     // Hide loading screen when page is fully loaded (with 1 second delay)
-    // Skip loading screen if page is loaded from bfcache or if there's already a search query (subsequent search)
+    // Skip loading screen if page is loaded from bfcache (back-forward cache)
     window.addEventListener('load', () => {
         // Check if page was loaded from bfcache (back-forward cache)
         if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
@@ -225,18 +236,7 @@
             return;
         }
 
-        // Check if there's already a search query in URL (subsequent search, not initial load)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('q') || urlParams.has('query')) {
-            // There's already a search query - skip loading screen
-            const loadingScreen = document.getElementById('loading-screen');
-            if (loadingScreen) {
-                loadingScreen.remove();
-            }
-            return;
-        }
-
-        // Normal page load (first time) - show loading screen with 1 second delay
+        // Normal page load - show loading screen with 1 second delay
         setTimeout(() => {
             const loadingScreen = document.getElementById('loading-screen');
             if (loadingScreen) {

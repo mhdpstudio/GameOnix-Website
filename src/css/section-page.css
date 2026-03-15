@@ -19,6 +19,23 @@
     color: var(--color-text-primary);
 }
 
+i.fa-fire{
+    color: rgb(255, 94, 0);
+}
+
+.section-label i:first-child{
+    transition: all 0.3s ease;
+}
+
+.section-label{
+    width: fit-content;
+    cursor: pointer;
+}
+
+.section-label:hover i:first-child{
+    transform: translateX(-4px);
+}
+
 /* شبكة الألعاب */
 #section-games {
     display: grid;

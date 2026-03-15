@@ -12,8 +12,57 @@
     width: fit-content;
 }
 
-.section-container{
+.section-container {
     margin-left: 20px;
+}
+
+/* حاوية البحث + الفلاتر */
+.search-full {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1800px;
+}
+
+.filter.active {
+    box-shadow: 0 0 15px #695CFE; 
+    border: 2px solid #695CFE;
+}
+
+/* input */
+.searchBox,
+#searchBox {
+    height: 48px;
+    padding: 0 20px 0 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+}
+
+/* الفلاتر */
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* أيقونات الفلاتر */
+.filter {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: var(--color-bg-secondary);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .sec-style {
@@ -53,18 +102,18 @@ i.fa-solid.fa-fire {
     color: rgb(255, 94, 0);
 }
 
-.main-section-title{
+.main-section-title {
     color: var(--color-text-primary);
     user-select: none;
     cursor: pointer;
     width: fit-content;
 }
 
-.main-section-title i:nth-child(2){
+.main-section-title i:nth-child(2) {
     transition: transform 0.3s ease;
 }
 
-.main-section-title:hover i:nth-child(2){
+.main-section-title:hover i:nth-child(2) {
     transform: translateX(8px);
 }
 
@@ -250,10 +299,6 @@ span:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.sec-style:hover span:nth-child(2) {
-    transform: translateX(8px) scale(1.1);
 }
 
 .game-details {

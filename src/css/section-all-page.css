@@ -1,0 +1,440 @@
+@import './../../assets/constants/variables.css';
+
+#games-container h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.section-container {
+    margin-left: 20px;
+}
+
+/* حاوية البحث + الفلاتر */
+.search-full {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1800px;
+}
+
+.filter.active {
+    box-shadow: 0 0 15px #695CFE; 
+    border: 2px solid #695CFE;
+}
+
+/* input */
+.searchBox,
+#searchBox {
+    height: 48px;
+    padding: 0 20px 0 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+}
+
+/* الفلاتر */
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* أيقونات الفلاتر */
+.filter {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: var(--color-bg-secondary);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sec-style {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    color: var(--color-text-primary);
+    transition: transform 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-container:first-child .sec-style:first-child span:first-child {
+    color: rgb(255, 94, 0);
+}
+
+.sec-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.ico {
+    color: var(--color-text-primary);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i.fa-solid.fa-fire {
+    color: rgb(255, 94, 0);
+}
+
+.main-section-title {
+    color: var(--color-text-primary);
+    user-select: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.sec-txt i {
+    transition: transform 0.3s ease;
+}
+
+.sec-txt:hover i.fa-solid.fa-chevron-right {
+    transform: translateX(8px);
+}
+
+.sec-style i:nth-child(2) {
+    transition: transform 0.3s ease;
+}
+
+.sec-style:hover i:nth-child(2) {
+    transform: translateX(8px) scale(1.1);
+}
+
+.main-title i:first-child {
+    transition: transform 0.3s ease;
+}
+
+.main-title:hover i:first-child {
+    transform: translateX(-4px);
+}
+
+.game-details {
+    background-color: var(--card-clr);
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    padding: 20px 20px;
+    min-height: 330px;
+    width: 93%;
+    overflow: hidden;
+}
+
+#games-container .section-container:first-child .section .game-card:first-child .game-details:first-child {
+    box-shadow: 0 0 8px rgb(245, 197, 75);
+}
+
+.section-wrapper {
+    position: relative;
+}
+
+.section-controls {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+}
+
+.scroll-btn,
+.scroll-btn:nth-child(2) {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: var(--scroll-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    transition: background 0.3s ease;
+    color: var(--color-text-primary);
+}
+
+.scroll-btn:hover,
+.scroll-btn:nth-child(2):hover {
+    background: var(--clr-txt-dev);
+    color: var(--color-scroll-btns);
+}
+
+/* --- للشاشات المتوسطة والصغيرة (Max 1024px) --- */
+@media (max-width: 1024px) {
+    .section {
+        width: 100%;
+        /* العودة للعرض الكامل */
+        padding: 10px 0;
+        overflow-x: auto;
+        /* السماح بالسكرول الأفقي باللمس */
+        gap: 15px;
+    }
+
+    .section-controls i:nth-child(1),
+    .section-controls i:nth-child(2) {
+        display: none;
+    }
+
+    #games-container h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .game-card:first-child {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* --- للشاشات الصغيرة جداً (Mobile - Max 768px) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 15px 5px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .section::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    /* ضبط المسافات في حاوية الألعاب */
+    .section-wrapper {
+        margin-bottom: 20px;
+    }
+
+    /* جعل العنوان والـ View All تحت بعض لو المساحة ضيقة */
+    #games-container h2 {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* --- لمسة احترافية لمنع اهتزاز الـ Hover في الموبايل --- */
+@media (hover: none) {
+    .sec-style:hover i:nth-child(2) {
+        transform: none;
+        /* إلغاء الـ animation بتاع الماوس في شاشات اللمس */
+    }
+
+    .game-card:active {
+        transform: scale(0.95);
+        /* تأثير ضغطة بسيطة لما اليوزر يلمس الكارت */
+        transition: 0.1s;
+    }
+}
+
+@import './../../assets/constants/variables.css';
+
+#games-container h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.sec-style {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    color: var(--color-text-primary);
+    transition: transform 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-container:first-child .sec-style:first-child span:first-child {
+    color: rgb(255, 94, 0);
+}
+
+span:nth-child(2) {
+    transition: transform 0.3s ease;
+    font-weight: 800;
+}
+
+.sec-txt {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.ico {
+    color: var(--color-text-primary);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.game-details {
+    background-color: var(--card-clr);
+    border-radius: 8px 8px 8px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    padding: 20px 20px;
+    min-height: 330px;
+    width: 93%;
+    overflow: hidden;
+}
+
+#games-container .section-container:first-child .section .game-card:first-child .game-details:first-child {
+    box-shadow: 0 0 8px rgb(245, 197, 75);
+}
+
+.section-wrapper {
+    position: relative;
+}
+
+.section-controls {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+}
+
+.scroll-btn,
+.scroll-btn:nth-child(2) {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: var(--scroll-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    transition: background 0.3s ease;
+    color: var(--color-text-primary);
+}
+
+.scroll-btn:hover,
+.scroll-btn:nth-child(2):hover {
+    background: var(--clr-txt-dev);
+    color: var(--color-scroll-btns);
+}
+
+/* --- للشاشات المتوسطة والصغيرة (Max 1024px) --- */
+@media (max-width: 1024px) {
+    .section {
+        width: 100%;
+        /* العودة للعرض الكامل */
+        padding: 10px 0;
+        overflow-x: auto;
+        /* السماح بالسكرول الأفقي باللمس */
+        gap: 15px;
+    }
+
+    .section-controls i:nth-child(1),
+    .section-controls i:nth-child(2) {
+        display: none;
+    }
+
+    #games-container h2 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .game-card:first-child {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+/* --- للشاشات الصغيرة جداً (Mobile - Max 768px) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 15px 5px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .section::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .sec-style {
+        font-size: 18px;
+        /* تصغير حجم "View All" أو العناوين */
+    }
+
+    /* ضبط المسافات في حاوية الألعاب */
+    .section-wrapper {
+        margin-bottom: 20px;
+    }
+
+    /* جعل العنوان والـ View All تحت بعض لو المساحة ضيقة */
+    #games-container h2 {
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* --- لمسة احترافية لمنع اهتزاز الـ Hover في الموبايل --- */
+@media (hover: none) {
+    .sec-style:hover i:nth-child(2) {
+        transform: none;
+        /* إلغاء الـ animation بتاع الماوس في شاشات اللمس */
+    }
+
+    .game-card:active {
+        transform: scale(0.95);
+        /* تأثير ضغطة بسيطة لما اليوزر يلمس الكارت */
+        transition: 0.1s;
+    }
+}

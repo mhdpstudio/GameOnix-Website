@@ -155,11 +155,21 @@ function processGames(data) {
     console.log('Games loaded successfully:', data);
     const allGames = [];
 
-    // Flatten all games from all categories
-    Object.values(data).forEach(category => {
-        if (category.games && Array.isArray(category.games)) {
-            allGames.push(...category.games);
+    // Recursively flatten all games from nested categories/subcategories
+    function collectGames(obj) {
+        if (obj.games && Array.isArray(obj.games)) {
+            allGames.push(...obj.games);
         }
+        // Recurse into subcategories
+        Object.values(obj).forEach(subObj => {
+            if (typeof subObj === 'object' && subObj !== null) {
+                collectGames(subObj);
+            }
+        });
+    }
+
+    Object.values(data).forEach(topLevel => {
+        collectGames(topLevel);
     });
 
     console.log('Total games found:', allGames.length);
@@ -195,7 +205,7 @@ function processGames(data) {
     searchContainer.innerHTML = '';
 
     if (uniqueResults.length === 0) {
-        searchContainer.innerHTML = '<div class="no-results"><p>No games found matching "<strong>${query}</strong>". Try different keywords.</p></div>';
+        searchContainer.innerHTML = `<div class="no-results"><p>No games found matching "<strong>${query}</strong>". Try different keywords.</p></div>`;
         return;
     }
 
