@@ -27,11 +27,6 @@
     color: rgb(255, 94, 0);
 }
 
-span:nth-child(2) {
-    transition: transform 0.3s ease;
-    font-weight: 800;
-}
-
 .sec-txt {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -50,7 +45,15 @@ span:nth-child(2) {
     justify-content: center;
 }
 
-.sec-style:hover span:nth-child(2) {
+i.fa-solid.fa-fire {
+    color: rgb(255, 94, 0);
+}
+
+.sec-style i:nth-child(2) {
+    transition: transform 0.3s ease;
+}
+
+.sec-style:hover i:nth-child(2) {
     transform: translateX(8px) scale(1.1);
 }
 

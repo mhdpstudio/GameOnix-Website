@@ -1,6 +1,6 @@
 {
     "PC Games": {
-        "icon": "fa-computer",
+        "icon": "fa-solid fa-computer",
         "Popular": {
             "icon": "fa-fire",
             "games": [
@@ -1165,7 +1165,7 @@
             ]
         },
         "Old Games": {
-            "icon": "fa-scroll-old",
+            "icon": "fa-solid fa-archway",
             "games": [
                 {
                     "slug": "red-alert-2-expansion",
@@ -1262,7 +1262,7 @@
         }
     },
     "PS Games": {
-        "icon": "fa-playstation",
+        "icon": "fa-brands fa-playstation",
         "Popular": {
             "icon": "fa-fire",
             "games": [

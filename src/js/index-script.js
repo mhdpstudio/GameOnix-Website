@@ -3,10 +3,9 @@ import { initGameSearch } from "./search-script.js";
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 
-// دالة لتحديث مكان section-controls وحجم padding للـ sections
 function updateControlsPosition() {
     const sidebar = document.querySelector('.sb');
-    const isOpen = !sidebar.classList.contains('closed'); // مفتوح؟
+    const isOpen = !sidebar.classList.contains('closed');
     const sidebarWidth = sidebar.offsetWidth;
 
     document.querySelectorAll('.section-controls').forEach(ctrl => {
@@ -30,28 +29,47 @@ if (searchBox) {
     });
 }
 
-// تحميل الألعاب
 fetch('https://www.gameonix.shop/data/json/games.json')
-    .then(res => res.json())
-    .then(data => {
-        for (const sectionName in data) {
-            const section = data[sectionName];
+.then(res => res.json())
+.then(data => {
+
+    for (const mainSectionName in data) {
+
+        const mainSection = data[mainSectionName];
+
+        // عرض اسم القسم الرئيسي
+        const mainTitle = document.createElement("h1");
+        mainTitle.classList.add("main-section-title");
+
+        mainTitle.innerHTML = `
+            ${mainSection.icon ? `<i class="${mainSection.icon}"></i>` : ''}
+            ${mainSectionName}
+        `;
+
+        container.appendChild(mainTitle);
+
+        for (const subSectionName in mainSection) {
+
+            if (subSectionName === "icon") continue;
+
+            const section = mainSection[subSectionName];
+            const games = section.games || [];
+
             const sectionDiv = document.createElement("div");
             sectionDiv.classList.add("section-container");
 
-            // الألعاب قبل "More Games"
-            const maxHomeIndex = section.games.findIndex(g => g.title === "More Games");
-            const homeGames = maxHomeIndex !== -1 ? section.games.slice(0, maxHomeIndex) : section.games;
+            const maxHomeIndex = games.findIndex(g => g.title === "More Games");
+            const homeGames = maxHomeIndex !== -1 ? games.slice(0, maxHomeIndex) : games;
 
             sectionDiv.innerHTML = `
             <div class="section-wrapper">
+
                 <div class="section-header">
                     <h2 class="sec-style">
-                        <a class="sec-txt" data-section="${sectionName}">
-                            ${section.icon ? `<i class="fa-solid fa-${section.icon}"></i>` : ''}
-                            ${sectionName}
-                            <i class="fa-solid fa-arrow-right"></i>
-
+                        <a class="sec-txt" data-section="${subSectionName}">
+                            ${section.icon ? `<i class="fa-solid ${section.icon}"></i>` : ''}
+                            ${subSectionName}
+                            <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </h2>
                 </div>
@@ -65,7 +83,7 @@ fetch('https://www.gameonix.shop/data/json/games.json')
                     ${homeGames.map(game => `
                         <div class="game-card" data-slug="${game.slug}">
                             <div class="game-details">
-                                <img src="${game.poster + ".jpg" || '../../assets/images/game.jpg'}" alt="${game.title}">
+                                <img src="${game.poster ? game.poster + ".jpg" : '../../assets/images/game.jpg'}" alt="${game.title}">
                                 <div class="publisher">${game.publisher || WebsiteName}</div>
                                 <div class="title">${game.title}</div>
                             </div>
@@ -81,26 +99,24 @@ fetch('https://www.gameonix.shop/data/json/games.json')
                         </div>
                     ` : ''}
                 </div>
+
             </div>
             `;
 
             container.appendChild(sectionDiv);
 
-            // رابط عنوان القسم
             sectionDiv.querySelector(".sec-txt").addEventListener("click", () => {
-                const sectionNameEncoded = encodeURIComponent(sectionName);
+                const sectionNameEncoded = encodeURIComponent(subSectionName);
                 window.location.href = `html/section.html?section=${sectionNameEncoded}`;
             });
 
-            // زر More Games
             sectionDiv.querySelectorAll(".more-games").forEach(btn => {
                 btn.addEventListener("click", () => {
-                    const sectionNameEncoded = encodeURIComponent(sectionName);
+                    const sectionNameEncoded = encodeURIComponent(subSectionName);
                     window.location.href = `html/section.html?section=${sectionNameEncoded}`;
                 });
             });
 
-            // فتح صفحة الألعاب العادية
             sectionDiv.querySelectorAll(".game-card").forEach(card => {
                 if (!card.classList.contains("more-games")) {
                     card.addEventListener("click", () => {
@@ -110,40 +126,43 @@ fetch('https://www.gameonix.shop/data/json/games.json')
                 }
             });
 
-            // كود التحريك يمين وشمال
             const slider = sectionDiv.querySelector(".section");
             const btnLeft = sectionDiv.querySelector(".scroll-btn.left");
             const btnRight = sectionDiv.querySelector(".scroll-btn.right");
             const controls = sectionDiv.querySelector(".section-controls");
 
+            const firstCard = slider.querySelector(".game-card");
 
+            if (firstCard) {
 
-            const cardWidth = slider.querySelector(".game-card").offsetWidth;
-            const gap = 15;
-            const scrollAmount = cardWidth + gap;
+                const cardWidth = firstCard.offsetWidth;
+                const gap = 15;
+                const scrollAmount = cardWidth + gap;
 
-            btnRight.addEventListener("click", () => slider.scrollLeft += scrollAmount);
-            btnLeft.addEventListener("click", () => slider.scrollLeft -= scrollAmount);
+                btnRight.addEventListener("click", () => slider.scrollLeft += scrollAmount);
+                btnLeft.addEventListener("click", () => slider.scrollLeft -= scrollAmount);
 
-            // إظهار أو إخفاء الأزرار حسب عدد الكروت
-            function updateControlsVisibility() {
-                controls.style.display = slider.scrollWidth > slider.clientWidth ? "flex" : "none";
+                function updateControlsVisibility() {
+                    controls.style.display = slider.scrollWidth > slider.clientWidth ? "flex" : "none";
+                }
+
+                updateControlsVisibility();
+
+                window.addEventListener("resize", () => {
+                    updateControlsVisibility();
+                    updateControlsPosition();
+                });
             }
 
-            updateControlsVisibility();
-            window.addEventListener("resize", () => {
-                updateControlsVisibility();
-                updateControlsPosition();
-            });
         }
 
-        // تحديث مكان الأزرار وأماكن الـ sections أول مرة
-        updateControlsPosition();
+    }
 
-        // التعامل مع sidebar toggle
-        document.querySelectorAll('.sb-toggle').forEach(btn => {
-            btn.addEventListener('click', () => setTimeout(updateControlsPosition, 400));
-        });
+    updateControlsPosition();
 
-    })
-    .catch(err => console.error(err));
+    document.querySelectorAll('.sb-toggle').forEach(btn => {
+        btn.addEventListener('click', () => setTimeout(updateControlsPosition, 400));
+    });
+
+})
+.catch(err => console.error(err));
