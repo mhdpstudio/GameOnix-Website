@@ -10,7 +10,8 @@
       "version": "1.2.2",
       "size": "245.3 MB",
       "appType": "Desktop Application",
-      "appTypeIcon": "desktop_windows",
+      "ap": "fa-desktop",
+      "appTypeIcon": "fa-windows",
       "app_poster": "https://www.gameonix.shop/assets/images/Logo.png",
       "appLink": "https://drive.usercontent.google.com/download?id=1E6Q74JnpyGMoDw4gdZ8XY1GS2466QjIT&export=download&authuser=3&confirm=t&uuid=6db8ccd9-94cb-46ab-ac8a-89763cf2304a&at=AGN2oQ0p_vCh7dgmcrCRb3jBMJ3X:1773501765860",
       "media": [
@@ -30,7 +31,8 @@
       "version": "Build 0.0.40-18950",
       "size": "231.2 MB",
       "appType": "Desktop Application",
-      "appTypeIcon": "desktop_windows",
+      "ap": "fa-desktop",
+      "appTypeIcon": "fa-windows",
       "app_poster": "https://www.gameonix.shop/assets/images/apps/rpcs3-logo.png",
       "appLink": "https://drive.usercontent.google.com/download?id=11UxLmYcGyPpjw_eb8j2HcngtGFD_rM83&export=download&authuser=0&confirm=t&uuid=446ccfd0-91c0-416e-935a-3dcff9e3513f&at=AGN2oQ2kh-2qA6CDo7pm5EpJOA-_%3A1773578480471",
       "media": [

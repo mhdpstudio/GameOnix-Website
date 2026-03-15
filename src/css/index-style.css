@@ -12,6 +12,10 @@
     width: fit-content;
 }
 
+.section-container{
+    margin-left: 20px;
+}
+
 .sec-style {
     display: flex;
     align-items: center;
@@ -51,6 +55,17 @@ i.fa-solid.fa-fire {
 
 .main-section-title{
     color: var(--color-text-primary);
+    user-select: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.main-section-title i:nth-child(2){
+    transition: transform 0.3s ease;
+}
+
+.main-section-title:hover i:nth-child(2){
+    transform: translateX(8px);
 }
 
 .sec-style i:nth-child(2) {
@@ -155,11 +170,6 @@ i.fa-solid.fa-fire {
     .section::-webkit-scrollbar {
         display: none;
         /* Chrome/Safari */
-    }
-
-    .sec-style {
-        font-size: 18px;
-        /* تصغير حجم "View All" أو العناوين */
     }
 
     /* ضبط المسافات في حاوية الألعاب */

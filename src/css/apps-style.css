@@ -109,7 +109,7 @@
 
 .app-description {
     font-size: 0.95rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     line-height: 1.6;
     margin-bottom: 20px;
     display: -webkit-box;
@@ -320,6 +320,7 @@
 /* Ensure search icon is always visible */
 .search-icon {
     z-index: 1;
+    color: var(--color-text-primary);
 }
 
 .search-clear {
@@ -370,7 +371,7 @@
 
 .app-page-subtitle {
     font-size: 1.1rem;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;

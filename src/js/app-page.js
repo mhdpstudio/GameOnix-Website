@@ -27,7 +27,7 @@ fetch("./../../data/json/apps-data.json")
             <div class="game-name" id="goBack"><i class="fa-solid fa-arrow-left" style="font-size: 40px;"></i> ${app.title}</div>
             <div class="details">
                 <div class="game-publisher pl"> ${app.publisher}</div>
-                <div class="game-type pl"><i class="fa-solid fa-desktop"></i> ${app.appType}</div>
+                <div class="game-type pl"><i class="fa-solid ${app.ap}"></i> ${app.appType}</div>
             </div>
         </div>
 
@@ -70,7 +70,7 @@ fetch("./../../data/json/apps-data.json")
                     
                     <div class="side-panel">
                         <div class="game-logo-wrapper">
-                            <img class="game-poster" src="${app.app_poster}" alt="${app.title}">
+                            <img style="border-radius: 10px;" class="game-poster" src="${app.app_poster}" alt="${app.title}">
                         </div>
 
                         <div class="commands-btns">
@@ -97,7 +97,7 @@ fetch("./../../data/json/apps-data.json")
                             </div>
                             <div class="detail-row">
                                 <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Platform</span>
-                                <span class="detail-value"><i class="fa-solid fa-desktop"></i></span>
+                                <span class="detail-value"><i class="fa-brands ${app.appTypeIcon}"></i></span>
                             </div>
                         </div>
                     </div>

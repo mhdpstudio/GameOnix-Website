@@ -44,6 +44,7 @@ fetch('https://www.gameonix.shop/data/json/games.json')
         mainTitle.innerHTML = `
             ${mainSection.icon ? `<i class="${mainSection.icon}"></i>` : ''}
             ${mainSectionName}
+            <i class="fa-solid fa-chevron-right"></i>
         `;
 
         container.appendChild(mainTitle);
