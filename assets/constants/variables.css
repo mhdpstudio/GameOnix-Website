@@ -26,6 +26,8 @@
     --color-text-primary-3: #5a5a5a;
     --bg-pop-5: #e2e2fb;
     --bg-pop-4: rgba(255, 255, 255, 0.5);
+    --sec-item-color: var(--bg-pop-4);
+    --sec-item-hr-color: rgba(255, 255, 255, 0.8);
 }
 
 body.dark-theme {
@@ -52,4 +54,6 @@ body.dark-theme {
     --color-text-primary-3: #eee;
     --bg-pop-5: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
     --bg-pop-4: rgba(255, 255, 255, 0.02);
+    --sec-item-color: rgba(255, 255, 255, 0.03);
+    --sec-item-hr-color: rgba(255, 255, 255, 0.1);
 }

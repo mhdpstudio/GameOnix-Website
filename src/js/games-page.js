@@ -181,9 +181,9 @@ function step(timestamp) {
     const loadingScreen = document.getElementById('loading-screen');
     if (loadingScreen) {
         const loadingStyle = window.getComputedStyle(loadingScreen);
-        const isLoadingVisible = loadingStyle.display !== 'none' && 
-                                  loadingStyle.visibility !== 'hidden' && 
-                                  loadingStyle.opacity !== '0';
+        const isLoadingVisible = loadingStyle.display !== 'none' &&
+            loadingStyle.visibility !== 'hidden' &&
+            loadingStyle.opacity !== '0';
         if (isLoadingVisible) {
             lastFrameTime = timestamp;
             return;
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 1. لما تضغط على الصورة يفتح صفحة اللعبة
         if (gameImg) {
             gameImg.style.cursor = "pointer";
-gameImg.addEventListener('click', (e) => {
+            gameImg.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Card img click:', slug);
@@ -252,7 +252,7 @@ gameImg.addEventListener('click', (e) => {
 
         // 2. تفعيل زرار الـ Download اللي جوه الكارت
         if (downloadBtn) {
-downloadBtn.addEventListener('click', (e) => {
+            downloadBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Card download click:', slug);
@@ -336,33 +336,86 @@ const sectionsContainer = document.getElementById("store-sections-list");
 fetch("https://www.gameonix.shop/data/json/games.json")
     .then(res => res.json())
     .then(data => {
+        // تنظيف الحاوية قبل البدء
+        sectionsContainer.innerHTML = "";
 
-        let isFirst = true; // العلم للسكشن الأول
+        for (const mainSectionName in data) {
+            const mainSection = data[mainSectionName];
 
-        for (const sectionName in data) {
-
-            if(isFirst) {
-                isFirst = false; // نتخطى السكشن الأول (Popular)
-                continue;
+            // 1. تحديد نوع المنصة (PC أو PS)
+            let platformType = "PC";
+            if (mainSection.icon && mainSection.icon.toLowerCase().includes("playstation")) {
+                platformType = "PS";
             }
 
-            const section = data[sectionName];
-
-            const sectionItem = document.createElement("div");
-            sectionItem.className = "section-item";
-
-            sectionItem.innerHTML = `
-                ${section.icon ? `<span class="material-symbols-rounded">${section.icon}</span>` : ""}
-                <span>${sectionName}</span>
+            // 2. إنشاء عنوان السيستم (Header) ليظهر قبل الأقسام بتاعته
+            const systemHeader = document.createElement("div");
+            systemHeader.className = "system-group-title"; // تقدر تديها ستايل في الـ CSS
+            systemHeader.innerHTML = `
+                <i class="${mainSection.icon || 'fa-solid fa-gamepad'}"></i>
+                <span>${mainSectionName}</span>
             `;
+            systemHeader.style.width = "100%";
+            systemHeader.style.margin = "15px 10px 10px";
+            systemHeader.style.fontWeight = "bold";
+            systemHeader.style.color = "var(--color-text-primary)"; // لون مميز للعنوان
 
-            sectionItem.addEventListener("click", () => {
-                const encoded = encodeURIComponent(sectionName);
-                window.location.href = `section.html?section=${encoded}`;
-            });
+            sectionsContainer.appendChild(systemHeader);
 
-            sectionsContainer.appendChild(sectionItem);
+            // 3. إنشاء حاوية للأقسام الفرعية عشان تظهر جنب بعضها (Flex/Grid)
+            const subSectionsWrapper = document.createElement("div");
+            subSectionsWrapper.className = "sub-sections-wrapper";
+            subSectionsWrapper.style.display = "flex";
+            subSectionsWrapper.style.flexWrap = "wrap";
+            subSectionsWrapper.style.gap = "10px";
+
+            // 4. لوب على الأقسام الفرعية داخل السيستم
+            for (const subSectionName in mainSection) {
+                // تخطي الأيقونة وأي قسم اسمه Popular
+                if (subSectionName === "icon" || subSectionName.toLowerCase() === "popular") continue;
+
+                const sectionData = mainSection[subSectionName];
+
+                const sectionItem = document.createElement("div");
+                sectionItem.className = "section-item";
+
+                sectionItem.innerHTML = `
+                    ${sectionData.icon ? `<i style="color: var(--color-text-primary);" class="fa-solid ${sectionData.icon}"></i>` : ""}
+                    <span class="section-name">${subSectionName}</span>
+                `;
+
+                sectionItem.addEventListener("click", () => {
+                    const encodedSection = encodeURIComponent(subSectionName);
+                    window.location.href = `section.html?section=${encodedSection}&type=${platformType}`;
+                });
+
+                subSectionsWrapper.appendChild(sectionItem);
+            }
+
+            sectionsContainer.appendChild(subSectionsWrapper);
         }
-
     })
     .catch(err => console.error("Sections Load Error:", err));
+
+// مراقبة حالة ظهور الصفحة (Visibility Change)
+document.addEventListener("visibilitychange", () => {
+    // جلب الفيديو الحالي الموجود في الـ Hero
+    const currentVideo = heroContainer.querySelector("video.hero-media");
+
+    if (document.hidden) {
+        // 1. لو الصفحة اختفت: وقف الفيديو
+        if (currentVideo) {
+            currentVideo.pause();
+        }
+        // ملاحظة: الـ Carousel متبرمج عندك أصلاً إنه يقف في دالة step لما يلاقي document.hidden
+    } else {
+        // 2. لو الصفحة رجعت: شغل الفيديو تاني
+        if (currentVideo) {
+            currentVideo.play().catch(err => console.log("Auto-play prevented"));
+        }
+
+        // 3. تحديث الـ Timer عشان الـ Carousel ميتنطش فجأة (موجود عندك في الكود الأصلي)
+        justUnhidden = true;
+        lastFrameTime = performance.now();
+    }
+});

@@ -22,6 +22,24 @@
     border-bottom-left-radius: var(--border-raduis-value);
 }
 
+.system-group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--sec-item-hr-color);
+    padding-bottom: 5px;
+    grid-column: 1 / -1;
+}
+
+.section-name {
+    color: var(--color-text-primary);
+}
+
+.section-item i{
+    color: var(--color-text-primary);
+}
+
 .hero::before {
     content: "";
     position: absolute;

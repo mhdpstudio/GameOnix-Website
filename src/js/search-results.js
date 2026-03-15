@@ -187,8 +187,8 @@ function processGames(data) {
         }
 
         return title.includes(searchQuery) ||
-               publisher.includes(searchQuery) ||
-               slug.includes(searchQuery);
+            publisher.includes(searchQuery) ||
+            slug.includes(searchQuery);
     });
 
     // Remove duplicates by slug
@@ -256,6 +256,118 @@ function processGames(data) {
         } else {
             img.src = 'assets/images/game.jpg';
         }
+    });
+}
+
+// المتغيرات العالمية للتحكم في الحالة
+let allGamesData = []; // لتخزين كل الألعاب المستخرجة
+let currentFilter = 'all'; // الفلتر المختار حالياً
+
+// 1. إضافة الـ Event Listeners للفلاتر (PC / PS / All)
+document.querySelectorAll('.filter').forEach(filterBtn => {
+    filterBtn.addEventListener('click', () => {
+        // تغيير الشكل النشط (Active Class)
+        document.querySelectorAll('.filter').forEach(btn => btn.classList.remove('active'));
+        filterBtn.classList.add('active');
+
+        // تحديث الفلتر وإعادة العرض
+        if (filterBtn.classList.contains('pc')) currentFilter = 'PC';
+        else if (filterBtn.classList.contains('ps')) currentFilter = 'PS';
+        else currentFilter = 'all';
+
+        displayResults(); // إعادة عرض النتائج بناءً على الفلتر الجديد
+    });
+});
+
+function processGames(data) {
+    const allGames = [];
+
+    // دالة لاستخراج الألعاب مع تحديد نوع المنصة (PC أو PS)
+    function collectGames(obj, platform = "PC") {
+        // تحديث نوع المنصة لو لقينا أيقونة بلايستيشن في القسم الرئيسي
+        let currentPlatform = platform;
+        if (obj.icon && obj.icon.toLowerCase().includes("playstation")) {
+            currentPlatform = "PS";
+        }
+
+        if (obj.games && Array.isArray(obj.games)) {
+            obj.games.forEach(g => {
+                allGames.push({ ...g, system: currentPlatform });
+            });
+        }
+
+        Object.values(obj).forEach(subObj => {
+            if (typeof subObj === 'object' && subObj !== null) {
+                collectGames(subObj, currentPlatform);
+            }
+        });
+    }
+
+    Object.values(data).forEach(topLevel => collectGames(topLevel));
+
+    allGamesData = allGames; // حفظ البيانات عالمياً
+    displayResults(); // العرض لأول مرة
+}
+
+function displayResults() {
+    const searchQuery = query.toLowerCase();
+
+    // فلترة النتائج بناءً على: (الاسم + الفلتر المختار)
+    const filteredResults = allGamesData.filter(game => {
+        const matchesQuery = (game.title || '').toLowerCase().includes(searchQuery) ||
+            (game.publisher || '').toLowerCase().includes(searchQuery);
+
+        const matchesFilter = (currentFilter === 'all' || game.system === currentFilter);
+
+        return matchesQuery && matchesFilter;
+    });
+
+    // حذف التكرار
+    const uniqueResults = [];
+    const seenSlugs = new Set();
+    filteredResults.forEach(game => {
+        if (!seenSlugs.has(game.slug)) {
+            seenSlugs.add(game.slug);
+            uniqueResults.push(game);
+        }
+    });
+
+    renderCards(uniqueResults);
+}
+
+function renderCards(games) {
+    searchContainer.innerHTML = '';
+    if (games.length === 0) {
+        searchContainer.innerHTML = `<div class="no-results"><p>No games found matching your search and filter.</p></div>`;
+        return;
+    }
+
+    games.forEach(game => {
+        const card = document.createElement('a');
+        card.href = `game.html?game=${encodeURIComponent(game.slug)}`;
+        card.className = 'result-card';
+        card.innerHTML = `
+            <div class="result-card-details">
+                <img src="assets/images/game.jpg" data-poster="${game.poster || ''}" alt="${game.title}" class="loading-img">
+                <p class="publisher">${game.publisher || 'Unknown'}</p>
+                <h3 class="title">${game.title}</h3>
+            </div>
+        `;
+        searchContainer.appendChild(card);
+    });
+
+    // تشغيل منطق تحميل الصور (نفس الكود القديم بتاعك)
+    lazyLoadPosters();
+}
+
+function lazyLoadPosters() {
+    const imgs = searchContainer.querySelectorAll('img[data-poster]');
+    imgs.forEach(img => {
+        const posterBase = img.dataset.poster;
+        if (!posterBase) return;
+        img.src = `${posterBase}.jpg`;
+        img.onload = () => img.classList.remove('loading-img');
+        img.onerror = () => { img.src = 'assets/images/game.jpg'; };
     });
 }
 
