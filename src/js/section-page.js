@@ -1,3 +1,5 @@
+import { initGameSearch } from "./search-script.js";
+
 const params = new URLSearchParams(window.location.search);
 const sectionName = params.get("section");
 const sectionLabel = document.getElementById("section-text");
@@ -88,9 +90,26 @@ async function loadSectionGames() {
 `;
         }
 
-        // استخراج الألعاب وعرضها
-        const gamesArray = gamesData.games || [];
+        let gamesArray = gamesData.games || [];
+
+        // حذف كارت More Games
+        gamesArray = gamesArray.filter(game =>
+            game.title?.toLowerCase() !== "more games"
+        );
+
+        // ترتيب الألعاب أبجديًا
+        gamesArray.sort((a, b) =>
+            a.title.localeCompare(b.title)
+        );
+
         renderInitialGames(gamesArray, "section-games");
+
+        initGameSearch({
+            containerId: "section-games",
+            searchInputId: "searchBox",
+            allGamesData: data,
+            websiteName: WebsiteName
+        });
 
     } catch (error) {
         console.error('Error loading JSON:', error);

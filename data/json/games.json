@@ -1171,6 +1171,18 @@
                 }
             ]
         },
+        "Horror": {
+            "icon": "fa-face-scream",
+            "games": [
+                {
+                    "slug": "ppt-5",
+                    "id": 1,
+                    "title": "Poppy Playtime Chapter 5",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ppt-5",
+                    "publisher": "Mob Games"
+                }
+            ]
+        },
         "Old Games": {
             "icon": "fa-solid fa-archway",
             "games": [

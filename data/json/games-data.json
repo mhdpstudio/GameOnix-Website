@@ -2356,6 +2356,21 @@
             "mediaCount": 8
         },
         {
+            "slug": "ppt-5",
+            "title": "Poppy Playtime Chapter 5",
+            "publisher": "Mob Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/ppt-5.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-face-scream",
+            "version": "1.7.21.0",
+            "size": "64.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ppt-5.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ppt-5",
+            "mediaCount": 10
+        },
+        {
             "slug": "god-of-war-3-ps3",
             "title": "God of War 3",
             "publisher": "Santa Monica Studio",
