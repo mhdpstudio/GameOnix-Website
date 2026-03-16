@@ -847,6 +847,13 @@
                     "title": "Days Gone",
                     "poster": "https://gameonix.shop/assets/images/games/posters/days-gone",
                     "publisher": "SCE Bend Studio"
+                },
+                {
+                    "slug": "stronghold-2",
+                    "id": 112,
+                    "title": "Stronghold 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/stronghold-2",
+                    "publisher": "Firefly Studios"
                 }
             ]
         },

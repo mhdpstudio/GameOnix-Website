@@ -2206,6 +2206,21 @@
             "mediaCount": 6
         },
         {
+            "slug": "stronghold-2",
+            "title": "Stronghold 2",
+            "publisher": "Firefly Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/stronghold-2.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.8.6.0",
+            "size": "3.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stronghold-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "stronghold-2",
+            "mediaCount": 6
+        },
+        {
             "slug": "uncharted",
             "title": "Uncharted: Legacy of Thieves Collection",
             "publisher": "Naughty Dog",
