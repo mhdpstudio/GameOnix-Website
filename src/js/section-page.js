@@ -107,7 +107,7 @@ async function loadSectionGames() {
         initGameSearch({
             containerId: "section-games",
             searchInputId: "searchBox",
-            allGamesData: data,
+            allGamesData: gamesArray,
             websiteName: WebsiteName
         });
 

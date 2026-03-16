@@ -8,16 +8,21 @@ export function initGameSearch({
     const searchBox = document.getElementById(searchInputId);
 
     // دالة استخراج الألعاب المحسنة جداً
+    // دالة استخراج الألعاب (تدعم JSON كامل أو Array سيكشن)
     function extractAllGames(data) {
         if (!data) return [];
+
+        // لو وصل Array مباشر (مثل صفحة Section)
+        if (Array.isArray(data)) {
+            return data.filter(g => g.title && g.title !== "More Games");
+        }
+
         let allGames = [];
-        
+
         console.log("Parsing data structure...", data);
 
         try {
-            // بنلف على الأقسام الكبيرة (PC Games, PS Games)
             Object.values(data).forEach(mainSection => {
-                // بنلف على الأقسام الفرعية (Action, Racing, etc.)
                 for (const key in mainSection) {
                     if (key !== "icon" && mainSection[key].games) {
                         const gamesArray = mainSection[key].games;
@@ -31,12 +36,14 @@ export function initGameSearch({
             console.error("Critical error during extraction:", e);
         }
 
-        // إزالة التكرار بناءً على الـ slug وضمان وجود title
-        const uniqueGames = Array.from(new Map(allGames.map(game => [game.slug, game])).values());
+        const uniqueGames = Array.from(
+            new Map(allGames.map(game => [game.slug, game])).values()
+        );
+
         return uniqueGames.filter(g => g.title && g.title !== "More Games");
     }
 
-    const sortedGames = extractAllGames(allGamesData).sort((a, b) => 
+    const sortedGames = extractAllGames(allGamesData).sort((a, b) =>
         a.title.localeCompare(b.title)
     );
 
@@ -56,7 +63,7 @@ export function initGameSearch({
     function performSearch(keyword) {
         const cleanKeyword = keyword.toLowerCase().trim();
         const filtered = sortedGames.filter(game =>
-            game.title.toLowerCase().includes(cleanKeyword) || 
+            game.title.toLowerCase().includes(cleanKeyword) ||
             (game.publisher && game.publisher.toLowerCase().includes(cleanKeyword))
         );
         render(filtered, cleanKeyword);
@@ -68,7 +75,7 @@ export function initGameSearch({
 
     function render(list, query = "") {
         if (!container) return;
-        
+
         if (list.length === 0) {
             container.innerHTML = `
                 <div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 50px;">

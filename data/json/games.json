@@ -1172,7 +1172,7 @@
             ]
         },
         "Horror": {
-            "icon": "fa-face-scream",
+            "icon": "fa-ghost",
             "games": [
                 {
                     "slug": "ppt-5",
