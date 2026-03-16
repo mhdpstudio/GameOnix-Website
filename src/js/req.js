@@ -1,16 +1,43 @@
-(function() {
+(function () {
     // Get elements immediately when script loads
     const form = document.querySelector('.game-form');
     const modal = document.getElementById('successModal');
     const closeModal = document.getElementById('closeModal');
 
+    document.querySelectorAll('.custom-select').forEach(select => {
+        const display = select.querySelector('.select-display');
+        const options = select.querySelector('.select-options');
+        const hiddenInput = select.querySelector('input[type="hidden"]');
+        const selectedText = select.querySelector('.selected-text');
+
+        display.addEventListener('click', () => {
+            select.classList.toggle('open');
+        });
+
+        options.querySelectorAll('li').forEach(option => {
+            option.addEventListener('click', () => {
+                // عند الاختيار، نخفي placeholder ونضع النص المختار
+                selectedText.textContent = option.textContent;
+                selectedText.style.color = "#fff"; // يصبح النص أبيض بعد الاختيار
+                hiddenInput.value = option.dataset.value; // حفظ القيمة للإرسال
+                select.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', e => {
+            if (!select.contains(e.target)) {
+                select.classList.remove('open');
+            }
+        });
+    });
+
     if (form) {
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener('submit', async function (e) {
             e.preventDefault(); // منع الريلود والانتقال لصفحة تانية
 
             const submitBtn = form.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
-            
+
             submitBtn.textContent = "TRANSMITTING...";
             submitBtn.disabled = true;
 

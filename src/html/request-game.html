@@ -43,12 +43,17 @@
     </div>
     <style>
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 
-<button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
+    <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
 
     <div class="container">
@@ -114,7 +119,7 @@
                 <p class="form-subtitle">Fill in the details below to request your game</p>
 
                 <form class="game-form"
-                    action="https://script.google.com/macros/s/AKfycbzuWzI79UFSnJnkIG_8hN0pJ3Ef9JJJpPfDF6sYu1jn5H1AV16eBL505pQIc8hvKGjn/exec"
+                    action="https://script.google.com/macros/s/AKfycby8klwS5JBR5amzGmf5a_CglYoeQN_DW_ZdOnXdrKstfwafused9JzCaRwDzHKd5B07/exec"
                     method="POST">
                     <div class="info-group">
                         <div class="input-group">
@@ -131,6 +136,21 @@
                     <div class="input-group">
                         <label for="game-name">Game Title</label>
                         <input name="GameTitle" type="text" id="game-name" placeholder="Write the game title" required>
+                    </div>
+
+                    <div class="input-group custom-select-group">
+                        <label for="platform">Platform</label>
+                        <div class="custom-select">
+                            <div class="select-display">
+                                <span class="selected-text">Select Platform</span>
+                                <span class="chevron"><i class="material-symbols-rounded">expand_more</i></span>
+                            </div>
+                            <ul class="select-options">
+                                <li data-value="PC">PC</li>
+                                <li data-value="PS">PS</li>
+                            </ul>
+                            <input type="hidden" name="Platform" required>
+                        </div>
                     </div>
 
                     <div class="input-group">
@@ -155,60 +175,60 @@
             <button type="button" class="modal-close-btn" id="closeModal">Back to Base</button>
         </div>
     </div>
-<!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
-<script>
-    // Disable right-click context menu
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
+    <!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
 
-    // Disable keyboard shortcuts for viewing source and developer tools
-    document.addEventListener('keydown', function(e) {
-        // Disable Ctrl+U (View Source)
-        if (e.ctrlKey && e.key === 'u') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable F12 (Developer Tools)
-        if (e.key === 'F12') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+I (Developer Tools)
-        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+J (Console)
-        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+Shift+C (Inspector)
-        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+S (Save)
-        if (e.ctrlKey && e.key === 's') {
-            e.preventDefault();
-            return false;
-        }
-        // Disable Ctrl+P (Print)
-        if (e.ctrlKey && e.key === 'p') {
-            e.preventDefault();
-            return false;
-        }
-    });
+        // Disable keyboard shortcuts for viewing source and developer tools
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspector)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
 
-    // Additional protection: Clear selection on mousedown to prevent text selection
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 0) { // Left click
-            // Allow normal left click functionality
-        }
-    });
-</script>
+        // Additional protection: Clear selection on mousedown to prevent text selection
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 0) { // Left click
+                // Allow normal left click functionality
+            }
+        });
+    </script>
 
 </body>
 
@@ -257,7 +277,7 @@
             }
             return;
         }
-        
+
         // Normal page load - show loading screen with 1 second delay
         setTimeout(() => {
             const loadingScreen = document.getElementById('loading-screen');
@@ -268,7 +288,7 @@
                     loadingScreen.remove();
                 }, 500);
             }
-            
+
             if (!sessionStorage.getItem('pageRefreshed')) {
                 sessionStorage.setItem('pageRefreshed', 'true');
                 location.reload(true);
@@ -279,11 +299,11 @@
 
 <!-- Service Worker for automatic cache busting -->
 <script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../sw_1.js')
-        .then(reg => console.log('Service Worker registered'))
-        .catch(err => console.log('Service Worker registration failed:', err));
-}
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../../sw_1.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    }
 </script>
 
 </html>
