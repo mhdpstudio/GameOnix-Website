@@ -36,9 +36,12 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
 
         // 🎯 بناء الصفحة
         page.innerHTML = `
+
     <div class="game-container">
-
-
+            <div class="adv">
+    <div class="ad ad-1"></div>
+    <div class="ad ad-2"></div>
+</div>
         <div class="game-title">
             <div class="game-name" id="goBack"><span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}</div>
             <div class="details">
@@ -86,8 +89,10 @@ ${mediaImages.map((img, i) => `
     justify-content: center;
     gap: 8px;"><span class="material-symbols-rounded">chevron_right</span></div>
                 </div>
-                <div class="game-ads">
-                </div>
+            <div class="adv" style="margin-top: 10px;">
+    <div class="ad ad-3"></div>
+    <div class="ad ad-4"></div>
+</div>
                 </div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
@@ -126,7 +131,32 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
+        function loadAd(containerClass, delay = 0) {
+            setTimeout(() => {
+                const container = document.querySelector(containerClass);
 
+                const script1 = document.createElement("script");
+                script1.innerHTML = `
+            atOptions = {
+                'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        `;
+
+                const script2 = document.createElement("script");
+                script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+
+                container.appendChild(script1);
+                container.appendChild(script2);
+            }, delay);
+        }
+        loadAd(".ad-1", 0);
+        loadAd(".ad-2", 500);
+        loadAd(".ad-3", 800);
+        loadAd(".ad-4", 1000);
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");

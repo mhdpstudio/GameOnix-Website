@@ -1,0 +1,29 @@
+.adv {
+    display: flex;                /* ترتيب العناصر بجانب بعض */
+    gap: 15px;                     /* المسافة بين الإعلانين */
+    justify-content: center;       /* توسيط الإعلانين أفقياً */
+    margin-bottom: 25px;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.adv .ad {
+    flex: 1;                       /* كل إعلان ياخد نص المساحة المتاحة */
+    max-width: 728px;               /* الحد الأقصى للعرض لكل إعلان */
+    height: 90px;                   /* ارتفاع ثابت */
+    background: #1a1f2e;           /* لون خلفية مؤقت لو الإطار فاضي */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;             /* تدوير زوايا الإعلانات */
+    overflow: hidden;
+}
+
+.adv .ad iframe,
+.adv .ad img,
+.adv .ad ins {
+    width: 100% !important;         /* عرض المحتوى يملي الإعلان بالكامل */
+    height: 100% !important;        /* نفس الشيء للارتفاع */
+    display: block;
+}

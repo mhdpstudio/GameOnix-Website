@@ -13,6 +13,7 @@
 }
 
 .section-container {
+    position: relative;
     margin-left: 20px;
 }
 
@@ -151,15 +152,18 @@ i.fa-solid.fa-fire {
     box-shadow: 0 0 8px rgb(245, 197, 75);
 }
 
-.section-wrapper {
-    position: relative;
+.section-container {
+    position: relative; /* مهم عشان الأزرار تكون absolute داخله */
 }
 
 .section-controls {
-    display: flex;
-    gap: 10px;
     position: absolute;
-    top: 20px;
+    top: 50%; /* نص ارتفاع الـ section */
+    transform: translateY(-50%);
+    right: 0;  /* الجهة اليمنى داخل الـ section */
+    display: flex;
+    gap: 5px;
+    z-index: 10;
 }
 
 .scroll-btn,

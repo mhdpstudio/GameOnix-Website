@@ -39,6 +39,8 @@ fetch('https://www.gameonix.shop/data/json/games.json')
     .then(res => res.json())
     .then(data => {
         allGamesData = data;
+
+        preloadAds();
         renderSections('all');
         setupFilterListeners();
     })
@@ -53,27 +55,23 @@ function renderSections(filterType = 'all') {
     for (const mainSectionName in allGamesData) {
         const mainSection = allGamesData[mainSectionName];
 
-        // التحقق من نوع القسم بناءً على الأيقونة الموجودة في الـ JSON
         const isPC = mainSection.icon && (mainSection.icon.includes("computer") || mainSection.icon.includes("desktop"));
         const isPS = mainSection.icon && mainSection.icon.includes("playstation");
 
-        // منطق فلترة صارم:
         if (filterType === 'pc' && !isPC) continue;
         if (filterType === 'ps' && !isPS) continue;
 
         const mainTitle = document.createElement("h1");
         mainTitle.classList.add("main-section-title");
-        mainTitle.style.cursor = "pointer"; // عشان اليوزر يعرف إنه كليكابل
+        mainTitle.style.cursor = "pointer";
 
         mainTitle.innerHTML = `
-    ${mainSection.icon ? `<i class="${mainSection.icon}"></i>` : ''}
-    ${mainSectionName}
-    <i class="fa-solid fa-chevron-right"></i>
-`;
+            ${mainSection.icon ? `<i class="${mainSection.icon}"></i>` : ''}
+            ${mainSectionName}
+            <i class="fa-solid fa-chevron-right"></i>
+        `;
 
-        // الربط الجديد
         mainTitle.addEventListener("click", () => {
-            // نعرف هو PC ولا PS من خلال الـ Boolean اللي أنت حاسبه فوق في كودك
             let type = isPS ? "PS" : "PC";
             window.location.href = `html/section-all.html?type=${type}`;
         });
@@ -85,8 +83,6 @@ function renderSections(filterType = 'all') {
 
             const section = mainSection[subSectionName];
             const games = section.games || [];
-
-            // لو القسم فرعي وفاضي (نادر الحدوث) نتخطاه
             if (games.length === 0) continue;
 
             const sectionDiv = document.createElement("div");
@@ -96,49 +92,116 @@ function renderSections(filterType = 'all') {
             const homeGames = maxHomeIndex !== -1 ? games.slice(0, maxHomeIndex) : games;
 
             sectionDiv.innerHTML = `
-                <div class="section-wrapper">
-                    <div class="section-header">
-                        <h2 class="sec-style">
-                            <a class="sec-txt" data-section="${subSectionName}">
-                                ${section.icon ? `<i class="fa-solid ${section.icon}"></i>` : ''}
-                                ${subSectionName}
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </a>
-                        </h2>
-                    </div>
-                    <div class="section-controls">
-                        <i class="fa-solid fa-chevron-left fa scroll-btn left"></i>
-                        <i class="fa-solid fa-chevron-right fa scroll-btn right"></i>
-                    </div>
-                    <div class="section">
-                        ${homeGames.map(game => `
-                            <div class="game-card" data-slug="${game.slug}">
-                                <div class="game-details">
-                                    <img src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}" alt="${game.title}" loading="lazy" onerror="this.src='assets/images/game.jpg'">
-                                    <div class="publisher">${game.publisher || WebsiteName}</div>
-                                    <div class="title">${game.title}</div>
-                                </div>
+                <div class="section-header">
+                    <h2 class="sec-style">
+                        <a class="sec-txt" data-section="${subSectionName}">
+                            ${section.icon ? `<i class="fa-solid ${section.icon}"></i>` : ''}
+                            ${subSectionName}
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </h2>
+                </div>
+                <div class="section-controls">
+                    <i class="fa-solid fa-chevron-left fa scroll-btn left"></i>
+                    <i class="fa-solid fa-chevron-right fa scroll-btn right"></i>
+                </div>
+                <div class="section">
+                    ${homeGames.map(game => `
+                        <div class="game-card" data-slug="${game.slug}">
+                            <div class="game-details">
+                                <img src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}" 
+                                     alt="${game.title}" loading="lazy" onerror="this.src='assets/images/game.jpg'">
+                                <div class="publisher">${game.publisher || WebsiteName}</div>
+                                <div class="title">${game.title}</div>
                             </div>
-                        `).join('')}
-                        ${maxHomeIndex !== -1 ? `
-                            <div class="game-card more-games">
-                                <div class="game-details">
-                                    <i class="fa-solid fa-arrow-right fa-3x" style="color: var(--color-text-primary);"></i>
-                                    <div class="title">More Games</div>
-                                </div>
+                        </div>
+                    `).join('')}
+                    ${maxHomeIndex !== -1 ? `
+                        <div class="game-card more-games">
+                            <div class="game-details">
+                                <i class="fa-solid fa-arrow-right fa-3x" style="color: var(--color-text-primary);"></i>
+                                <div class="title">More Games</div>
                             </div>
-                        ` : ''}
-                    </div>
+                        </div>
+                    ` : ''}
+                </div>
+                                <div class="adv" style="margin-top: 10px; margin-right: 120px;">
+                    <div class="ad ad-1"></div>
+                    <div class="ad ad-2"></div>
                 </div>
             `;
+
             container.appendChild(sectionDiv);
             attachSectionEvents(sectionDiv, subSectionName);
         }
     }
+
     updateControlsPosition();
+
+    // ✅ أهم سطر: شغل الإعلانات بعد توليد كل الأقسام
+    loadAllAdsSequential();
 }
 
-// --- 5. أحداث السلايدر والضغط على الكروت ---
+// بعد كل renderSections
+function loadAllAdsSequential() {
+    const allAdContainers = container.querySelectorAll(".section-container .adv .ad");
+    allAdContainers.forEach((ad, index) => {
+        setTimeout(() => {
+            const script1 = document.createElement("script");
+            script1.type = "text/javascript";
+            script1.innerHTML = `
+                atOptions = {
+                    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            `;
+            const script2 = document.createElement("script");
+            script2.type = "text/javascript";
+            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+
+            ad.appendChild(script1);
+            ad.appendChild(script2);
+        }, index * 600);
+    });
+}
+
+function preloadAds() {
+    const adPlaceholderCount = 10; // عدد الإعلانات اللي تحب تجهزها مسبقاً
+    for (let i = 0; i < adPlaceholderCount; i++) {
+        const adDiv = document.createElement('div');
+        adDiv.classList.add('adv', 'preload-ad');
+        adDiv.style.marginTop = '10px';
+
+        const innerAd = document.createElement('div');
+        innerAd.classList.add('ad');
+        adDiv.appendChild(innerAd);
+
+        container.appendChild(adDiv);
+
+        // تحميل السكريبت الخاص بالإعلان فوراً
+        const script1 = document.createElement("script");
+        script1.type = "text/javascript";
+        script1.innerHTML = `
+            atOptions = {
+                'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        `;
+        const script2 = document.createElement("script");
+        script2.type = "text/javascript";
+        script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+
+        innerAd.appendChild(script1);
+        innerAd.appendChild(script2);
+    }
+}
+
 // --- 5. أحداث السلايدر والضغط على الكروت (النسخة المعدلة) ---
 function attachSectionEvents(sectionDiv, subSectionName) {
     // تحديد نوع المنصة بناءً على الأيقونة في العنوان الرئيسي اللي فوق القسم ده
