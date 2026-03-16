@@ -65,6 +65,8 @@
     background-color: var(--color-bg-secondary);
     border-radius: 10px;
     cursor: pointer;
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
 }
 
 /* شبكة الألعاب */
