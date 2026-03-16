@@ -143,28 +143,50 @@ function renderSections(filterType = 'all') {
 }
 
 // بعد كل renderSections
-function loadAllAdsSequential() {
+async function loadAllAdsSequential() {
     const allAdContainers = container.querySelectorAll(".section-container .adv .ad");
-    allAdContainers.forEach((ad, index) => {
-        setTimeout(() => {
-            const script1 = document.createElement("script");
-            script1.type = "text/javascript";
-            script1.innerHTML = `
-                atOptions = {
-                    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            `;
-            const script2 = document.createElement("script");
-            script2.type = "text/javascript";
-            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
 
-            ad.appendChild(script1);
-            ad.appendChild(script2);
-        }, index * 600);
+    for (let index = 0; index < allAdContainers.length; index++) {
+        const ad = allAdContainers[index];
+
+        try {
+            await loadSingleAd(ad);
+        } catch (err) {
+            console.error(`Ad #${index + 1} failed to load:`, err);
+            // Fallback: صورة افتراضية بدل الإعلان
+            ad.innerHTML = `<img src="assets/images/ad-fallback.jpg" alt="Ad" style="width:100%; height:auto;">`;
+        }
+    }
+}
+
+// دالة لتحميل إعلان واحد بشكل آمن
+function loadSingleAd(adContainer) {
+    return new Promise((resolve, reject) => {
+        // تنظيف أي محتوى سابق
+        adContainer.innerHTML = "";
+
+        const script1 = document.createElement("script");
+        script1.type = "text/javascript";
+        script1.innerHTML = `
+            atOptions = {
+                'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        `;
+
+        const script2 = document.createElement("script");
+        script2.type = "text/javascript";
+        script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+
+        // حدث نجاح أو فشل تحميل السكريبت الخارجي
+        script2.onload = () => resolve();
+        script2.onerror = () => reject(new Error("Failed to load ad script"));
+
+        adContainer.appendChild(script1);
+        adContainer.appendChild(script2);
     });
 }
 

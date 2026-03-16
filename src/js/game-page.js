@@ -1,8 +1,49 @@
 const WebsiteName = "GameOnix";
 const params = new URLSearchParams(window.location.search);
 const gameSlug = params.get("game");
-
 const page = document.getElementById("game-page");
+
+// --- 1. دالة تحميل الإعلانات بشكل مستقل ---
+function loadAllAdsOnPage() {
+    const adSelectors = [".ad-1", ".ad-2", ".ad-3", ".ad-4"];
+
+    adSelectors.forEach((selector, i) => {
+        setTimeout(() => {
+            const container = document.querySelector(selector);
+            if (!container) return;
+
+            container.innerHTML = ""; // تنظيف
+
+            const script1 = document.createElement("script");
+            script1.innerHTML = `
+                atOptions = {
+                    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            `;
+
+            const script2 = document.createElement("script");
+            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+
+            script2.onload = () => console.log(selector + " loaded successfully");
+            script2.onerror = () => {
+                console.warn(selector + " failed, showing fallback");
+                container.innerHTML = `<img src="assets/images/ad-fallback.jpg" alt="Ad" style="width:100%; height:auto;">`;
+            };
+
+            container.appendChild(script1);
+            container.appendChild(script2);
+        }, i * 500); // فرق زمني بسيط بين الإعلانات
+    });
+}
+
+// --- 2. شغل الإعلانات فور فتح الصفحة ---
+document.addEventListener("DOMContentLoaded", () => {
+    loadAllAdsOnPage();
+});
 
 fetch("https://www.gameonix.shop/data/json/games-data.json")
     .then(res => res.json())
@@ -131,32 +172,8 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
-        function loadAd(containerClass, delay = 0) {
-            setTimeout(() => {
-                const container = document.querySelector(containerClass);
+        loadAllAdsOnPage();
 
-                const script1 = document.createElement("script");
-                script1.innerHTML = `
-            atOptions = {
-                'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        `;
-
-                const script2 = document.createElement("script");
-                script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
-
-                container.appendChild(script1);
-                container.appendChild(script2);
-            }, delay);
-        }
-        loadAd(".ad-1", 0);
-        loadAd(".ad-2", 500);
-        loadAd(".ad-3", 800);
-        loadAd(".ad-4", 1000);
 
         const shareBtn = document.querySelector(".share-btn");
         const bugBtn = document.querySelector(".bug-btn");
