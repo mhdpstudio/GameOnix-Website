@@ -2371,6 +2371,21 @@
             "mediaCount": 10
         },
         {
+            "slug": "enshrouded",
+            "title": "Enshrouded",
+            "publisher": "Keen Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/enshrouded.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "487046",
+            "size": "9.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/enshrouded.torrent",
+            "platform": "pc",
+            "mediaPrefix": "enshrouded",
+            "mediaCount": 10
+        },
+        {
             "slug": "god-of-war-3-ps3",
             "title": "God of War 3",
             "publisher": "Santa Monica Studio",

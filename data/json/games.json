@@ -854,6 +854,13 @@
                     "title": "Stronghold 2",
                     "poster": "https://gameonix.shop/assets/images/games/posters/stronghold-2",
                     "publisher": "Firefly Studios"
+                },
+                {
+                    "slug": "enshrouded",
+                    "id": 113,
+                    "title": "Enshrouded",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/enshrouded",
+                    "publisher": "Keen Games"
                 }
             ]
         },
