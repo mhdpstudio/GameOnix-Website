@@ -16,17 +16,17 @@ function loadAllAdsOnPage() {
 
             const script1 = document.createElement("script");
             script1.innerHTML = `
-                atOptions = {
-                    'key' : '9d1775733bcb53c5e0ad81d6d9870e39',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
+ atOptions = {
+    'key' : '95ccbecea9239e3ff672f846ce4d1fc1',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
             `;
 
             const script2 = document.createElement("script");
-            script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
+            script2.src = "https://www.highperformanceformat.com/95ccbecea9239e3ff672f846ce4d1fc1/invoke.js";
 
             script2.onload = () => console.log(selector + " loaded successfully");
             script2.onerror = () => {
