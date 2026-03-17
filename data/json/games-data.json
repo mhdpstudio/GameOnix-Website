@@ -2371,6 +2371,21 @@
             "mediaCount": 10
         },
         {
+            "slug": "little-nightmare-1",
+            "title": "Poppy Playtime Chapter 5",
+            "publisher": "Mob Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/little-nightmare.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.3.5.0",
+            "size": "3.0 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/little-nightmare-1.torrent",
+            "platform": "pc",
+            "mediaPrefix": "little-nightmare",
+            "mediaCount": 6
+        },
+        {
             "slug": "enshrouded",
             "title": "Enshrouded",
             "publisher": "Keen Games",

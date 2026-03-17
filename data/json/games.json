@@ -1187,6 +1187,13 @@
                     "title": "Poppy Playtime Chapter 5",
                     "poster": "https://gameonix.shop/assets/images/games/posters/ppt-5",
                     "publisher": "Mob Games"
+                },
+                {
+                    "slug": "little-nightmare-1",
+                    "id": 2,
+                    "title": "Little Nightmare",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/little-nightmare",
+                    "publisher": "Bandai Namco"
                 }
             ]
         },
