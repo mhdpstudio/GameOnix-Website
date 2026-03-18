@@ -28,6 +28,7 @@
     --bg-pop-4: rgba(255, 255, 255, 0.5);
     --sec-item-color: var(--bg-pop-4);
     --sec-item-hr-color: rgba(255, 255, 255, 0.8);
+    --title-icons-clr-hover: #161b22;
 }
 
 body.dark-theme {
@@ -56,4 +57,5 @@ body.dark-theme {
     --bg-pop-4: rgba(255, 255, 255, 0.02);
     --sec-item-color: rgba(255, 255, 255, 0.03);
     --sec-item-hr-color: rgba(255, 255, 255, 0.1);
+    --title-icons-clr-hover: #F1F5F9;
 }
