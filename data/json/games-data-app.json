@@ -2504,6 +2504,21 @@
             "platform": "pc",
             "mediaPrefix": "soma",
             "mediaCount": 7
+        },
+        {
+            "slug": "the-closing-shift",
+            "title": "The Closing Shift",
+            "publisher": "Chilla's Art",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-closing-shift.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.05.0.0",
+            "size": "1.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-closing-shift.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-closing-shift",
+            "mediaCount": 5
         }
     ]
 }

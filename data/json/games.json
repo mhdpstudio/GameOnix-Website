@@ -1229,6 +1229,13 @@
                     "title": "SOMA",
                     "poster": "https://gameonix.shop/assets/images/games/posters/soma",
                     "publisher": "Frictional Games"
+                },
+                {
+                    "slug": "the-closing-shift",
+                    "id": 7,
+                    "title": "The Closing Shift",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-closing-shift",
+                    "publisher": "Chilla's Art"
                 }
             ]
         },
