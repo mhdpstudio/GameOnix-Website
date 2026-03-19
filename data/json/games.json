@@ -1201,6 +1201,27 @@
                     "title": "Little Nightmare",
                     "poster": "https://gameonix.shop/assets/images/games/posters/little-nightmare",
                     "publisher": "Bandai Namco"
+                },
+                {
+                    "slug": "the-mortuary-assistant",
+                    "id": 3,
+                    "title": "The Mortuary Assistant",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-mortuary-assistant",
+                    "publisher": "DarkStone Digital"
+                },
+                {
+                    "slug": "madison",
+                    "id": 4,
+                    "title": "MADison",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/madison",
+                    "publisher": "Bloodious Games"
+                },
+                {
+                    "slug": "devotion",
+                    "id": 5,
+                    "title": "Devotion",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/devotion",
+                    "publisher": "Red Candle Games"
                 }
             ]
         },

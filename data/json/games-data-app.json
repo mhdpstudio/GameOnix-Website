@@ -2444,6 +2444,51 @@
             "platform": "ps",
             "mediaPrefix": "minecraft",
             "mediaCount": 6
+        },
+        {
+            "slug": "the-mortuary-assistant",
+            "title": "The Mortuary Assistant",
+            "publisher": "DarkStone Digital",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-mortuary-assistant.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "3.0.0.0",
+            "size": "1.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-mortuary-assistant.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-mortuary-assistant",
+            "mediaCount": 7
+        },
+        {
+            "slug": "madison",
+            "title": "MADison",
+            "publisher": "Bloodious Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/madison.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.0.1.0",
+            "size": "3.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/madison.torrent",
+            "platform": "pc",
+            "mediaPrefix": "madison",
+            "mediaCount": 4
+        },
+        {
+            "slug": "devotion",
+            "title": "Devotion",
+            "publisher": "Red Candle Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/devotion.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.0.0.0",
+            "size": "5.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/devotion.torrent",
+            "platform": "pc",
+            "mediaPrefix": "devotion",
+            "mediaCount": 1
         }
     ]
 }
