@@ -2489,6 +2489,21 @@
             "platform": "pc",
             "mediaPrefix": "devotion",
             "mediaCount": 1
+        },
+        {
+            "slug": "soma",
+            "title": "SOMA",
+            "publisher": "Frictional Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/soma.png",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.6.2.0",
+            "size": "8.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/soma.torrent",
+            "platform": "pc",
+            "mediaPrefix": "soma",
+            "mediaCount": 7
         }
     ]
 }

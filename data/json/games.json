@@ -1222,6 +1222,13 @@
                     "title": "Devotion",
                     "poster": "https://gameonix.shop/assets/images/games/posters/devotion",
                     "publisher": "Red Candle Games"
+                },
+                {
+                    "slug": "soma",
+                    "id": 6,
+                    "title": "SOMA",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/soma",
+                    "publisher": "Frictional Games"
                 }
             ]
         },
