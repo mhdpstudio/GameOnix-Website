@@ -1291,6 +1291,21 @@
             "mediaCount": 4
         },
         {
+            "slug": "pes-2013",
+            "title": "PES 2013",
+            "publisher": "Konami",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/pes2013.png",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-basketball",
+            "version": "1.4.2.0",
+            "size": "4.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2013.torrent",
+            "platform": "pc",
+            "mediaPrefix": "pes2013",
+            "mediaCount": 8
+        },
+        {
             "slug": "pes-2019",
             "title": "PES 2019",
             "publisher": "Konami",
