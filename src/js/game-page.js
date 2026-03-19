@@ -12,31 +12,27 @@ function loadAllAdsOnPage() {
             const container = document.querySelector(selector);
             if (!container) return;
 
-            container.innerHTML = ""; // تنظيف
+            container.innerHTML = "";
 
-            const script1 = document.createElement("script");
-            script1.innerHTML = `
- atOptions = {
-    'key' : '95ccbecea9239e3ff672f846ce4d1fc1',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-            `;
+            try {
+                const s = document.createElement('script');
 
-            const script2 = document.createElement("script");
-            script2.src = "https://www.highperformanceformat.com/95ccbecea9239e3ff672f846ce4d1fc1/invoke.js";
+                s.src = "//stupid-police.com/beX.VJs/d/Gmlf0/YBW/cH/Nedmk9KuHZhUKl/kaP/T/Ye4TOiDBMZ4QMlz_cntINJjrgD4QMUz/g/0SM_Qx";
+                s.async = true;
+                s.referrerPolicy = 'no-referrer-when-downgrade';
 
-            script2.onload = () => console.log(selector + " loaded successfully");
-            script2.onerror = () => {
-                console.warn(selector + " failed, showing fallback");
-                container.innerHTML = `<img src="assets/images/ad-fallback.jpg" alt="Ad" style="width:100%; height:auto;">`;
-            };
+                s.onload = () => console.log(selector + " loaded");
+                s.onerror = () => {
+                    container.innerHTML = `<img src="assets/images/ad-fallback.jpg" style="width:100%">`;
+                };
 
-            container.appendChild(script1);
-            container.appendChild(script2);
-        }, i * 500); // فرق زمني بسيط بين الإعلانات
+                container.appendChild(s);
+
+            } catch (err) {
+                console.error(err);
+            }
+
+        }, i * 700);
     });
 }
 
@@ -79,10 +75,6 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
         page.innerHTML = `
 
     <div class="game-container">
-            <div class="adv">
-    <div class="ad ad-1"></div>
-    <div class="ad ad-2"></div>
-</div>
         <div class="game-title">
             <div class="game-name" id="goBack"><span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}</div>
             <div class="details">
@@ -130,10 +122,6 @@ ${mediaImages.map((img, i) => `
     justify-content: center;
     gap: 8px;"><span class="material-symbols-rounded">chevron_right</span></div>
                 </div>
-            <div class="adv" style="margin-top: 10px;">
-    <div class="ad ad-3"></div>
-    <div class="ad ad-4"></div>
-</div>
                 </div>
                 <div class="side-panel">
                     <div class="game-logo-wrapper">

@@ -125,9 +125,6 @@ function renderSections(filterType = 'all') {
                         </div>
                     ` : ''}
                 </div>
-                                <div class="adv" style="margin-top: 10px; margin-right: 120px;">
-                    <div class="ad ad-1"></div>
-                    <div class="ad ad-2"></div>
                 </div>
             `;
 
@@ -162,31 +159,27 @@ async function loadAllAdsSequential() {
 // دالة لتحميل إعلان واحد بشكل آمن
 function loadSingleAd(adContainer) {
     return new Promise((resolve, reject) => {
-        // تنظيف أي محتوى سابق
         adContainer.innerHTML = "";
 
-        const script1 = document.createElement("script");
-        script1.type = "text/javascript";
-        script1.innerHTML = `
- atOptions = {
-    'key' : '95ccbecea9239e3ff672f846ce4d1fc1',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-        `;
+        try {
+            (function (jiwz) {
+                var d = document,
+                    s = d.createElement('script'),
+                    l = d.scripts[d.scripts.length - 1];
 
-        const script2 = document.createElement("script");
-        script2.type = "text/javascript";
-        script2.src = "https://www.highperformanceformat.com/95ccbecea9239e3ff672f846ce4d1fc1/invoke.js";
+                s.settings = jiwz || {};
+                s.src = "//stupid-police.com/beX.VJs/d/Gmlf0/YBW/cH/Nedmk9KuHZhUKl/kaP/T/Ye4TOiDBMZ4QMlz_cntINJjrgD4QMUz/g/0SM_Qx";
+                s.async = true;
+                s.referrerPolicy = 'no-referrer-when-downgrade';
 
-        // حدث نجاح أو فشل تحميل السكريبت الخارجي
-        script2.onload = () => resolve();
-        script2.onerror = () => reject(new Error("Failed to load ad script"));
+                s.onload = () => resolve();
+                s.onerror = () => reject(new Error("Ad failed"));
 
-        adContainer.appendChild(script1);
-        adContainer.appendChild(script2);
+                adContainer.appendChild(s);
+            })({});
+        } catch (err) {
+            reject(err);
+        }
     });
 }
 
