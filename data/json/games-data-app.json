@@ -2519,6 +2519,36 @@
             "platform": "pc",
             "mediaPrefix": "the-closing-shift",
             "mediaCount": 5
+        },
+        {
+            "slug": "dark-souls",
+            "title": "Dark Souls",
+            "publisher": "FromSoftware",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/dark-souls.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "2.1.0.0",
+            "size": "3.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dark-souls-1-prepare-to-die.torrent",
+            "platform": "pc",
+            "mediaPrefix": "dark-souls",
+            "mediaCount": 10
+        },
+        {
+            "slug": "dark-souls-2",
+            "title": "Dark Souls 2",
+            "publisher": "FromSoftware",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/dark-souls-2.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.02.0.0",
+            "size": "6.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dark-souls-2-scholar.torrent",
+            "platform": "pc",
+            "mediaPrefix": "dark-souls-2",
+            "mediaCount": 6
         }
     ]
 }

@@ -861,6 +861,20 @@
                     "title": "Enshrouded",
                     "poster": "https://gameonix.shop/assets/images/games/posters/enshrouded",
                     "publisher": "Keen Games"
+                },
+                {
+                    "slug": "dark-souls",
+                    "id": 114,
+                    "title": "Dark Souls",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dark-souls",
+                    "publisher": "FromSoftware"
+                },
+                {
+                    "slug": "dark-souls-2",
+                    "id": 115,
+                    "title": "Dark Souls 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dark-souls-2",
+                    "publisher": "FromSoftware"
                 }
             ]
         },
