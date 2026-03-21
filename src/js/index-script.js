@@ -4,37 +4,53 @@ const WebsiteName = "GameOnix";
 let allGamesData = null;
 let currentFilter = 'all'; // متغير لحفظ الحالة الحالية للفلتر
 
-function lazyLoadImages() {
-    const imgs = document.querySelectorAll('img[data-src]:not([data-observed])');
+// --- Lazy Load Images (Optimized) ---
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(async (entry) => {
+        if (!entry.isIntersecting) return;
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
+        const img = entry.target;
+        const src = img.dataset.src;
 
-                const temp = new Image();
-                temp.src = img.dataset.src;
+        if (!src) return;
 
-                temp.onload = () => {
-                    img.src = temp.src;
-                    img.classList.remove('lazy-img');
-                };
+        try {
+            img.src = src;
 
-                temp.onerror = () => {
-                    img.src = 'assets/images/game.jpg';
-                };
-
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
+            if (img.decode) {
+                await img.decode();
             }
-        });
-    }, {
-        rootMargin: "200px" // 🔥 أهم تعديل
+
+            img.classList.remove('lazy-img');
+        } catch (err) {
+            img.src = 'assets/images/game.jpg';
+        } finally {
+            observer.unobserve(img);
+            img.removeAttribute('data-src');
+        }
     });
+}, {
+    rootMargin: "300px 0px",
+    threshold: 0.01
+});
+
+function lazyLoadImages(root = document) {
+    const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
 
     imgs.forEach(img => {
         img.setAttribute('data-observed', 'true');
-        observer.observe(img);
+        imageObserver.observe(img);
+    });
+}
+
+// --- تحسين preload للصور القريبة ---
+function preloadVisibleImages() {
+    const imgs = document.querySelectorAll('img[data-src]');
+    imgs.forEach((img, index) => {
+        if (index < 6) {
+            const temp = new Image();
+            temp.src = img.dataset.src;
+        }
     });
 }
 
@@ -61,7 +77,6 @@ if (searchBox) {
         if (e.key === 'Enter') {
             const query = searchBox.value.trim();
             if (query) {
-                // الانتقال فوراً لصفحة النتائج مع كلمة البحث
                 window.location.href = `html/search-results.html?q=${encodeURIComponent(query)}`;
             }
         }
@@ -80,7 +95,7 @@ fetch('https://www.gameonix.shop/data/json/games.json')
     })
     .catch(err => console.error("Error fetching games:", err));
 
-// --- 4. دالة عرض الأقسام الصارمة (Strict Filtering) ---
+// --- 4. دالة عرض الأقسام ---
 function renderSections(filterType = 'all') {
     if (!allGamesData) return;
     currentFilter = filterType;
@@ -143,14 +158,15 @@ function renderSections(filterType = 'all') {
                     ${homeGames.map(game => `
                         <div class="game-card" data-slug="${game.slug}">
                             <div class="game-details">
-<img 
-  src="assets/images/game.jpg"
-  data-src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
-  alt="${game.title}"
-  class="lazy-img"
-  loading="lazy"
-  onerror="this.src='assets/images/game.jpg'"
->
+                                <img 
+                                    src="assets/images/game.jpg"
+                                    data-src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
+                                    alt="${game.title}"
+                                    class="lazy-img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    onerror="this.src='assets/images/game.jpg'"
+                                >
                                 <div class="publisher">${game.publisher || WebsiteName}</div>
                                 <div class="title">${game.title}</div>
                             </div>
@@ -174,8 +190,9 @@ function renderSections(filterType = 'all') {
 
     updateControlsPosition();
 
-    // ✅ أهم سطر: شغل الإعلانات بعد توليد كل الأقسام
+    // تشغيل lazy loading + preload
     lazyLoadImages();
+    preloadVisibleImages();
 }
 
 // بعد كل renderSections
@@ -189,13 +206,12 @@ async function loadAllAdsSequential() {
             await loadSingleAd(ad);
         } catch (err) {
             console.error(`Ad #${index + 1} failed to load:`, err);
-            // Fallback: صورة افتراضية بدل الإعلان
             ad.innerHTML = `<img src="assets/images/ad-fallback.jpg" alt="Ad" style="width:100%; height:auto;">`;
         }
     }
 }
 
-// دالة لتحميل إعلان واحد بشكل آمن
+// دالة لتحميل إعلان واحد
 function loadSingleAd(adContainer) {
     return new Promise((resolve, reject) => {
         adContainer.innerHTML = "";
@@ -203,8 +219,7 @@ function loadSingleAd(adContainer) {
         try {
             (function (jiwz) {
                 var d = document,
-                    s = d.createElement('script'),
-                    l = d.scripts[d.scripts.length - 1];
+                    s = d.createElement('script');
 
                 s.settings = jiwz || {};
                 s.src = "//stupid-police.com/beX.VJs/d/Gmlf0/YBW/cH/Nedmk9KuHZhUKl/kaP/T/Ye4TOiDBMZ4QMlz_cntINJjrgD4QMUz/g/0SM_Qx";
@@ -223,7 +238,8 @@ function loadSingleAd(adContainer) {
 }
 
 function preloadAds() {
-    const adPlaceholderCount = 10; // عدد الإعلانات اللي تحب تجهزها مسبقاً
+    const adPlaceholderCount = 10;
+
     for (let i = 0; i < adPlaceholderCount; i++) {
         const adDiv = document.createElement('div');
         adDiv.classList.add('adv', 'preload-ad');
@@ -235,7 +251,6 @@ function preloadAds() {
 
         container.appendChild(adDiv);
 
-        // تحميل السكريبت الخاص بالإعلان فوراً
         const script1 = document.createElement("script");
         script1.type = "text/javascript";
         script1.innerHTML = `
@@ -247,6 +262,7 @@ function preloadAds() {
                 'params' : {}
             };
         `;
+
         const script2 = document.createElement("script");
         script2.type = "text/javascript";
         script2.src = "https://www.highperformanceformat.com/9d1775733bcb53c5e0ad81d6d9870e39/invoke.js";
@@ -256,12 +272,11 @@ function preloadAds() {
     }
 }
 
-// --- 5. أحداث السلايدر والضغط على الكروت (النسخة المعدلة) ---
+// --- 5. أحداث السلايدر ---
 function attachSectionEvents(sectionDiv, subSectionName) {
-    // تحديد نوع المنصة بناءً على الأيقونة في العنوان الرئيسي اللي فوق القسم ده
-    let platformType = "PC"; // الافتراضي
 
-    // بنجيب الـ h1 اللي قبل الـ section-container مباشرة
+    let platformType = "PC";
+
     const mainHeader = sectionDiv.previousElementSibling;
     if (mainHeader && mainHeader.classList.contains("main-section-title")) {
         const iconClass = mainHeader.querySelector("i")?.className || "";
@@ -270,10 +285,8 @@ function attachSectionEvents(sectionDiv, subSectionName) {
         }
     }
 
-    // بناء الرابط الموحد مع إضافة الـ type
     const targetSectionUrl = `html/section.html?section=${encodeURIComponent(subSectionName)}&type=${platformType}`;
 
-    // 1. الضغط على اسم القسم (العنوان الجانبي)
     const secTxt = sectionDiv.querySelector(".sec-txt");
     if (secTxt) {
         secTxt.addEventListener("click", () => {
@@ -281,14 +294,12 @@ function attachSectionEvents(sectionDiv, subSectionName) {
         });
     }
 
-    // 2. الضغط على كارت "More Games"
     sectionDiv.querySelectorAll(".more-games").forEach(btn => {
         btn.addEventListener("click", () => {
             window.location.href = targetSectionUrl;
         });
     });
 
-    // 3. الضغط على كروت الألعاب العادية
     sectionDiv.querySelectorAll(".game-card").forEach(card => {
         if (!card.classList.contains("more-games")) {
             card.addEventListener("click", () => {
@@ -298,7 +309,6 @@ function attachSectionEvents(sectionDiv, subSectionName) {
         }
     });
 
-    // --- منطق السلايدر (بدون تغيير) ---
     const slider = sectionDiv.querySelector(".section");
     const btnLeft = sectionDiv.querySelector(".scroll-btn.left");
     const btnRight = sectionDiv.querySelector(".scroll-btn.right");
@@ -329,7 +339,7 @@ function attachSectionEvents(sectionDiv, subSectionName) {
     }
 }
 
-// --- 6. الفلاتر (صارمة ولا تمسح السيرش بوكس) ---
+// --- 6. الفلاتر ---
 function setupFilterListeners() {
     const allBtn = document.querySelector('.filter.all');
     const pcBtn = document.querySelector('.filter.pc');
@@ -362,7 +372,7 @@ function toggleActiveFilter(el) {
     el.classList.add('active');
 }
 
-// --- 7. أحداث الـ Sidebar والـ Resize ---
+// --- 7. Sidebar ---
 document.querySelectorAll('.sb-toggle').forEach(btn => {
     btn.addEventListener('click', () => setTimeout(updateControlsPosition, 400));
 });
