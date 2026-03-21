@@ -4,7 +4,7 @@
         "slug": "gta-v",
         "title": "Grand Theft Auto V",
         "pub": "Rockstar Games",
-        "thumb": "../../assets/images/games/posters/gta5.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/gta5.jpg",
         "popular": true,
         "shortDesc": "Dive into the massive open world of Los Santos and Blaine County, following three unique protagonists as they navigate a life of crime. Experience thrilling story missions, dynamic events, and an expansive online multiplayer mode."
     },
@@ -13,7 +13,7 @@
         "slug": "forza-horizon-4",
         "title": "Forza Horizon 4",
         "pub": "Playground Games",
-        "thumb": "../../assets/images/games/posters/f-h-4.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/f-h-4.jpg",
         "popular": true,
         "shortDesc": "Enjoy the ultimate racing experience in a beautifully recreated open-world UK with dynamic seasons, over 450 cars, online multiplayer events, and hidden surprises."
     },
@@ -22,7 +22,7 @@
         "slug": "far-cry-5",
         "title": "Far Cry 5",
         "pub": "Ubisoft",
-        "thumb": "../../assets/images/games/posters/fc-5.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/fc-5.jpg",
         "shortDesc": "Fight against a dangerous cult in rural Montana, explore vast landscapes, engage in first-person combat, and uncover hidden secrets in this action-packed open world."
     },
     {
@@ -30,7 +30,7 @@
         "slug": "god-of-war-ragnarok",
         "title": "God of War Ragnarok",
         "pub": "Santa Monica Studio",
-        "thumb": "../../assets/images/games/posters/g-o-w-r.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/g-o-w-r.jpg",
         "popular": true,
         "onlyPopular": true,
         "shortDesc": "Join Kratos and Atreus on an epic journey through Norse mythology, facing mythical creatures, cinematic storytelling, and breathtaking combat experiences."
@@ -40,7 +40,7 @@
         "slug": "rdr-2",
         "title": "Red Dead Redemption II",
         "pub": "Rockstar Games",
-        "thumb": "../../assets/images/games/posters/rdr-2.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/rdr-2.jpg",
         "shortDesc": "Experience the American Wild West as outlaw Arthur Morgan. Explore vast landscapes, engage in missions and side quests, and interact with a living world of characters and wildlife."
     },
     {
@@ -48,7 +48,7 @@
         "slug": "the-witcher-3",
         "title": "The Witcher 3: Wild Hunt",
         "pub": "CD Projekt",
-        "thumb": "../../assets/images/games/posters/the-witcher-3.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/the-witcher-3.jpg",
         "popular": true,
         "shortDesc": "Play as Geralt of Rivia in a vast open-world RPG filled with rich storytelling, complex characters, and challenging combat. Hunt monsters, explore diverse landscapes, and uncover political intrigue."
     },
@@ -57,7 +57,7 @@
         "slug": "max-payne-2",
         "title": "Max Payne 2",
         "pub": "Rockstar Games",
-        "thumb": "../../assets/images/games/posters/m-p-2.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/m-p-2.jpg",
         "shortDesc": "Experience noir-style storytelling and bullet-time action as Max Payne navigates a dark world of crime, revenge, and intense firefights."
     },
     {
@@ -65,7 +65,7 @@
         "slug": "ac-odyssey",
         "title": "Assassin's Creed Odyssey",
         "pub": "Ubisoft",
-        "thumb": "../../assets/images/games/posters/ac-odyssey.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/ac-odyssey.jpg",
         "popular": true,
         "shortDesc": "Embark on an epic journey through Ancient Greece as a mercenary, exploring a huge open world, battling legendary creatures, and uncovering the secrets of the Assassin's legacy."
     },
@@ -74,7 +74,7 @@
         "slug": "spider-man-web-of-shadows",
         "title": "Spider-Man: Web of Shadows",
         "pub": "Beenox",
-        "thumb": "../../assets/images/games/posters/spiderman-web-of-shadow.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/spiderman-web-of-shadow.jpg",
         "shortDesc": "Swing through New York City as Spider-Man, facing the symbiote invasion, dynamic combat, and save civilians in this action-packed superhero adventure."
     },
     {
@@ -82,7 +82,7 @@
         "slug": "cyberpunk-2077",
         "title": "Cyberpunk 2077",
         "pub": "CD Projekt",
-        "thumb": "../../assets/images/games/posters/cyberpunk-2077.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/cyberpunk-2077.jpg",
         "popular": true,
         "shortDesc": "Enter Night City as V, a mercenary in a cyberpunk dystopia. Customize your character, explore the vast open-world city, engage in deep narrative choices, and take on high-tech combat missions."
     },
@@ -91,7 +91,7 @@
         "slug": "left-4-dead-2",
         "title": "Left 4 Dead 2",
         "pub": "Turtle Rock Studios",
-        "thumb": "../../assets/images/games/posters/left4dead2.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/left4dead2.jpg",
         "shortDesc": "Survive the zombie apocalypse with friends or AI companions. Battle hordes of infected in dynamic, fast-paced co-op campaigns full of intense action."
     },
     {
@@ -99,7 +99,7 @@
         "slug": "alan-wake",
         "title": "Alan Wake",
         "pub": "Remedy Entertainment",
-        "thumb": "../../assets/images/games/posters/alan-wake-1.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/alan-wake-1.jpg",
         "shortDesc": "Dive into psychological thriller storytelling as Alan Wake, a novelist uncovering dark mysteries in a small town. Solve puzzles, fight enemies, and explore atmospheric environments."
     },
     {
@@ -107,7 +107,7 @@
         "slug": "ac-valhalla",
         "title": "Assassin's Creed Valhalla",
         "pub": "Ubisoft",
-        "thumb": "../../assets/images/games/posters/ac-v.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/ac-v.jpg",
         "shortDesc": "Lead Eivor, a fierce Viking raider, through England's dark ages. Raid, explore, and build your settlement in a massive open world."
     },
     {
@@ -115,7 +115,7 @@
         "slug": "batman-arkham-city",
         "title": "Batman: Arkham City",
         "pub": "Rocksteady Studios",
-        "thumb": "../../assets/images/games/posters/bat-ark.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/bat-ark.jpg",
         "shortDesc": "Patrol Gotham as Batman, confront iconic villains, and solve intricate puzzles while enjoying deep combat mechanics in Arkham City."
     },
     {
@@ -123,7 +123,7 @@
         "slug": "max-payne-3",
         "title": "Max Payne 3",
         "pub": "Rockstar Games",
-        "thumb": "../../assets/images/games/posters/m-p-3.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/m-p-3.jpg",
         "shortDesc": "Return as Max Payne in a gripping noir story full of bullet-time action, gritty shootouts, and a personal quest for redemption."
     },
     {
@@ -131,7 +131,7 @@
         "slug": "far-cry-primal",
         "title": "Far Cry Primal",
         "pub": "Ubisoft",
-        "thumb": "../../assets/images/games/posters/fc-primal.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/fc-primal.jpg",
         "shortDesc": "Step into the Stone Age, hunt prehistoric beasts, tame animals, and survive as the last member of your tribe in a savage open world."
     },
     {
@@ -139,7 +139,7 @@
         "slug": "ghost-of-tsushima",
         "title": "Ghost of Tsushima",
         "pub": "Sucker Punch",
-        "thumb": "../../assets/images/games/posters/g-o-t.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/g-o-t.jpg",
         "shortDesc": "Play as Jin Sakai and defend Tsushima Island from Mongol invaders using samurai combat, stealth, and a beautifully crafted open world."
     },
     {
@@ -147,7 +147,7 @@
         "slug": "elden-ring",
         "title": "Elden Ring",
         "pub": "FromSoftware",
-        "thumb": "../../assets/images/games/posters/elden-ring.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/elden-ring.jpg",
         "shortDesc": "Explore a vast dark fantasy world, challenge formidable bosses, and create your own path in this action-RPG adventure."
     },
     {
@@ -155,7 +155,7 @@
         "slug": "devil-may-cry-5",
         "title": "Devil May Cry 5",
         "pub": "Capcom",
-        "thumb": "../../assets/images/games/posters/devil-may-cry-5.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/devil-may-cry-5.jpg",
         "shortDesc": "Experience high-octane action with stylish combat, three playable characters, and a gripping demon-slaying story."
     },
     {
@@ -163,7 +163,7 @@
         "slug": "watch-dogs",
         "title": "Watch Dogs",
         "pub": "Ubisoft",
-        "thumb": "../../assets/images/games/posters/watch-dogs.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/watch-dogs.jpg",
         "shortDesc": "Hack into Chicago's city infrastructure, manipulate systems, and uncover conspiracies while playing as skilled hacker Aiden Pearce."
     },
     {
@@ -171,7 +171,7 @@
         "slug": "sleeping-dogs",
         "title": "Sleeping Dogs",
         "pub": "United Front Games",
-        "thumb": "../../assets/images/games/posters/sleeping-dog.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/sleeping-dog.jpg",
         "shortDesc": "Go undercover in Hong Kong's criminal underworld, combining martial arts combat, gunfights, and driving in an open-world adventure."
     },
     {
@@ -179,7 +179,7 @@
         "slug": "world-war-z",
         "title": "World War Z",
         "pub": "Saber Interactive",
-        "thumb": "../../assets/images/games/posters/world-war-z.jpg",
+        "thumb": "https://www.gameonix.shop/assets/images/games/posters/world-war-z.jpg",
         "shortDesc": "Team up in fast-paced co-op battles against massive zombie hordes across multiple global locations."
     }
 ]
