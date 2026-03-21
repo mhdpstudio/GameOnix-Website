@@ -3,43 +3,41 @@ const params = new URLSearchParams(window.location.search);
 const gameSlug = params.get("game");
 const page = document.getElementById("game-page");
 
-// --- 1. دالة تحميل الإعلانات بشكل مستقل ---
-function loadAllAdsOnPage() {
-    const adSelectors = [".ad-1", ".ad-2", ".ad-3", ".ad-4"];
+function lazyLoadImages() {
+    const imgs = document.querySelectorAll('img[data-src]:not([data-observed])');
 
-    adSelectors.forEach((selector, i) => {
-        setTimeout(() => {
-            const container = document.querySelector(selector);
-            if (!container) return;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
 
-            container.innerHTML = "";
+                // preload الصورة قبل عرضها
+                const temp = new Image();
+                temp.src = img.dataset.src;
 
-            try {
-                const s = document.createElement('script');
-
-                s.src = "//stupid-police.com/beX.VJs/d/Gmlf0/YBW/cH/Nedmk9KuHZhUKl/kaP/T/Ye4TOiDBMZ4QMlz_cntINJjrgD4QMUz/g/0SM_Qx";
-                s.async = true;
-                s.referrerPolicy = 'no-referrer-when-downgrade';
-
-                s.onload = () => console.log(selector + " loaded");
-                s.onerror = () => {
-                    container.innerHTML = `<img src="assets/images/ad-fallback.jpg" style="width:100%">`;
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.remove('lazy-img');
                 };
 
-                container.appendChild(s);
+                temp.onerror = () => {
+                    img.src = 'assets/images/game.jpg';
+                };
 
-            } catch (err) {
-                console.error(err);
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
             }
+        });
+    }, {
+        rootMargin: "200px" // 🔥 يبدأ التحميل قبل الظهور
+    });
 
-        }, i * 700);
+    imgs.forEach(img => {
+        img.setAttribute('data-observed', 'true');
+        observer.observe(img);
     });
 }
 
-// --- 2. شغل الإعلانات فور فتح الصفحة ---
-document.addEventListener("DOMContentLoaded", () => {
-    loadAllAdsOnPage();
-});
 
 fetch("https://www.gameonix.shop/data/json/games-data.json")
     .then(res => res.json())
@@ -160,7 +158,6 @@ ${mediaImages.map((img, i) => `
         </div>
     </div>
     `;
-        loadAllAdsOnPage();
 
 
         const shareBtn = document.querySelector(".share-btn");
@@ -294,8 +291,7 @@ Describe the problem:
                 updateSlider();
             }
         };
-
-
+        lazyLoadImages();
     })
     .catch(err => {
         console.error(err);

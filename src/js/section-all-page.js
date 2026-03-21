@@ -1,24 +1,61 @@
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 
+
+// --- Lazy Load Images (NEW) ---
+function lazyLoadImages(root = document) {
+    const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                // preload قبل العرض
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.remove('lazy-img');
+                };
+
+                temp.onerror = () => {
+                    img.src = '../assets/images/game.jpg';
+                };
+
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: "200px"
+    });
+
+    imgs.forEach(img => {
+        img.setAttribute('data-observed', 'true');
+        observer.observe(img);
+    });
+}
+
+
 // --- 1. تحسين موضع أزرار التحكم (Responsive Controls) ---
 function updateControlsPosition() {
-    const sidebar = document.querySelector('.sb'); // تأكد أن كلاس الـ Sidebar هو sb عندك
+    const sidebar = document.querySelector('.sb');
     if (!sidebar) return;
 
     const isOpen = !sidebar.classList.contains('closed');
     const sidebarWidth = sidebar.offsetWidth;
 
-    // ضبط مكان أزرار السلايدر (يمين)
     document.querySelectorAll('.section-controls').forEach(ctrl => {
         ctrl.style.right = isOpen ? (sidebarWidth + 40) + 'px' : "150px";
     });
 
-    // ضبط الحشو الداخلي للسيكشن عشان الكروت متختفيش تحت السايدبار
     document.querySelectorAll('.section').forEach(sec => {
         sec.style.paddingRight = isOpen ? "170px" : "20px";
     });
 }
+
 
 // --- 2. جلب البيانات وعرضها ---
 async function init() {
@@ -32,14 +69,17 @@ async function init() {
         let targetKey = platform === "PS" ? "Playstation Games" : "Desktop Games";
         let platformData = data[targetKey];
 
-        // جلب الأيقونة من الداتا (fa-computer أو غيرها)
         let mainIcon = platformData.icon || (platform === "PS" ? "fa-brands fa-playstation" : "fa-solid fa-desktop");
 
         document.title = `${WebsiteName} | ${targetKey}`;
+        window.titleBarPageName = targetKey;
+        if (window.renderTitleBar) {
+            window.renderTitleBar();
+        }
 
         container.innerHTML = "";
 
-        // العنوان الرئيسي مع الأيقونة المستخرجة من الـ JSON وسهم الرجوع
+        // العنوان الرئيسي
         const mainTitle = document.createElement("h1");
         mainTitle.className = "main-section-title";
         mainTitle.style.margin = "20px";
@@ -52,8 +92,6 @@ async function init() {
         `;
         container.appendChild(mainTitle);
 
-        // داخل دالة init()، تحديداً جوه الـ loop بتاع الـ subSectionName:
-
         for (const subSectionName in platformData) {
             if (subSectionName === "icon") continue;
 
@@ -64,7 +102,9 @@ async function init() {
             const sectionDiv = document.createElement("div");
             sectionDiv.className = "section-container";
 
-            // بناء الـ HTML
+            const maxHomeIndex = games.findIndex(g => g.title === "More Games");
+            const homeGames = maxHomeIndex !== -1 ? games.slice(0, maxHomeIndex) : games;
+
             sectionDiv.innerHTML = `
         <div class="section-wrapper">
             <div class="section-header">
@@ -81,37 +121,60 @@ async function init() {
                 <i class="fa-solid fa-chevron-right scroll-btn right"></i>
             </div>
             <div class="section">
-                ${games.map(game => `
+                ${homeGames.map(game => `
                     <div class="game-card" data-slug="${game.slug}">
                         <div class="game-details">
-                            <img src="${game.poster ? game.poster + ".jpg" : '../assets/images/game.jpg'}" alt="${game.title}" onerror="this.src='../assets/images/game.jpg'">
+                            <img 
+                                src="../assets/images/game.jpg"
+                                data-src="${game.poster ? game.poster + ".jpg" : '../assets/images/game.jpg'}"
+                                alt="${game.title}"
+                                class="lazy-img"
+                                onerror="this.src='../assets/images/game.jpg'"
+                            >
                             <div class="publisher">${game.publisher || WebsiteName}</div>
                             <div class="title">${game.title}</div>
                         </div>
                     </div>
                 `).join('')}
+
+                ${maxHomeIndex !== -1 ? `
+                    <div class="game-card more-games" style="cursor:pointer;">
+                        <div class="game-details">
+                            <i class="fa-solid fa-arrow-right fa-3x"></i>
+                            <div class="title">More Games</div>
+                        </div>
+                    </div>
+                ` : ''}
             </div>
         </div>
     `;
 
-            // --- إضافة منطق الضغط على عنوان القسم الفرعي ---
+            sectionDiv.querySelectorAll(".more-games").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    window.location.href = `section.html?section=${encodeURIComponent(subSectionName)}&type=${platform}`;
+                });
+            });
+
             const header = sectionDiv.querySelector(".sec-style");
             header.addEventListener("click", () => {
-                // نبعت الـ subSectionName كـ slug والـ platform كـ type (PC/PS)
                 window.location.href = `section.html?section=${encodeURIComponent(subSectionName)}&type=${platform}`;
             });
 
             container.appendChild(sectionDiv);
+
             setupSlider(sectionDiv);
+
+            // 🔥 تشغيل lazy loading لكل section بعد إضافته
+            lazyLoadImages(sectionDiv);
         }
 
-        // تشغيل الوظيفة فور الانتهاء من الرندر لضبط الأزرار
         updateControlsPosition();
 
     } catch (err) {
         console.error("Error loading games:", err);
     }
 }
+
 
 // --- 3. إعداد السلايدر والضغط على الكروت ---
 function setupSlider(sectionDiv) {
@@ -135,17 +198,16 @@ function setupSlider(sectionDiv) {
     }
 }
 
-// --- 4. المستمعات (Listeners) للتغييرات ---
-// لو عندك زرار بيقفل ويفتح السايدبار (sb-toggle)
+
+// --- 4. المستمعات ---
 document.querySelectorAll('.sb-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
-        // ننتظر شوية لحد ما الـ Animation يخلص وبعدين نحدث مكان الأزرار
         setTimeout(updateControlsPosition, 400);
     });
 });
 
-// تحديث الأماكن عند تغيير حجم الشاشة
 window.addEventListener("resize", updateControlsPosition);
+
 
 // بدء التشغيل
 init();

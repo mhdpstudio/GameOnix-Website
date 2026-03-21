@@ -5,52 +5,107 @@ const sectionName = params.get("section");
 const sectionLabel = document.getElementById("section-text");
 const WebsiteName = "GameOnix";
 
-// دالة العرض اللي اتفقنا عليها
+
+// --- Lazy Load Images (NEW) ---
+function lazyLoadImages(root = document) {
+    const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                // preload
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.remove('lazy-img');
+                };
+
+                temp.onerror = () => {
+                    img.src = '../../assets/images/game.jpg';
+                };
+
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: "200px"
+    });
+
+    imgs.forEach(img => {
+        img.setAttribute('data-observed', 'true');
+        observer.observe(img);
+    });
+}
+
+
+// دالة العرض
 function renderInitialGames(games, containerId) {
     const container = document.getElementById(containerId);
+
     if (!games || games.length === 0) {
         container.innerHTML = `<div class="no-results"><p>No games available in this section.</p></div>`;
         return;
     }
 
     container.innerHTML = "";
+
+    const fragment = document.createDocumentFragment();
+
     games.forEach(game => {
-        const gameCard = `
-            <div class="game-card" data-slug="${game.slug}" style="cursor: pointer;">
-                <div class="game-details">
-                    <img src="${game.poster ? game.poster + ".jpg" : '../../assets/images/game.jpg'}" 
-                         alt="${game.title}" 
-                         loading="lazy" 
-                         onerror="this.src='../../assets/images/game.jpg'">
-                    <div class="publisher">${game.publisher || WebsiteName}</div>
-                    <div class="title">${game.title}</div>
-                </div>
+        const div = document.createElement("div");
+        div.className = "game-card";
+        div.dataset.slug = game.slug;
+        div.style.cursor = "pointer";
+
+        div.innerHTML = `
+            <div class="game-details">
+                <img 
+                    src="../../assets/images/game.jpg"
+                    data-src="${game.poster ? game.poster + ".jpg" : '../../assets/images/game.jpg'}"
+                    alt="${game.title}"
+                    class="lazy-img"
+                    onerror="this.src='../../assets/images/game.jpg'"
+                >
+                <div class="publisher">${game.publisher || WebsiteName}</div>
+                <div class="title">${game.title}</div>
             </div>
         `;
-        container.innerHTML += gameCard;
+
+        fragment.appendChild(div);
     });
 
-    document.querySelectorAll('.game-card').forEach(card => {
+    container.appendChild(fragment);
+
+    // events
+    container.querySelectorAll('.game-card').forEach(card => {
         card.addEventListener('click', () => {
-            const slug = card.getAttribute('data-slug');
+            const slug = card.dataset.slug;
             if (slug) window.location.href = `game.html?game=${encodeURIComponent(slug)}`;
         });
     });
+
+    // lazy load
+    lazyLoadImages(container);
 }
+
 
 async function loadSectionGames() {
     try {
         const params = new URLSearchParams(window.location.search);
-        const sectionName = params.get("section"); // مثل: Popular
-        const platform = params.get("type");      // نرسل فيه PC أو PS
+        const sectionName = params.get("section");
+        const platform = params.get("type");
 
-        const response = await fetch('../../data/json/games.json');
+        const response = await fetch('https://www.gameonix.shop/data/json/games.json');
         const data = await response.json();
 
         let gamesData = null;
-        let displayType = ""; // اللي هيتكتب في العنوان
+        let displayType = "";
 
-        // المنطق: تحديد الـ Key الأساسي بناءً على النوع المبعوث في الرابط
         if (platform === "PS") {
             gamesData = data["Playstation Games"]?.[sectionName];
             displayType = "PS";
@@ -58,7 +113,6 @@ async function loadSectionGames() {
             gamesData = data["Desktop Games"]?.[sectionName];
             displayType = "PC";
         } else {
-            // حل احتياطي في حال نسينا نبعت النوع (Fallback)
             if (data["Desktop Games"][sectionName]) {
                 gamesData = data["Desktop Games"][sectionName];
                 displayType = "PC";
@@ -73,31 +127,30 @@ async function loadSectionGames() {
             return;
         }
 
-        // التعديل المطلوب: تحديث التايتل حسب المنصة والقسم
-        // النتيجة: GameOnix | Popular | PC
         document.title = `${WebsiteName} | ${sectionName} | ${displayType}`;
+        window.titleBarPageName = `${sectionName} | ${displayType}`;
+        if (window.renderTitleBar) {
+            window.renderTitleBar();
+        }
 
-        // عرض الأيقونة والنص في الصفحة
         const sectionLabel = document.getElementById("section-text");
         if (sectionLabel) {
             const icon = gamesData.icon || "fa-gamepad";
             sectionLabel.innerHTML = `
-    <div class="section-label" style="cursor: pointer;" onclick="window.history.back()">
-        <i class="fa-solid fa-arrow-left"></i> 
-        <i class="fa-solid ${icon}"></i> 
-        ${sectionName} Games
-    </div>
-`;
+                <div class="section-label" style="cursor: pointer;" onclick="window.history.back()">
+                    <i class="fa-solid fa-arrow-left"></i> 
+                    <i class="fa-solid ${icon}"></i> 
+                    ${sectionName} Games
+                </div>
+            `;
         }
 
         let gamesArray = gamesData.games || [];
 
-        // حذف كارت More Games
         gamesArray = gamesArray.filter(game =>
             game.title?.toLowerCase() !== "more games"
         );
 
-        // ترتيب الألعاب أبجديًا
         gamesArray.sort((a, b) =>
             a.title.localeCompare(b.title)
         );

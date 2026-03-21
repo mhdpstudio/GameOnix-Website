@@ -4,6 +4,40 @@ const WebsiteName = "GameOnix";
 let allGamesData = null;
 let currentFilter = 'all'; // متغير لحفظ الحالة الحالية للفلتر
 
+function lazyLoadImages() {
+    const imgs = document.querySelectorAll('img[data-src]:not([data-observed])');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.remove('lazy-img');
+                };
+
+                temp.onerror = () => {
+                    img.src = 'assets/images/game.jpg';
+                };
+
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: "200px" // 🔥 أهم تعديل
+    });
+
+    imgs.forEach(img => {
+        img.setAttribute('data-observed', 'true');
+        observer.observe(img);
+    });
+}
+
 // --- 1. تحسين موضع أزرار التحكم ---
 function updateControlsPosition() {
     const sidebar = document.querySelector('.sb');
@@ -109,8 +143,14 @@ function renderSections(filterType = 'all') {
                     ${homeGames.map(game => `
                         <div class="game-card" data-slug="${game.slug}">
                             <div class="game-details">
-                                <img src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}" 
-                                     alt="${game.title}" loading="lazy" onerror="this.src='assets/images/game.jpg'">
+<img 
+  src="assets/images/game.jpg"
+  data-src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
+  alt="${game.title}"
+  class="lazy-img"
+  loading="lazy"
+  onerror="this.src='assets/images/game.jpg'"
+>
                                 <div class="publisher">${game.publisher || WebsiteName}</div>
                                 <div class="title">${game.title}</div>
                             </div>
@@ -125,7 +165,6 @@ function renderSections(filterType = 'all') {
                         </div>
                     ` : ''}
                 </div>
-                </div>
             `;
 
             container.appendChild(sectionDiv);
@@ -136,7 +175,7 @@ function renderSections(filterType = 'all') {
     updateControlsPosition();
 
     // ✅ أهم سطر: شغل الإعلانات بعد توليد كل الأقسام
-    loadAllAdsSequential();
+    lazyLoadImages();
 }
 
 // بعد كل renderSections
