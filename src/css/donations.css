@@ -1,0 +1,266 @@
+@import './../../assets/constants/variables.css';
+
+.section {
+    flex: 1;
+    background-color: var(--color-bg-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text-primary);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* الـ Before هنا هيكون هو الـ Animated Border الرفيع (اختياري) */
+.section::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    /* خليه طالع لبرا سنة بسيطة جداً */
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), #695CFE, #8f84ff, #695CFE);
+    z-index: -1;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 2px;
+    opacity: 0;
+    animation: spin1 3s linear infinite;
+    transition: opacity 0.3s ease;
+}
+
+/* 2. الـ After هو الـ Glow اللي ورا الكارت */
+.section::after {
+    content: "";
+    position: absolute;
+    /* 3. بنكبر المساحة عشان يظهر من ورا الجوانب */
+    inset: -10px;
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), #695CFE, #8f84ff, #695CFE);
+    z-index: -2;
+    /* تحت الـ before وتحت خلفية الكارت */
+    filter: blur(25px);
+    /* تنعيم الإضاءة */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: spin1 3s linear infinite;
+}
+
+/* 4. تغيير الألوان لكل سكشن للـ After والـ Before مع بعض */
+.section-1::before,
+.section-1::after {
+    background: conic-gradient(from var(--angle), #695CFE, #8f84ff, #695CFE);
+    filter: blur(15px);
+}
+
+.section-2::before,
+.section-2::after {
+    background: conic-gradient(from var(--angle), #ff7a00, #ffb347, #ff7a00);
+    filter: blur(15px);
+}
+
+.section-3::before,
+.section-3::after {
+    background: conic-gradient(from var(--angle),
+            #00c853,
+            /* أخضر أساسي */
+            #69f0ae,
+            /* أخضر فاتح */
+            #00c853);
+    filter: blur(15px);
+}
+
+
+.section:hover::before,
+.section:hover::after {
+    opacity: 1;
+}
+
+.bank-transfer {
+    transition: filter 0.6s ease;
+}
+
+.section-3:hover .bank-transfer {
+    filter: drop-shadow(0 0 10px #000000);
+}
+
+.donation-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.donation-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.donation-box {
+    background: var(--color-bg-sidebar);
+    padding: 30px;
+    border-radius: 18px;
+    width: 500px;
+    box-shadow: 0 20px 40px var(--color-shadow);
+    text-align: center;
+    animation: popIn .3s ease;
+}
+
+.donation-box h3 {
+    margin-bottom: 18px;
+    color: var(--color-text-primary);
+}
+
+.donation-input {
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-hr);
+}
+
+.donation-input input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.donation-input button {
+    background: var(--color-hover-primary);
+    color: white;
+    border: none;
+    padding: 0 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.donation-input button:hover {
+    background: var(--color-hover-primary-btn);
+}
+
+.close-donation {
+    margin-top: 15px;
+    border: none;
+    background: var(--color-hover-secondary);
+    color: var(--color-text-primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.close-donation:hover {
+    background: var(--color-hover-primary);
+    color: white;
+}
+
+/* ====================== Cards ========================= */
+.section-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.donate-btn {
+    background-color: var(--color-hover-primary);
+    color: var(--color-text-primary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 90%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 0 10px var(--color-text-primary);
+}
+
+.img-wrapper img {
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-wrapper.bank-transfer img {
+    width: 350px;
+}
+
+.all-content {
+    margin-top: auto;
+}
+
+.section-header .header-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color-hover-primary);
+}
+
+.section-header .header-sub {
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.donations-models {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.section-3 {
+    grid-column: 1 / -1;
+}
+
+/* =================== Animations ===================== */
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin1 {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title></title>
+    <title>GameOnix | Donations</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -103,8 +103,8 @@
 
             <div class="sb-footer">
                 <ul class="menu-list" style="list-style: none;">
-                   <li class="menu-item">
-                        <a href="donations.html" class="menu-link" rel="noopener noreferrer">
+                    <li class="menu-item">
+                        <a href="donations.html" class="menu-link active" rel="noopener noreferrer">
                             <span class="material-symbols-rounded">volunteer_activism</span>
                             <span class="menu-label">Support Us</span>
                         </a>
@@ -114,16 +114,83 @@
         </aside>
 
         <div class="content">
-            <div class="search-bar" style="margin-top: 20px;">
-                <span class="search-icon"><span class="material-symbols-rounded">search</span></span>
-                <input type="text" id="searchBox" placeholder="Search games...">
-            </div>
-            <div id="main-content">
-                <div id="section-header-container"></div>
+            <section class="section-main">
+                <div class="section-header">
+                    <h1 class="header-text">Support Us</h1>
+                    <p class="header-sub">Your support helps us keep GameOnix running and free for everyone.</p>
+                </div>
 
-                <div id="games-container"></div>
-            </div>
+                <div class="donations-models">
+                    <div class="section section-1" onclick="openLink('https://ipn.eg/S/mahmoudpro123/instapay/7uIXkH')">
+                        <div class="header-main">
+                            <div class="img-wrapper">
+                                <img class="fa-solid" class="img-donation instaPay"
+                                    src="../../assets/content/images/InstaPay.png" alt="InstaPay Logo">
+                            </div>
+                        </div>
+                        <div class="all-content">
+                            <h1 class="section-title">Support Us with InstaPay</h1>
+                            <p class="section-description">Your support helps us keep GameOnix running and free for
+                                everyone.
+                                Consider donating through InstaPay to contribute to our mission of providing quality
+                                gaming
+                                content.</p>
+                            <a href="https://ipn.eg/S/mahmoudpro123/instapay/7uIXkH" target="_blank"
+                                rel="noopener noreferrer" onclick="event.stopPropagation();">
+                                <button class="donate-btn">
+                                    Donate via InstaPay
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="section section-2" onclick="openDonationPopup('Orange Cash Number', '01206492548')">
+                        <div class="header-main">
+                            <div class="img-wrapper">
+                                <img class="fa-solid" class="img-donation orange"
+                                    src="../../assets/content/images/orange-cash.png" alt="Orange Cash Logo">
+                            </div>
+                        </div>
+                        <div class="all-content">
+                            <h1 class="section-title">Support Us with Orange Cash</h1>
+                            <p class="section-description">Your support helps us keep GameOnix running and free for
+                                everyone.
+                                Consider donating through Orange Cash to contribute to our mission of providing quality
+                                gaming
+                                content.</p>
+                            <button class="donate-btn"
+                                onclick="event.stopPropagation(); openDonationPopup('Orange Cash Number', '01206492548')">
+                                Donate via Orange Cash
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="section section-3"
+                        onclick="openDonationPopup('Bank IBAN', 'EG860003020050016597403000110')">
+                        <div class="header-main">
+                            <div class="img-wrapper bank-transfer">
+                                <img class="fa-solid" class="img-donation"
+                                    src="../../assets/content/images/bank-transfer.png" alt="Orange Cash Logo">
+                            </div>
+                        </div>
+                        <div class="all-content">
+                            <h1 class="section-title">Support Us with Bank Transfer (IBAN)</h1>
+                            <p class="section-description">Your support helps us keep GameOnix running and free for
+                                everyone.
+                                Consider donating through Orange Cash to contribute to our mission of providing quality
+                                gaming
+                                content.</p>
+                            <button class="donate-btn"
+                                onclick="event.stopPropagation(); openDonationPopup('Bank IBAN', 'EG860003020050016597403000110')">
+                                Donate via Bank Transfer
+                            </button>
+                        </div>
+                    </div>
+                </div>
         </div>
+    </div>
+    </section>
+    </div>
     </div>
 
     <!-- Disable right-click, Ctrl+U, F12, and Developer Tools -->
@@ -181,6 +248,19 @@
         });
     </script>
 
+    <div id="donation-popup" class="donation-popup">
+        <div class="donation-box">
+            <h3 id="donation-title">Title</h3>
+
+            <div class="donation-input">
+                <input type="text" id="donation-input" readonly>
+                <button id="donation-copy">Copy</button>
+            </div>
+
+            <button id="donation-close" class="close-donation">Close</button>
+        </div>
+    </div>
+
 </body>
 
 <script>
@@ -190,10 +270,8 @@
     // CSS Files
     const cssFiles = [
         "../css/sidebar-style.css",
-        "../css/section-all-page.css",
-        "../css/search-style.css",
-        "../css/cards-style.css",
-        "../css/theme-btn.css"
+        "../css/theme-btn.css",
+        "../css/donations.css"
     ];
 
     cssFiles.forEach(file => {
@@ -205,9 +283,9 @@
 
     // JS Files مع تحديد إذا كان module أو لا
     const jsFiles = [
-        { src: "../js/section-all-page.js", module: true },
         { src: "../js/sidebar-script.js", module: false },
-        { src: "../js/icon.js", module: false }
+        { src: "../js/icon.js", module: false },
+        { src: "../js/donations.js", module: false }
     ];
 
     jsFiles.forEach(file => {
@@ -223,8 +301,6 @@
 </script>
 
 <script>
-    // Hide loading screen when page is fully loaded (with 1 second delay)
-    // Skip loading screen if page is loaded from bfcache (back-forward cache)
     window.addEventListener('load', () => {
         // Check if page was loaded from bfcache (back-forward cache)
         if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {

@@ -2,57 +2,7 @@
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 let allGamesData = null;
-let currentFilter = 'all'; // متغير لحفظ الحالة الحالية للفلتر
-
-// --- Lazy Load Images (Optimized) ---
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(async (entry) => {
-        if (!entry.isIntersecting) return;
-
-        const img = entry.target;
-        const src = img.dataset.src;
-
-        if (!src) return;
-
-        try {
-            img.src = src;
-
-            if (img.decode) {
-                await img.decode();
-            }
-
-            img.classList.remove('lazy-img');
-        } catch (err) {
-            img.src = 'assets/images/game.jpg';
-        } finally {
-            observer.unobserve(img);
-            img.removeAttribute('data-src');
-        }
-    });
-}, {
-    rootMargin: "300px 0px",
-    threshold: 0.01
-});
-
-function lazyLoadImages(root = document) {
-    const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
-
-    imgs.forEach(img => {
-        img.setAttribute('data-observed', 'true');
-        imageObserver.observe(img);
-    });
-}
-
-// --- تحسين preload للصور القريبة ---
-function preloadVisibleImages() {
-    const imgs = document.querySelectorAll('img[data-src]');
-    imgs.forEach((img, index) => {
-        if (index < 6) {
-            const temp = new Image();
-            temp.src = img.dataset.src;
-        }
-    });
-}
+let currentFilter = 'all';
 
 // --- 1. تحسين موضع أزرار التحكم ---
 function updateControlsPosition() {
@@ -70,7 +20,7 @@ function updateControlsPosition() {
     });
 }
 
-// --- 2. إعدادات صندوق البحث (الانتقال لصفحة النتائج فقط) ---
+// --- 2. إعدادات صندوق البحث ---
 const searchBox = document.getElementById('searchBox');
 if (searchBox) {
     searchBox.addEventListener('keypress', (e) => {
@@ -83,7 +33,7 @@ if (searchBox) {
     });
 }
 
-// --- 3. جلب البيانات وعرضها ---
+// --- 3. جلب البيانات ---
 fetch('https://www.gameonix.shop/data/json/games.json')
     .then(res => res.json())
     .then(data => {
@@ -95,7 +45,7 @@ fetch('https://www.gameonix.shop/data/json/games.json')
     })
     .catch(err => console.error("Error fetching games:", err));
 
-// --- 4. دالة عرض الأقسام ---
+// --- 4. عرض الأقسام ---
 function renderSections(filterType = 'all') {
     if (!allGamesData) return;
     currentFilter = filterType;
@@ -150,20 +100,20 @@ function renderSections(filterType = 'all') {
                         </a>
                     </h2>
                 </div>
+
                 <div class="section-controls">
                     <i class="fa-solid fa-chevron-left fa scroll-btn left"></i>
                     <i class="fa-solid fa-chevron-right fa scroll-btn right"></i>
                 </div>
+
                 <div class="section">
                     ${homeGames.map(game => `
                         <div class="game-card" data-slug="${game.slug}">
                             <div class="game-details">
                                 <img 
-                                    src="assets/images/game.jpg"
-                                    data-src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
+                                    src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
                                     alt="${game.title}"
-                                    class="lazy-img"
-                                    loading="lazy"
+                                    loading="eager"
                                     decoding="async"
                                     onerror="this.src='assets/images/game.jpg'"
                                 >
@@ -172,6 +122,7 @@ function renderSections(filterType = 'all') {
                             </div>
                         </div>
                     `).join('')}
+
                     ${maxHomeIndex !== -1 ? `
                         <div class="game-card more-games">
                             <div class="game-details">
@@ -189,13 +140,9 @@ function renderSections(filterType = 'all') {
     }
 
     updateControlsPosition();
-
-    // تشغيل lazy loading + preload
-    lazyLoadImages();
-    preloadVisibleImages();
 }
 
-// بعد كل renderSections
+// --- Ads ---
 async function loadAllAdsSequential() {
     const allAdContainers = container.querySelectorAll(".section-container .adv .ad");
 
@@ -211,7 +158,6 @@ async function loadAllAdsSequential() {
     }
 }
 
-// دالة لتحميل إعلان واحد
 function loadSingleAd(adContainer) {
     return new Promise((resolve, reject) => {
         adContainer.innerHTML = "";
