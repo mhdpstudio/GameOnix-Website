@@ -236,12 +236,12 @@ function processGames(data) {
         const posterBase = img.dataset.poster;
         if (posterBase) {
             // Try remote first (matching JSON format)
-            const remoteUrl = `${posterBase}.jpg`;
+const remoteUrl = `${posterBase}.webp`;
             img.src = remoteUrl;
             img.onerror = () => {
                 console.log(`Image failed: ${remoteUrl}, trying local`);
                 // Fallback to local poster if exists
-                const localPoster = `assets/images/games/posters/${posterBase.split('/').pop()}.jpg`;
+const localPoster = `assets/images/games/posters/${posterBase.split('/').pop()}.webp`;
                 img.src = localPoster;
                 img.onerror = () => {
                     console.log(`Local also failed, using placeholder`);
@@ -365,7 +365,7 @@ function lazyLoadPosters() {
     imgs.forEach(img => {
         const posterBase = img.dataset.poster;
         if (!posterBase) return;
-        img.src = `${posterBase}.jpg`;
+img.src = `${posterBase}.webp`;
         img.onload = () => img.classList.remove('loading-img');
         img.onerror = () => { img.src = 'assets/images/game.jpg'; };
     });

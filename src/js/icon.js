@@ -1,10 +1,10 @@
 (function () {
     // قائمة بالمسارات المحتملة للوصول لفولدر الـ assets من أي مكان في الموقع
     const potentialPaths = [
-        'assets/images/logo.png',         // لو الصفحة في الـ root
-        '../assets/images/logo.png',      // لو الصفحة جوه فولدر واحد (زي صفحاتك الحالية)
-        '../../assets/images/logo.png',   // لو الصفحة جوه فولدرين
-        '../../../assets/images/logo.png' // للاحتياط
+'assets/images/logo.webp',         // لو الصفحة في الـ root
+'../assets/images/logo.webp',      // لو الصفحة جوه فولدر واحد (زي صفحاتك الحالية)
+'../../assets/images/logo.webp',   // لو الصفحة جوه فولدرين
+'../../../assets/images/logo.webp' // للاحتياط
     ];
 
     // وظيفة للتحقق من وجود الصورة وتعيينها كـ Favicon

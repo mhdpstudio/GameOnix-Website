@@ -89,7 +89,7 @@ export function initGameSearch({
         container.innerHTML = list.map(game => `
             <div class="game-card" data-slug="${game.slug}">
                 <div class="game-details">
-                    <img src="${game.poster ? game.poster + ".jpg" : '../assets/images/game.jpg'}" 
+                    <img src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}" 
                          alt="${game.title}" 
                          onerror="this.src='../assets/images/game.jpg'">
                     <div class="publisher">${game.publisher || websiteName}</div>

@@ -63,7 +63,7 @@ fetch("https://www.gameonix.shop/data/json/games-data.json")
                 : "../../assets/images/games/banners/";
 
             for (let i = 1; i <= game.mediaCount; i++) {
-                mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.png`);
+mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.webp`);
             }
         } else {
             mediaImages = game.media || [];

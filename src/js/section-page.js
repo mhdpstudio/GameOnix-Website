@@ -66,9 +66,8 @@ function renderInitialGames(games, containerId) {
             <div class="game-details">
                 <img 
                     src="../../assets/images/game.jpg"
-                    data-src="${game.poster ? game.poster + ".jpg" : '../../assets/images/game.jpg'}"
+                    data-src="${game.poster ? game.poster + ".webp" : '../../assets/images/game.jpg'}"
                     alt="${game.title}"
-                    class="lazy-img"
                     onerror="this.src='../../assets/images/game.jpg'"
                 >
                 <div class="publisher">${game.publisher || WebsiteName}</div>
@@ -89,8 +88,6 @@ function renderInitialGames(games, containerId) {
         });
     });
 
-    // lazy load
-    lazyLoadImages(container);
 }
 
 

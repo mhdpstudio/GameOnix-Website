@@ -1,44 +1,6 @@
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 
-
-// --- Lazy Load Images (NEW) ---
-function lazyLoadImages(root = document) {
-    const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-
-                // preload قبل العرض
-                const temp = new Image();
-                temp.src = img.dataset.src;
-
-                temp.onload = () => {
-                    img.src = temp.src;
-                    img.classList.remove('lazy-img');
-                };
-
-                temp.onerror = () => {
-                    img.src = '../assets/images/game.jpg';
-                };
-
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
-        });
-    }, {
-        rootMargin: "200px"
-    });
-
-    imgs.forEach(img => {
-        img.setAttribute('data-observed', 'true');
-        observer.observe(img);
-    });
-}
-
-
 // --- 1. تحسين موضع أزرار التحكم (Responsive Controls) ---
 function updateControlsPosition() {
     const sidebar = document.querySelector('.sb');
@@ -125,10 +87,8 @@ async function init() {
                     <div class="game-card" data-slug="${game.slug}">
                         <div class="game-details">
                             <img 
-                                src="../assets/images/game.jpg"
-                                data-src="${game.poster ? game.poster + ".jpg" : '../assets/images/game.jpg'}"
+                                src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
                                 alt="${game.title}"
-                                class="lazy-img"
                                 onerror="this.src='../assets/images/game.jpg'"
                             >
                             <div class="publisher">${game.publisher || WebsiteName}</div>
@@ -164,8 +124,6 @@ async function init() {
 
             setupSlider(sectionDiv);
 
-            // 🔥 تشغيل lazy loading لكل section بعد إضافته
-            lazyLoadImages(sectionDiv);
         }
 
         updateControlsPosition();
