@@ -113,8 +113,6 @@ function renderSections(filterType = 'all') {
                                 <img 
                                     src="${game.poster ? game.poster + ".jpg" : 'assets/images/game.jpg'}"
                                     alt="${game.title}"
-                                    loading="eager"
-                                    decoding="async"
                                     onerror="this.src='assets/images/game.jpg'"
                                 >
                                 <div class="publisher">${game.publisher || WebsiteName}</div>
