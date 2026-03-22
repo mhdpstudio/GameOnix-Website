@@ -2719,6 +2719,21 @@
             "downloadType": "torrent",
             "mediaPrefix": "dark-souls-2",
             "mediaCount": 6
+        },
+        {
+            "slug": "tom-clancys-splinter-cell",
+            "title": "Tom Clancy's Splinter Cell: Conviction",
+            "publisher": "Ubisoft",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/splinter-cell-conviction.png",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.4.0.0",
+            "size": "5.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/tom-clancys-splinter-cell.torrent",
+            "platform": "pc",
+            "mediaPrefix": "tom-clancys-splinter-cell",
+            "mediaCount": 6
         }
     ]
 }

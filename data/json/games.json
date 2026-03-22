@@ -875,6 +875,13 @@
                     "title": "Dark Souls 2",
                     "poster": "https://gameonix.shop/assets/images/games/posters/dark-souls-2",
                     "publisher": "FromSoftware"
+                },
+                {
+                    "slug": "tom-clancys-splinter-cell",
+                    "id": 116,
+                    "title": "Tom Clancy's Splinter Cell: Conviction",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/splinter-cell-conviction",
+                    "publisher": "Ubisoft"
                 }
             ]
         },
