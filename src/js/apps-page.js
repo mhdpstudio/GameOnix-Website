@@ -15,7 +15,7 @@ async function loadApps() {
         showLoadingSkeletons(appsGrid);
 
         // Fetch with no cache
-        const response = await fetch("../../data/json/apps-list.json?" + Date.now(), { cache: "no-store" });
+        const response = await fetch("../../data/json/apps-data.json?" + Date.now(), { cache: "no-store" });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
         const data = await response.json();
@@ -57,9 +57,9 @@ async function loadApps() {
 
 function createAppCard(app) {
     const card = document.createElement('div');
-    card.className = `app-card ${app.ITEAM.toLowerCase().replace(/\s+/g, '-')}`;
+    card.className = `app-card ${app.category.toLowerCase().replace(/\s+/g, '-')}`;
     card.dataset.slug = app.slug;
-    card.dataset.category = app.ITEAM.toLowerCase().replace(/\s+/g, '-');
+    card.dataset.category = app.category.toLowerCase().replace(/\s+/g, '-');
 
     // Generate star rating HTML (using a default rating since it's not in the JSON)
     const starsHTML = generateStars(4.5); // Default rating
@@ -67,13 +67,13 @@ function createAppCard(app) {
     card.innerHTML = `
         <div class="app-icon-container">
             <div class="app-icon">
-                <img class="app-icon-img" src="${app.previewImage}">
+                <img class="app-icon-img" src="${app.app_poster || app.previewImage || '../../assets/images/logo.png'}">
             </div>
         </div>
         
         <div class="app-info">
             <h3 class="app-title">${app.title}</h3>
-            <span class="app-category"><i class="fa-solid fa-${app.categoryIcon}"></i> ${app.category}</span>
+            <span class="app-category"><span class="material-symbols-rounded">${app.categoryIcon}</span> ${app.category}</span>
             
             
             <p class="app-description">${app.description}</p>
@@ -192,7 +192,7 @@ function showNoAppsMessage(container) {
 
 // Category filter functionality
 function setupCategoryFilters() {
-    const categories = ['all', 'games-store', 'emulator' , "gaming-platform"];
+    const categories = ['all', 'games-store', 'emulator', 'gaming-platform'];
 
     const filtersContainer = document.getElementById('app-filters');
     if (!filtersContainer) {
@@ -235,7 +235,7 @@ function filterAppsByCategory(category) {
         // Check category filter
         const categoryMatch = category === 'all' || cardCategory.includes(category);
 
-        // Check search filter (title only)
+// Check search filter (title only)
         const searchMatch = searchTerm === '' || 
             cardTitle.includes(searchTerm);
 
