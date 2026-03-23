@@ -1,0 +1,34 @@
+/* Loading Screen - Higher z-index than everything else */
+#loading-screen {
+    position: fixed !important;
+    inset: 0 !important;
+    background: #0b0b0d !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 2147483647 !important; /* Highest possible */
+    transition: opacity 0.5s ease, visibility 0.5s ease !important;
+    pointer-events: none !important; /* Doesn't block mouse */
+}
+
+#loading-screen > div {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #1a1a2e;
+    border-top: 4px solid #695CFE;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#loading-screen > p {
+    color: #fff;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

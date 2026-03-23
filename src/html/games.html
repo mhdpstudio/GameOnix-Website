@@ -15,44 +15,7 @@
 </head>
 
 <body class="dark-theme">
-    <!-- Loading Screen -->
-    <div id="loading-screen" style="
-        position: fixed;
-        inset: 0;
-        background: #0b0b0d;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        transition: opacity 0.5s ease, visibility 0.5s ease;
-    ">
-        <div style="
-            width: 60px;
-            height: 60px;
-            border: 4px solid #1a1a2e;
-            border-top: 4px solid #695CFE;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        "></div>
-        <p style="
-            color: #fff;
-            margin-top: 20px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-        ">Loading...</p>
-    </div>
-    <style>
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+<!-- Loading Screen managed by shared JS/CSS -->
 
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
@@ -279,7 +242,8 @@
         "../css/games-page.css",
         "../css/search-style.css",
         "../css/cards-style.css",
-        "../css/theme-btn.css"
+        "../css/theme-btn.css",
+        "../css/loading-screen.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");
@@ -287,6 +251,11 @@
         link.href = `${file}?v=${version}`;
         document.head.appendChild(link);
     });
+
+    // Loading manager
+    const loadingScript = document.createElement("script");
+    loadingScript.src = `../js/loading-manager.js?v=${version}`;
+    document.body.appendChild(loadingScript);
 
     // JS Files
     const jsFiles = [
