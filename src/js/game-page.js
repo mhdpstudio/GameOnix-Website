@@ -3,42 +3,6 @@ const params = new URLSearchParams(window.location.search);
 const gameSlug = params.get("game");
 const page = document.getElementById("game-page");
 
-function lazyLoadImages() {
-    const imgs = document.querySelectorAll('img[data-src]:not([data-observed])');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-
-                // preload الصورة قبل عرضها
-                const temp = new Image();
-                temp.src = img.dataset.src;
-
-                temp.onload = () => {
-                    img.src = temp.src;
-                    img.classList.remove('lazy-img');
-                };
-
-                temp.onerror = () => {
-                    img.src = 'assets/images/game.jpg';
-                };
-
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            }
-        });
-    }, {
-        rootMargin: "200px" // 🔥 يبدأ التحميل قبل الظهور
-    });
-
-    imgs.forEach(img => {
-        img.setAttribute('data-observed', 'true');
-        observer.observe(img);
-    });
-}
-
-
 fetch("https://www.gameonix.shop/data/json/games-data.json")
     .then(res => res.json())
     .then(data => {
@@ -92,17 +56,17 @@ mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.webp`);
 
                     <div class="media-overlay">
                         <div class="media-arrow left" id="mainLeft">
-                            <span class="material-symbols-rounded">chevron_left</span>
+                            <i class="fa-solid fa-chevron-left"></i>
                         </div>
 
                         <div class="media-arrow right" id="mainRight">
-                            <span class="material-symbols-rounded">chevron_right</span>
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="thumb-wrapper">
-                    <div class="arrow" id="leftArrow"><span class="material-symbols-rounded">chevron_left</span></div>
+                    <div class="arrow" id="leftArrow"><i class="fa-solid fa-chevron-left"></i></div>
 
                     <div class="thumb-slider">
                         <div class="thumb-slider-inner" id="thumbSlider">
@@ -118,7 +82,7 @@ ${mediaImages.map((img, i) => `
                     <div class="arrow" id="rightArrow" style="    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;"><span class="material-symbols-rounded">chevron_right</span></div>
+    gap: 8px;"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
                 </div>
                 <div class="side-panel">
@@ -291,7 +255,6 @@ Describe the problem:
                 updateSlider();
             }
         };
-        lazyLoadImages();
     })
     .catch(err => {
         console.error(err);
