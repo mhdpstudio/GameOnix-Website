@@ -1321,6 +1321,21 @@
             "mediaCount": 6
         },
         {
+            "slug": "pes-2021",
+            "title": "PES 2021",
+            "publisher": "Konami",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/pes2021.webp",
+            "gameType": "Sports",
+            "gameTypeIcon": "fa-basketball",
+            "version": "1.1.0.0",
+            "size": "23.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pes2021.torrent",
+            "platform": "pc",
+            "mediaPrefix": "pes2021",
+            "mediaCount": 6
+        },
+        {
             "slug": "fifa-12",
             "title": "FIFA 12",
             "publisher": "EA Sports",
