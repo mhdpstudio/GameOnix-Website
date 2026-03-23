@@ -25,6 +25,19 @@
       "appTypeIcon": "desktop_windows",
       "appLink": "https://drive.usercontent.google.com/download?id=11UxLmYcGyPpjw_eb8j2HcngtGFD_rM83&export=download&authuser=0&confirm=t&uuid=446ccfd0-91c0-416e-935a-3dcff9e3513f&at=AGN2oQ2kh-2qA6CDo7pm5EpJOA-_%3A1773578480471",
       "previewImage": "../../assets/images/apps/rpcs3-logo.png"
+    },
+    {
+      "slug": "ubisoft-connect",
+      "title": "Ubisoft Connect",
+      "category": "Gaming Platform",
+      "categoryIcon": "gamepad",
+      "ITEAM": "gaming-platform",
+      "description": "Ubisoft Connect is a digital game distribution platform that allows you to purchase, download, and play Ubisoft games.",
+      "version": "169.6.0.13045",
+      "size": "253.1 MB",
+      "appTypeIcon": "desktop_windows",
+      "appLink": "https://drive.google.com/uc?export=download&id=1yyXwbXbxi6mezNvqzwX4p0Pz2V6SCGx6",
+      "previewImage": "../../assets/images/apps/ubisoft-logo.png"
     }
   ]
 }

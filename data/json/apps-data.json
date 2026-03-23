@@ -42,6 +42,25 @@
         "https://www.gameonix.shop/assets/images/apps/r-4.png"
       ],
       "content": "RPCS3 is the ultimate PlayStation 3 emulator for PC gamers and enthusiasts. Designed to bring the PS3 experience to your desktop, it allows you to play a wide range of PS3 titles with improved performance, higher resolutions, and advanced graphical enhancements. Stay updated with the latest emulator improvements, explore compatibility lists, and enjoy seamless gameplay with features like save states, customizable controls, and network support. RPCS3 transforms your computer into a powerful PS3 gaming hub, making it easier than ever to relive classic games or experience titles you missed."
+    },
+    {
+      "slug": "ubisoft-connect",
+      "title": "Ubisoft Connect",
+      "category": "Gaming Platform",
+      "categoryIcon": "sports_esports",
+      "description": "Ubisoft Connect is a digital game distribution platform that allows you to purchase, download, and play Ubisoft games.",
+      "publisher": "Ubisoft",
+      "version": "169.6.0.13045",
+      "size": "253.1 MB",
+      "appType": "Desktop Application",
+      "ap": "fa-desktop",
+      "appTypeIcon": "fa-windows",
+      "app_poster": "https://www.gameonix.shop/assets/images/apps/ubisoft-logo.png",
+      "appLink": "https://drive.google.com/uc?export=download&id=1yyXwbXbxi6mezNvqzwX4p0Pz2V6SCGx6",
+      "media": [
+        "https://www.gameonix.shop/assets/images/apps/ubisoft.png"
+      ],
+      "content": "Ubisoft Connect is your gateway to the world of Ubisoft gaming. This digital distribution platform offers a seamless experience for purchasing, downloading, and playing Ubisoft titles on your PC. With a vast library of games, exclusive rewards, and social features, Ubisoft Connect keeps you connected to your gaming community while providing easy access to your favorite franchises. Stay updated with the latest releases, manage your game library, and enjoy a personalized gaming experience with Ubisoft Connect."
     }
   ]
 }

@@ -192,7 +192,7 @@ function showNoAppsMessage(container) {
 
 // Category filter functionality
 function setupCategoryFilters() {
-    const categories = ['all', 'games-store', 'emulator'];
+    const categories = ['all', 'games-store', 'emulator' , "gaming-platform"];
 
     const filtersContainer = document.getElementById('app-filters');
     if (!filtersContainer) {
