@@ -222,34 +222,32 @@
 <script>
     // Hide loading screen when page is fully loaded (with 1 second delay)
     // Skip loading screen if page is loaded from bfcache (back-forward cache)
-    window.addEventListener('load', () => {
-        // Check if page was loaded from bfcache (back-forward cache)
-        if (performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
-            // Page loaded from bfcache - skip loading screen immediately
-            const loadingScreen = document.getElementById('loading-screen');
-            if (loadingScreen) {
-                loadingScreen.remove();
-            }
-            return;
-        }
-
-        // Normal page load - show loading screen with 1 second delay
-        setTimeout(() => {
-            const loadingScreen = document.getElementById('loading-screen');
-            if (loadingScreen) {
-                loadingScreen.style.opacity = '0';
-                loadingScreen.style.visibility = 'hidden';
-                setTimeout(() => {
-                    loadingScreen.remove();
-                }, 500);
-            }
-
-            if (!sessionStorage.getItem('pageRefreshed')) {
-                sessionStorage.setItem('pageRefreshed', 'true');
-                location.reload(true);
-            }
-        }, 1000);
-    });
+// Enhanced loading screen - persists on back/forward, detects image loading
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (!loadingScreen) return;
+    
+    const navEntry = performance.getEntriesByType('navigation')[0];
+    const navType = navEntry?.type || 'navigate';
+    
+    if (['back_forward', 'prerender', 'reload'].includes(navType)) {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+        setTimeout(() => loadingScreen.remove(), 200);
+        return;
+    }
+    
+    const imgLoading = document.images.length > 0 && 
+        Array.from(document.images).some(img => !img.complete);
+    
+    const timeout = imgLoading ? 1200 : 400;
+    
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+        setTimeout(() => loadingScreen.remove(), 300);
+    }, timeout);
+});
 </script>
 
 <!-- Service Worker for automatic cache busting -->
