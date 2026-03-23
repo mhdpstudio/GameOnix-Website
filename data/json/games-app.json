@@ -882,6 +882,13 @@
                     "title": "Tom Clancy's Splinter Cell: Conviction",
                     "poster": "https://gameonix.shop/assets/images/games/posters/splinter-cell",
                     "publisher": "Ubisoft"
+                },
+                {
+                    "slug": "dragon-ball-sparking-zero",
+                    "id": 117,
+                    "title": "Dragon Ball Sparking Zero",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/dragon-ball-sparking-zero",
+                    "publisher": "Spike Chunsoft"
                 }
             ]
         },
