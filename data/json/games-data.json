@@ -2564,6 +2564,21 @@
             "platform": "pc",
             "mediaPrefix": "tom-clancys-splinter-cell",
             "mediaCount": 6
+        },
+        {
+            "slug": "dragon-ball-sparking-zero",
+            "title": "Dragon Ball Sparking Zero",
+            "publisher": "Spike Chunsoft",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/dragon-ball-sparking-zero.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1003.003.003.003.002",
+            "size": "19.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dragon-ball-sparking-zero.torrent",
+            "platform": "pc",
+            "mediaPrefix": "dragon-ball-sparking-zero",
+            "mediaCount": 7
         }
     ]
 }
