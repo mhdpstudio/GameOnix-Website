@@ -1,48 +1,60 @@
 import os
 from PIL import Image
 
-input_folder = r"E:\Program\Projects\Xhyper\assets\images\games\banners"
+# 🔹 قائمة المسارات
+input_folders = [
+    r"E:\Program\Projects\Xhyper\assets\images\games\posters",
+    r"E:\Program\Projects\Xhyper\assets\images\games\logos",
+    r"E:\Program\Projects\Xhyper\assets\images\games\banners"
+]
 
 # إزالة limit التحذيري للصور الكبيرة
 Image.MAX_IMAGE_PIXELS = None
 
 MAX_DIMENSION = 16383
 
-for filename in os.listdir(input_folder):
-    if filename.lower().endswith((".png", ".jpg", ".jpeg")):
-        input_path = os.path.join(input_folder, filename)
+for input_folder in input_folders:
+    print(f"\n📂 Processing folder: {input_folder}")
 
-        # اسم الملف الجديد في نفس الفولدر
-        new_name = os.path.splitext(filename)[0] + ".webp"
-        output_path = os.path.join(input_folder, new_name)
+    if not os.path.exists(input_folder):
+        print(f"⚠ Folder not found: {input_folder}")
+        continue
 
-        # ⛔ لو ملف webp موجود بالفعل نتخطاه
-        if os.path.exists(output_path):
-            print(f"⏭ Skipped (already exists): {new_name}")
-            continue
+    for filename in os.listdir(input_folder):
+        if filename.lower().endswith((".png", ".jpg", ".jpeg")):
+            input_path = os.path.join(input_folder, filename)
 
-        try:
-            img = Image.open(input_path)
+            # اسم الملف الجديد
+            new_name = os.path.splitext(filename)[0] + ".webp"
+            output_path = os.path.join(input_folder, new_name)
 
-            # التعامل مع الشفافية
-            if img.mode in ("P", "RGBA"):
-                img = img.convert("RGBA")
-            else:
-                img = img.convert("RGB")
+            # ⛔ لو موجود بالفعل نتخطاه
+            if os.path.exists(output_path):
+                print(f"⏭ Skipped (already exists): {new_name}")
+                continue
 
-            # تصغير الصور الكبيرة لو تعدت الحد
-            if img.width > MAX_DIMENSION or img.height > MAX_DIMENSION:
-                img.thumbnail((MAX_DIMENSION, MAX_DIMENSION))
+            try:
+                img = Image.open(input_path)
 
-            # حفظ WebP مع الحفاظ على الشفافية
-            if img.mode == "RGBA":
-                img.save(output_path, "webp", quality=80, lossless=True, method=6)
-            else:
-                img.save(output_path, "webp", quality=80, method=6)
+                # التعامل مع الشفافية
+                if img.mode in ("P", "RGBA"):
+                    img = img.convert("RGBA")
+                else:
+                    img = img.convert("RGB")
 
-            print(f"✔ Converted: {filename} → {new_name}")
+                # تصغير الصور الكبيرة
+                if img.width > MAX_DIMENSION or img.height > MAX_DIMENSION:
+                    img.thumbnail((MAX_DIMENSION, MAX_DIMENSION))
 
-        except Exception as e:
-            print(f"❌ Error with {filename}: {e}")
+                # حفظ WebP
+                if img.mode == "RGBA":
+                    img.save(output_path, "webp", quality=80, lossless=True, method=6)
+                else:
+                    img.save(output_path, "webp", quality=80, method=6)
 
-print("🔥 Done!")
+                print(f"✔ Converted: {filename} → {new_name}")
+
+            except Exception as e:
+                print(f"❌ Error with {filename}: {e}")
+
+print("\n🔥 All folders done!")

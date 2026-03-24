@@ -1576,6 +1576,21 @@
             "mediaCount": 6
         },
         {
+            "slug": "cod-mw-1",
+            "title": "Call of Duty: Modern Warfare 2019",
+            "publisher": "Activision",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cod-mw-1.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "8.67.0.0",
+            "size": "114.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-mw-1.torrent",
+            "platform": "pc",
+            "mediaPrefix": "cod-mw-1",
+            "mediaCount": 10
+        },
+        {
             "slug": "cod-mw-2",
             "title": "Call of Duty: Modern Warfare 2",
             "publisher": "Activision",

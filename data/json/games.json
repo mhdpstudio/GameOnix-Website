@@ -889,6 +889,13 @@
                     "title": "Dragon Ball Sparking Zero",
                     "poster": "https://gameonix.shop/assets/images/games/posters/dragon-ball-sparking-zero",
                     "publisher": "Spike Chunsoft"
+                },
+                {
+                    "slug": "cod-mw-1",
+                    "id": 118,
+                    "title": "Call of Duty: Modern Warfare 2019",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-1",
+                    "publisher": "Activision"
                 }
             ]
         },
