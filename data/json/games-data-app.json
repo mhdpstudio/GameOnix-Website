@@ -2805,7 +2805,7 @@
             "version": "2020.11.17",
             "size": "54.8 MB",
             "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/among-us.torrent",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/amoung-us.torrent",
             "platform": "pc",
             "mediaPrefix": "among-us",
             "mediaCount": 2
@@ -2814,7 +2814,7 @@
             "slug": "cod-va",
             "title": "Call of Duty: Vanguard ",
             "publisher": "Activision",
-            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cof-va.webp",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cod-va.webp",
             "gameType": "Action",
             "gameTypeIcon": "fa-gun",
             "version": "1.26.0.0",
