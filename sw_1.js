@@ -30,16 +30,28 @@ self.addEventListener('fetch', (event) => {
 
     if (!event.request.url.startsWith(self.location.origin)) return;
 
-    // BYPASS CACHE FOR DOWNLOADS - FIXES INFINITE LOOP
-    if (event.request.url.includes('/downloads/') || 
+    // ❌ تجاهل الفيديوهات (Range requests)
+    if (event.request.destination === "video") {
+        return;
+    }
+
+    // BYPASS CACHE FOR DOWNLOADS
+    if (
+        event.request.url.includes('/downloads/') || 
         event.request.url.endsWith('.torrent') ||
-        event.request.headers.get('accept')?.includes('octet-stream')) {
+        event.request.headers.get('accept')?.includes('octet-stream')
+    ) {
         return fetch(event.request);
     }
 
     event.respondWith(
         fetch(event.request)
             .then((response) => {
+
+                // ❌ تجاهل partial responses (206)
+                if (!response || response.status !== 200) {
+                    return response;
+                }
 
                 const responseClone = response.clone();
 
