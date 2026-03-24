@@ -2632,10 +2632,10 @@
             "game_poster": "https://www.gameonix.shop/assets/images/games/logos/among-us.webp",
             "gameType": "Adventure",
             "gameTypeIcon": "fa-compass",
-            "version": "2020.11.17",
-            "size": "54.8 MB",
+            "version": "2020.9.9",
+            "size": "60.1 MB",
             "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/among-us.torrent",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/amoung-us.torrent",
             "platform": "pc",
             "mediaPrefix": "among-us",
             "mediaCount": 2
