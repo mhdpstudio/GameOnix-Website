@@ -1,0 +1,316 @@
+@import './../../assets/constants/variables.css';
+
+/* Profile Header Styles (existing) */
+.profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 25px;
+    border-bottom: 1px solid var(--color-border-hr);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-pic {
+    flex-shrink: 0;
+}
+
+.profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-hover-primary);
+    box-shadow: 0 4px 15px var(--color-shadow);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10px;
+    width: 80%;
+}
+
+.reach {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.reach .reach-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-primary);
+}
+
+.reach .reach-item:not(:last-child) {
+    border-right: 3px solid var(--color-border-hr);
+    padding-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.profile-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.profile-handle {
+    font-size: 1rem;
+    color: var(--color-text-placeholder);
+    font-weight: 500;
+    margin: 0;
+}
+
+.profile-more {
+    font-size: 0.9rem;
+    color: var(--color-text-primary-2);
+    margin-top: 10px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.02);
+    border-color: var(--color-hover-primary-btn);
+    transition: 0.3s ease-in-out;
+}
+
+.profile-tag {
+    display: inline-block;
+    background-color: var(--color-bg-tag);
+    color: var(--color-tag);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+.title-main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.title-main i {
+    font-size: 1.5rem;
+    color: var(--color-hover-primary);
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.title-main i:hover {
+    background-color: var(--color-hover-primary-btn);
+    color: var(--color-text-primary);
+}
+
+/* =============== Video ================= */
+
+/* Grid */
+#channel-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+/* Card */
+.video-card {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Thumbnail */
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Duration */
+.video-time {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 6px;
+}
+
+/* Details */
+.video-details {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+/* Channel image */
+.channel-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+/* Meta */
+.video-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Channel name */
+.channel-name {
+    font-size: 13px;
+    color: var(--color-text-primary-2);
+    margin: 3px 0;
+}
+
+/* Info */
+.video-info {
+    font-size: 12px;
+    color: var(--color-text-primary-2);
+}
+
+.video-card .thumbnail img {
+    transition: filter 0.3s ease;
+}
+
+.video-card:hover .thumbnail img {
+    filter: brightness(1.2);
+}
+
+/* ===== Share Popup ===== */
+
+.share-btn {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary)
+}
+
+.share-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.share-popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.share-box {
+    background: var(--color-bg-sidebar);
+    padding: 30px;
+    border-radius: 18px;
+    width: 560px;
+    box-shadow: 0 20px 40px var(--color-shadow);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    animation: popIn .3s ease;
+}
+
+.share-box h3 {
+    margin-bottom: 18px;
+    color: var(--color-text-primary);
+}
+
+.share-input {
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-hr);
+}
+
+.share-input input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.share-input button {
+    background: var(--color-hover-primary);
+    color: white;
+    border: none;
+    padding: 0 18px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.share-input button:hover {
+    background: var(--color-hover-primary-btn);
+}
+
+.close-share {
+    margin-top: 15px;
+    border: none;
+    background: var(--color-hover-secondary);
+    color: var(--color-text-primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.close-share:hover {
+    background: var(--color-hover-primary);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #channel-page {
+        grid-template-columns: 1fr;
+    }
+}

@@ -30,6 +30,13 @@ self.addEventListener('fetch', (event) => {
 
     if (!event.request.url.startsWith(self.location.origin)) return;
 
+    // BYPASS CACHE FOR DOWNLOADS - FIXES INFINITE LOOP
+    if (event.request.url.includes('/downloads/') || 
+        event.request.url.endsWith('.torrent') ||
+        event.request.headers.get('accept')?.includes('octet-stream')) {
+        return fetch(event.request);
+    }
+
     event.respondWith(
         fetch(event.request)
             .then((response) => {

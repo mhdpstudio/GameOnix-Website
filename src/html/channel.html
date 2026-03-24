@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>GameOnix | Channel</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1531408819768027"
+        crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="dark-theme">
+    <!-- Loading Screen managed by shared JS/CSS -->
+
+    <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
+    <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
+
+    <div class="container">
+        <aside class="sb closed">
+            <header class="sb-h">
+                <a href="../index.html" rel="noopener noreferrer">
+                    <img src="../../assets/images/Logo.png" alt="Logo" class="logo" loading="lazy" decoding="async">
+                    <h2 class="sb-text">GameOnix</h2>
+                </a>
+                <button class="sb-toggle"><span class="material-symbols-rounded">chevron_left</span></button>
+            </header>
+
+            <div class="sb-content">
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="../index.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">home</span>
+                            <span class="menu-label">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">stadia_controller</span>
+                            <span class="menu-label">Games</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="games-news.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">newspaper</span>
+                            <span class="menu-label">Games News</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="channel.html" class="menu-link active" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">live_tv</span>
+                            <span class="menu-label">GameOnix Channel</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="apps.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">apps</span>
+                            <span class="menu-label">Applacations</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="request-game.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">person_raised_hand</span>
+                            <span class="menu-label">Request Game</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sb-footer">
+                <ul class="menu-list" style="list-style: none;">
+                    <li class="menu-item">
+                        <a href="donations.html" class="menu-link" rel="noopener noreferrer">
+                            <span class="material-symbols-rounded">volunteer_activism</span>
+                            <span class="menu-label">Support Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+
+            <div class="profile-header">
+                <div class="profile-pic">
+                    <img src="../../assets/videos/pics/logo/logo-vd.webp" class="channel-logo" alt="Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <div class="reach">
+                        <div class="reach-item">
+                            <span class="material-symbols-rounded">visibility</span>
+                            <span class="reach-count" id="watch">0</span>
+                        </div>
+                        <div class="reach-item">
+                            <span class="material-symbols-rounded">thumb_up</span>
+                            <span class="reach-count" id="likes">0</span>
+                        </div>
+                        <div class="reach-item">
+                            <span class="material-symbols-rounded">videocam</span>
+                            <span class="reach-count" id="videos">0</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="title-main">
+                            <h1 class="profile-name">GameOnix</h1>
+                            <i class="fa-solid fa-share" id="openShare"></i>
+                        </div>
+                        <p class="profile-handle">@GameOnix | Mahmoud Pro</p>
+                        <p class="profile-more">Hey everyone, I'll be explaining, playing, and solving game problems and
+                            all
+                            kinds of game issues.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="channel-page"></div>
+
+        </div>
+    </div>
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable keyboard shortcuts for viewing source and developer tools
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable F12 (Developer Tools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+C (Inspector)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+S (Save)
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+P (Print)
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        // Additional protection: Clear selection on mousedown to prevent text selection
+        document.addEventListener('mousedown', function (e) {
+            if (e.button === 0) { // Left click
+                // Allow normal left click functionality
+            }
+        });
+    </script>
+
+
+    <div id="sharePopup" class="share-popup">
+        <div class="share-box">
+            <h3>Share this Channel</h3>
+
+            <div class="share-input">
+                <input id="shareLink" readonly>
+                <button id="copyBtn">Copy</button>
+            </div>
+
+            <button class="close-share">Close</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const version = new Date().getTime(); // رقم نسخة ديناميكي
+
+    // CSS Files
+    const cssFiles = [
+        "../css/sidebar-style.css",
+        "../css/ads-style.css",
+        "../css/channel-page.css",
+        "../css/theme-btn.css",
+        "../css/loading-screen.css"
+    ];
+    cssFiles.forEach(file => {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = `${file}?v=${version}`;
+        document.head.appendChild(link);
+    });
+
+    // Loading manager
+    const loadingScript = document.createElement("script");
+    loadingScript.src = `../js/loading-manager.js?v=${version}`;
+    document.body.appendChild(loadingScript);
+
+    // JS Files
+    const jsFiles = [
+        "../js/channel-page.js",
+        "../js/sidebar-script.js",
+        "../js/icon.js"
+    ];
+    jsFiles.forEach(file => {
+        const script = document.createElement("script");
+        script.src = `${file}?v=${version}`;
+        document.body.appendChild(script);
+    });
+</script>
+
+<script>
+    // Hide loading screen when page is fully loaded (with 1 second delay)
+    // Skip loading screen if page is loaded from bfcache (back-forward cache)
+    // Enhanced loading screen - persists on back/forward, detects image loading
+    window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (!loadingScreen) return;
+
+        const navEntry = performance.getEntriesByType('navigation')[0];
+        const navType = navEntry?.type || 'navigate';
+
+        if (['back_forward', 'prerender', 'reload'].includes(navType)) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+            setTimeout(() => loadingScreen.remove(), 200);
+            return;
+        }
+
+        const imgLoading = document.images.length > 0 &&
+            Array.from(document.images).some(img => !img.complete);
+
+        const timeout = imgLoading ? 1200 : 400;
+
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+            setTimeout(() => loadingScreen.remove(), 300);
+        }, timeout);
+    });
+</script>
+
+<!-- Service Worker for automatic cache busting -->
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../../sw_1.js')
+            .then(reg => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed:', err));
+    }
+</script>
+
+</html>

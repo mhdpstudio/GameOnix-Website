@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-input_folder = r"E:\Program\Projects\Xhyper\assets\images\games\banners"
+input_folder = r"E:\Program\Projects\Xhyper\assets\videos\pics\Logo"
 
 # إزالة limit التحذيري للصور الكبيرة
 Image.MAX_IMAGE_PIXELS = None

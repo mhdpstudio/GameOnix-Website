@@ -1,0 +1,176 @@
+@import './../../assets/constants/variables.css';
+
+#video-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-player {
+    flex: 1;
+    max-width: 1000px;
+}
+
+.video_player .main-video {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.video-sidebar {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.video-sidebar-item.active {
+    background: var(--card-clr);
+    border-left: 3px solid var(--color-hover-primary);
+}
+
+.reco{
+    color: var(--color-text-primary);
+    font-size: 18px;
+}
+
+.video-sidebar-item {
+    display: flex;
+    gap: 12px;
+    padding: 8px 10px 4px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 8px;
+}
+
+.video-sidebar-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.video-sidebar-item.current {
+    border: 2px solid var(--color-hover-primary);
+}
+
+.video-sidebar-item.current:hover {
+    background: rgba(255, 174, 0, 0.2);
+}
+
+.video-sidebar-thumbnail {
+    width: 160px;
+    height: 90px;
+    max-height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.video-sidebar-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.video-sidebar-title {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    color: var(--color-text-primary);
+}
+
+.video-sidebar-meta {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+.video-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.channel-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* نخلي العنوان والميتا تحت بعض */
+.video-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* كودك الأصلي */
+.video-title {
+    margin-top: 15px;
+    font-size: 20px;
+    color: var(--color-text-primary);
+}
+
+/* عدّلناه عشان مايبقاش فيه مسافة كبيرة فوق لأنه داخل container */
+.video-info .video-title {
+    margin-top: 0;
+}
+
+/* كودك الأصلي */
+.video-meta {
+    color: var(--color-text-primary-2);
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.reactions button {
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+    color: #F1F5F9;
+    width: 32px;
+    height: 32px;
+    background: var(--color-hover-primary);
+    border-radius: 50%;
+}
+
+.reactions button.active-btn {
+    color: #161b22;
+}
+
+.reactions button:hover {
+    opacity: 0.7;
+    background: var(--color-hover-primary);
+}
+
+@media (max-width: 1200px) {
+    #video-container {
+        flex-direction: column;
+    }
+
+    .video-sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .video-player {
+        max-width: none;
+    }
+}
