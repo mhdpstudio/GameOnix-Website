@@ -896,6 +896,13 @@
                     "title": "Call of Duty: Modern Warfare 2019",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-1",
                     "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-va",
+                    "id": 119,
+                    "title": "Call of Duty: Vanguard",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-va",
+                    "publisher": "Activision"
                 }
             ]
         },

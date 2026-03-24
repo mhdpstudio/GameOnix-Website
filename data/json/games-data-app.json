@@ -2809,6 +2809,21 @@
             "platform": "pc",
             "mediaPrefix": "among-us",
             "mediaCount": 2
+        },
+        {
+            "slug": "cod-va",
+            "title": "Call of Duty: Vanguard ",
+            "publisher": "Activision",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cof-va.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.26.0.0",
+            "size": "63.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-va.torrent",
+            "platform": "pc",
+            "mediaPrefix": "cod-va",
+            "mediaCount": 12
         }
     ]
 }
