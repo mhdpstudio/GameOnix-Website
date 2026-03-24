@@ -14,7 +14,14 @@
 </head>
 
 <body class="dark-theme">
-    <!-- Loading Screen managed by shared JS/CSS -->
+    <!-- Channel-specific Loading Screen - SAME as video -->
+    <div id="channel-loading">
+        <div class="video-loader-spinner"></div>
+        <div class="video-loader-text">Loading channel videos...</div>
+        <div class="video-loader-progress">
+            <div class="video-loader-progress-fill"></div>
+        </div>
+    </div>
 
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
@@ -83,7 +90,6 @@
         </aside>
 
         <div class="content">
-
             <div class="profile-header">
                 <div class="profile-pic">
                     <img src="../../assets/videos/pics/logo/logo-vd.webp" class="channel-logo" alt="Profile Picture">
@@ -118,63 +124,8 @@
             </div>
 
             <div id="channel-page"></div>
-
         </div>
     </div>
-    <script>
-        // Disable right-click context menu
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            return false;
-        });
-
-        // Disable keyboard shortcuts for viewing source and developer tools
-        document.addEventListener('keydown', function (e) {
-            // Disable Ctrl+U (View Source)
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable F12 (Developer Tools)
-            if (e.key === 'F12') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+I (Developer Tools)
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+J (Console)
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+C (Inspector)
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+S (Save)
-            if (e.ctrlKey && e.key === 's') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+P (Print)
-            if (e.ctrlKey && e.key === 'p') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        // Additional protection: Clear selection on mousedown to prevent text selection
-        document.addEventListener('mousedown', function (e) {
-            if (e.button === 0) { // Left click
-                // Allow normal left click functionality
-            }
-        });
-    </script>
-
 
     <div id="sharePopup" class="share-popup">
         <div class="share-box">
@@ -188,82 +139,75 @@
             <button class="close-share">Close</button>
         </div>
     </div>
-</body>
 
-<script>
-    const version = new Date().getTime(); // رقم نسخة ديناميكي
+    <script>
+        // Anti-dev tools
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey && ['u','s','p'].includes(e.key) || e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key))) {
+                e.preventDefault();
+            }
+        });
+    </script>
 
-    // CSS Files
-    const cssFiles = [
-        "../css/sidebar-style.css",
-        "../css/ads-style.css",
-        "../css/channel-page.css",
-        "../css/theme-btn.css",
-        "../css/loading-screen.css"
-    ];
-    cssFiles.forEach(file => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = `${file}?v=${version}`;
-        document.head.appendChild(link);
-    });
+    <script>
+        const version = new Date().getTime();
 
-    // Loading manager
-    const loadingScript = document.createElement("script");
-    loadingScript.src = `../js/loading-manager.js?v=${version}`;
-    document.body.appendChild(loadingScript);
+        // CSS Files
+        const cssFiles = [
+            "../css/sidebar-style.css?v=" + version,
+            "../css/ads-style.css?v=" + version,
+            "../css/channel-page.css?v=" + version,
+            "../css/theme-btn.css?v=" + version,
+            "../css/video-loading.css?v=" + version  // Shared loader CSS
+        ];
+        cssFiles.forEach(href => {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = href;
+            document.head.appendChild(link);
+        });
 
-    // JS Files
-    const jsFiles = [
-        "../js/channel-page.js",
-        "../js/sidebar-script.js",
-        "../js/icon.js"
-    ];
-    jsFiles.forEach(file => {
-        const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
-        document.body.appendChild(script);
-    });
-</script>
+        // 1. Channel loading manager FIRST (same as video-loading.js logic)
+        const channelLoadingScript = document.createElement("script");
+        channelLoadingScript.textContent = `
+            // Channel page dedicated loader - IDENTICAL to video-loading.js
+            (function() {
+                const loadingScreen = document.getElementById('channel-loading');
+                const hideLoading = () => {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => loadingScreen.remove(), 600);
+                };
+                
+                let readyCount = 0;
+                // Progress animation + hide\n                document.addEventListener('channel-videos-ready', () => {\n                    // Animate progress fill\n                    const progressFill = loadingScreen.querySelector('.video-loader-progress-fill');\n                    progressFill.style.transition = 'width 0.8s ease';\n                    progressFill.style.width = '100%';\n                    \n                    setTimeout(hideLoading, 1200); // After animation\n                }, { once: true });
+                
+        setTimeout(() => {\n            readyCount = 1;\n            hideLoading();\n        }, 4000); // Faster for channel - no heavy video
+                
+                console.log('Channel loader active');
+            })();
+        `;
+        document.body.appendChild(channelLoadingScript);
 
-<script>
-    // Hide loading screen when page is fully loaded (with 1 second delay)
-    // Skip loading screen if page is loaded from bfcache (back-forward cache)
-    // Enhanced loading screen - persists on back/forward, detects image loading
-    window.addEventListener('load', () => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (!loadingScreen) return;
-
-        const navEntry = performance.getEntriesByType('navigation')[0];
-        const navType = navEntry?.type || 'navigate';
-
-        if (['back_forward', 'prerender', 'reload'].includes(navType)) {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
-            setTimeout(() => loadingScreen.remove(), 200);
-            return;
-        }
-
-        const imgLoading = document.images.length > 0 &&
-            Array.from(document.images).some(img => !img.complete);
-
-        const timeout = imgLoading ? 1200 : 400;
-
+        // 2. Content scripts after delay
         setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
-            setTimeout(() => loadingScreen.remove(), 300);
-        }, timeout);
-    });
-</script>
+            const scripts = [
+                "../js/channel-page.js?v=" + version,
+                "../js/sidebar-script.js?v=" + version,
+                "../js/icon.js?v=" + version
+            ];
+            scripts.forEach(src => {
+                const script = document.createElement("script");
+                script.src = src;
+                document.body.appendChild(script);
+            });
+        }, 300);
+    </script>
 
-<!-- Service Worker for automatic cache busting -->
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('../../sw_1.js')
-            .then(reg => console.log('Service Worker registered'))
-            .catch(err => console.log('Service Worker registration failed:', err));
-    }
-</script>
-
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../../sw_1.js');
+        }
+    </script>
 </html>

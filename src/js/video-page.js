@@ -1,5 +1,12 @@
 const container = document.getElementById("video-container");
 
+let userId = localStorage.getItem("userId");
+
+if (!userId) {
+  userId = "user-" + Math.random().toString(36).substring(2, 10);
+  localStorage.setItem("userId", userId);
+}
+
 function getSlug() {
   const params = new URLSearchParams(window.location.search);
   return params.get("slug");
@@ -9,31 +16,26 @@ async function loadVideo() {
   const slug = getSlug();
 
   try {
-    const res = await fetch("../../data/json/channel-data.json");
+    const res = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${slug}`);
     const data = await res.json();
-    const video = data.find(v => v.slug === slug);
 
-    if (!video) {
-      container.innerHTML = "<h2>Video not found</h2>";
-      return;
-    }
+    const video = {
+      slug,
+      views: data.views,
+      likes: data.likes,
+      dislikes: data.dislikes,
+      title: data.title,
+      videoUrl: data.videoUrl,
+      thumbnail: data.thumbnail
+    };
 
-    document.title = `GameOnix | ${video.tapTitle}`;
+    // Static fallback if API fails\n    if (!video || !video.title) {\n      console.log('API failed, using static fallback');\n      const staticRes = await fetch('../../backend/data/json/channel-data.json');\n      const staticVideos = await staticRes.json();\n      const staticVideo = staticVideos.find(v => v.slug === slug);\n      if (staticVideo) {\n        video = {\n          slug,\n          views: 0,\n          likes: 0,\n          dislikes: 0,\n          title: staticVideo.title,\n          videoUrl: staticVideo.videoUrl,\n          thumbnail: staticVideo.thumbnail\n        };\n      }\n    }\n\n    if (!video || !video.title) {\n      container.innerHTML = "<h2>Video not found</h2>";\n      return;\n    }
+
+    document.title = `GameOnix | ${video.title}`;
 
     const reactionKey = `video-${video.slug}-reaction`;
     const viewKey = `video-${video.slug}-viewed`;
     const statsKey = `video-${video.slug}-stats`;
-
-    // 🔄 جلب البيانات المحفوظة
-    const savedStats = JSON.parse(localStorage.getItem(statsKey)) || {
-      views: 0,
-      likes: 0,
-      dislikes: 0
-    };
-
-    video.views = savedStats.views;
-    video.likes = savedStats.likes;
-    video.dislikes = savedStats.dislikes;
 
     function saveStats() {
       localStorage.setItem(statsKey, JSON.stringify({
@@ -43,13 +45,7 @@ async function loadVideo() {
       }));
     }
 
-    // ✨ الحل هنا: لو المشاهدات 0 أو أول مرة يدخل، نزودها ونحفظ
-    if (!localStorage.getItem(viewKey) || video.views === 0) {
-      video.views = Math.max(video.views + 1, 1); // بيخليها 1 لو هي 0
-      localStorage.setItem(viewKey, "true");
-      saveStats();
-    }
-
+    // التعديل المقترح للجزء ده
     container.innerHTML = `
         <div class="main-video-section">
           <div class="video_player">
@@ -69,7 +65,7 @@ async function loadVideo() {
                 </div>
               </div>
               <div class="video-meta">
-                <span id="viewsCount">${video.views} Observation</span>
+                <span id="viewsCount">${video.views} Views</span>
                 <span>|</span>
                 <span id="likesCount">${video.likes} Likes</span>
                 <span>|</span>
@@ -83,6 +79,56 @@ async function loadVideo() {
         </div>
         `;
 
+
+    async function sendAction(type) {
+      try {
+        console.log("Sending:", { slug, type, userId }); // 🔥 debug
+
+        const res = await fetch("https://backend-videos-psi.vercel.app/api/action", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            slug,
+            type,
+            userId
+          })
+        });
+
+        const data = await res.json();
+        console.log("Response:", data); // 🔥 debug
+
+      } catch (e) {
+        console.log("Action failed:", e);
+      }
+    }
+
+    async function incrementView() {
+      try {
+        // 1. تحديث الـ UI فوراً (قبل ما نبعت للـ API)
+        const viewsElement = document.getElementById("viewsCount");
+        if (viewsElement) {
+          // بنجيب الرقم الحالي ونزود عليه 1 يدوياً
+          let currentViews = parseInt(video.views) || 0;
+          viewsElement.textContent = `${currentViews + 1} Views`;
+        }
+
+        // 2. ابعت الطلب للسيرفر في الخلفية
+        sendAction("view");
+
+        /* ملحوظة: شلنا الـ fetch التاني اللي كان بيجيب البيانات المحدثة 
+           عشان ميعملش "فليكر" أو يرجع الرقم القديم لو الـ API لسه مخلصش معالجة.
+           كده المستخدم هيشوف الزيادة فوراً.
+        */
+
+      } catch (e) {
+        console.error("Failed to increment view:", e);
+      }
+    }
+
+    // استدعاء الدالة (مش محتاجين await هنا عشان مش عايزين نعطل تحميل المشغل)
+    incrementView();
 
 
     // Initialize custom video player
@@ -376,7 +422,10 @@ async function loadVideo() {
 
     mainVideo.addEventListener('canplay', () => {
       loader.style.display = "none";
-    })
+
+      window.__videoReady = true;
+      document.dispatchEvent(new CustomEvent('video-ready'));
+    });
 
 
     // change volume
@@ -610,22 +659,9 @@ async function loadVideo() {
     }
 
     //  blob url
-    let mainVideoSources = mainVideo.querySelectorAll("source");
-    for (let i = 0; i < mainVideoSources.length; i++) {
-      let videoUrl = mainVideoSources[i].src;
-      blobUrl(mainVideoSources[i], videoUrl);
-    }
-    function blobUrl(video, videoUrl) {
-      let xhr = new XMLHttpRequest();
-      xhr.open("GET", videoUrl);
-      xhr.responseType = "arraybuffer";
-      xhr.onload = (e) => {
-        let blob = new Blob([xhr.response]);
-        let url = URL.createObjectURL(blob);
-        video.src = url;
-      };
-      xhr.send();
-    }
+    // Blob URL conversion disabled - causes 404s on local assets
+    // let mainVideoSources = mainVideo.querySelectorAll("source");
+    // ...
 
     mainVideo.addEventListener("contextmenu", (e) => {
       e.preventDefault();
@@ -668,7 +704,7 @@ async function loadVideo() {
     let userReaction = localStorage.getItem(reactionKey) || null;
 
     function renderMeta() {
-      document.getElementById("viewsCount").textContent = `${video.views} Observation`;
+      document.getElementById("viewsCount").textContent = `${video.views} Views`;
       document.getElementById("likesCount").textContent = `${video.likes} Likes`;
       document.getElementById("dislikesCount").textContent = `${video.dislikes} Dislikes`;
     }
@@ -678,35 +714,60 @@ async function loadVideo() {
       dislikeBtn.classList.toggle("active-btn", userReaction === "dislike");
     }
 
-    likeBtn.addEventListener("click", () => {
+    likeBtn.addEventListener("click", async () => {
+      // 1. Update UI immediately (optimistic)
       if (userReaction === "like") {
-        video.likes = Math.max(video.likes - 1, 0);
         userReaction = null;
-        localStorage.removeItem(reactionKey);
+        video.likes--;
       } else {
-        video.likes += 1;
-        if (userReaction === "dislike") video.dislikes = Math.max(video.dislikes - 1, 0);
+        if (userReaction === "dislike") {
+          video.dislikes--;
+        }
         userReaction = "like";
-        localStorage.setItem(reactionKey, "like");
+        video.likes++;
       }
-      saveStats();
+
+      localStorage.setItem(reactionKey, userReaction || "");
       updateButtons();
+      renderMeta();
+
+      // 2. Send request in background (no blocking UI)
+      await sendAction("like");
+
+      // 3. Sync with server (optional refresh)
+      const updated = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${slug}`);
+      const updatedData = await updated.json();
+
+      video.likes = updatedData.likes;
+      video.dislikes = updatedData.dislikes;
+
       renderMeta();
     });
 
-    dislikeBtn.addEventListener("click", () => {
+    dislikeBtn.addEventListener("click", async () => {
       if (userReaction === "dislike") {
-        video.dislikes = Math.max(video.dislikes - 1, 0);
         userReaction = null;
-        localStorage.removeItem(reactionKey);
+        video.dislikes--;
       } else {
-        video.dislikes += 1;
-        if (userReaction === "like") video.likes = Math.max(video.likes - 1, 0);
+        if (userReaction === "like") {
+          video.likes--;
+        }
         userReaction = "dislike";
-        localStorage.setItem(reactionKey, "dislike");
+        video.dislikes++;
       }
-      saveStats();
+
+      localStorage.setItem(reactionKey, userReaction || "");
       updateButtons();
+      renderMeta();
+
+      await sendAction("dislike");
+
+      const updated = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${slug}`);
+      const updatedData = await updated.json();
+
+      video.likes = updatedData.likes;
+      video.dislikes = updatedData.dislikes;
+
       renderMeta();
     });
 
@@ -715,37 +776,76 @@ async function loadVideo() {
 
     // Load recommended videos sidebar
     const sidebar = document.getElementById('videoSidebar');
-    const otherVideos = data;
-    // Shuffle for random
+
+    const resVideos = await fetch("https://backend-videos-psi.vercel.app/api/videos");
+    const otherVideos = await resVideos.json();
+
+    // 🔥 Shuffle
     for (let i = otherVideos.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [otherVideos[i], otherVideos[j]] = [otherVideos[j], otherVideos[i]];
     }
-    const recommended = otherVideos.slice(0, 8); // 8 random
 
+    // خذ 8 فيديوهات عشوائية
+    const recommended = otherVideos.slice(0, 8);
+
+    // 🔥 نجيب stats لكل فيديو (views الحقيقية)
+    const recommendedWithStats = await Promise.all(
+      recommended.map(async (v) => {
+        try {
+          const res = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${v.slug}`);
+          const stats = await res.json();
+
+          return {
+            ...v,
+            views: stats.views || v.views
+          };
+        } catch (err) {
+          return v; // fallback لو حصل خطأ
+        }
+      })
+    );
+
+    // عرض الفيديوهات
     sidebar.innerHTML = `
-          <h3 style="margin-bottom: 15px;" class="reco">Recommended Videos</h3>
-          ${otherVideos.slice(0, 8).map(v => `
-  <div class="video-sidebar-item ${v.slug === slug ? 'active' : ''}" data-slug="${v.slug}" onclick="window.location.href='?slug=${v.slug}'">
-              <img class="video-sidebar-thumbnail" src="${v.thumbnail}" alt="${v.title}" loading="lazy">
-              <div class="video-sidebar-info">
-                <div class="video-sidebar-title">${v.title}</div>
-                <div class="video-sidebar-meta">
-                  ${Math.floor(v.views).toLocaleString()} views • ${formatDuration(v.duration)}
-                </div>
-              </div>
-            </div>
-          `).join('')}
-        `;
+  <h3 style="margin-bottom: 15px;" class="reco">Recommended Videos</h3>
+  ${recommendedWithStats.map(v => `
+    <div class="video-sidebar-item ${v.slug === slug ? 'active' : ''}" 
+         data-slug="${v.slug}" 
+         onclick="window.location.href='?slug=${v.slug}'">
+
+      <img class="video-sidebar-thumbnail" 
+           src="${v.thumbnail}" 
+           alt="${v.title}" 
+           loading="lazy">
+
+      <div class="video-sidebar-info">
+        <div class="video-sidebar-title">${v.title}</div>
+        <div class="video-sidebar-meta">
+          ${Math.floor(v.views || 0).toLocaleString()} views • ${formatDuration(v.duration)}
+        </div>
+      </div>
+
+    </div>
+  `).join('')}
+`;
 
     function formatDuration(seconds) {
       const mins = Math.floor(seconds / 60);
       const secs = Math.floor(seconds % 60);
       return `${mins}:${secs.toString().padStart(2, '0')}`;
     }
+    window.__videoReady = true;
+    document.dispatchEvent(new CustomEvent('video-ready'));
+
+    window.__sidebarReady = true;
+    document.dispatchEvent(new CustomEvent('sidebar-ready'));
 
   } catch (err) {
-    console.error("Error:", err);
+    console.error(err);
+    // في حالة الخطأ، ابعت الإشارات برضه عشان اللودر ميفضلش معلق
+    document.dispatchEvent(new CustomEvent('video-ready'));
+    document.dispatchEvent(new CustomEvent('sidebar-ready'));
   }
 }
 

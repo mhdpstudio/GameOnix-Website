@@ -2048,6 +2048,21 @@
             "mediaCount": 1
         },
         {
+            "slug": "guilty-gear-lsuka",
+            "title": "Guilty Gear Lsuka",
+            "publisher": "Arc System",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/guilty-gear-lsuka.webp",
+            "gameType": "Action | Old Games",
+            "gameTypeIcon": "fa-archway",
+            "version": "2.0.0.1",
+            "size": "540.4 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/guilty.torrent",
+            "platform": "pc",
+            "mediaPrefix": "guilty-gear-lsuka",
+            "mediaCount": 1
+        },
+        {
             "slug": "resident-evil-requiem",
             "title": "Resident Evil Requiem",
             "publisher": "Capcom",

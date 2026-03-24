@@ -36,6 +36,16 @@ function timeAgo(dateString) {
     return "Just now";
 }
 
+// ✅ جلب stats من السيرفر
+async function getVideoStats(slug) {
+    try {
+        const res = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${slug}`);
+        return await res.json();
+    } catch (err) {
+        return { views: 0, likes: 0, dislikes: 0 };
+    }
+}
+
 async function loadChannelVideos() {
     try {
         const res = await fetch("../../data/json/channel-data.json");
@@ -46,18 +56,15 @@ async function loadChannelVideos() {
         let totalViews = 0;
         let totalLikes = 0;
 
-        data.forEach(video => {
-            const statsKey = `video-${video.slug}-stats`;
+        for (const video of data) {
 
-            const savedStats = JSON.parse(localStorage.getItem(statsKey)) || {
-                views: video.views || 0,
-                likes: video.likes || 0,
-                dislikes: video.dislikes || 0
-            };
+            const stats = await getVideoStats(video.slug);
 
-            // استخدم القيم الحقيقية
-            totalViews += savedStats.views;
-            totalLikes += savedStats.likes;
+            const views = stats.views || 0;
+            const likes = stats.likes || 0;
+
+            totalViews += views;
+            totalLikes += likes;
 
             const videoCard = document.createElement("div");
             videoCard.className = "video-card";
@@ -75,7 +82,7 @@ async function loadChannelVideos() {
                         <h3 class="video-title">${video.title}</h3>
                         <p class="channel-name">GameOnix</p>
                         <p class="video-info">
-                            ${savedStats.views} Observation • ${timeAgo(video.date)}
+                            ${views} Views • ${timeAgo(video.date)}
                         </p>
                     </div>
                 </div>
@@ -86,13 +93,12 @@ async function loadChannelVideos() {
             });
 
             container.appendChild(videoCard);
-        });
+        }
 
+        // ✅ إجمالي البروفايل
         document.getElementById("watch").textContent = totalViews;
         document.getElementById("likes").textContent = totalLikes;
         document.getElementById("videos").textContent = data.length;
-
-
 
     } catch (error) {
         console.error(error);
@@ -100,7 +106,9 @@ async function loadChannelVideos() {
     }
 }
 
-loadChannelVideos();
+loadChannelVideos().finally(() => {
+    document.dispatchEvent(new CustomEvent('channel-videos-ready'));
+});
 
 // ===== SHARE SYSTEM =====
 

@@ -1367,6 +1367,13 @@
                     "title": "Adventures of Robinson Crusoe",
                     "poster": "https://gameonix.shop/assets/images/games/posters/adventures-of-robinson-crusoe",
                     "publisher": "MagicIndie Softworks"
+                },
+                {
+                    "slug": "guilty-gear-lsuka",
+                    "id": 14,
+                    "title": "Guilty Gear Lsuka",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/guilty-gear-lsuka",
+                    "publisher": "Arc System"
                 }
             ]
         }

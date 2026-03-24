@@ -7,7 +7,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title></title>
+    <title>GameOnix | Video</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -17,7 +17,14 @@
 </head>
 
 <body class="dark-theme">
-    <!-- Loading Screen managed by shared JS/CSS -->
+    <!-- Video-specific Loading Screen -->
+    <div id="video-loading">
+        <div class="video-loader-spinner"></div>
+        <div class="video-loader-text">Loading video...</div>
+        <div class="video-loader-progress">
+            <div class="video-loader-progress-fill"></div>
+        </div>
+    </div>
 
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
@@ -89,140 +96,61 @@
             <div id="video-container"></div>
         </div>
     </div>
+
     <script>
-        // Disable right-click context menu
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-            return false;
-        });
-
-        // Disable keyboard shortcuts for viewing source and developer tools
-        document.addEventListener('keydown', function (e) {
-            // Disable Ctrl+U (View Source)
-            if (e.ctrlKey && e.key === 'u') {
+        // Anti-right-click + dev tools block
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.ctrlKey && ['u', 's', 'p'].includes(e.key) || e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key))) {
                 e.preventDefault();
-                return false;
-            }
-            // Disable F12 (Developer Tools)
-            if (e.key === 'F12') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+I (Developer Tools)
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+J (Console)
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+Shift+C (Inspector)
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+S (Save)
-            if (e.ctrlKey && e.key === 's') {
-                e.preventDefault();
-                return false;
-            }
-            // Disable Ctrl+P (Print)
-            if (e.ctrlKey && e.key === 'p') {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-        // Additional protection: Clear selection on mousedown to prevent text selection
-        document.addEventListener('mousedown', function (e) {
-            if (e.button === 0) { // Left click
-                // Allow normal left click functionality
             }
         });
     </script>
 
-</body>
+    <script>
+        const version = new Date().getTime();
 
-<script>
-    const version = new Date().getTime(); // رقم نسخة ديناميكي
+        // 1. CSS first
+        const cssFiles = [
+            "../css/sidebar-style.css?v=" + version,
+            "../css/ads-style.css?v=" + version,
+            "../css/video-page.css?v=" + version,
+            "../css/theme-btn.css?v=" + version,
+            "../css/player-style.css?v=" + version,
+            "../css/video-loading.css?v=" + version  // Video-specific
+        ];
+        cssFiles.forEach(href => {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = href;
+            document.head.appendChild(link);
+        });
 
-    // CSS Files
-    const cssFiles = [
-        "../css/sidebar-style.css",
-        "../css/ads-style.css",
-        "../css/video-page.css",
-        "../css/theme-btn.css",
-        "../css/loading-screen.css",
-        "../css/player-style.css"
-    ];
+        // 2. Video loading manager FIRST
+        const videoLoadingScript = document.createElement("script");
+        videoLoadingScript.src = "../js/video-loading.js?v=" + version;
+        videoLoadingScript.onload = () => console.log("Video loader ready");
+        document.body.appendChild(videoLoadingScript);
 
-    cssFiles.forEach(file => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = `${file}?v=${version}`;
-        document.head.appendChild(link);
-    });
-
-    // Loading manager
-    const loadingScript = document.createElement("script");
-    loadingScript.src = `../js/loading-manager.js?v=${version}`;
-    document.body.appendChild(loadingScript);
-
-    // JS Files
-    const jsFiles = [
-        "../js/video-page.js",
-        "../js/sidebar-script.js",
-        "../js/icon.js"
-    ];
-
-
-    jsFiles.forEach(file => {
-        const script = document.createElement("script");
-        script.src = `${file}?v=${version}`;
-        document.body.appendChild(script);
-    });
-</script>
-
-<script>
-    // Hide loading screen when page is fully loaded (with 1 second delay)
-    // Skip loading screen if page is loaded from bfcache (back-forward cache)
-    // Enhanced loading screen - persists on back/forward, detects image loading
-    window.addEventListener('load', () => {
-        const loadingScreen = document.getElementById('loading-screen');
-        if (!loadingScreen) return;
-
-        const navEntry = performance.getEntriesByType('navigation')[0];
-        const navType = navEntry?.type || 'navigate';
-
-        if (['back_forward', 'prerender', 'reload'].includes(navType)) {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
-            setTimeout(() => loadingScreen.remove(), 200);
-            return;
-        }
-
-        const imgLoading = document.images.length > 0 &&
-            Array.from(document.images).some(img => !img.complete);
-
-        const timeout = imgLoading ? 1200 : 400;
-
+        // 3. Content scripts with delay
         setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            loadingScreen.style.visibility = 'hidden';
-            setTimeout(() => loadingScreen.remove(), 300);
-        }, timeout);
-    });
-</script>
+            const scripts = [
+                "../js/video-page.js?v=" + version,
+                "../js/sidebar-script.js?v=" + version,
+                "../js/icon.js?v=" + version
+            ];
+            scripts.forEach(src => {
+                const script = document.createElement("script");
+                script.src = src;
+                document.body.appendChild(script);
+            });
+        }, 200);
+    </script>
 
-<!-- Service Worker for automatic cache busting -->
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('../../sw_1.js')
-            .then(reg => console.log('Service Worker registered'))
-            .catch(err => console.log('Service Worker registration failed:', err));
-    }
-</script>
-
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('../../sw_1.js');
+        }
+    </script>
 </html>
