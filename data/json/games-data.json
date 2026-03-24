@@ -2624,6 +2624,21 @@
             "platform": "pc",
             "mediaPrefix": "dragon-ball-sparking-zero",
             "mediaCount": 7
+        },
+        {
+            "slug": "among-us",
+            "title": "Among Us",
+            "publisher": "Innersloth",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/among-us.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-backpack",
+            "version": "2020.11.17",
+            "size": "54.8 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/among-us.torrent",
+            "platform": "pc",
+            "mediaPrefix": "among-us",
+            "mediaCount": 2
         }
     ]
 }
