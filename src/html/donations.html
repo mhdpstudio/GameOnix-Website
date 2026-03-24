@@ -134,8 +134,10 @@
                         </div>
                     </div>
 
-                    <div class="section section-3"
-                        onclick="openDonationPopup('Bank IBAN', 'EG860003020050016597403000110')">
+                    <div class="section section-3" onclick="openBankPopup('Bank Transfer', {
+    iban: 'EG860003020050016597403000110',
+    swift: 'NBEGEGCX200'
+})">
                         <div class="header-main">
                             <div class="img-wrapper bank-transfer">
                                 <img class="fa-solid" class="img-donation"
@@ -149,29 +151,10 @@
                                 Consider donating through IBAN to contribute to our mission of providing quality
                                 gaming
                                 content.</p>
-                            <button class="donate-btn"
-                                onclick="event.stopPropagation(); openDonationPopup('Bank IBAN', 'EG860003020050016597403000110')">
-                                Donate via Bank Transfer
-                            </button>
-                        </div>
-                    </div>
-                    <div class="section section-3"
-                        onclick="openDonationPopup('Bank IBAN', 'NBEGEGCX200')">
-                        <div class="header-main">
-                            <div class="img-wrapper bank-transfer">
-                                <img class="fa-solid" class="img-donation"
-                                    src="../../assets/content/images/bank-transfer.png" alt="Orange Cash Logo">
-                            </div>
-                        </div>
-                        <div class="all-content">
-                            <h1 class="section-title">Support Us with Bank Transfer (Swift Code)</h1>
-                            <p class="section-description">Your support helps us keep GameOnix running and free for
-                                everyone.
-                                Consider donating through Swift Code to contribute to our mission of providing quality
-                                gaming
-                                content.</p>
-                            <button class="donate-btn"
-                                onclick="event.stopPropagation(); openDonationPopup('Bank IBAN', 'NBEGEGCX200')">
+                            <button class="donate-btn" onclick="event.stopPropagation(); openBankPopup('Bank Transfer', {
+    iban: 'EG860003020050016597403000110',
+    swift: 'NBEGEGCX200'
+})">
                                 Donate via Bank Transfer
                             </button>
                         </div>
@@ -242,9 +225,23 @@
         <div class="donation-box">
             <h3 id="donation-title">Title</h3>
 
-            <div class="donation-input">
+            <!-- خانة واحدة -->
+            <div class="donation-input" id="single-input">
                 <input type="text" id="donation-input" readonly>
                 <button id="donation-copy">Copy</button>
+            </div>
+
+            <!-- خانتين للبنك -->
+            <div class="bank-inputs" id="bank-inputs" style="display:none;">
+                <div class="donation-input">
+                    <input type="text" id="donation-iban" readonly>
+                    <button id="copy-iban">Copy IBAN</button>
+                </div>
+
+                <div class="donation-input">
+                    <input type="text" id="donation-swift" readonly>
+                    <button id="copy-swift">Copy SWIFT</button>
+                </div>
             </div>
 
             <button id="donation-close" class="close-donation">Close</button>

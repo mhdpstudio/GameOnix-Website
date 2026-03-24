@@ -218,6 +218,10 @@
     justify-content: center;
 }
 
+.donation-popup .donation-box .bank-inputs .donation-input:first-child{
+    margin-bottom: 10px;
+}
+
 .img-wrapper.bank-transfer img {
     width: 350px;
 }
