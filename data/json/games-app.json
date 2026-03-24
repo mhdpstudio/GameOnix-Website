@@ -1234,18 +1234,6 @@
                 }
             ]
         },
-        "Adventure": {
-            "icon": "fa-backpack",
-            "games": [
-                {
-                    "slug": "among-us",
-                    "id": 1,
-                    "title": "Among Us",
-                    "poster": "https://gameonix.shop/assets/images/games/posters/among-us",
-                    "publisher": "Innersloth"
-                }
-            ]
-        },
         "Horror": {
             "icon": "fa-ghost",
             "games": [
