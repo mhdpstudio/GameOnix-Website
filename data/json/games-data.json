@@ -2669,6 +2669,21 @@
             "platform": "pc",
             "mediaPrefix": "total-overdose",
             "mediaCount": 2
+        },
+        {
+            "slug": "cod-bo6",
+            "title": "Call of Duty: Black Ops 6",
+            "publisher": "Activision",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cod-bo-6.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "11.1.0.0",
+            "size": "43.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-bo-6.torrent",
+            "platform": "pc",
+            "mediaPrefix": "cod-bo6",
+            "mediaCount": 12
         }
     ]
 }

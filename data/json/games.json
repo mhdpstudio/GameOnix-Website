@@ -910,6 +910,13 @@
                     "title": "Total Overdose",
                     "poster": "https://gameonix.shop/assets/images/games/posters/tdo",
                     "publisher": "Deadline Games"
+                },
+                {
+                    "slug": "cod-bo6",
+                    "id": 121,
+                    "title": "Call of Duty: Black Ops 6",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-6",
+                    "publisher": "Activision"
                 }
             ]
         },
