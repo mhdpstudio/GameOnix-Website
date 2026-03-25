@@ -2824,6 +2824,21 @@
             "platform": "pc",
             "mediaPrefix": "cod-va",
             "mediaCount": 12
+        },
+        {
+            "slug": "total-overdose",
+            "title": "Total Overdose",
+            "publisher": "Deadline Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/tod.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.0",
+            "size": "1.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/total-overdose.torrent",
+            "platform": "pc",
+            "mediaPrefix": "total-overdose",
+            "mediaCount": 2
         }
     ]
 }

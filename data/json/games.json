@@ -903,6 +903,13 @@
                     "title": "Call of Duty: Vanguard",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-va",
                     "publisher": "Activision"
+                },
+                {
+                    "slug": "total-overdose",
+                    "id": 120,
+                    "title": "Total Overdose",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/tdo",
+                    "publisher": "Deadline Games"
                 }
             ]
         },
