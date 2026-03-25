@@ -5,7 +5,8 @@ from PIL import Image
 input_folders = [
     r"E:\Program\Projects\Xhyper\assets\images\games\posters",
     r"E:\Program\Projects\Xhyper\assets\images\games\logos",
-    r"E:\Program\Projects\Xhyper\assets\images\games\banners"
+    r"E:\Program\Projects\Xhyper\assets\images\games\banners",
+    r"E:\Program\Projects\Xhyper\assets\videos\pics\webp"
 ]
 
 # إزالة limit التحذيري للصور الكبيرة

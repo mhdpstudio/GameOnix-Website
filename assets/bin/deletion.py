@@ -4,7 +4,8 @@ import os
 folders = [
     r"E:\Program\Projects\Xhyper\assets\images\games\posters",
     r"E:\Program\Projects\Xhyper\assets\images\games\logos",
-    r"E:\Program\Projects\Xhyper\assets\images\games\banners"
+    r"E:\Program\Projects\Xhyper\assets\images\games\banners",
+    r"E:\Program\Projects\Xhyper\assets\videos\pics\webp"
 ]
 
 extensions_to_delete = (".png", ".jpg", ".jpeg")

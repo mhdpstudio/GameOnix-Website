@@ -7,8 +7,8 @@ import os
 Tk().withdraw()
 
 input_file = askopenfilename(
-    title="Select MP4 Video",
-    filetypes=[("MP4 files", "*.mp4")]
+    title="Select Video File",
+    filetypes=[("Video files", "*.mp4 *.mkv *.avi *.mov"), ("All files", "*.*")],
 )
 
 if not input_file:
@@ -27,12 +27,17 @@ else:
     try:
         cmd = [
             "ffmpeg",
-            "-i", input_file,
-            "-c:v", "libvpx-vp9",
-            "-crf", "30",
-            "-b:v", "0",
-            "-c:a", "libopus",
-            output_file
+            "-i",
+            input_file,
+            "-c:v",
+            "libvpx-vp9",
+            "-crf",
+            "30",
+            "-b:v",
+            "0",
+            "-c:a",
+            "libopus",
+            output_file,
         ]
 
         subprocess.run(cmd, check=True)
