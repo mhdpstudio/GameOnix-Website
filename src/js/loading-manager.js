@@ -8,7 +8,7 @@
         loadingScreen.id = 'loading-screen';
         loadingScreen.innerHTML = `
             <div></div>
-            <p>Loading video...</p>
+            <p>Loading...</p>
         `;
         document.body.prepend(loadingScreen);
     }
