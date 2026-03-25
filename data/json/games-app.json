@@ -917,6 +917,20 @@
                     "title": "Call of Duty: Black Ops 6",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-bo-6",
                     "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-mw-2-2022",
+                    "id": 122,
+                    "title": "Call of Duty: Modern Warfare 2 - 2022",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-2-2022",
+                    "publisher": "Activision"
+                },
+                {
+                    "slug": "cod-mw-3-2023",
+                    "id": 123,
+                    "title": "Call of Duty: Modern Warfare 3 - 2023",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-3-2023",
+                    "publisher": "Activision"
                 }
             ]
         },

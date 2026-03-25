@@ -2684,6 +2684,36 @@
             "platform": "pc",
             "mediaPrefix": "cod-bo6",
             "mediaCount": 12
+        },
+        {
+            "slug": "cod-mw-2-2022",
+            "title": "Call of Duty: Modern Warfare 2 - 2022",
+            "publisher": "Activision",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cod-mw-2-2022.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "9.7.0.0",
+            "size": "92.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-mw-2-2022.torrent",
+            "platform": "pc",
+            "mediaPrefix": "cof-mw-2-2022",
+            "mediaCount": 7
+        },
+        {
+            "slug": "cod-mw-3-2023",
+            "title": "Call of Duty: Modern Warfare 3 - 2023",
+            "publisher": "Activision",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/cod-mw-3-2023.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "10.4.0.0",
+            "size": "41.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/cof-mw-3-2023.torrent",
+            "platform": "pc",
+            "mediaPrefix": "cof-mw-3-2023",
+            "mediaCount": 10
         }
     ]
 }
