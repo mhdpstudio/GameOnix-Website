@@ -19,7 +19,7 @@ async function loadVideo() {
     const res = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${slug}`);
     const data = await res.json();
 
-    const video = {
+    let video = {
       slug,
       views: data.views,
       likes: data.likes,
@@ -727,7 +727,11 @@ async function loadVideo() {
         video.likes++;
       }
 
-      localStorage.setItem(reactionKey, userReaction || "");
+      if (userReaction) {
+        localStorage.setItem(reactionKey, userReaction);
+      } else {
+        localStorage.removeItem(reactionKey);
+      }
       updateButtons();
       renderMeta();
 
@@ -756,7 +760,11 @@ async function loadVideo() {
         video.dislikes++;
       }
 
-      localStorage.setItem(reactionKey, userReaction || "");
+      if (userReaction) {
+        localStorage.setItem(reactionKey, userReaction);
+      } else {
+        localStorage.removeItem(reactionKey);
+      }
       updateButtons();
       renderMeta();
 

@@ -59,15 +59,12 @@ async function loadChannelVideos() {
         const res = await fetch("../../data/json/channel-data.json");
         const data = await res.json();
 
-        container.innerHTML = `
-    <div id="channel-videos-loading" class="channel-overlay-loader">
-        <div class="simple-spinner"></div>
-        <div class="loader-text">Retrieving channel content...</div>
-    </div>
-`;
+        // Render skeleton cards based on video count
+        renderSkeletonCards(data.length);
 
         let totalViews = 0;
         let totalLikes = 0;
+        let loadedCount = 0;
 
         for (const video of data) {
 
@@ -105,20 +102,53 @@ async function loadChannelVideos() {
                 window.location.href = `video.html?slug=${video.slug}`;
             });
 
-            container.appendChild(videoCard);
+            // Replace skeleton card with actual card
+            const skeletonCard = container.children[loadedCount];
+            if (skeletonCard) {
+                container.replaceChild(videoCard, skeletonCard);
+            } else {
+                container.appendChild(videoCard);
+            }
+
+            loadedCount++;
         }
 
         // ✅ إجمالي البروفايل
-        const localLoader = document.getElementById("channel-videos-loading");
-        if (localLoader) localLoader.remove();
-        
         document.getElementById("watch").textContent = totalViews;
         document.getElementById("likes").textContent = totalLikes;
         document.getElementById("videos").textContent = data.length;
+        
+        // Ensure meta text is visible
+        document.getElementById("watch").style.visibility = 'visible';
+        document.getElementById("likes").style.visibility = 'visible';
+        document.getElementById("videos").style.visibility = 'visible';
 
     } catch (error) {
         console.error(error);
         container.innerHTML = "<p>Failed to load videos</p>";
+    }
+}
+
+function renderSkeletonCards(count) {
+    container.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+        const skeletonCard = document.createElement("div");
+        skeletonCard.className = "video-card skeleton-card";
+        skeletonCard.innerHTML = `
+            <div class="thumbnail skeleton-thumbnail">
+                <div class="skeleton-image"></div>
+                <span class="video-time skeleton-time">00:00</span>
+            </div>
+            <div class="video-details">
+                <div class="channel-img skeleton-avatar"></div>
+                <div class="video-meta">
+                    <h3 class="video-title skeleton-line skeleton-title"></h3>
+                    <p class="channel-name skeleton-line skeleton-subtitle"></p>
+                    <p class="video-info skeleton-line skeleton-info"></p>
+                </div>
+            </div>
+        `;
+        container.appendChild(skeletonCard);
     }
 }
 
