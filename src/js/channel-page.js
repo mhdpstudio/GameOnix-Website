@@ -51,7 +51,12 @@ async function loadChannelVideos() {
         const res = await fetch("../../data/json/channel-data.json");
         const data = await res.json();
 
-        container.innerHTML = "";
+        container.innerHTML = `
+    <div id="channel-videos-loading" class="channel-overlay-loader">
+        <div class="simple-spinner"></div>
+        <div class="loader-text">Retrieving channel content...</div>
+    </div>
+`;
 
         let totalViews = 0;
         let totalLikes = 0;
@@ -96,6 +101,9 @@ async function loadChannelVideos() {
         }
 
         // ✅ إجمالي البروفايل
+        const localLoader = document.getElementById("channel-videos-loading");
+        if (localLoader) localLoader.remove();
+        
         document.getElementById("watch").textContent = totalViews;
         document.getElementById("likes").textContent = totalLikes;
         document.getElementById("videos").textContent = data.length;
