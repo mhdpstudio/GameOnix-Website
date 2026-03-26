@@ -48,6 +48,14 @@ async function getVideoStats(slug) {
 
 async function loadChannelVideos() {
     try {
+        // Show small loading in stats
+        const watchEl = document.getElementById('watch');
+        const likesEl = document.getElementById('likes'); 
+        const videosEl = document.getElementById('videos');
+        [watchEl, likesEl, videosEl].forEach(el => {
+            el.innerHTML = '<span class="small-stat-loader"></span>';
+        });
+        
         const res = await fetch("../../data/json/channel-data.json");
         const data = await res.json();
 
