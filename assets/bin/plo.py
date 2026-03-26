@@ -6,7 +6,10 @@ input_folders = [
     r"E:\Program\Projects\Xhyper\assets\images\games\posters",
     r"E:\Program\Projects\Xhyper\assets\images\games\logos",
     r"E:\Program\Projects\Xhyper\assets\images\games\banners",
-    r"E:\Program\Projects\Xhyper\assets\videos\pics\webp"
+    r"E:\Program\Projects\Xhyper\assets\videos\pics\webp",
+    r"E:\Program\Projects\Xhyper\assets\images\games\ps\banners",
+    r"E:\Program\Projects\Xhyper\assets\images\games\ps\logos",
+    r"E:\Program\Projects\Xhyper\assets\images\games\ps\posters"
 ]
 
 # إزالة limit التحذيري للصور الكبيرة
