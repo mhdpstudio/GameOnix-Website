@@ -2591,7 +2591,7 @@
         },
         {
             "slug": "little-nightmare-1",
-            "title": "Little Nightmare",
+            "title": "Little Nightmares",
             "publisher": "Bandai Namco",
             "game_poster": "https://www.gameonix.shop/assets/images/games/logos/little-nightmare.webp",
             "gameType": "Horror",
@@ -2884,6 +2884,22 @@
             "platform": "pc",
             "mediaPrefix": "cof-mw-3-2023",
             "mediaCount": 10
+        },
+        {
+            "slug": "little-nightmare-2",
+            "title": "Little Nightmares 2",
+            "publisher": "Bandai Namco",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/little-nightmare-2.webp",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "1.3.5.0",
+            "size": "3.0 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/little-nightmare-2.torrent",
+            "platform": "pc",
+            "downloadType": "torrent",
+            "mediaPrefix": "little-nightmare-2",
+            "mediaCount": 7
         }
     ]
 }

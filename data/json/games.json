@@ -1287,7 +1287,7 @@
                 {
                     "slug": "little-nightmare-1",
                     "id": 2,
-                    "title": "Little Nightmare",
+                    "title": "Little Nightmares",
                     "poster": "https://gameonix.shop/assets/images/games/posters/little-nightmare",
                     "publisher": "Bandai Namco"
                 },
@@ -1325,6 +1325,13 @@
                     "title": "The Closing Shift",
                     "poster": "https://gameonix.shop/assets/images/games/posters/the-closing-shift",
                     "publisher": "Chilla's Art"
+                },
+                {
+                    "slug": "little-nightmare-2",
+                    "id": 8,
+                    "title": "Little Nightmares 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/little-nightmare-2",
+                    "publisher": "Bandai Namco"
                 }
             ]
         },
