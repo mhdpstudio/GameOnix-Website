@@ -2900,6 +2900,21 @@
             "downloadType": "torrent",
             "mediaPrefix": "little-nightmare-2",
             "mediaCount": 7
+        },
+        {
+            "slug": "detroit",
+            "title": "Detroit: Become Human",
+            "publisher": "Quantic Dream",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/detroit.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "2.3.5.0",
+            "size": "52.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/detroit-become-human.torrent",
+            "platform": "pc",
+            "mediaPrefix": "detroit",
+            "mediaCount": 9
         }
     ]
 }

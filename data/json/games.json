@@ -1271,6 +1271,13 @@
                     "title": "Among Us",
                     "poster": "https://gameonix.shop/assets/images/games/posters/among-us",
                     "publisher": "Innersloth"
+                },
+                {
+                    "slug": "detroit",
+                    "id": 2,
+                    "title": "Detroit: Become Human",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/detroit",
+                    "publisher": "Quantic Dream"
                 }
             ]
         },
