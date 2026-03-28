@@ -2760,6 +2760,51 @@
             "platform": "pc",
             "mediaPrefix": "the-outlast-trials",
             "mediaCount": 14
+        },
+        {
+            "slug": "tomb-raider-2013",
+            "title": "Tomb Raider - 2013",
+            "publisher": "Square Enix",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/tomb-raider-2013.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "2.4.2.0",
+            "size": "6.5 GB",
+            "ico": "windows",
+            "gameLink": "https://s264klg.storage.yandex.net/rdisk/8a4d910c708251f2bed06d73ff54fda0428480e9d01a6ee7371eb1ad53b4262c/69c8623f/tsChDyldXys17tYtIuNkh4GnohrpmkRDw6P6L2eGhEMUAoEsThhj1RASqjjIaJzAqjDyeA5xeuSYMqnbSpe7ag==?uid=1927087343&filename=Tomb-Raider.rar&disposition=attachment&hash=&limit=0&content_type=application%2Fx-rar&owner_uid=1927087343&fsize=6960706213&hid=637fd93556737f4994871fce52d8070c&media_type=compressed&tknv=v3&etag=38b375654bf2001100bd95e63e389145&ts=64e1ddd1dcdc0&s=7f912e41cdea80629346c8aa6d466b5b5ad563797539c26b916ec82f16887a15&pb=U2FsdGVkX1_-5qzKB0OWPwHCW9WHKbvLm1pLeqUsI-Jf8V6-Xad9nzGLeCy88LT0GdTao4oJQB_3H1CYcwdAl6LtYIMUlaTrIiVtinN8nUQ",
+            "platform": "pc",
+            "mediaPrefix": "tomb-raider-2013",
+            "mediaCount": 7
+        },
+        {
+            "slug": "rise-of-the-tomb-raider-2015",
+            "title": "Rise of the Tomb Raider - 2015",
+            "publisher": "Square Enix",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/rise-of-the-tomb-raider-2015.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.1027.0",
+            "size": "24.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/rise-of-the-tomb-raider-2015.torrent",
+            "platform": "pc",
+            "mediaPrefix": "rise-of-the-tomb-raider-2015",
+            "mediaCount": 7
+        },
+        {
+            "slug": "shadow-of-the-tomb-raider-2018",
+            "title": "Shadow of the Tomb Raider - 2018",
+            "publisher": "Square Enix",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/shadow-of-the-tomb-raider-2018.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.2.1.3",
+            "size": "28.4 GB",
+            "ico": "windows",
+            "gameLink": "https://s290klg.storage.yandex.net/rdisk/137173619d967e47b1e5260fdaea02e1b19b0b762e495ef75b0bbfef5472c97e/69c8656e/tsChDyldXys17tYtIuNkh2FZdZCtCW9c1XL7QrN1oE2ehJ8MRdO_JlzAfLLLXSaOOQUOMWEMYFDoUmsVGQRAAA==?uid=1927087343&filename=Shadow-of-The-Tomb-Raider.rar&disposition=attachment&hash=&limit=0&content_type=application%2Fx-rar&owner_uid=1927087343&fsize=30507897074&hid=bd59a35cf5391b724faa7391f814528f&media_type=compressed&tknv=v3&etag=5eaf5f379c053b9c5d1e5087563e3155&ts=64e1e0db1b780&s=d4876cbf3807d1429fe0b229d192d020b9f6e60062fd5c4ff2b833b98108a285&pb=U2FsdGVkX18J6hqRToPQ9GeDX1ks_cZKpyQO1zfENubB7bRELVEz0iQEXdWbaZY6ArnsB6qIzMupHBXDJ_27JyuehvIMoStPJZFy_Uh7H2s",
+            "platform": "pc",
+            "mediaPrefix": "shadow-of-the-tomb-raider-2018",
+            "mediaCount": 15
         }
     ]
 }

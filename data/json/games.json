@@ -931,6 +931,27 @@
                     "title": "Call of Duty: Modern Warfare 3 - 2023",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-3-2023",
                     "publisher": "Activision"
+                },
+                {
+                    "slug": "tomb-raider-2013",
+                    "id": 124,
+                    "title": "Tomb Raider - 2013",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/tomb-raider-2013",
+                    "publisher": "Square Enix"
+                },
+                {
+                    "slug": "rise-of-the-tomb-raider-2015",
+                    "id": 125,
+                    "title": "Rise of the Tomb Raider - 2015",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/rise-of-the-tomb-raider-2015",
+                    "publisher": "Square Enix"
+                },
+                {
+                    "slug": "shadow-of-the-tomb-raider-2018",
+                    "id": 126,
+                    "title": "Shadow of the Tomb Raider - 2018",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/shadow-of-the-tomb-raider-2018",
+                    "publisher": "Square Enix"
                 }
             ]
         },
