@@ -52,7 +52,7 @@
           e.stopPropagation();
           
           // Fetch game data to get version
-          fetch("https://www.gameonix.shop/data/json/games-data.json")
+          fetch("../../data/json/games-data.json")
               .then(res => res.json())
               .then(data => {
                   const game = data.games.find(g => g.slug === slug);

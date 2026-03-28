@@ -25,7 +25,7 @@ async function init() {
     const platform = params.get("type");
 
     try {
-        const response = await fetch('https://www.gameonix.shop/data/json/games.json');
+        const response = await fetch('../../data/json/games.json');
         const data = await response.json();
 
         let targetKey = platform === "PS" ? "Playstation Games" : "Desktop Games";

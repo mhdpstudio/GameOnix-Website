@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const gameSlug = params.get("game");
 const page = document.getElementById("game-page");
 
-fetch("https://www.gameonix.shop/data/json/games-data.json")
+fetch("../../data/json/games-data.json")
     .then(res => res.json())
     .then(data => {
 

@@ -34,7 +34,7 @@ if (searchBox) {
 }
 
 // --- 3. جلب البيانات ---
-fetch('https://www.gameonix.shop/data/json/games.json')
+fetch('../data/json/games.json')
     .then(res => res.json())
     .then(data => {
         allGamesData = data;

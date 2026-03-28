@@ -97,7 +97,7 @@ async function loadSectionGames() {
         const sectionName = params.get("section");
         const platform = params.get("type");
 
-        const response = await fetch('https://www.gameonix.shop/data/json/games.json');
+        const response = await fetch('../../data/json/games.json');
         const data = await response.json();
 
         let gamesData = null;
