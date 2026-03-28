@@ -2935,7 +2935,7 @@
             "slug": "inzoi",
             "title": "inZOI",
             "publisher": "Krafton",
-            "game_poster": "../../assets/images/games/logos/inzoi.webp",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/inzoi.webp",
             "gameType": "Simulation",
             "gameTypeIcon": "fa-gamepad",
             "version": "2025.03.27.1308",
@@ -2945,6 +2945,21 @@
             "platform": "pc",
             "mediaPrefix": "inzoi",
             "mediaCount": 10
+        },
+        {
+            "slug": "crisol-theater-of-idols",
+            "title": "Crisol: Theater of Idols",
+            "publisher": "Vermila Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/inzoi.webp",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "2026.02.10.2502",
+            "size": "11.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/crisol.torrent",
+            "platform": "pc",
+            "mediaPrefix": "crisol",
+            "mediaCount": 6
         }
     ]
 }

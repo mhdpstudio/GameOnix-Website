@@ -1374,6 +1374,13 @@
                     "title": "The Outlast Trials",
                     "poster": "../../assets/images/games/posters/the-outlast-trials",
                     "publisher": "Red Barrels"
+                },
+                {
+                    "slug": "crisol-theater-of-idols",
+                    "id": 10,
+                    "title": "Crisol: Theater of Idols",
+                    "poster": "../../assets/images/games/posters/crisol",
+                    "publisher": "Vermila Studios"
                 }
             ]
         },
