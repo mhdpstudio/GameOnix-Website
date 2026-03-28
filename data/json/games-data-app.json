@@ -2915,6 +2915,21 @@
             "platform": "pc",
             "mediaPrefix": "detroit",
             "mediaCount": 9
+        },
+        {
+            "slug": "the-outlast-trials",
+            "title": "The Outlast Trials",
+            "publisher": "Red Barrels",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-outlast-trials.webp",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "5.1.0.0",
+            "size": "22.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-outlast-trials.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-outlast-trials",
+            "mediaCount": 14
         }
     ]
 }

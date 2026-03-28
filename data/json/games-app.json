@@ -1332,6 +1332,13 @@
                     "title": "Little Nightmares 2",
                     "poster": "https://gameonix.shop/assets/images/games/posters/little-nightmare-2",
                     "publisher": "Bandai Namco"
+                },
+                {
+                    "slug": "the-outlast-trials",
+                    "id": 9,
+                    "title": "The Outlast Trials",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-outlast-trials",
+                    "publisher": "Red Barrels"
                 }
             ]
         },
