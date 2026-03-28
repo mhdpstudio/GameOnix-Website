@@ -1280,6 +1280,13 @@
                     "title": "Internet Cafe Simulator 2",
                     "poster": "../../assets/images/games/posters/internet-cafe-sim-2",
                     "publisher": "Cheesecake Dev"
+                },
+                {
+                    "slug": "inzoi",
+                    "id": 12,
+                    "title": "inZOI",
+                    "poster": "../../assets/images/games/posters/inzoi",
+                    "publisher": "Krafton"
                 }
             ]
         },

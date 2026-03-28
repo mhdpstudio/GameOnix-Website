@@ -2805,6 +2805,21 @@
             "platform": "pc",
             "mediaPrefix": "shadow-of-the-tomb-raider-2018",
             "mediaCount": 15
+        },
+        {
+            "slug": "inzoi",
+            "title": "inZOI",
+            "publisher": "Krafton",
+            "game_poster": "../../assets/images/games/logos/inzoi.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "2025.03.27.1308",
+            "size": "19.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/inzoi.torrent",
+            "platform": "pc",
+            "mediaPrefix": "inzoi",
+            "mediaCount": 10
         }
     ]
 }
