@@ -1,3 +1,5 @@
+@import './../../assets/constants/variables.css';
+
 /* ===== Theme Changer ===== */
 .theme-changer {
     position: fixed;

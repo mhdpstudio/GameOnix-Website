@@ -1,3 +1,5 @@
+@import './../../assets/constants/variables.css';
+
 /* ====== Search Bar Container ====== */
 .search-bar {
     position: relative;
