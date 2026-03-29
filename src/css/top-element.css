@@ -1,0 +1,119 @@
+@import './../../assets/constants/variables.css';
+
+/* ===== Container ===== */
+.top-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    z-index: 9999;
+    border-radius: 999px;
+
+    background: var(--ad-bg);
+    border: 1px solid var(--ad-border);
+    backdrop-filter: blur(8px);
+    color: var(--ad-text);
+    cursor: pointer;
+    overflow: hidden;
+
+    height: 44px;
+    /* السر في تنعيم الرجعة هو تثبيت الـ min-width واللعب بالـ max-width */
+    min-width: 44px;
+    max-width: 200px;
+    /* العرض الأقصى في حالة الـ Pill */
+    padding: 0 16px;
+
+    /* جعل الـ transition موحد لكل الخصائص بنفس التوقيت */
+    transition:
+        max-width 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+/* ===== Inner Element ===== */
+.ads-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: gap 0.7s ease;
+    /* تنعيم حركة المسافة بين الأيقونة والنص */
+}
+
+/* ===== Icon ===== */
+.top-group i {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* ===== Text ===== */
+.top-group .txt {
+    white-space: nowrap;
+    opacity: 1;
+    max-width: 150px;
+    /* سقف النص */
+
+    /* انتقال تدريجي للنص */
+    transition:
+        opacity 0.4s ease,
+        max-width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== COLLAPSED STATE (الدائرة) ===== */
+.top-group.collapsed {
+    max-width: 44px;
+    /* هنا القفلة الحقيقية */
+    padding: 0;
+}
+
+.top-group.collapsed .txt {
+    opacity: 0;
+    max-width: 0;
+    /* تأخير بسيط لاختفاء النص عشان ميبانش مقطوع والـ pill بتقفل */
+    transition:
+        opacity 0.2s ease,
+        max-width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-group.collapsed .ads-element {
+    gap: 0;
+}
+
+/* ===== Hover State (الرجوع للـ Pill بسلاسة) ===== */
+.top-group.collapsed:hover {
+    max-width: 200px;
+    /* يفتح للمقاس اللي إحنا حددناه فوق */
+    padding: 0 16px;
+}
+
+.top-group.collapsed:hover .txt {
+    opacity: 1;
+    max-width: 150px;
+    /* النص يظهر بعد ما الـ pill تبدأ تفتح شوية */
+    transition:
+        opacity 0.5s ease 0.2s,
+        max-width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.top-group.collapsed:hover .ads-element {
+    gap: 10px;
+}
+
+/* تأثير الـ Hover العام */
+.top-group:hover {
+    transform: translateY(-3px);
+}
+
+.top-group.active {
+    background: var(--ad-active-bg, #00c853);
+    border-color: rgba(0, 200, 83, 0.6);
+    color: #0b0b0b;
+    box-shadow: 0 0 14px rgba(0, 200, 83, 0.35);
+
+    transform: translateY(-3px);
+}

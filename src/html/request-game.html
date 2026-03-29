@@ -20,6 +20,23 @@
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
 
+    <a class="link-ads" href="ads.html" target="_blank" rel="noopener noreferrer">
+        <div class="top-group" id="adBox">
+            <div class="ads-element">
+                <i class="fa-solid fa-rectangle-ad"></i>
+                <span class="txt">Ads Support</span>
+            </div>
+        </div>
+    </a>
+
+    <script>
+        const adBox = document.querySelector(".top-group");
+
+        setTimeout(() => {
+            adBox.classList.add("collapsed");
+        }, 5000);
+    </script>
+
     <div class="container">
         <aside class="sb closed">
             <header class="sb-h">
@@ -212,7 +229,8 @@
         "../css/cards-style.css",
         "../css/order-style.css",
         "../css/theme-btn.css",
-        "../css/loading-screen.css"
+        "../css/loading-screen.css",
+        "../css/top-element.css"
     ];
     cssFiles.forEach(file => {
         const link = document.createElement("link");

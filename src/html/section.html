@@ -19,6 +19,23 @@
 
     <button class="theme-changer"><span class="material-symbols-rounded">dark_mode</span></button>
     <button class="menu-toggle"><span class="material-symbols-rounded">menu</span></button>
+
+    <a class="link-ads" href="ads.html" target="_blank" rel="noopener noreferrer">
+        <div class="top-group" id="adBox">
+            <div class="ads-element">
+                <i class="fa-solid fa-rectangle-ad"></i>
+                <span class="txt">Ads Support</span>
+            </div>
+        </div>
+    </a>
+
+    <script>
+        const adBox = document.querySelector(".top-group");
+
+        setTimeout(() => {
+            adBox.classList.add("collapsed");
+        }, 5000);
+    </script>
     <div class="container">
         <aside class="sb closed">
             <header class="sb-h">
@@ -84,8 +101,10 @@
 
         <div class="content">
             <div class="search-bar" style="margin-top: 20px;">
-                <span class="search-icon"><span class="material-symbols-rounded">search</span></span>
-                <input type="text" id="searchBox" placeholder="Search games...">
+                <input type="text" class="searchBox" id="searchBox" placeholder="Search games...">
+                <span class="search-icon">
+                    <span class="material-symbols-rounded">search</span>
+                </span>
             </div>
             <div id="section-text"></div>
             <div id="section-games" class="grid"></div>
@@ -160,7 +179,8 @@
         "../css/search-style.css",
         "../css/cards-style.css",
         "../css/theme-btn.css",
-        "../css/loading-screen.css"
+        "../css/loading-screen.css",
+        "../css/top-element.css"
     ];
 
     cssFiles.forEach(file => {

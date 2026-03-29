@@ -1,63 +1,224 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* =========================
+   🌞 LIGHT THEME
+========================= */
 :root {
-    /* Light Mode */
+
+    /* ===== Typography ===== */
+    --font-main: 'Poppins', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+
+    /* ===== Text Colors ===== */
     --color-text-primary: #1F2936;
+    --color-text-secondary: #646464;
+    --color-text-tertiary: #5a5a5a;
+    --color-text-primary-2: #646464;
+    /* ✅ رجعناه */
+    --color-text-primary-3: #5a5a5a;
+    /* ✅ رجعناه */
     --color-text-placeholder: #798EAE;
+
+    /* ===== Backgrounds ===== */
     --color-bg-primary: #f9fafb;
     --color-bg-secondary: #ECECFD;
     --color-bg-sidebar: #FFFFFF;
+
+    /* ===== Borders ===== */
     --color-border-hr: #E2E8F0;
+
+    /* ===== Primary Accent ===== */
+    --color-primary: #695CFE;
+    --color-primary-hover: #584ED3;
+
+    /* ✅ القديم (Backward Compatibility) */
     --color-hover-primary: #695CFE;
     --color-hover-primary-btn: #584ED3;
+
+    /* ===== Hover / UI ===== */
     --color-hover-secondary: #e2e2fb;
     --color-scroll-btns: #F1F5F9;
+
+    /* ===== Cards / Surfaces ===== */
+    --card-clr: #e2e2fb;
+    --video-card: #e2e2fb;
     --color-more-games-card: rgba(0, 0, 0, 0.1);
-    --color-side-panel-details: #5e5e5e;
+
+    /* ===== Tags ===== */
     --color-bg-tag: #dddddd;
     --color-tag: #6e6e6e;
+
+    /* ===== Misc ===== */
     --color-shadow: rgba(0, 0, 0, 0.05);
-    --card-clr: #e2e2fb;
-    --text-clr-shadow: #F1F5F9;
     --clr-txt-dev: #808080;
     --scroll-clr: #e2e2fb;
-    --height-nav-value: 55px;
-    --color-text-primary-2: #646464;
-    --color-text-primary-3: #5a5a5a;
+
+    /* ===== Popups ===== */
     --bg-pop-5: #e2e2fb;
     --bg-pop-4: rgba(255, 255, 255, 0.5);
+
     --sec-item-color: var(--bg-pop-4);
     --sec-item-hr-color: rgba(255, 255, 255, 0.8);
+
+    /* ===== Icons ===== */
     --title-icons-clr-hover: #161b22;
-    --video-card: #e2e2fb;
+
+    /* ===== Layout ===== */
+    --height-nav: 55px;
+    --height-nav-value: 55px;
+    /* ✅ رجعناه */
+    --radius: 10px;
+
+    /* =========================
+       🔍 SEARCH SYSTEM
+    ========================= */
+    --search-bg: var(--color-bg-secondary);
+    --search-bg-focus: #ffffff;
+
+    --search-text: var(--color-text-primary);
+    --search-placeholder: var(--color-text-placeholder);
+
+    --search-border: #dcdcdc;
+    --search-border-hover: #cfcfcf;
+
+    --search-focus: var(--color-primary);
+    --search-focus-glow: rgba(105, 92, 254, 0.25);
+
+    --search-icon: #888;
+
+    /* =========================
+       🎯 FILTERS
+    ========================= */
+    --filter-bg: var(--color-bg-secondary);
+    --filter-text: var(--color-text-primary);
+
+    --filter-border: #dcdcdc;
+    --filter-hover-border: #cfcfcf;
+
+    /* 🔥 خلي active يعتمد على border مش background */
+    --filter-active-bg: transparent;
+    --filter-active-text: var(--color-primary);
+
+    --filter-active-border: var(--color-primary);
+    --filter-active-glow: rgba(105, 92, 254, 0.35);
+
+    /* ========================= Theme Button ========================= */
+
+    --theme-btn-bg: var(--color-bg-secondary);
+    --theme-btn-icon: var(--color-text-primary);
+
+    --theme-btn-border: #dcdcdc;
+    --theme-btn-hover-border: var(--color-primary);
+
+    --theme-btn-glow: rgba(105, 92, 254, 0.3);
+
+    /* ========================= ADS ========================= */
+
+    --ad-bg: rgba(0, 0, 0, 0.45);
+    --ad-border: rgba(255, 255, 255, 0.08);
+    --ad-text: #fff;
 }
 
+/* =========================
+   🌙 DARK THEME
+========================= */
 body.dark-theme {
-    /* Dark Mode */
+
+    /* ===== Text ===== */
     --color-text-primary: #F1F5F9;
+    --color-text-secondary: #ccc;
+    --color-text-tertiary: #eee;
+    --color-text-primary-2: #ccc;
+    /* ✅ رجعناه */
+    --color-text-primary-3: #eee;
+    /* ✅ رجعناه */
     --color-text-placeholder: #A6B7D2;
+
+    /* ===== Backgrounds ===== */
     --color-bg-primary: #111827;
     --color-bg-secondary: #3D4859;
     --color-bg-sidebar: #1f2937;
+
+    /* ===== Borders ===== */
     --color-border-hr: #3B475C;
+
+    /* ===== Hover ===== */
     --color-hover-secondary: #48566a;
     --color-scroll-btns: #1F2936;
+
+    /* ===== Primary القديم */
+    --color-hover-primary: #7c6cff;
+    --color-hover-primary-btn: #6d5dfc;
+
+    /* ===== Cards ===== */
+    --card-clr: #1e1e1e;
+    --video-card: rgba(255, 255, 255, 0.1);
     --color-more-games-card: rgba(0, 0, 0, 0.3);
-    --color-side-panel-details: #888;
+
+    /* ===== Tags ===== */
     --color-bg-tag: #1f2937;
     --color-tag: #c5c5c5;
+
+    /* ===== Misc ===== */
     --color-shadow: rgba(0, 0, 0, 0.3);
-    --card-clr: #1e1e1e;
     --clr-txt-dev: #bbb;
     --scroll-clr: #28303b;
-    --height-nav-value: 55px;
-    --border-raduis-value: 8px;
-    --color-text-primary-2: #ccc;
-    --color-text-primary-3: #eee;
+
+    /* ===== Popups ===== */
     --bg-pop-5: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
     --bg-pop-4: rgba(255, 255, 255, 0.02);
+
     --sec-item-color: rgba(255, 255, 255, 0.03);
     --sec-item-hr-color: rgba(255, 255, 255, 0.1);
+
+    /* ===== Icons ===== */
     --title-icons-clr-hover: #F1F5F9;
-    --video-card: rgba(255, 255, 255, 0.1);
+
+    /* =========================
+       🔍 SEARCH
+    ========================= */
+    --search-bg: #1e293b;
+    --search-bg-focus: #111827;
+
+    --search-text: #fff;
+    --search-placeholder: #94a3b8;
+
+    --search-border: #2d3748;
+    --search-border-hover: #3b475c;
+
+    --search-focus: #7c6cff;
+    --search-focus-glow: rgba(124, 108, 255, 0.35);
+
+    --search-icon: #aaa;
+
+    /* =========================
+       🎯 FILTERS
+    ========================= */
+    --filter-bg: #1e293b;
+    --filter-text: #fff;
+
+    --filter-border: #2d3748;
+    --filter-hover-border: #3b475c;
+
+    --filter-active-bg: transparent;
+    --filter-active-text: #7c6cff;
+
+    --filter-active-border: #7c6cff;
+    --filter-active-glow: rgba(124, 108, 255, 0.4);
+
+    /* ========================= Theme Button ========================= */
+
+    --theme-btn-bg: #1e293b;
+    --theme-btn-icon: #fff;
+
+    --theme-btn-border: #2d3748;
+    --theme-btn-hover-border: #7c6cff;
+
+    --theme-btn-glow: rgba(124, 108, 255, 0.35);
+
+    /* ========================= ADS ========================= */
+
+    --ad-bg: rgba(15, 23, 42, 0.7);
+    --ad-border: rgba(255, 255, 255, 0.08);
+    --ad-text: #fff;
 }

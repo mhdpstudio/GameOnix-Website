@@ -1,5 +1,4 @@
-/* Shared search bar styling used across pages */
-
+/* ====== Search Bar Container ====== */
 .search-bar {
     position: relative;
     display: inline-block;
@@ -7,37 +6,177 @@
     margin-top: 0;
 }
 
+/* ====== Icon ====== */
 .search-icon {
     position: absolute;
-    left: 12px;
+    left: 18px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-text-primary);
+    color: var(--search-icon-color);
+    font-size: 18px;
     pointer-events: none;
     z-index: 5;
+    transition: 0.3s ease;
 }
 
-/* inputs on different pages sometimes use a class or an ID */
+/* ====== Input ====== */
 .searchBox,
 #searchBox {
     width: 100%;
-    height: 48px;
-    padding: 0 20px 0 40px;
-    border-radius: 10px;
-    border: none;
-    background: var(--color-bg-secondary);
-    color: var(--color-text-primary);
-    font-size: 16px;
-    transition: box-shadow 0.3s ease;
+    height: 52px;
+    padding: 0 24px 0 50px;
+
+    border-radius: 999px;
+    /* 🔥 الشكل الدائري */
+    border: 1.5px solid var(--search-border-color);
+
+    background: var(--search-bg);
+    color: var(--search-text);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
 }
 
+/* ====== Placeholder ====== */
 .searchBox::placeholder,
 #searchBox::placeholder {
-    color: var(--color-text-secondary);
+    color: var(--search-placeholder);
+    font-weight: 400;
 }
 
+/* ====== Hover Effect ====== */
+.searchBox:hover,
+#searchBox:hover {
+    border-color: var(--search-hover-border);
+}
+
+/* ====== Focus Effect ====== */
 .searchBox:focus,
 #searchBox:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--color-hover-primary);
+
+    border-color: var(--search-focus-border);
+
+    box-shadow:
+        0 0 0 3px var(--search-focus-glow),
+        0 8px 25px rgba(0, 0, 0, 0.15);
+
+    background: var(--search-bg-focus);
+}
+
+/* ====== Icon Animation on Focus ====== */
+.searchBox:focus+.search-icon,
+#searchBox:focus+.search-icon {
+    color: var(--search-focus-border);
+}
+
+/* ====== Optional Glass Effect ====== */
+.search-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    pointer-events: none;
+}
+
+/* ===== Filters Container ===== */
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ===== Filter Button ===== */
+.filter {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    border-radius: 999px;
+
+    background: var(--filter-bg);
+    color: var(--filter-text);
+
+    border: 1.5px solid var(--filter-border);
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.25s ease;
+}
+
+/* ===== Hover ===== */
+.filter:hover {
+    border-color: var(--filter-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Active (🔥 بدون خلفية) ===== */
+.filter.active {
+    background: var(--filter-bg);
+    /* نفس الخلفية */
+
+    color: var(--filter-active-border);
+    /* اللون يتغير بس */
+
+    border-color: var(--filter-active-border);
+
+    transform: translateY(-2px) scale(1.05);
+
+    box-shadow:
+        0 0 0 3px var(--filter-active-glow),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Ring Effect شيك ===== */
+.filter.active::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 999px;
+
+    border: 1.5px solid var(--filter-active-border);
+    opacity: 0.4;
+}
+
+/* ===== Click ===== */
+.filter:active {
+    transform: scale(0.95);
+}
+
+/* ====== Icon ====== */
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* دي بتسنتر رأسياً بالملي */
+
+    /* نضمن إن الأيقونة نفسها جوه الـ span متسنترة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--search-icon-color);
+    pointer-events: none;
+    z-index: 5;
+    transition: 0.3s ease;
+}
+
+.search-icon .material-symbols-rounded {
+    font-size: 22px;
+    /* كبرتها شوية عشان تبان متناسقة مع الـ height 52px */
+    display: block;
 }
