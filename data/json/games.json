@@ -1309,6 +1309,18 @@
                 }
             ]
         },
+        "Survival": {
+            "icon": "fa-tree",
+            "games": [
+                {
+                    "slug": "sunkenland",
+                    "id": 1,
+                    "title": "Sunkenland",
+                    "poster": "../../assets/images/games/posters/among-us",
+                    "publisher": "Innersloth"
+                }
+            ]
+        },
         "Horror": {
             "icon": "fa-ghost",
             "games": [
