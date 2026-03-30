@@ -2876,7 +2876,7 @@
             "version": "1.21.130.0",
             "size": "947.3 MB",
             "ico": "windows",
-            "gameLink": "",
+            "gameLink": "https://github.com/mhdpstudio/Games/releases/download/Windows-Game/minecraft.Bedrock.Edition.zip",
             "platform": "pc",
             "mediaPrefix": "minecraft-bedrock",
             "mediaCount": 9
