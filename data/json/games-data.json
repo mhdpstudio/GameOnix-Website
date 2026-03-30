@@ -2850,6 +2850,36 @@
             "platform": "pc",
             "mediaPrefix": "sunkenland",
             "mediaCount": 12
+        },
+        {
+            "slug": "ark",
+            "title": "ARK: Survival Evolved",
+            "publisher": "Studio Wildcard",
+            "game_poster": "../../assets/images/games/logos/ark.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "329.5.0.0",
+            "size": "35.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ark.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ark",
+            "mediaCount": 18
+        },
+        {
+            "slug": "minecraft",
+            "title": "Minecraft: Bedrock Edition",
+            "publisher": "Mojang Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/ps/logos/minecraft-bedrock.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.21.130.0",
+            "size": "947.3 MB",
+            "ico": "windows",
+            "gameLink": "https://drive.usercontent.google.com/download?id=1bdQ07jprAMHHTZbzUuNhfa-EVhxLZH-a&export=download&authuser=0",
+            "platform": "ps",
+            "mediaPrefix": "minecraft-bedrock",
+            "mediaCount": 9
         }
     ]
 }

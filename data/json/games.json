@@ -1318,6 +1318,20 @@
                     "title": "Sunkenland",
                     "poster": "../../assets/images/games/posters/sunkenland",
                     "publisher": "Vector3 Studio"
+                },
+                {
+                    "slug": "ark",
+                    "id": 2,
+                    "title": "ARK: Survival Evolved",
+                    "poster": "../../assets/images/games/posters/ark",
+                    "publisher": "Studio Wildcard"
+                },
+                {
+                    "slug": "minecraft-bedrock",
+                    "id": 3,
+                    "title": "Minecraft: Bedrock Edition",
+                    "poster": "../../assets/images/games/posters/minecraft-bedrock",
+                    "publisher": "Mojang Studios"
                 }
             ]
         },
