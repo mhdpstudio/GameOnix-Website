@@ -2870,14 +2870,14 @@
             "slug": "minecraft-bedrock",
             "title": "Minecraft: Bedrock Edition",
             "publisher": "Mojang Studios",
-            "game_poster": "https://www.gameonix.shop/assets/images/games/ps/logos/minecraft-bedrock.webp",
+            "game_poster": "../../assets/images/games/logos/minecraft-bedrock.webp",
             "gameType": "Survival",
             "gameTypeIcon": "fa-tree",
             "version": "1.21.130.0",
             "size": "947.3 MB",
             "ico": "windows",
             "gameLink": "https://drive.usercontent.google.com/download?id=1bdQ07jprAMHHTZbzUuNhfa-EVhxLZH-a&export=download&authuser=0",
-            "platform": "ps",
+            "platform": "pc",
             "mediaPrefix": "minecraft-bedrock",
             "mediaCount": 9
         }
