@@ -2835,6 +2835,21 @@
             "platform": "pc",
             "mediaPrefix": "crisol",
             "mediaCount": 6
+        },
+        {
+            "slug": "sunkenland",
+            "title": "Sunkenland",
+            "publisher": "Vector3 Studio",
+            "game_poster": "../../assets/images/games/logos/sunkenland.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "0.7.08",
+            "size": "3.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/sunkenland.torrent",
+            "platform": "pc",
+            "mediaPrefix": "sunkenland",
+            "mediaCount": 12
         }
     ]
 }
