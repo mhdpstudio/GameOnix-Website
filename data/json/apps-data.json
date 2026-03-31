@@ -61,6 +61,25 @@
         "https://www.gameonix.shop/assets/images/apps/ubisoft.png"
       ],
       "content": "Ubisoft Connect is your gateway to the world of Ubisoft gaming. This digital distribution platform offers a seamless experience for purchasing, downloading, and playing Ubisoft titles on your PC. With a vast library of games, exclusive rewards, and social features, Ubisoft Connect keeps you connected to your gaming community while providing easy access to your favorite franchises. Stay updated with the latest releases, manage your game library, and enjoy a personalized gaming experience with Ubisoft Connect."
+    },
+    {
+      "slug": "uplay",
+      "title": "Uplay",
+      "category": "Gaming Platform",
+      "categoryIcon": "sports_esports",
+      "description": "Uplay is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games.",
+      "publisher": "Ubisoft",
+      "version": "3.0.0.0",
+      "size": "60.4 MB",
+      "appType": "Desktop Application",
+      "ap": "fa-desktop",
+      "appTypeIcon": "fa-windows",
+      "app_poster": "../../assets/images/apps/uplay-logo.webp",
+      "appLink": "https://github.com/mhdpstudio/UB-Connection/releases/download/Uplay/UplayInstaller.exe",
+      "media": [
+        "../../assets/images/apps/uplay-1.png"
+      ],
+      "content": "Uplay is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games."
     }
   ]
 }

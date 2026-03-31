@@ -38,6 +38,19 @@
       "appTypeIcon": "desktop_windows",
       "appLink": "#",
       "previewImage": "../../assets/images/apps/ubisoft-logo.png"
+    },
+    {
+      "slug": "uplay",
+      "title": "Uplay",
+      "category": "Gaming Platform",
+      "categoryIcon": "gamepad",
+      "ITEAM": "gaming-platform",
+      "description": "Uplay is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games.",
+      "version": "3.0.0.0",
+      "size": "60.4 MB",
+      "appTypeIcon": "desktop_windows",
+      "appLink": "#",
+      "previewImage": "../../assets/images/apps/uplay-logo.webp"
     }
   ]
 }
