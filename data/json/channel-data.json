@@ -20,5 +20,16 @@
     "likes": 0,
     "duration": 362,
     "date": "2026-03-26T00:09:00"
+  },
+  {
+    "slug": "setup-tutorial",
+    "tapTitle": "Setup Tutorial",
+    "title": "GameOnix شرح كيفية تسطيب الالعاب | Setup Tutorial",
+    "videoUrl": "../../assets/videos/webp/how-to-setup-games.webm",
+    "thumbnail": "../../assets/videos/pics/webp/setup-guide.webp",
+    "views": 0,
+    "likes": 0,
+    "duration": 414,
+    "date": "2026-03-31T21:55:00"
   }
 ]
