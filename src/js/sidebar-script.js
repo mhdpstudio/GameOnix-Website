@@ -136,3 +136,48 @@ if (modeBtn && modeMenu && modeText) {
 
 // ================= Default Sidebar State =================
 if (window.innerWidth > 768 && sb) sb.classList.add("closed");
+
+async function fetchWithFallback(paths) {
+    for (const path of paths) {
+        try {
+            const res = await fetch(path);
+
+            if (res.ok) {
+                return await res.json();
+            }
+        } catch (e) {
+            // تجاهل وجرّب اللي بعده
+        }
+    }
+    throw new Error("All paths failed");
+}
+
+async function checkNewVideos() {
+    try {
+        const videos = await fetchWithFallback([
+            "../data/json/channel-data.json",
+            "../../data/json/channel-data.json"
+        ]);
+
+        const now = new Date();
+
+        const hasNew = videos.some(video => {
+            const videoDate = new Date(video.date);
+            const diffDays = (now - videoDate) / (1000 * 60 * 60 * 24);
+            return diffDays <= 6;
+        });
+
+        const dot = document.getElementById("channelDot");
+
+        if (hasNew) {
+            dot.style.display = "inline-block";
+        } else {
+            dot.style.display = "none";
+        }
+
+    } catch (err) {
+        console.error("Error checking new videos:", err);
+    }
+}
+
+checkNewVideos();

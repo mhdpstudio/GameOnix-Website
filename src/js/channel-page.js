@@ -30,7 +30,7 @@ function timeAgo(dateString) {
     for (let unit of units) {
         const amount = Math.floor(diff / unit.value);
         if (amount >= 1) {
-            return `Just ${amount} ${unit.name}${amount > 1 ? "" : ""}`;
+            return `Just ${amount} ${unit.name}${amount > 1 ? "s" : ""} ago`;
         }
     }
     return "Just now";
@@ -50,12 +50,12 @@ async function loadChannelVideos() {
     try {
         // Show small loading in stats
         const watchEl = document.getElementById('watch');
-        const likesEl = document.getElementById('likes'); 
+        const likesEl = document.getElementById('likes');
         const videosEl = document.getElementById('videos');
         [watchEl, likesEl, videosEl].forEach(el => {
             el.innerHTML = '<span class="small-stat-loader"></span>';
         });
-        
+
         const res = await fetch("../../data/json/channel-data.json");
         const data = await res.json();
 
@@ -65,6 +65,9 @@ async function loadChannelVideos() {
         let totalViews = 0;
         let totalLikes = 0;
         let loadedCount = 0;
+
+        // 🔥 ترتيب الفيديوهات من الجديد للأقدم
+        data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
         for (const video of data) {
 
@@ -117,7 +120,7 @@ async function loadChannelVideos() {
         document.getElementById("watch").textContent = totalViews;
         document.getElementById("likes").textContent = totalLikes;
         document.getElementById("videos").textContent = data.length;
-        
+
         // Ensure meta text is visible
         document.getElementById("watch").style.visibility = 'visible';
         document.getElementById("likes").style.visibility = 'visible';
