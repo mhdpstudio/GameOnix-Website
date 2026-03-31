@@ -952,6 +952,20 @@
                     "title": "Shadow of the Tomb Raider - 2018",
                     "poster": "../../assets/images/games/posters/shadow-of-the-tomb-raider-2018",
                     "publisher": "Square Enix"
+                },
+                {
+                    "slug": "hitman-codename-47",
+                    "id": 127,
+                    "title": "Hitman: Codename 47",
+                    "poster": "../../assets/images/games/posters/hitman-codename-47",
+                    "publisher": "IO Interactive"
+                },
+                {
+                    "slug": "hitman-2",
+                    "id": 128,
+                    "title": "Hitman 2: Silent Assassin",
+                    "poster": "../../assets/images/games/posters/hitman-2",
+                    "publisher": "IO Interactive"
                 }
             ]
         },
@@ -1510,6 +1524,20 @@
                     "title": "Guilty Gear Lsuka",
                     "poster": "../../assets/images/games/posters/guilty-gear-lsuka",
                     "publisher": "Arc System"
+                },
+                {
+                    "slug": "hitman-codename-47",
+                    "id": 15,
+                    "title": "Hitman: Codename 47",
+                    "poster": "../../assets/images/games/posters/hitman-codename-47",
+                    "publisher": "IO Interactive"
+                },
+                {
+                    "slug": "hitman-2",
+                    "id": 16,
+                    "title": "Hitman 2: Silent Assassin",
+                    "poster": "../../assets/images/games/posters/hitman-2",
+                    "publisher": "IO Interactive"
                 }
             ]
         }
@@ -1523,14 +1551,14 @@
                     "slug": "god-of-war-3-ps3",
                     "id": 1,
                     "title": "God of War 3",
-                    "poster": "https://gameonix.shop/assets/images/games/ps/posters/god-of-war-3",
+                    "poster": "../../assets/images/games/ps/posters/god-of-war-3",
                     "publisher": "Santa Monica Studio"
                 },
                 {
                     "slug": "minecraft-ps3",
                     "id": 2,
                     "title": "Minecraft",
-                    "poster": "https://gameonix.shop/assets/images/games/ps/posters/minecraft",
+                    "poster": "../../assets/images/games/ps/posters/minecraft",
                     "publisher": "Mojang Studios"
                 }
             ]

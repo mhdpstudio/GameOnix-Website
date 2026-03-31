@@ -893,7 +893,7 @@
                 {
                     "slug": "cod-mw-1",
                     "id": 118,
-                    "title": "Call of Duty: Modern Warfare 2019",
+                    "title": "Call of Duty: Modern Warfare - 2019",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-1",
                     "publisher": "Activision"
                 },
@@ -931,6 +931,41 @@
                     "title": "Call of Duty: Modern Warfare 3 - 2023",
                     "poster": "https://gameonix.shop/assets/images/games/posters/cof-mw-3-2023",
                     "publisher": "Activision"
+                },
+                {
+                    "slug": "tomb-raider-2013",
+                    "id": 124,
+                    "title": "Tomb Raider - 2013",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/tomb-raider-2013",
+                    "publisher": "Square Enix"
+                },
+                {
+                    "slug": "rise-of-the-tomb-raider-2015",
+                    "id": 125,
+                    "title": "Rise of the Tomb Raider - 2015",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/rise-of-the-tomb-raider-2015",
+                    "publisher": "Square Enix"
+                },
+                {
+                    "slug": "shadow-of-the-tomb-raider-2018",
+                    "id": 126,
+                    "title": "Shadow of the Tomb Raider - 2018",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/shadow-of-the-tomb-raider-2018",
+                    "publisher": "Square Enix"
+                },
+                {
+                    "slug": "hitman-codename-47",
+                    "id": 127,
+                    "title": "Hitman: Codename 47",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hitman-codename-47",
+                    "publisher": "IO Interactive"
+                },
+                {
+                    "slug": "hitman-2",
+                    "id": 128,
+                    "title": "Hitman 2: Silent Assassin",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hitman-2",
+                    "publisher": "IO Interactive"
                 }
             ]
         },
@@ -1273,11 +1308,44 @@
             "icon": "fa-compass",
             "games": [
                 {
-                    "slug": "detroit",
+                    "slug": "among-us",
                     "id": 1,
+                    "title": "Among Us",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/among-us",
+                    "publisher": "Innersloth"
+                },
+                {
+                    "slug": "detroit",
+                    "id": 2,
                     "title": "Detroit: Become Human",
                     "poster": "https://gameonix.shop/assets/images/games/posters/detroit",
                     "publisher": "Quantic Dream"
+                }
+            ]
+        },
+        "Survival": {
+            "icon": "fa-tree",
+            "games": [
+                {
+                    "slug": "sunkenland",
+                    "id": 1,
+                    "title": "Sunkenland",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/sunkenland",
+                    "publisher": "Vector3 Studio"
+                },
+                {
+                    "slug": "ark",
+                    "id": 2,
+                    "title": "ARK: Survival Evolved",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ark",
+                    "publisher": "Studio Wildcard"
+                },
+                {
+                    "slug": "minecraft-bedrock",
+                    "id": 3,
+                    "title": "Minecraft: Bedrock Edition",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/minecraft-bedrock",
+                    "publisher": "Mojang Studios"
                 }
             ]
         },
@@ -1456,6 +1524,20 @@
                     "title": "Guilty Gear Lsuka",
                     "poster": "https://gameonix.shop/assets/images/games/posters/guilty-gear-lsuka",
                     "publisher": "Arc System"
+                },
+                {
+                    "slug": "hitman-codename-47",
+                    "id": 15,
+                    "title": "Hitman: Codename 47",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hitman-codename-47",
+                    "publisher": "IO Interactive"
+                },
+                {
+                    "slug": "hitman-2",
+                    "id": 16,
+                    "title": "Hitman 2: Silent Assassin",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hitman-2",
+                    "publisher": "IO Interactive"
                 }
             ]
         }

@@ -2880,6 +2880,36 @@
             "platform": "pc",
             "mediaPrefix": "minecraft-bedrock",
             "mediaCount": 9
+        },
+        {
+            "slug": "hitman-codename-47",
+            "title": "Hitman: Codename 47",
+            "publisher": "IO Interactive",
+            "game_poster": "../../assets/images/games/logos/hitman-codename-47.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.3.0.0",
+            "size": "244.1 MB",
+            "ico": "windows",
+            "gameLink": "https://github.com/mhdpstudio/Games/releases/download/Hitman-1/hitman.zip",
+            "platform": "pc",
+            "mediaPrefix": "hitman-codename-47",
+            "mediaCount": 5
+        },
+        {
+            "slug": "hitman-2",
+            "title": "Hitman 2: Silent Assassin",
+            "publisher": "IO Interactive",
+            "game_poster": "../../assets/images/games/logos/hitman-2.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.0",
+            "size": "513.1 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/hitman-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "hitman-2",
+            "mediaCount": 9
         }
     ]
 }
