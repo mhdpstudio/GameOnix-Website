@@ -1320,6 +1320,13 @@
                     "title": "Detroit: Become Human",
                     "poster": "../../assets/images/games/posters/detroit",
                     "publisher": "Quantic Dream"
+                },
+                {
+                    "slug": "crimson-desert",
+                    "id": 3,
+                    "title": "Crimson Desert",
+                    "poster": "../../assets/images/games/posters/crimson-desert",
+                    "publisher": "Pearl Abyss"
                 }
             ]
         },

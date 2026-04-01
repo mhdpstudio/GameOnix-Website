@@ -2910,6 +2910,21 @@
             "platform": "pc",
             "mediaPrefix": "hitman-2",
             "mediaCount": 9
+        },
+        {
+            "slug": "crimson-desert",
+            "title": "Crimson Desert",
+            "publisher": "Pearl Abyss",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/crimson-desert.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.00.02.0",
+            "size": "66.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/crimson-desert.torrent",
+            "platform": "pc",
+            "mediaPrefix": "crimson-desert",
+            "mediaCount": 14
         }
     ]
 }
