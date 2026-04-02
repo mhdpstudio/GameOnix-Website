@@ -301,7 +301,6 @@ body:not(.dark-theme) .game-card .game {
     inset: 1px;
     border-radius: inherit;
 
-    /* لون داخلي أغمق عشان يبرز النص */
     background: rgba(12, 12, 18, 0.25);
 
     z-index: -1;
