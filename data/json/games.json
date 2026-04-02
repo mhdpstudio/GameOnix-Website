@@ -987,6 +987,13 @@
                     "title": "Spider-Man: Shattered Dimensions",
                     "poster": "../../assets/images/games/posters/spider-man-shattered-dimensions",
                     "publisher": "Beenox"
+                },
+                {
+                    "slug": "broken-arrow",
+                    "id": 132,
+                    "title": "Broken Arrow",
+                    "poster": "../../assets/images/games/posters/broken-arrow",
+                    "publisher": "Steel Balalaika Studio"
                 }
             ]
         },

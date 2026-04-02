@@ -3030,6 +3030,21 @@
             "platform": "pc",
             "mediaPrefix": "the-sims-4",
             "mediaCount": 8
+        },
+        {
+            "slug": "broken-arrow",
+            "title": "Broken Arrow",
+            "publisher": "Steel Balalaika Studio",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/broken-arrow.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.6.p",
+            "size": "18.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/broken-arrow.torrent",
+            "platform": "pc",
+            "mediaPrefix": "broken-arrow",
+            "mediaCount": 8
         }
     ]
 }
