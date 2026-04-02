@@ -21,6 +21,10 @@
     transition: 0.3s ease;
 }
 
+.search-icon span{
+    color: var(--filter-text);
+}
+
 /* ====== Input ====== */
 .searchBox,
 #searchBox {
