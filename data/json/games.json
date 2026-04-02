@@ -1103,6 +1103,13 @@
                     "title": "Need For Speed: Undercover",
                     "poster": "../../assets/images/games/posters/nfs-undercover",
                     "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "assetto-corsa-competizione",
+                    "id": 16,
+                    "title": "Assetto Corsa Competizione",
+                    "poster": "../../assets/images/games/posters/assetto-c",
+                    "publisher": "Kunos Simulazioni"
                 }
             ]
         },

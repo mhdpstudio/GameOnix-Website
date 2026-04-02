@@ -2985,6 +2985,21 @@
             "platform": "pc",
             "mediaPrefix": "spider-man-shattered-dimensions",
             "mediaCount": 7
+        },
+        {
+            "slug": "assetto-corsa-competizione",
+            "title": "Assetto Corsa Competizione",
+            "publisher": "Kunos Simulazioni",
+            "game_poster": "../../assets/images/games/logos/assetto-c.webp",
+            "gameType": "Racing",
+            "gameTypeIcon": "fa-flag-checkered",
+            "version": "1.8.12.0",
+            "size": "7.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/assetto-c.torrent",
+            "platform": "pc",
+            "mediaPrefix": "assetto-corsa-competizione",
+            "mediaCount": 11
         }
     ]
 }
