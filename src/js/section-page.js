@@ -2,11 +2,23 @@ import { initGameSearch } from "./search-script.js";
 
 const params = new URLSearchParams(window.location.search);
 const sectionName = params.get("section");
-const sectionLabel = document.getElementById("section-text");
 const WebsiteName = "GameOnix";
 
 
-// --- Lazy Load Images (NEW) ---
+// --- NEW: check if game is recent (36h) ---
+function isNewGame(gameDate) {
+    if (!gameDate) return false;
+
+    const gameTime = new Date(gameDate).getTime();
+    const now = Date.now();
+
+    const diffHours = (now - gameTime) / (1000 * 60 * 60);
+
+    return diffHours <= 36;
+}
+
+
+// --- Lazy Load Images (UNCHANGED) ---
 function lazyLoadImages(root = document) {
     const imgs = root.querySelectorAll('img[data-src]:not([data-observed])');
 
@@ -15,7 +27,6 @@ function lazyLoadImages(root = document) {
             if (entry.isIntersecting) {
                 const img = entry.target;
 
-                // preload
                 const temp = new Image();
                 temp.src = img.dataset.src;
 
@@ -43,7 +54,7 @@ function lazyLoadImages(root = document) {
 }
 
 
-// دالة العرض
+// --- RENDER GAMES (UPDATED) ---
 function renderInitialGames(games, containerId) {
     const container = document.getElementById(containerId);
 
@@ -62,8 +73,13 @@ function renderInitialGames(games, containerId) {
         div.dataset.slug = game.slug;
         div.style.cursor = "pointer";
 
+        const isNew = isNewGame(game.date);
+
         div.innerHTML = `
-            <div class="game-details">
+            <div class="game-details" style="position: relative;">
+                
+                ${isNew ? `<div class="badge-new">New</div>` : ""}
+
                 <img 
                     src="https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg"
                     data-src="${game.poster ? game.poster + ".webp" : 'https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg'}"
@@ -88,6 +104,8 @@ function renderInitialGames(games, containerId) {
         });
     });
 
+    // re-init lazy load after render
+    lazyLoadImages(container);
 }
 
 
@@ -126,6 +144,7 @@ async function loadSectionGames() {
 
         document.title = `${WebsiteName} | ${sectionName} | ${displayType}`;
         window.titleBarPageName = `${sectionName} | ${displayType}`;
+
         if (window.renderTitleBar) {
             window.renderTitleBar();
         }

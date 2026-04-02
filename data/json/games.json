@@ -972,28 +972,32 @@
                     "id": 129,
                     "title": "Black Myth: Wukong",
                     "poster": "../../assets/images/games/posters/black-m-w",
-                    "publisher": "Game Science"
+                    "publisher": "Game Science",
+                    "date": "2026-04-02T21:54:00Z"
                 },
                 {
                     "slug": "duke-nukem-forever",
                     "id": 130,
                     "title": "Duke Nukem Forever",
                     "poster": "../../assets/images/games/posters/duke-nukem-forever",
-                    "publisher": "Gearbox Software"
+                    "publisher": "Gearbox Software",
+                    "date": "2026-04-02T21:54:00Z"
                 },
                 {
                     "slug": "spider-man-shattered-dimensions",
                     "id": 131,
                     "title": "Spider-Man: Shattered Dimensions",
                     "poster": "../../assets/images/games/posters/spider-man-shattered-dimensions",
-                    "publisher": "Beenox"
+                    "publisher": "Beenox",
+                    "date": "2026-04-02T21:54:00Z"
                 },
                 {
                     "slug": "broken-arrow",
                     "id": 132,
                     "title": "Broken Arrow",
                     "poster": "../../assets/images/games/posters/broken-arrow",
-                    "publisher": "Steel Balalaika Studio"
+                    "publisher": "Steel Balalaika Studio",
+                    "date": "2026-04-02T21:54:00Z"
                 }
             ]
         },
@@ -1116,7 +1120,8 @@
                     "id": 16,
                     "title": "Assetto Corsa Competizione",
                     "poster": "../../assets/images/games/posters/assetto-c",
-                    "publisher": "Kunos Simulazioni"
+                    "publisher": "Kunos Simulazioni",
+                    "date": "2026-04-01T16:54:00Z"
                 }
             ]
         },
@@ -1342,7 +1347,8 @@
                     "id": 13,
                     "title": "Microsoft Flight Simulator",
                     "poster": "../../assets/images/games/posters/microsoft-flight-sim",
-                    "publisher": "Microsoft"
+                    "publisher": "Microsoft",
+                    "date": "2026-04-01T16:54:00Z"
                 },
                 {
                     "id": "",
@@ -1355,7 +1361,8 @@
                     "id": 14,
                     "title": "The Sims 4",
                     "poster": "../../assets/images/games/posters/the-sims-4",
-                    "publisher": "Electronic Arts"
+                    "publisher": "Electronic Arts",
+                    "date": "2026-04-01T16:54:00Z"
                 }
             ]
         },
@@ -1381,14 +1388,16 @@
                     "id": 3,
                     "title": "Crimson Desert",
                     "poster": "../../assets/images/games/posters/crimson-desert",
-                    "publisher": "Pearl Abyss"
+                    "publisher": "Pearl Abyss",
+                    "date": "2026-04-01T16:54:00Z"
                 },
                 {
                     "slug": "clair-obscur-expedition-33",
                     "id": 4,
                     "title": "Clair Obscur Expedition 33",
                     "poster": "../../assets/images/games/posters/clair-obscur-expedition-33",
-                    "publisher": "Sandfall Interactive"
+                    "publisher": "Sandfall Interactive",
+                    "date": "2026-04-01T16:54:00Z"
                 }
             ]
         },

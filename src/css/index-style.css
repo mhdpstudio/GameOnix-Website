@@ -46,7 +46,6 @@
     align-items: center;
 }
 
-
 .sec-style {
     display: flex;
     align-items: center;
@@ -132,14 +131,17 @@ i.fa-solid.fa-fire {
 }
 
 .section-container {
-    position: relative; /* مهم عشان الأزرار تكون absolute داخله */
+    position: relative;
+    /* مهم عشان الأزرار تكون absolute داخله */
 }
 
 .section-controls {
     position: absolute;
-    top: 50%; /* نص ارتفاع الـ section */
+    top: 50%;
+    /* نص ارتفاع الـ section */
     transform: translateY(-50%);
-    right: 0;  /* الجهة اليمنى داخل الـ section */
+    right: 0;
+    /* الجهة اليمنى داخل الـ section */
     display: flex;
     gap: 5px;
     z-index: 10;
@@ -168,7 +170,7 @@ i.fa-solid.fa-fire {
 
 /* --- للشاشات المتوسطة والصغيرة (Max 1024px) --- */
 @media (max-width: 1024px) {
-    .menu-toggle{
+    .menu-toggle {
         display: none;
     }
 

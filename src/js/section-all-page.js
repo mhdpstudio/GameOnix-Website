@@ -1,6 +1,17 @@
 const container = document.getElementById("games-container");
 const WebsiteName = "GameOnix";
 
+function isNewGame(gameDate) {
+    if (!gameDate) return false;
+
+    const gameTime = new Date(gameDate).getTime();
+    const now = Date.now();
+
+    const diffHours = (now - gameTime) / (1000 * 60 * 60);
+
+    return diffHours <= 36;
+}
+
 // --- 1. تحسين موضع أزرار التحكم (Responsive Controls) ---
 function updateControlsPosition() {
     const sidebar = document.querySelector('.sb');
@@ -83,19 +94,26 @@ async function init() {
                 <i class="fa-solid fa-chevron-right scroll-btn right"></i>
             </div>
             <div class="section">
-                ${homeGames.map(game => `
-                    <div class="game-card" data-slug="${game.slug}">
-                        <div class="game-details">
-                            <img 
-                                src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
-                                alt="${game.title}"
-                                onerror="this.src='../assets/images/game.jpg'"
-                            >
-                            <div class="publisher">${game.publisher || WebsiteName}</div>
-                            <div class="title">${game.title}</div>
-                        </div>
-                    </div>
-                `).join('')}
+                ${homeGames.map(game => {
+                const isNew = isNewGame(game.date);
+
+                return `
+        <div class="game-card" data-slug="${game.slug}">
+            <div class="game-details" style="position: relative;">
+
+                ${isNew ? `<div class="badge-new">New</div>` : ""}
+
+                <img 
+                    src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
+                    alt="${game.title}"
+                    onerror="this.src='../assets/images/game.jpg'"
+                >
+                <div class="publisher">${game.publisher || WebsiteName}</div>
+                <div class="title">${game.title}</div>
+            </div>
+        </div>
+    `;
+            }).join('')}
 
                 ${maxHomeIndex !== -1 ? `
                     <div class="game-card more-games" style="cursor:pointer;">

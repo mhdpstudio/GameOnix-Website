@@ -4,6 +4,18 @@ const WebsiteName = "GameOnix";
 let allGamesData = null;
 let currentFilter = 'all';
 
+// --- NEW BADGE LOGIC (36 HOURS) ---
+function isNewGame(gameDate) {
+    if (!gameDate) return false;
+
+    const gameTime = new Date(gameDate).getTime();
+    const now = Date.now();
+
+    const diffHours = (now - gameTime) / (1000 * 60 * 60);
+
+    return diffHours <= 36;
+}
+
 // --- 1. تحسين موضع أزرار التحكم ---
 function updateControlsPosition() {
     const sidebar = document.querySelector('.sb');
@@ -107,19 +119,26 @@ function renderSections(filterType = 'all') {
                 </div>
 
                 <div class="section">
-                    ${homeGames.map(game => `
-                        <div class="game-card" data-slug="${game.slug}">
-                            <div class="game-details">
-                                <img 
-                                    src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
-                                    alt="${game.title}"
-                                    onerror="this.src='../assets/images/game.jpg'"
-                                >
-                                <div class="publisher">${game.publisher || WebsiteName}</div>
-                                <div class="title">${game.title}</div>
+                    ${homeGames.map(game => {
+                        const isNew = isNewGame(game.date);
+
+                        return `
+                            <div class="game-card" data-slug="${game.slug}">
+                                <div class="game-details">
+
+                                    ${isNew ? `<div class="badge-new">New</div>` : ""}
+
+                                    <img 
+                                        src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
+                                        alt="${game.title}"
+                                        onerror="this.src='../assets/images/game.jpg'"
+                                    >
+                                    <div class="publisher">${game.publisher || WebsiteName}</div>
+                                    <div class="title">${game.title}</div>
+                                </div>
                             </div>
-                        </div>
-                    `).join('')}
+                        `;
+                    }).join('')}
 
                     ${maxHomeIndex !== -1 ? `
                         <div class="game-card more-games">

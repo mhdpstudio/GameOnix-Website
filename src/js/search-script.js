@@ -7,12 +7,23 @@ export function initGameSearch({
     const container = document.getElementById(containerId);
     const searchBox = document.getElementById(searchInputId);
 
-    // دالة استخراج الألعاب المحسنة جداً
-    // دالة استخراج الألعاب (تدعم JSON كامل أو Array سيكشن)
+    // --- NEW: check if game is recent (36h) ---
+    function isNewGame(gameDate) {
+        if (!gameDate) return false;
+
+        const gameTime = new Date(gameDate).getTime();
+        const now = Date.now();
+
+        const diffHours = (now - gameTime) / (1000 * 60 * 60);
+
+        return diffHours <= 36;
+    }
+
+
+    // --- استخراج الألعاب ---
     function extractAllGames(data) {
         if (!data) return [];
 
-        // لو وصل Array مباشر (مثل صفحة Section)
         if (Array.isArray(data)) {
             return data.filter(g => g.title && g.title !== "More Games");
         }
@@ -43,13 +54,14 @@ export function initGameSearch({
         return uniqueGames.filter(g => g.title && g.title !== "More Games");
     }
 
+
     const sortedGames = extractAllGames(allGamesData).sort((a, b) =>
         a.title.localeCompare(b.title)
     );
 
     console.log("✅ Final Games List Created:", sortedGames.length, "games found.");
 
-    // منطق الـ URL والبحث
+
     const urlParams = new URLSearchParams(window.location.search);
     const initialQuery = urlParams.get('q') || "";
 
@@ -60,18 +72,25 @@ export function initGameSearch({
         render(sortedGames);
     }
 
+
     function performSearch(keyword) {
         const cleanKeyword = keyword.toLowerCase().trim();
+
         const filtered = sortedGames.filter(game =>
             game.title.toLowerCase().includes(cleanKeyword) ||
             (game.publisher && game.publisher.toLowerCase().includes(cleanKeyword))
         );
+
         render(filtered, cleanKeyword);
     }
 
+
     if (searchBox) {
-        searchBox.addEventListener("input", (e) => performSearch(e.target.value));
+        searchBox.addEventListener("input", (e) =>
+            performSearch(e.target.value)
+        );
     }
+
 
     function render(list, query = "") {
         if (!container) return;
@@ -80,23 +99,35 @@ export function initGameSearch({
             container.innerHTML = `
                 <div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 50px;">
                     <i class="fa-solid fa-face-frown fa-3x" style="color: #695CFE;"></i>
-                    <p style="margin-top: 20px; font-size: 1.2rem;">No games found matching "<strong>${query}</strong>".</p>
+                    <p style="margin-top: 20px; font-size: 1.2rem;">
+                        No games found matching "<strong>${query}</strong>".
+                    </p>
                     <p style="opacity: 0.7;">Check spelling or try common names like 'GTA' or 'FIFA'.</p>
                 </div>`;
             return;
         }
 
-        container.innerHTML = list.map(game => `
-            <div class="game-card" data-slug="${game.slug}">
-                <div class="game-details">
-                    <img src="${game.poster ? game.poster + ".webp" : '../../assets/images/game.jpg'}" 
-                         alt="${game.title}" 
-                         onerror="this.src='../../assets/images/game.jpg'">
-                    <div class="publisher">${game.publisher || websiteName}</div>
-                    <div class="title">${game.title}</div>
+        container.innerHTML = list.map(game => {
+            const isNew = isNewGame(game.date);
+
+            return `
+                <div class="game-card" data-slug="${game.slug}">
+                    <div class="game-details" style="position: relative;">
+
+                        ${isNew ? `<div class="badge-new">New</div>` : ""}
+
+                        <img 
+                            src="${game.poster ? game.poster + ".webp" : '../../assets/images/game.jpg'}" 
+                            alt="${game.title}" 
+                            onerror="this.src='../../assets/images/game.jpg'"
+                        >
+
+                        <div class="publisher">${game.publisher || websiteName}</div>
+                        <div class="title">${game.title}</div>
+                    </div>
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
 
         container.querySelectorAll(".game-card").forEach(card => {
             card.addEventListener("click", () => {
