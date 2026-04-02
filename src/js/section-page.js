@@ -25,7 +25,7 @@ function lazyLoadImages(root = document) {
                 };
 
                 temp.onerror = () => {
-                    img.src = '../../assets/images/game.jpg';
+                    img.src = 'https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg';
                 };
 
                 img.removeAttribute('data-src');
@@ -65,10 +65,10 @@ function renderInitialGames(games, containerId) {
         div.innerHTML = `
             <div class="game-details">
                 <img 
-                    src="../../assets/images/game.jpg"
-                    data-src="${game.poster ? game.poster + ".webp" : '../../assets/images/game.jpg'}"
+                    src="https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg"
+                    data-src="${game.poster ? game.poster + ".webp" : 'https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg'}"
                     alt="${game.title}"
-                    onerror="this.src='../../assets/images/game.jpg'"
+                    onerror="this.src='https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/assets/images/game.jpg'"
                 >
                 <div class="publisher">${game.publisher || WebsiteName}</div>
                 <div class="title">${game.title}</div>

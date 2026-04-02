@@ -966,6 +966,13 @@
                     "title": "Hitman 2: Silent Assassin",
                     "poster": "../../assets/images/games/posters/hitman-2",
                     "publisher": "IO Interactive"
+                },
+                {
+                    "slug": "black-myth-Wukong",
+                    "id": 129,
+                    "title": "Black Myth: Wukong",
+                    "poster": "../../assets/images/games/posters/black-m-w",
+                    "publisher": "Game Science"
                 }
             ]
         },
