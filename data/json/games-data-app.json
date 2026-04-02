@@ -2970,6 +2970,21 @@
             "platform": "pc",
             "mediaPrefix": "duke-nukem-forever",
             "mediaCount": 6
+        },
+        {
+            "slug": "spider-man-shattered-dimensions",
+            "title": "Spider-Man: Shattered Dimensions",
+            "publisher": "Beenox",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/spider-man-shattered-dimensions.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.3.2.0",
+            "size": "7.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/spider-man-shattered-dimensions.torrent",
+            "platform": "pc",
+            "mediaPrefix": "spider-man-shattered-dimensions",
+            "mediaCount": 7
         }
     ]
 }

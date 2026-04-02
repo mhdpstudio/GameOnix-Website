@@ -980,6 +980,13 @@
                     "title": "Duke Nukem Forever",
                     "poster": "../../assets/images/games/posters/duke-nukem-forever",
                     "publisher": "Gearbox Software"
+                },
+                {
+                    "slug": "spider-man-shattered-dimensions",
+                    "id": 131,
+                    "title": "Spider-Man: Shattered Dimensions",
+                    "poster": "../../assets/images/games/posters/spider-man-shattered-dimensions",
+                    "publisher": "Beenox"
                 }
             ]
         },
