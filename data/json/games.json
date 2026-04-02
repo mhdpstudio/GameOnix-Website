@@ -1301,6 +1301,13 @@
                     "title": "inZOI",
                     "poster": "../../assets/images/games/posters/inzoi",
                     "publisher": "Krafton"
+                },
+                {
+                    "slug": "microsoft-flight-simulator",
+                    "id": 13,
+                    "title": "Microsoft Flight Simulator",
+                    "poster": "../../assets/images/games/posters/microsoft-flight-sim",
+                    "publisher": "Microsoft"
                 }
             ]
         },

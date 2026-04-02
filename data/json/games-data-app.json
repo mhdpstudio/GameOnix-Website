@@ -2925,6 +2925,21 @@
             "platform": "pc",
             "mediaPrefix": "crimson-desert",
             "mediaCount": 14
+        },
+        {
+            "slug": "microsoft-flight-simulator",
+            "title": "Microsoft Flight Simulator",
+            "publisher": "Microsoft",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/microsoft-flight-sim.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "1.40.0.0",
+            "size": "68.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/microsoft-flight-sim.torrent",
+            "platform": "pc",
+            "mediaPrefix": "mfs",
+            "mediaCount": 14
         }
     ]
 }
