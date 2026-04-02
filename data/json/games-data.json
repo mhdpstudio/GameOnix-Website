@@ -2955,6 +2955,21 @@
             "platform": "pc",
             "mediaPrefix": "black-myth-wukong",
             "mediaCount": 7
+        },
+        {
+            "slug": "duke-nukem-forever",
+            "title": "Duke Nukem Forever",
+            "publisher": "Gearbox Software",
+            "game_poster": "../../assets/images/games/logos/duke-nukem-forever.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.0",
+            "size": "4.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/duke-nukem-forever.torrent",
+            "platform": "pc",
+            "mediaPrefix": "duke-nukem-forever",
+            "mediaCount": 6
         }
     ]
 }

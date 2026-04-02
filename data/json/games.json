@@ -973,6 +973,13 @@
                     "title": "Black Myth: Wukong",
                     "poster": "../../assets/images/games/posters/black-m-w",
                     "publisher": "Game Science"
+                },
+                {
+                    "slug": "duke-nukem-forever",
+                    "id": 130,
+                    "title": "Duke Nukem Forever",
+                    "poster": "../../assets/images/games/posters/duke-nukem-forever",
+                    "publisher": "Gearbox Software"
                 }
             ]
         },
