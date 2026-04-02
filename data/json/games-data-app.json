@@ -3000,6 +3000,21 @@
             "platform": "pc",
             "mediaPrefix": "assetto-corsa-competizione",
             "mediaCount": 11
+        },
+        {
+            "slug": "clair-obscur-expedition-33",
+            "title": "Clair Obscur Expedition 33",
+            "publisher": "Sandfall Interactive",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/clair-obscur-expedition-33.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "56180.0.0.0",
+            "size": "36.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/clair-obscur-expedition-33.torrent",
+            "platform": "pc",
+            "mediaPrefix": "clair-obscur-expedition-33",
+            "mediaCount": 13
         }
     ]
 }

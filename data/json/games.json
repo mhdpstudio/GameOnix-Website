@@ -1362,6 +1362,13 @@
                     "title": "Crimson Desert",
                     "poster": "../../assets/images/games/posters/crimson-desert",
                     "publisher": "Pearl Abyss"
+                },
+                {
+                    "slug": "clair-obscur-expedition-33",
+                    "id": 4,
+                    "title": "Clair Obscur Expedition 33",
+                    "poster": "../../assets/images/games/posters/clair-obscur-expedition-33",
+                    "publisher": "Sandfall Interactive"
                 }
             ]
         },
