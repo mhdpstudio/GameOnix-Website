@@ -994,6 +994,13 @@
                     "title": "Broken Arrow",
                     "poster": "https://gameonix.shop/assets/images/games/posters/broken-arrow",
                     "publisher": "Steel Balalaika Studio"
+                },
+                {
+                    "slug": "the-matrix-path-of-neo",
+                    "id": 133,
+                    "title": "The Matrix: Path of Neo",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-matrix-path-of-neo",
+                    "publisher": "Shiny Entertainment"
                 }
             ]
         },

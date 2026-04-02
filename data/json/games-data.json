@@ -3045,6 +3045,21 @@
             "platform": "pc",
             "mediaPrefix": "broken-arrow",
             "mediaCount": 8
+        },
+        {
+            "slug": "the-matrix-path-of-neo",
+            "title": "The Matrix: Path of Neo",
+            "publisher": "Warner Bros. Interactive Entertainment",
+            "game_poster": "../../assets/images/games/logos/the-matrix-path-of-neo.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.1.0.0",
+            "size": "2.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-matrix-path-of-neo.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-matrix-path-of-neo",
+            "mediaCount": 4
         }
     ]
 }
