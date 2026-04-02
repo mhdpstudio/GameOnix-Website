@@ -27,6 +27,11 @@
     width: 1800px;
 }
 
+.more-games .title,
+.more-games i {
+    transition: 0.3s ease;
+}
+
 /* input */
 .searchBox,
 #searchBox {

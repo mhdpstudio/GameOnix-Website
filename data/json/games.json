@@ -1336,6 +1336,19 @@
                     "title": "Microsoft Flight Simulator",
                     "poster": "../../assets/images/games/posters/microsoft-flight-sim",
                     "publisher": "Microsoft"
+                },
+                {
+                    "id": "",
+                    "title": "More Games",
+                    "poster": "",
+                    "publisher": ""
+                },
+                {
+                    "slug": "the-sims-4",
+                    "id": 14,
+                    "title": "The Sims 4",
+                    "poster": "../../assets/images/games/posters/the-sims-4",
+                    "publisher": "Electronic Arts"
                 }
             ]
         },

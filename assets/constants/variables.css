@@ -35,6 +35,7 @@
    --color-hover-primary: #695CFE;
    --color-hover-primary-btn: #584ED3;
    --color-hover-primary-btn-profile: #4b4776;
+   --text-clr-shadow: #1F2936;
 
    /* ===== Hover / UI ===== */
    --color-hover-secondary: #e2e2fb;
@@ -150,6 +151,7 @@ body.dark-theme {
    /* ===== Primary القديم */
    --color-hover-primary: #7c6cff;
    --color-hover-primary-btn: #6d5dfc;
+   --text-clr-shadow: #F1F5F9;
 
    /* ===== Cards ===== */
    --card-clr: #1e1e1e;

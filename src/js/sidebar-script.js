@@ -11,18 +11,36 @@ const searchForm = document.querySelector(".search-form");
 const modeBtn = document.getElementById("modeBtn");
 const modeMenu = document.getElementById("modeMenu");
 const modeText = document.getElementById("modeText");
-    const modeIcon = modeBtn?.querySelector(".mode-icon");
+const modeIcon = modeBtn?.querySelector(".mode-icon");
 
+// ================= Sidebar State (NEW FIX) =================
+const savedSidebar = localStorage.getItem("sidebar-state");
+
+// default: desktop open, mobile closed
+const isMobile = window.innerWidth <= 768;
+
+if (sb) {
+    if (savedSidebar === "open") {
+        sb.classList.remove("closed");
+    } else if (savedSidebar === "closed") {
+        sb.classList.add("closed");
+    } else {
+        // first time load
+        if (isMobile) {
+            sb.classList.add("closed");
+        }
+    }
+}
+
+// ================= Theme =================
 const savedTheme = localStorage.getItem("theme");
 const sysPrefersDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
-const shouldUseDarkTheme = savedTheme === "dark" || (!savedTheme && sysPrefersDark);
 
-// ================= Helper =================
+// helper
 const updateThemeIco = () => {
     if (!themeIco) return;
 
     const isDark = document.body.classList.contains("dark-theme");
-
     themeIco.textContent = isDark ? "light_mode" : "dark_mode";
 };
 
@@ -33,60 +51,67 @@ const applyMode = (mode) => {
 
     if (modeText) modeText.textContent = isDark ? "Dark" : "Light";
 
-        if (modeIcon) {
-            modeIcon.textContent = isDark ? "dark_mode" : "light_mode";
-        }
+    if (modeIcon) {
+        modeIcon.textContent = isDark ? "dark_mode" : "light_mode";
+    }
 
     updateThemeIco();
 };
 
-// ================= Init Theme =================
+// init theme
 applyMode(savedTheme || (sysPrefersDark ? "dark" : "light"));
 
-// ================= Sidebar Toggle =================
+// ================= Sidebar Toggle (FIXED) =================
+const toggleSidebar = () => {
+    if (!sb) return;
+
+    sb.classList.toggle("closed");
+
+    // save state
+    localStorage.setItem(
+        "sidebar-state",
+        sb.classList.contains("closed") ? "closed" : "open"
+    );
+};
+
+// desktop toggle buttons
 sbToggleBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        sb?.classList.toggle("closed");
-        updateThemeIco();
-    });
+    btn.addEventListener("click", toggleSidebar);
 });
 
-// ================= Mobile Menu Toggle =================
-menuToggle?.addEventListener("click", () => {
-    sb?.classList.toggle("closed");
-});
+// mobile menu button
+menuToggle?.addEventListener("click", toggleSidebar);
 
 // ================= Close Sidebar when clicking outside (mobile) =================
 document.addEventListener("click", (e) => {
-
     if (
-        window.innerWidth <= 786 &&
+        window.innerWidth <= 768 &&
         sb &&
         !sb.contains(e.target) &&
         !e.target.closest(".menu-toggle")
     ) {
         sb.classList.add("closed");
+        localStorage.setItem("sidebar-state", "closed");
     }
-
 });
 
-// ================= Search Form =================
+// ================= Search =================
 searchForm?.addEventListener("click", () => {
     if (sb?.classList.contains("closed")) {
         sb.classList.remove("closed");
         searchForm.querySelector("input")?.focus();
+
+        localStorage.setItem("sidebar-state", "open");
     }
 });
 
 // ================= Theme Button =================
 themeBtn?.addEventListener("click", () => {
-
     const isDark = document.body.classList.toggle("dark-theme");
 
     localStorage.setItem("theme", isDark ? "dark" : "light");
 
     applyMode(isDark ? "dark" : "light");
-
 });
 
 // ================= Mode Dropdown =================
@@ -96,58 +121,50 @@ if (modeBtn && modeMenu && modeText) {
         e.stopPropagation();
 
         const isOpen = modeMenu.style.display === "block";
-
         modeMenu.style.display = isOpen ? "none" : "block";
 
         modeBtn.classList.toggle("open", !isOpen);
     });
 
     modeMenu.querySelectorAll("li").forEach(item => {
-
         item.addEventListener("click", () => {
-
             const selected = item.dataset.mode;
 
             applyMode(selected);
-
             localStorage.setItem("theme", selected);
 
             modeMenu.style.display = "none";
-
             modeBtn.classList.remove("open");
-
         });
-
     });
 
     document.addEventListener("click", (e) => {
-
         if (!e.target.closest(".mode-dropdown")) {
-
             modeMenu.style.display = "none";
-
             modeBtn.classList.remove("open");
-
         }
-
     });
-
 }
 
 // ================= Default Sidebar State =================
-if (window.innerWidth > 768 && sb) sb.classList.add("closed");
+window.addEventListener("resize", () => {
+    if (!sb) return;
 
+    const isMobileNow = window.innerWidth <= 768;
+
+    // optional smart behavior
+    if (isMobileNow && !sb.classList.contains("closed")) {
+        // keep as user choice (no forced reset)
+    }
+});
+
+// ================= Channel Dot =================
 async function fetchWithFallback(paths) {
     for (const path of paths) {
         try {
             const res = await fetch(path);
-
-            if (res.ok) {
-                return await res.json();
-            }
-        } catch (e) {
-            // تجاهل وجرّب اللي بعده
-        }
+            if (res.ok) return await res.json();
+        } catch (e) {}
     }
     throw new Error("All paths failed");
 }
@@ -169,10 +186,8 @@ async function checkNewVideos() {
 
         const dot = document.getElementById("channelDot");
 
-        if (hasNew) {
-            dot.style.display = "inline-block";
-        } else {
-            dot.style.display = "none";
+        if (dot) {
+            dot.style.display = hasNew ? "inline-block" : "none";
         }
 
     } catch (err) {

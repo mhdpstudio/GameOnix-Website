@@ -3015,6 +3015,21 @@
             "platform": "pc",
             "mediaPrefix": "clair-obscur-expedition-33",
             "mediaCount": 13
+        },
+        {
+            "slug": "the-sims-4",
+            "title": "The Sims 4",
+            "publisher": "Electronic Arts",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-sims-4.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "1.77.131.1030",
+            "size": "29.0 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-sims-4.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-sims-4",
+            "mediaCount": 8
         }
     ]
 }
