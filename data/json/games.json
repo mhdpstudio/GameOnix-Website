@@ -5,106 +5,99 @@
             "icon": "fa-fire",
             "games": [
                 {
-                    "slug": "resident-evil-requiem",
-                    "id": 1,
-                    "title": "Resident Evil Requiem",
-                    "poster": "../../assets/images/games/posters/resident-evil-requiem",
-                    "publisher": "Capcom"
-                },
-                {
                     "slug": "gta-v",
-                    "id": 2,
+                    "id": 1,
                     "title": "Grand Theft Auto V",
                     "poster": "../../assets/images/games/posters/gta5",
                     "publisher": "Rockstar Games"
                 },
                 {
                     "slug": "gta-iv",
-                    "id": 3,
+                    "id": 2,
                     "title": "Grand Theft Auto IV: The Complete Edition",
                     "poster": "../../assets/images/games/posters/gta4",
                     "publisher": "Rockstar Games"
                 },
                 {
                     "slug": "ac-2",
-                    "id": 4,
+                    "id": 3,
                     "title": "Assassin's Creed II",
                     "poster": "../../assets/images/games/posters/ac-2",
                     "publisher": "Ubisoft"
                 },
                 {
                     "slug": "nfs-most-wanted-2012",
-                    "id": 5,
+                    "id": 4,
                     "title": "Need For Speed: Most Wanted 2012",
                     "poster": "../../assets/images/games/posters/nfs-2012",
                     "publisher": "Electronic Arts"
                 },
                 {
                     "slug": "far-cry-3",
-                    "id": 6,
+                    "id": 5,
                     "title": "Far Cry 3",
                     "poster": "../../assets/images/games/posters/fc-3",
                     "publisher": "Ubisoft"
                 },
                 {
                     "slug": "stronghold-crusader-de",
-                    "id": 7,
+                    "id": 6,
                     "title": "Stronghold Crusader DE",
                     "poster": "../../assets/images/games/posters/scde",
                     "publisher": "Firefly Studios"
                 },
                 {
                     "slug": "the-witcher-2",
-                    "id": 8,
+                    "id": 7,
                     "title": "The Witcher 2",
                     "poster": "../../assets/images/games/posters/the-witcher-2",
                     "publisher": "CD Projekt"
                 },
                 {
                     "slug": "ac-odyssey",
-                    "id": 9,
+                    "id": 8,
                     "title": "Assassin's Creed Odyssey",
                     "poster": "../../assets/images/games/posters/ac-odyssey",
                     "publisher": "Ubisoft"
                 },
                 {
                     "slug": "mad-max",
-                    "id": 10,
+                    "id": 9,
                     "title": "Mad Max",
                     "poster": "../../assets/images/games/posters/mad-max",
                     "publisher": "Avalanche Studios"
                 },
                 {
                     "slug": "the-amazing-spider-man-1",
-                    "id": 11,
+                    "id": 10,
                     "title": "The Amazing Spider-Man",
                     "poster": "../../assets/images/games/posters/the-amazing-sm",
                     "publisher": "Beenox"
                 },
                 {
                     "slug": "the-witcher-3",
-                    "id": 12,
+                    "id": 11,
                     "title": "The Witcher 3",
                     "poster": "../../assets/images/games/posters/the-witcher-3",
                     "publisher": "CD Projekt"
                 },
                 {
                     "slug": "dying-light-2",
-                    "id": 13,
+                    "id": 12,
                     "title": "Dying light 2",
                     "poster": "../../assets/images/games/posters/dying-light-2",
                     "publisher": "Tencent"
                 },
                 {
                     "slug": "max-payne-2",
-                    "id": 14,
+                    "id": 13,
                     "title": "Max Payne 2",
                     "poster": "../../assets/images/games/posters/m-p-2",
                     "publisher": "Rockstar Games"
                 },
                 {
                     "slug": "forza-horizon-5",
-                    "id": 15,
+                    "id": 14,
                     "title": "Forza Horizon 5",
                     "poster": "../../assets/images/games/posters/f-h-5",
                     "publisher": "Playground Games"
@@ -1390,14 +1383,6 @@
                     "title": "Detroit: Become Human",
                     "poster": "../../assets/images/games/posters/detroit",
                     "publisher": "Quantic Dream"
-                },
-                {
-                    "slug": "crimson-desert",
-                    "id": 3,
-                    "title": "Crimson Desert",
-                    "poster": "../../assets/images/games/posters/crimson-desert",
-                    "publisher": "Pearl Abyss",
-                    "date": "2026-04-01T16:54:00Z"
                 },
                 {
                     "slug": "clair-obscur-expedition-33",
