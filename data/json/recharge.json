@@ -1,0 +1,61 @@
+[
+    {
+        "id": "freefire",
+        "name": "Free Fire",
+        "image": "../../assets/images/recharge/icons/free-fire.webp",
+        "packs": [
+            {
+                "title": "50",
+                "price": "35.00",
+                "img": "../../assets/images/recharge/images/free_fire/50.webp",
+                "type": "Diamonds",
+                "popular": false
+            },
+            {
+                "title": "100",
+                "price": "56.50",
+                "img": "../../assets/images/recharge/images/free_fire/100.webp",
+                "type": "Diamonds",
+                "popular": false
+            },
+            {
+                "title": "210",
+                "price": "108.50",
+                "oldPrice": "110.00",
+                "img": "../../assets/images/recharge/images/free_fire/210.webp",
+                "type": "Diamonds",
+                "popular": true
+            },
+            {
+                "title": "310",
+                "price": "164.50",
+                "img": "../../assets/images/recharge/images/free_fire/310.webp",
+                "type": "Diamonds",
+                "popular": false
+            },
+            {
+                "title": "520",
+                "price": "258.50",
+                "oldPrice": "262.50",
+                "img": "../../assets/images/recharge/images/free_fire/520.webp",
+                "type": "Diamonds",
+                "popular": true
+            },
+            {
+                "title": "1060",
+                "price": "525.00",
+                "type": "Diamonds",
+                "img": "../../assets/images/recharge/images/free_fire/1060.webp",
+                "popular": false
+            },
+            {
+                "title": "2200",
+                "price": "1050.00",
+                "oldPrice": "1100.00",
+                "img": "../../assets/images/recharge/images/free_fire/2200.webp",
+                "type": "Diamonds",
+                "popular": true
+            }
+        ]
+    }
+]
