@@ -9,52 +9,34 @@
     overflow: hidden;
 }
 
+#recharge-page {
+    border-bottom: 2px solid var(--color-text-primary);
+    
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 /* =========================
-   HEADER (NEW STRUCTURE)
+   HEADER
 ========================= */
 .game-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 90%;
+
+    margin-top: 14px;
+    width: 100%;
 }
 
-/* left side (image + title) */
-.game-header-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-}
-
-.game-header-left img {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.game-header-left h2 {
+/* title only */
+.section-title {
     font-family: var(--font-display);
     color: var(--color-text-primary);
     font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.game-header-left h2 i {
-    transition: transform 0.3s ease;
-}
-
-.game-header-left:hover h2 i {
-    transform: translateX(5px);
 }
 
 /* =========================
-   HEADER CONTROLS (INSIDE HEADER)
+   HEADER CONTROLS
 ========================= */
 .header-controls {
     display: flex;
@@ -64,8 +46,7 @@
 /* =========================
    SCROLL BUTTONS
 ========================= */
-.scroll-btn,
-.scroll-btn:nth-child(2) {
+.scroll-btn {
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -75,12 +56,11 @@
     justify-content: center;
     border-radius: 50%;
     border: none;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
     color: var(--color-text-primary);
 }
 
-.scroll-btn:hover,
-.scroll-btn:nth-child(2):hover {
+.scroll-btn:hover {
     background: var(--clr-txt-dev);
     color: var(--color-scroll-btns);
 }
@@ -90,9 +70,9 @@
 }
 
 /* =========================
-   CARDS ROW
+   APPS ROW
 ========================= */
-.cards-grid {
+.apps-row {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
@@ -106,112 +86,452 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 
-    width: 90%;
+    width: 100%;
+    margin: auto;
 }
 
-.cards-grid::-webkit-scrollbar {
+.apps-row::-webkit-scrollbar {
     display: none;
 }
 
 /* =========================
-   CARD
+   APP ITEM
 ========================= */
-.card {
-    background: var(--card-clr);
-    position: relative;
+.app-item {
     flex: 0 0 auto;
-    width: 220px;
+    min-width: 100px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     cursor: pointer;
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
-.card img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-}
-
-.card:hover {
+/* hover effect */
+.app-item:hover {
     transform: translateY(-3px);
 }
 
 /* =========================
-   BADGES
+   ICON
 ========================= */
-.popular-badge {
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: var(--card-clr);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* subtle glow */
+.app-item:hover .app-icon {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   NAME
+========================= */
+.app-name {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--color-text-primary);
+
+    width: 100%;
+    line-height: 1.3;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .app-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .app-name {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px auto 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   SEARCH
+========================= */
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: var(--search-bg);
+    border: 1px solid var(--search-border);
+    border-radius: 12px;
+
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    color: var(--search-text);
+}
+
+.search-box input::placeholder {
+    color: var(--search-placeholder);
+}
+
+.search-box i {
+    color: var(--search-icon);
+}
+
+.search-box:focus-within {
+    border-color: var(--search-focus);
+    box-shadow: 0 0 0 3px var(--search-focus-glow);
+    background: var(--search-bg-focus);
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: var(--filter-bg);
+    color: var(--filter-text);
+    border: 1px solid var(--filter-border);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: var(--filter-hover-border);
+}
+
+.filter-btn.active {
+    border-color: var(--filter-active-border);
+    color: var(--filter-active-text);
+    box-shadow: 0 0 0 2px var(--filter-active-glow);
+}
+
+/* =========================
+   SORT
+========================= */
+.sort-box select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: var(--filter-bg);
+    color: var(--filter-text);
+    border: 1px solid var(--filter-border);
+    outline: none;
+}
+
+/* =========================
+   CART
+========================= */
+.cart-box {
+    position: relative;
+    cursor: pointer;
+
+    background: var(--theme-btn-bg);
+    border: 1px solid var(--theme-btn-border);
+    border-radius: 12px;
+
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.cart-box:hover {
+    border-color: var(--theme-btn-hover-border);
+}
+
+.cart-box i {
+    color: var(--theme-btn-icon);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    background: var(--color-primary);
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+/* =========================
+   SEARCH RESULTS (FIXED ALIGNMENT)
+========================= */
+.search-results {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 10px 0;
+}
+
+/* =========================
+   SEARCH ITEM (same system as app-item)
+========================= */
+.search-item {
+    flex: 0 0 auto;
+    width: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.search-item:hover {
+    transform: translateY(-3px);
+}
+
+.search-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    object-fit: cover;
+
+    background: var(--card-clr);
+}
+
+.search-item span {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+/* =========================
+   HEADER ICON ANIMATION
+========================= */
+.game-header .section-title i {
+    transition: all 0.3s ease;
+}
+
+.game-header .section-title {
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.game-header .section-title:hover i {
+    transform: translateX(5px);
+}
+
+/* ========================= Cards Style ========================= */
+
+.discover-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: var(--color-text-primary);
+}
+
+
+/* CARD */
+.discover-card {
+    background: var(--card-clr);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.discover-card:hover {
+    transform: translateY(-5px);
+}
+
+.discover-img {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background: #111;
+}
+
+.discover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BADGE */
+.badge {
     position: absolute;
     top: 10px;
     left: 10px;
 
-    padding: 6px 12px;
+    background: rgba(255, 59, 59, 0.15);
+    color: var(--color-text-primary);
+
     font-size: 11px;
-    font-weight: 900;
+    font-weight: 600;
 
-    color: white;
-    background: rgba(255, 85, 87, 0.9);
+    padding: 4px 7px;
+    border-radius: 6px;
 
-    border-radius: 20px;
     z-index: 10;
+    border: 1px solid rgba(255, 59, 59, 0.4);
+    backdrop-filter: blur(4px);
 }
 
+/* INFO */
+.discover-info {
+    padding: 10px;
+}
+
+.title {
+    font-size: 14px;
+    color: var(--color-text-primary);
+}
+
+.desc {
+    font-size: 12px;
+    opacity: 0.7;
+    margin: 5px 0;
+    color: var(--color-text-primary);
+}
+
+/* PRICE */
+.price-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.price {
+    color: #00ff99;
+    font-weight: bold;
+}
+
+.old {
+    text-decoration: line-through;
+    font-size: 12px;
+    opacity: 0.6;
+    color: var(--search-placeholder);
+}
+
+.discover-card {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto; /* بيمنع الكارت إنه ينضغط ويخليه يحافظ على حجمه */
+    width: 200px;
+}
+
+/* DISCOUNT BADGE RIGHT FIXED */
 .discount-badge {
     position: absolute;
     top: 10px;
     right: 10px;
 
-    font-size: 10px;
-    font-weight: 800;
-
-    background: #ff3b3b;
+    background: linear-gradient(135deg, #ff3b3b, #ff1a1a);
     color: #fff;
 
-    padding: 4px 7px;
-    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
 
-    z-index: 20;
+    padding: 5px 9px;
+    border-radius: 8px;
+
+    z-index: 10;
+
+    box-shadow: 0 6px 18px rgba(255, 0, 0, 0.35);
 }
 
 /* =========================
-   PRICE
+   DISCOVER SECTION (LIKE GAME SECTION)
 ========================= */
-.price-box {
-    display: flex;
-    gap: 6px;
+
+.discover-section {
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 40px auto;
+    overflow: hidden;
 }
 
-.old-price {
-    font-size: 11px;
-    color: #888;
-    text-decoration: line-through;
-}
-
-.new-price {
-    font-size: 12px;
-    color: var(--clr-txt-dev);
-}
-
-.price-only {
-    font-size: 12px;
-    color: var(--clr-txt-dev);
-}
-
-/* =========================
-   CARD BODY
-========================= */
-.card-body {
-    padding: 20px;
-    color: white;
-}
-
-.card-body {
-    font-size: 17px;
+/* title */
+.discover-section h2 {
+    font-family: var(--font-display);
     color: var(--color-text-primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* نفس السكروول بتاع السكاشن */
+.discover-grid-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+    padding: 10px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    width: 100%;
+}
+
+.discover-grid-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.discover-grid{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
 }

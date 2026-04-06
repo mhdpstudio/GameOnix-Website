@@ -37,32 +37,12 @@
 
                 <!-- 🔍 Search -->
                 <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass fa-mh"></i>
                     <input type="text" id="searchInput" placeholder="Search games..." />
                 </div>
 
-                <!-- 🎯 Filters -->
-                <div class="filters" id="filters"></div>
-
             </div>
-
-            <div class="slider" id="slider">
-                <div class="slides">
-                    <img src="../../assets/images/recharge/images/slider/free-fire.webp" class="slide">
-                    <img src="../../assets/images/recharge/images/slider/steam-gift-cards.webp" class="slide">
-                </div>
-
-                <button class="arrow left" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="arrow right" id="next"><i class="fa-solid fa-chevron-right"></i></button>
-
-                <div class="dots" id="dots"></div>
-            </div>
-            <div id="recharge-page"></div>
-
-            <div id="discover-products" class="discover-products-section">
-                <h2 class="discover-title"><i class="fa-solid fa-eye"></i> Discover Products</h2>
-                <div class="discover-grid" id="discover-grid"></div>
-            </div>
+            <div id="category-page"></div>
 
         </div>
     </div>
@@ -131,8 +111,7 @@
     const cssFiles = [
         "../css/sidebar-style.css",
         "../css/ads-style.css",
-        "../css/recharge-page.css",
-        "../css/slider.css",
+        "../css/search-recharge.css",
         "../css/theme-btn.css",
         "../css/loading-screen.css",
         "../css/top-element.css"
@@ -151,10 +130,9 @@
 
     // JS Files
     const jsFiles = [
-        "../js/recharge-page.js",
+        "../js/search-recharge.js",
         "../js/components/sidebar-comp.js",
-        "../js/icon.js",
-        "../js/slider.js"
+        "../js/icon.js"
     ];
     jsFiles.forEach(file => {
         const script = document.createElement("script");

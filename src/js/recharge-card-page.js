@@ -84,8 +84,13 @@
         form.innerHTML = `
             <div class="selected-info">
                 <div class="info-box">
+                    <span class="label">Amount</span>
+                    <span class="value" id="selectedAmount">${pack.title} ${pack.type}</span>
+                </div>
+
+                <div class="info-box">
                     <span class="label">Price</span>
-                    <span class="value">${priceHTML}</span>
+                    <span class="value" id="selectedPrice">${priceHTML}</span>
                 </div>
             </div>
 

@@ -99,7 +99,7 @@
             return;
         }
 
-        if (amountEl) amountEl.textContent = pack.title || "-";
+        if (amountEl) amountEl.textContent = pack.title + " " +pack.type || "-";
         if (priceEl) {
             const price = pack.price ?? 0;
             const oldPrice = pack.oldPrice ?? pack.originalPrice;

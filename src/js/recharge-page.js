@@ -1,5 +1,27 @@
 const container = document.getElementById("recharge-page");
+
 let data = [];
+let filteredData = [];
+let currentFilter = "all";
+let searchValue = "";
+let currentSort = "default";
+let cart = [];
+
+// =========================
+// HELPERS 🔥
+// =========================
+function normalize(str) {
+    return (str || "").toLowerCase().trim();
+}
+
+function formatLabel(str) {
+    return (str || "")
+        .split(" ")
+        .map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        )
+        .join(" ");
+}
 
 // =========================
 // CONTROLS POSITION
@@ -20,172 +42,240 @@ function updateControlsPosition() {
     });
 }
 
+function parsePrice(value) {
+    if (value == null) return 0;
+
+    // يشيل أي حاجة غير أرقام و نقط
+    const cleaned = String(value).replace(/,/g, "").replace(/[^\d.]/g, "");
+    return parseFloat(cleaned) || 0;
+}
+
+function formatNumber(num) {
+    return new Intl.NumberFormat("en-US").format(num);
+}
+
 // =========================
-// LOAD DATA
+// 💥 SMART DISCOUNT CALC
+// =========================
+function calcDiscount(oldPrice, price) {
+    const oldP = parsePrice(oldPrice);
+    const newP = parsePrice(price);
+
+    if (!oldP || oldP <= newP) return null;
+
+    const diff = oldP - newP;
+
+    const percent = (diff / oldP) * 100;
+
+    return {
+        amount: diff,
+        percent: percent
+    };
+}
+
+// =========================
+// LOAD
 // =========================
 async function load() {
     try {
         const res = await fetch("../../data/json/recharge.json");
         data = await res.json();
-        render();
+
+        generateFilters();
+        applyFilters();
+
+        renderDiscoverProducts();
+
     } catch (error) {
         console.error("Error loading data:", error);
     }
 }
 
 // =========================
-// RENDER
+// FILTER LOGIC
 // =========================
-function render() {
-    container.innerHTML = "";
+function applyFilters() {
+    filteredData = data.filter(item => {
+        const matchFilter =
+            normalize(currentFilter) === "all" ||
+            normalize(item.type) === normalize(currentFilter);
 
-    data.forEach(game => {
+        return matchFilter;
+    });
+
+    if (currentSort === "name-asc") {
+        filteredData.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (currentSort === "name-desc") {
+        filteredData.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    renderSections();
+}
+
+// =========================
+// RENDER SECTIONS
+// =========================
+function renderSections() {
+    container.innerHTML = "";
+    const grouped = {};
+
+    filteredData.forEach(item => {
+        const key = normalize(item.type);
+
+        if (!grouped[key]) {
+            grouped[key] = {
+                title: item.type,
+                items: []
+            };
+        }
+
+        grouped[key].items.push(item);
+    });
+
+    Object.keys(grouped).forEach(key => {
+        const group = grouped[key];
+
         const section = document.createElement("section");
         section.className = "game-section";
 
         section.innerHTML = `
             <div class="game-header">
-                <div class="game-header-left" data-id="${game.id}">
-                    <img src="${game.image}" />
-                    <h2>${game.name} <i class="fa-solid fa-chevron-right"></i></h2>
-                </div>
-
-                <div class="header-controls">
+                <h2 class="section-title clickable-title" data-type="${group.title}">
+                    ${formatLabel(group.title)} 
+                    <i class="fa-solid fa-chevron-right"></i>
+                </h2>
+                <div class="header-controls section-controls">
                     <i class="fa-solid fa-chevron-left scroll-btn left"></i>
                     <i class="fa-solid fa-chevron-right scroll-btn right"></i>
                 </div>
             </div>
-
-            <div class="cards-grid">
-                ${game.packs.map(pack => createCardHTML(game, pack)).join("")}
+            <div class="apps-row">
+                ${group.items.map(item => createAppHTML(item)).join("")}
             </div>
         `;
 
         container.appendChild(section);
-
-        requestAnimationFrame(() => {
-            attachSectionEvents(section);
-        });
+        attachSectionEvents(section);
     });
 
     updateControlsPosition();
 }
 
 // =========================
-// EVENT DELEGATION (🔥 المهم)
+// CLICK CATEGORY
 // =========================
-container.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
+    const title = e.target.closest(".clickable-title");
+    if (!title) return;
 
-    // ===== HEADER CLICK =====
-    const header = e.target.closest(".game-header-left");
-    if (header) {
-        const gameId = header.dataset.id;
-        window.location.href = `game-recharge.html?game=${gameId}`;
-        return;
-    }
-
-    // ===== CARD CLICK =====
-    const card = e.target.closest(".card");
-    if (card) {
-        const gameId = card.dataset.game;
-        const pack = card.dataset.pack;
-
-        window.location.href = `game-recharge-card.html?game=${gameId}&pack=${pack}`;
-        return;
-    }
-
+    const type = title.dataset.type;
+    window.location.href = `category.html?type=${encodeURIComponent(type)}`;
 });
 
 // =========================
-// SCROLL LOGIC
+// APP CLICK
+// =========================
+container.addEventListener("click", (e) => {
+    const app = e.target.closest(".app-item");
+    if (!app) return;
+
+    const id = app.dataset.id;
+    window.location.href = `game-recharge.html?game=${id}`;
+});
+
+// =========================
+// SEARCH
+// =========================
+document.addEventListener("keydown", (e) => {
+    if (e.target.id === "searchInput") {
+        if (e.key === "Enter") {
+            const query = e.target.value.trim();
+            if (query !== "") {
+                window.location.href = `search-recharge.html?q=${encodeURIComponent(query)}`;
+            }
+        }
+    }
+});
+
+// =========================
+// FILTERS
+// =========================
+function generateFilters() {
+    const filtersContainer = document.getElementById("filters");
+    if (!filtersContainer) return;
+
+    const types = ["all", ...new Set(data.map(d => normalize(d.type)))];
+
+    filtersContainer.innerHTML = types.map(type => `
+        <div class="filter-btn ${type === "all" ? "active" : ""}" data-type="${type}">
+            ${type === "all" ? "All" : formatLabel(type)}
+        </div>
+    `).join("");
+}
+
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
+
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    currentFilter = btn.dataset.type;
+    applyFilters();
+});
+
+// =========================
+// SORT
+// =========================
+document.addEventListener("change", (e) => {
+    if (e.target.id === "sortSelect") {
+        currentSort = e.target.value;
+        applyFilters();
+    }
+});
+
+// =========================
+// SCROLL
 // =========================
 function attachSectionEvents(section) {
-    const grid = section.querySelector(".cards-grid");
+    const row = section.querySelector(".apps-row");
     const btnLeft = section.querySelector(".scroll-btn.left");
     const btnRight = section.querySelector(".scroll-btn.right");
     const controls = section.querySelector(".header-controls");
 
-    if (!grid || !btnLeft || !btnRight) return;
+    if (!row || !btnLeft || !btnRight) return;
 
-    function getScrollAmount() {
-        const card = grid.querySelector(".card");
-        if (!card) return 200;
+    const amount = 150;
 
-        const gap = 20;
-        return card.offsetWidth + gap;
-    }
-
-    btnRight.addEventListener("click", () => {
-        grid.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
-    });
-
-    btnLeft.addEventListener("click", () => {
-        grid.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
-    });
+    btnRight.onclick = () => row.scrollBy({ left: amount, behavior: "smooth" });
+    btnLeft.onclick = () => row.scrollBy({ left: -amount, behavior: "smooth" });
 
     function updateVisibility() {
-        const canScroll = grid.scrollWidth > grid.clientWidth + 5;
-        controls.style.display = canScroll ? "flex" : "none";
+        if (controls) {
+            controls.style.display = row.scrollWidth > row.clientWidth + 5 ? "flex" : "none";
+        }
     }
 
     updateVisibility();
-
     window.addEventListener("resize", updateVisibility);
-    grid.addEventListener("scroll", updateVisibility);
 }
 
 // =========================
-// CARD HTML
+// HTML BUILDER
 // =========================
-function createCardHTML(game, pack) {
-    const popular = pack.popular ? "popular" : "";
-
-    let priceHTML = "";
-
-    if (pack.oldPrice) {
-        const discountRaw =
-            ((pack.oldPrice - pack.price) / pack.oldPrice) * 100;
-
-        const discount = discountRaw.toFixed(2);
-
-        priceHTML = `
-            <div class="price-box">
-                <span class="old-price">${pack.oldPrice} EGP</span>
-                <span class="new-price">${pack.price} EGP</span>
-            </div>
-
-            <div class="discount-badge">-${discount}%</div>
-        `;
-    } else {
-        priceHTML = `<div class="price-only">${pack.price} EGP</div>`;
-    }
-
+function createAppHTML(item) {
     return `
-        <div class="card ${popular}" 
-             data-game="${game.id}" 
-             data-pack="${pack.title}">
-
-            ${pack.popular ? `
-                <div class="popular-badge">
-                    <i class="fa-solid fa-fire"></i>
-                    Hot
-                </div>
-            ` : ""}
-
-            <div class="card-img">
-                <img src="${pack.img}" />
+        <div class="app-item" data-id="${item.id}" data-type="${item.type}">
+            <div class="app-icon">
+                <img src="${item.image}" alt="${item.name}" />
             </div>
-
-            <div class="card-body">
-                <h3 class="card-title">${pack.title} Diamonds</h3>
-                ${priceHTML}
-            </div>
+            <div class="app-name">${item.name}</div>
         </div>
     `;
 }
 
 // =========================
-// SIDEBAR TOGGLE FIX
+// SIDEBAR FIX
 // =========================
 document.addEventListener("click", (e) => {
     if (e.target.closest(".sb-toggle")) {
@@ -193,10 +283,109 @@ document.addEventListener("click", (e) => {
     }
 });
 
-// =========================
-// RESIZE
-// =========================
 window.addEventListener("resize", updateControlsPosition);
+
+// =========================
+// DISCOVER (GAMES / CARDS)
+// =========================
+function renderDiscoverProducts() {
+    const grid = document.getElementById("discover-grid");
+    if (!grid) return;
+
+    const groups = {};
+
+    data.forEach(game => {
+        game.packs.forEach(pack => {
+
+            const type = normalize(pack.type);
+
+            const item = {
+                gameId: game.id,
+                gameName: game.name,
+                pack
+            };
+
+            const sectionName = pack.discoverSection || "Other";
+
+            const key = normalize(sectionName);
+
+            if (!groups[key]) {
+                groups[key] = {
+                    title: sectionName,
+                    items: []
+                };
+            }
+
+            groups[key].items.push(item);
+        });
+    });
+
+    function buildCard(item) {
+        const pack = item.pack;
+        const discount = calcDiscount(pack.oldPrice, pack.price);
+
+        return `
+            <div class="discover-card" 
+     data-game="${item.gameId}" 
+     data-pack="${item.pack.title}">
+                
+${discount ? `
+    <div class="discount-badge">
+        - ${discount.percent.toFixed(2)}%
+    </div>
+` : ""}
+
+                <div class="discover-img">
+                    <img src="${pack.img}" alt="${item.gameName}" />
+                    ${pack.popular ? `<span class="badge"><i class="fa-solid fa-fire"></i> Hot</span>` : ""}
+                </div>
+
+                <div class="discover-info">
+                    <h3 class="title">${item.gameName}</h3>
+                    <p class="desc">${pack.title} ${pack.type}</p>
+
+                    <div class="price-box">
+                        <span class="price">${pack.price}</span>
+                        ${pack.oldPrice ? `<span class="old">${pack.oldPrice}</span>` : ""}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    grid.innerHTML = Object.values(groups).map(group => `
+    <section class="discover-section game-section">
+        <div class="game-header">
+            <h2>${group.title}</h2>
+            <div class="header-controls section-controls">
+                <i class="fa-solid fa-chevron-left scroll-btn left"></i>
+                <i class="fa-solid fa-chevron-right scroll-btn right"></i>
+            </div>
+        </div>
+        <div class="discover-grid-inner apps-row">
+            ${group.items.map(buildCard).join("")}
+        </div>
+    </section>
+`).join("");
+
+    // 🔥 الخطوة الأهم: تشغيل الأحداث لكل قسم اكتشاف جديد
+    grid.querySelectorAll('.discover-section').forEach(sec => {
+        attachSectionEvents(sec);
+    });
+
+    // تحديث أماكن الأسهم بناءً على السايدبار
+    updateControlsPosition();
+}
+
+document.addEventListener("click", (e) => {
+    const card = e.target.closest(".discover-card");
+    if (!card) return;
+
+    const gameId = card.dataset.game;
+    const packTitle = card.dataset.pack;
+
+    window.location.href = `game-recharge-card.html?game=${encodeURIComponent(gameId)}&pack=${encodeURIComponent(packTitle)}`;
+});
 
 // =========================
 // INIT
