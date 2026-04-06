@@ -77,7 +77,7 @@
                 "price": "318.50",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/5dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": false
             },
             {
@@ -86,7 +86,7 @@
                 "oldPrice": "655.00",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/10dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": true
             },
             {
@@ -94,7 +94,7 @@
                 "price": "1220.50",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/20dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": true
             },
             {
@@ -102,7 +102,7 @@
                 "price": "1550.30",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/25dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": false
             },
             {
@@ -111,14 +111,14 @@
                 "oldPrice": "1830.58",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/30dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": true
             },
             {
                 "title": "50",
                 "price": "3040.76",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/50dol.webp",
                 "popular": false
             },
@@ -127,7 +127,7 @@
                 "price": "6220.32",
                 "img": "../../assets/images/recharge/images/steam_gift_cards/100dol.webp",
                 "discoverSection": "Cards",
-                "type": "$",
+                "type": "$ (UC)",
                 "popular": true
             }
         ]
