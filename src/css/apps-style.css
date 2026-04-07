@@ -90,6 +90,12 @@
     object-fit: contain;
 }
 
+.apps-grid .app-card:nth-child(5) .app-icon-container img {
+    width: 180px;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* App Info Section */
 .app-info {
     padding: 20px;

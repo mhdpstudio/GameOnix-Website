@@ -12,12 +12,12 @@
       "appType": "Desktop Application",
       "ap": "fa-desktop",
       "appTypeIcon": "fa-windows",
-      "app_poster": "https://www.gameonix.shop/assets/images/Logo.png",
+      "app_poster": "../../assets/images/Logo.webp",
       "appLink": "https://github.com/mhdpstudio/GameOnix-Store/releases/download/V1.4.3/GameOnix.Setup.1.4.3.exe",
       "media": [
-        "https://www.gameonix.shop/assets/images/apps/p-1.png",
-        "https://www.gameonix.shop/assets/images/apps/p-2.png",
-        "https://www.gameonix.shop/assets/images/apps/p-3.png"
+        "../../assets/images/apps/p-1.webp",
+        "../../assets/images/apps/p-2.webp",
+        "../../assets/images/apps/p-3.webp"
       ],
       "content": "GameOnix Desktop App is your ultimate hub for all things gaming. Designed for gamers and enthusiasts alike, it provides instant access to the latest games, news, and updates in one sleek, intuitive interface. Stay on top of new releases, download your favorite titles directly, and explore curated content tailored to your interests. GameOnix enhances your gaming experience with seamless updates, fast downloads, and a fully interactive platform that keeps you connected to the gaming world effortlessly."
     },
@@ -33,13 +33,13 @@
       "appType": "Desktop Application",
       "ap": "fa-desktop",
       "appTypeIcon": "fa-windows",
-      "app_poster": "https://www.gameonix.shop/assets/images/apps/rpcs3-logo.png",
+      "app_poster": "../../assets/images/apps/rpcs3-logo.webp",
       "appLink": "https://drive.usercontent.google.com/download?id=11UxLmYcGyPpjw_eb8j2HcngtGFD_rM83&export=download&authuser=0&confirm=t&uuid=446ccfd0-91c0-416e-935a-3dcff9e3513f&at=AGN2oQ2kh-2qA6CDo7pm5EpJOA-_%3A1773578480471",
       "media": [
-        "https://www.gameonix.shop/assets/images/apps/r-1.png",
-        "https://www.gameonix.shop/assets/images/apps/r-2.png",
-        "https://www.gameonix.shop/assets/images/apps/r-3.png",
-        "https://www.gameonix.shop/assets/images/apps/r-4.png"
+        "../../assets/images/apps/r-1.webp",
+        "../../assets/images/apps/r-2.webp",
+        "../../assets/images/apps/r-3.webp",
+        "../../assets/images/apps/r-4.webp"
       ],
       "content": "RPCS3 is the ultimate PlayStation 3 emulator for PC gamers and enthusiasts. Designed to bring the PS3 experience to your desktop, it allows you to play a wide range of PS3 titles with improved performance, higher resolutions, and advanced graphical enhancements. Stay updated with the latest emulator improvements, explore compatibility lists, and enjoy seamless gameplay with features like save states, customizable controls, and network support. RPCS3 transforms your computer into a powerful PS3 gaming hub, making it easier than ever to relive classic games or experience titles you missed."
     },
@@ -55,10 +55,10 @@
       "appType": "Desktop Application",
       "ap": "fa-desktop",
       "appTypeIcon": "fa-windows",
-      "app_poster": "https://www.gameonix.shop/assets/images/apps/ubisoft-logo.png",
+      "app_poster": "../../assets/images/apps/ubisoft-logo.webp",
       "appLink": "https://github.com/mhdpstudio/UB-Connection/releases/download/UB-Connection/UB-Connection.rar",
       "media": [
-        "https://www.gameonix.shop/assets/images/apps/ubisoft.png"
+        "../../assets/images/apps/ubisoft.webp"
       ],
       "content": "Ubisoft Connect is your gateway to the world of Ubisoft gaming. This digital distribution platform offers a seamless experience for purchasing, downloading, and playing Ubisoft titles on your PC. With a vast library of games, exclusive rewards, and social features, Ubisoft Connect keeps you connected to your gaming community while providing easy access to your favorite franchises. Stay updated with the latest releases, manage your game library, and enjoy a personalized gaming experience with Ubisoft Connect."
     },
@@ -77,9 +77,28 @@
       "app_poster": "../../assets/images/apps/uplay-logo.webp",
       "appLink": "https://github.com/mhdpstudio/UB-Connection/releases/download/Uplay/UplayInstaller.exe",
       "media": [
-        "../../assets/images/apps/uplay-1.png"
+        "../../assets/images/apps/uplay-1.webp"
       ],
       "content": "Uplay is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games."
+    },
+    {
+      "slug": "ppsspp",
+      "title": "PPSSPP",
+      "category": "Emulator",
+      "categoryIcon": "sports_esports",
+      "description": "PPSSPP is an open-source PlayStation (1 & 2) Portable emulator that allows you to play PSP games on your PC with improved performance and graphics.",
+      "publisher": "Henrik Rydgård",
+      "version": "1.8.0.0",
+      "size": "20.4 MB",
+      "appType": "Desktop Application",
+      "ap": "fa-desktop",
+      "appTypeIcon": "fa-windows",
+      "app_poster": "../../assets/images/apps/ppsspp.webp",
+      "appLink": "https://github.com/mhdpstudio/Apps/releases/download/PPSSPP/ppsspp_win-GameOnix.zip",
+      "media": [
+        "../../assets/images/apps/ppsspp-1.webp"
+      ],
+      "content": "PPSSPP is an open-source PlayStation (1 & 2) Portable emulator that allows you to play PSP games on your PC with improved performance and graphics."
     }
   ]
 }

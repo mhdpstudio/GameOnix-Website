@@ -14,7 +14,9 @@ input_folders = [
     r"E:\Program\Projects\Xhyper\assets\images\recharge\images",
     r"E:\Program\Projects\Xhyper\assets\images\recharge\images\free_fire",
     r"E:\Program\Projects\Xhyper\assets\images\recharge\images\steam_gift_cards",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\slider"
+    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\slider",
+    r"E:\Program\Projects\Xhyper\assets\images\apps",
+    r"E:\Program\Projects\Xhyper\assets\images"
 ]
 
 # إزالة limit التحذيري للصور الكبيرة

@@ -12,7 +12,8 @@ folders = [
     r"E:\Program\Projects\Xhyper\assets\images\recharge\icons",
     r"E:\Program\Projects\Xhyper\assets\images\recharge\images",
     r"E:\Program\Projects\Xhyper\assets\images\recharge\images\free_fire",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\slider"
+    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\slider",
+    r"E:\Program\Projects\Xhyper\assets\images\apps"
 ]
 
 extensions_to_delete = (".png", ".jpg", ".jpeg")
