@@ -99,6 +99,26 @@
         "../../assets/images/apps/ppsspp-1.webp"
       ],
       "content": "PPSSPP is an open-source PlayStation (1 & 2) Portable emulator that allows you to play PSP games on your PC with improved performance and graphics."
+    },
+    {
+      "slug": "winlator",
+      "title": "Winlator",
+      "category": "Emulator",
+      "categoryIcon": "sports_esports",
+      "description": "Winlator is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games.",
+      "publisher": "Brunodev85",
+      "version": "Beta 11.0.0.0",
+      "size": "145.6 MB",
+      "appType": "Mobile Application",
+      "ap": "fa-mobile",
+      "appTypeIcon": "fa-android",
+      "app_poster": "../../assets/images/apps/winlator-logo.webp",
+      "appLink": "https://github.com/brunodev85/winlator/releases/download/v11.0.0/Winlator_11.0.apk",
+      "media": [
+        "../../assets/images/apps/winlator-1.webp",
+        "../../assets/images/apps/winlator-2.webp"
+      ],
+      "content": "Winlator is a digital game distribution platform that allows you to play Ubisoft games and fix bugs in your Ubisoft games."
     }
   ]
 }
