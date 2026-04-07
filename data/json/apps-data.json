@@ -12,7 +12,7 @@
       "appType": "Desktop Application",
       "ap": "fa-desktop",
       "appTypeIcon": "fa-windows",
-      "app_poster": "../../assets/images/Logo.webp",
+      "app_poster": "../../assets/images/apps/logo.webp",
       "appLink": "https://github.com/mhdpstudio/GameOnix-Store/releases/download/V1.4.3/GameOnix.Setup.1.4.3.exe",
       "media": [
         "../../assets/images/apps/p-1.webp",
