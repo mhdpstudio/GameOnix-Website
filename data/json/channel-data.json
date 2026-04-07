@@ -42,5 +42,16 @@
     "likes": 0,
     "duration": 219,
     "date": "2026-04-01T00:19:00"
+  },
+  {
+    "slug": "ppsspp",
+    "tapTitle": "PPSSPP",
+    "title": "شرح كيفية تشغيل العاب بلايستيشن 1 & 2 | PPSSPP Installation",
+    "videoUrl": "../../assets/videos/webp/ppsspp.webm",
+    "thumbnail": "../../assets/videos/pics/webp/ppsspp.webp",
+    "views": 0,
+    "likes": 0,
+    "duration": 526,
+    "date": "2026-04-07T16:43:00"
   }
 ]
