@@ -1115,8 +1115,15 @@
                     "slug": "assetto-corsa-competizione",
                     "id": 16,
                     "title": "Assetto Corsa Competizione",
-                    "poster": "../../assets/images/games/posters/assetto-c",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/assetto-c",
                     "publisher": "Kunos Simulazioni"
+                },
+                {
+                    "slug": "nfs-the-run",
+                    "id": 17,
+                    "title": "Need For Speed: The Run",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/nfs-the-run",
+                    "publisher": "Electronic Arts"
                 }
             ]
         },
@@ -1354,7 +1361,7 @@
                     "slug": "the-sims-4",
                     "id": 14,
                     "title": "The Sims 4",
-                    "poster": "../../assets/images/games/posters/the-sims-4",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-sims-4",
                     "publisher": "Electronic Arts"
                 }
             ]
