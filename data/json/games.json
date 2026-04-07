@@ -1399,6 +1399,14 @@
                     "poster": "../../assets/images/games/posters/heavy-rain",
                     "publisher": "Quantic Dream",
                     "date": "2026-04-07T17:19:00Z"
+                },
+                {
+                    "slug": "beyond-two-souls",
+                    "id": 5,
+                    "title": "Beyond: Two Souls",
+                    "poster": "../../assets/images/games/posters/beyond",
+                    "publisher": "Quantic Dream",
+                    "date": "2026-04-07T17:35:00Z"
                 }
             ]
         },

@@ -1387,7 +1387,14 @@
                     "slug": "heavy-rain",
                     "id": 4,
                     "title": "Heavy Rain",
-                    "poster": "../../assets/images/games/posters/heavy-rain",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/heavy-rain",
+                    "publisher": "Quantic Dream"
+                },
+                {
+                    "slug": "beyond-two-souls",
+                    "id": 5,
+                    "title": "Beyond: Two Souls",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/beyond",
                     "publisher": "Quantic Dream"
                 }
             ]
