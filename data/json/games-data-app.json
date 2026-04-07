@@ -3060,6 +3060,21 @@
             "platform": "pc",
             "mediaPrefix": "the-matrix-path-of-neo",
             "mediaCount": 4
+        },
+        {
+            "slug": "heavy-rain",
+            "title": "Heavy Rain",
+            "publisher": "Quantic Dream",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/heavy-rain.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.4.0",
+            "size": "14.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/heavy-rain.torrent",
+            "platform": "pc",
+            "mediaPrefix": "heavy-rain",
+            "mediaCount": 5
         }
     ]
 }

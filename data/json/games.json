@@ -1386,11 +1386,19 @@
                 },
                 {
                     "slug": "clair-obscur-expedition-33",
-                    "id": 4,
+                    "id": 3,
                     "title": "Clair Obscur Expedition 33",
                     "poster": "../../assets/images/games/posters/clair-obscur-expedition-33",
                     "publisher": "Sandfall Interactive",
                     "date": "2026-04-01T16:54:00Z"
+                },
+                {
+                    "slug": "heavy-rain",
+                    "id": 4,
+                    "title": "Heavy Rain",
+                    "poster": "../../assets/images/games/posters/heavy-rain",
+                    "publisher": "Quantic Dream",
+                    "date": "2026-04-07T17:19:00Z"
                 }
             ]
         },

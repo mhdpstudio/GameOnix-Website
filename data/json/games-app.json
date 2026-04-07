@@ -1382,6 +1382,13 @@
                     "title": "Clair Obscur Expedition 33",
                     "poster": "https://gameonix.shop/assets/images/games/posters/clair-obscur-expedition-33",
                     "publisher": "Sandfall Interactive"
+                },
+                {
+                    "slug": "heavy-rain",
+                    "id": 4,
+                    "title": "Heavy Rain",
+                    "poster": "../../assets/images/games/posters/heavy-rain",
+                    "publisher": "Quantic Dream"
                 }
             ]
         },
