@@ -345,7 +345,7 @@ ${discount ? `
                     <p class="desc">${pack.title} ${pack.type}</p>
 
                     <div class="price-box">
-                        <span class="price">${pack.price}</span>
+                        <span class="price">${pack.price} EGP</span>
                         ${pack.oldPrice ? `<span class="old">${pack.oldPrice}</span>` : ""}
                     </div>
                 </div>
