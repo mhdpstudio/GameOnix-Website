@@ -3120,6 +3120,21 @@
             "platform": "pc",
             "mediaPrefix": "nfs-the-run",
             "mediaCount": 4
+        },
+        {
+            "slug": "limbo",
+            "title": "Limbo",
+            "publisher": "Playdead",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/limbo.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.2.0.0",
+            "size": "176.2 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/limbo.torrent",
+            "platform": "pc",
+            "mediaPrefix": "limbo",
+            "mediaCount": 3
         }
     ]
 }

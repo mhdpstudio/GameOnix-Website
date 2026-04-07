@@ -1410,6 +1410,13 @@
                     "title": "Portal 2",
                     "poster": "https://gameonix.shop/assets/images/games/posters/portal-2",
                     "publisher": "Valve"
+                },
+                {
+                    "slug": "limbo",
+                    "id": 7,
+                    "title": "Limbo",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/limbo",
+                    "publisher": "Playdead"
                 }
             ]
         },

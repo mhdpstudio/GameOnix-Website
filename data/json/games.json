@@ -1422,6 +1422,14 @@
                     "poster": "../../assets/images/games/posters/portal-2",
                     "publisher": "Valve",
                     "date": "2026-04-07T17:50:00Z"
+                },
+                {
+                    "slug": "limbo",
+                    "id": 7,
+                    "title": "Limbo",
+                    "poster": "../../assets/images/games/posters/limbo",
+                    "publisher": "Playdead",
+                    "date": "2026-04-07T20:58:00Z"
                 }
             ]
         },
