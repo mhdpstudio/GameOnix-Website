@@ -3080,7 +3080,7 @@
             "slug": "beyond-two-souls",
             "title": "Beyond: Two Souls",
             "publisher": "Quantic Dream",
-            "game_poster": "../../assets/images/games/logos/beyond.webp",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/beyond.webp",
             "gameType": "Adventure",
             "gameTypeIcon": "fa-compass",
             "version": "1.3.4.0",
@@ -3089,6 +3089,21 @@
             "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/beyond-two-souls.torrent",
             "platform": "pc",
             "mediaPrefix": "beyond",
+            "mediaCount": 6
+        },
+        {
+            "slug": "portal-2",
+            "title": "Portal 2",
+            "publisher": "Valve",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/portal-2.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.1.0",
+            "size": "4.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/portal-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "portal-2",
             "mediaCount": 6
         }
     ]

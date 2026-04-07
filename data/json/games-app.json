@@ -1396,6 +1396,13 @@
                     "title": "Beyond: Two Souls",
                     "poster": "https://gameonix.shop/assets/images/games/posters/beyond",
                     "publisher": "Quantic Dream"
+                },
+                {
+                    "slug": "portal-2",
+                    "id": 6,
+                    "title": "Portal 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/portal-2",
+                    "publisher": "Valve"
                 }
             ]
         },
