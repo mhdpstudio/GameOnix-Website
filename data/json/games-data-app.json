@@ -3135,6 +3135,51 @@
             "platform": "pc",
             "mediaPrefix": "limbo",
             "mediaCount": 3
+        },
+        {
+            "slug": "dead-space-1",
+            "title": "Dead Space 1",
+            "publisher": "Electronic Arts",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/ds.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.222",
+            "size": "2.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dead-space-1.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ds",
+            "mediaCount": 6
+        },
+        {
+            "slug": "dead-space-2",
+            "title": "Dead Space 2",
+            "publisher": "Electronic Arts",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/ds-2.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.1.0.0",
+            "size": "5.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dead-space-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ds-2",
+            "mediaCount": 6
+        },
+        {
+            "slug": "dead-space-3",
+            "title": "Dead Space 3",
+            "publisher": "Electronic Arts",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/ds-3.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.1",
+            "size": "5.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/dead-space-3.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ds-3",
+            "mediaCount": 6
         }
     ]
 }

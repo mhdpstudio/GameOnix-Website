@@ -994,6 +994,27 @@
                     "title": "The Matrix: Path of Neo",
                     "poster": "https://gameonix.shop/assets/images/games/posters/the-matrix-path-of-neo",
                     "publisher": "Shiny Entertainment"
+                },
+                {
+                    "slug": "dead-space-1",
+                    "id": 134,
+                    "title": "Dead Space",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ds",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "dead-space-2",
+                    "id": 135,
+                    "title": "Dead Space 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ds-2",
+                    "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "dead-space-3",
+                    "id": 136,
+                    "title": "Dead Space 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/ds-3",
+                    "publisher": "Electronic Arts"
                 }
             ]
         },
