@@ -126,6 +126,65 @@
         ]
     },
     {
+        "type": "Games Recharge",
+        "id": "valorant",
+        "name": "VALORANT",
+        "image": "../../assets/images/recharge/icons/valorant.webp",
+        "packs": [
+            {
+                "title": "475",
+                "price": "255.52",
+                "img": "../../assets/images/recharge/images/valorant/475.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": false
+            },
+            {
+                "title": "1000",
+                "price": "512.35",
+                "oldPrice": "515.82",
+                "img": "../../assets/images/recharge/images/valorant/1000.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": true
+            },
+            {
+                "title": "2050",
+                "price": "985.53",
+                "oldPrice": "990.63",
+                "img": "../../assets/images/recharge/images/valorant/2050.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": true
+            },
+            {
+                "title": "3650",
+                "price": "1753.23",
+                "img": "../../assets/images/recharge/images/valorant/3650.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": true
+            },
+            {
+                "title": "5350",
+                "price": "2457.63",
+                "oldPrice": "2515.60",
+                "img": "../../assets/images/recharge/images/valorant/5350.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": true
+            },
+            {
+                "title": "11000",
+                "price": "4918.50",
+                "img": "../../assets/images/recharge/images/valorant/11000.webp",
+                "discoverSection": "Games",
+                "type": "VP",
+                "popular": false
+            }
+        ]
+    },
+    {
         "type": "Gift Cards",
         "id": "steam-gift-cards",
         "name": "Steam Gift Cards",
