@@ -23,6 +23,15 @@ function formatLabel(str) {
         .join(" ");
 }
 
+// دالة لخبطة العناصر (Fisher-Yates Shuffle)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 // =========================
 // CONTROLS POSITION
 // =========================
@@ -44,8 +53,6 @@ function updateControlsPosition() {
 
 function parsePrice(value) {
     if (value == null) return 0;
-
-    // يشيل أي حاجة غير أرقام و نقط
     const cleaned = String(value).replace(/,/g, "").replace(/[^\d.]/g, "");
     return parseFloat(cleaned) || 0;
 }
@@ -60,13 +67,9 @@ function formatNumber(num) {
 function calcDiscount(oldPrice, price) {
     const oldP = parsePrice(oldPrice);
     const newP = parsePrice(price);
-
     if (!oldP || oldP <= newP) return null;
-
     const diff = oldP - newP;
-
     const percent = (diff / oldP) * 100;
-
     return {
         amount: diff,
         percent: percent
@@ -286,7 +289,7 @@ document.addEventListener("click", (e) => {
 window.addEventListener("resize", updateControlsPosition);
 
 // =========================
-// DISCOVER (GAMES / CARDS)
+// DISCOVER (GAMES / CARDS) - RANDOMIZED 🎲
 // =========================
 function renderDiscoverProducts() {
     const grid = document.getElementById("discover-grid");
@@ -296,9 +299,6 @@ function renderDiscoverProducts() {
 
     data.forEach(game => {
         game.packs.forEach(pack => {
-
-            const type = normalize(pack.type);
-
             const item = {
                 gameId: game.id,
                 gameName: game.name,
@@ -306,7 +306,6 @@ function renderDiscoverProducts() {
             };
 
             const sectionName = pack.discoverSection || "Other";
-
             const key = normalize(sectionName);
 
             if (!groups[key]) {
@@ -315,7 +314,6 @@ function renderDiscoverProducts() {
                     items: []
                 };
             }
-
             groups[key].items.push(item);
         });
     });
@@ -325,25 +323,15 @@ function renderDiscoverProducts() {
         const discount = calcDiscount(pack.oldPrice, pack.price);
 
         return `
-            <div class="discover-card" 
-     data-game="${item.gameId}" 
-     data-pack="${item.pack.title}">
-                
-${discount ? `
-    <div class="discount-badge">
-        - ${discount.percent.toFixed(2)}%
-    </div>
-` : ""}
-
+            <div class="discover-card" data-game="${item.gameId}" data-pack="${item.pack.title}">
+                ${discount ? `<div class="discount-badge">- ${discount.percent.toFixed(2)}%</div>` : ""}
                 <div class="discover-img">
                     <img src="${pack.img}" alt="${item.gameName}" />
                     ${pack.popular ? `<span class="badge"><i class="fa-solid fa-fire"></i> Hot</span>` : ""}
                 </div>
-
                 <div class="discover-info">
                     <h3 class="title">${item.gameName}</h3>
                     <p class="desc">${pack.title} ${pack.type}</p>
-
                     <div class="price-box">
                         <span class="price">${pack.price} EGP</span>
                         ${pack.oldPrice ? `<span class="old">${pack.oldPrice}</span>` : ""}
@@ -353,27 +341,30 @@ ${discount ? `
         `;
     }
 
-    grid.innerHTML = Object.values(groups).map(group => `
-    <section class="discover-section game-section">
-        <div class="game-header">
-            <h2>${group.title}</h2>
-            <div class="header-controls section-controls">
-                <i class="fa-solid fa-chevron-left scroll-btn left"></i>
-                <i class="fa-solid fa-chevron-right scroll-btn right"></i>
-            </div>
-        </div>
-        <div class="discover-grid-inner apps-row">
-            ${group.items.map(buildCard).join("")}
-        </div>
-    </section>
-`).join("");
+    grid.innerHTML = Object.values(groups).map(group => {
+        // 🔥 اللخبطة هنا: بنلخبط العناصر جوه كل قسم قبل الرندر
+        const shuffledItems = shuffleArray([...group.items]);
+        
+        return `
+            <section class="discover-section game-section">
+                <div class="game-header">
+                    <h2>${group.title}</h2>
+                    <div class="header-controls section-controls">
+                        <i class="fa-solid fa-chevron-left scroll-btn left"></i>
+                        <i class="fa-solid fa-chevron-right scroll-btn right"></i>
+                    </div>
+                </div>
+                <div class="discover-grid-inner apps-row">
+                    ${shuffledItems.map(buildCard).join("")}
+                </div>
+            </section>
+        `;
+    }).join("");
 
-    // 🔥 الخطوة الأهم: تشغيل الأحداث لكل قسم اكتشاف جديد
     grid.querySelectorAll('.discover-section').forEach(sec => {
         attachSectionEvents(sec);
     });
 
-    // تحديث أماكن الأسهم بناءً على السايدبار
     updateControlsPosition();
 }
 

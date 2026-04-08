@@ -1,38 +1,68 @@
 import os
 
-# 🔹 نفس المسارات
+# =========================
+# 🔹 المسارات (عادي + recursive)
+# =========================
 folders = [
-    r"E:\Program\Projects\Xhyper\assets\images\games\posters",
-    r"E:\Program\Projects\Xhyper\assets\images\games\logos",
-    r"E:\Program\Projects\Xhyper\assets\images\games\banners",
-    r"E:\Program\Projects\Xhyper\assets\videos\pics\webp",
-    r"E:\Program\Projects\Xhyper\assets\images\games\ps\banners",
-    r"E:\Program\Projects\Xhyper\assets\images\games\ps\logos",
-    r"E:\Program\Projects\Xhyper\assets\images\games\ps\posters",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\icons",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\images",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\free_fire",
-    r"E:\Program\Projects\Xhyper\assets\images\recharge\images\slider",
-    r"E:\Program\Projects\Xhyper\assets\images\apps"
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\posters", "recursive": False},
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\logos", "recursive": False},
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\banners", "recursive": False},
+    {"path": r"E:\Program\Projects\Xhyper\assets\videos\pics\webp", "recursive": False},
+
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\banners", "recursive": False},
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\logos", "recursive": False},
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\posters", "recursive": False},
+
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\recharge\icons", "recursive": False},
+
+    # 🔥 ده recursive (يدخل كل الفولدرات)
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\recharge\images", "recursive": True},
+
+    {"path": r"E:\Program\Projects\Xhyper\assets\images\apps", "recursive": False},
 ]
 
+# 🔹 الامتدادات اللي هتتمسح
 extensions_to_delete = (".png", ".jpg", ".jpeg")
 
-for folder in folders:
-    print(f"\n📂 Cleaning folder: {folder}")
+
+# =========================
+# 🔥 دالة الحذف
+# =========================
+def delete_file(file_path):
+    filename = os.path.basename(file_path)
+
+    try:
+        os.remove(file_path)
+        print(f"🗑 Deleted: {filename}")
+    except Exception as e:
+        print(f"❌ Error deleting {filename}: {e}")
+
+
+# =========================
+# 🔄 التشغيل
+# =========================
+for item in folders:
+    folder = item["path"]
+    recursive = item["recursive"]
+
+    print(f"\n📂 Cleaning: {folder} (recursive={recursive})")
 
     if not os.path.exists(folder):
-        print(f"⚠ Folder not found: {folder}")
+        print(f"⚠ Folder not found")
         continue
 
-    for filename in os.listdir(folder):
-        if filename.lower().endswith(extensions_to_delete):
-            file_path = os.path.join(folder, filename)
+    # 🔹 لو recursive
+    if recursive:
+        for root, dirs, files in os.walk(folder):
+            for filename in files:
+                if filename.lower().endswith(extensions_to_delete):
+                    delete_file(os.path.join(root, filename))
 
-            try:
-                os.remove(file_path)
-                print(f"🗑 Deleted: {filename}")
-            except Exception as e:
-                print(f"❌ Error deleting {filename}: {e}")
+    # 🔹 لو عادي
+    else:
+        for filename in os.listdir(folder):
+            if filename.lower().endswith(extensions_to_delete):
+                delete_file(os.path.join(folder, filename))
+
 
 print("\n🔥 Cleanup done!")
