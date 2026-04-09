@@ -1015,6 +1015,38 @@
                     "title": "Dead Space 3",
                     "poster": "https://gameonix.shop/assets/images/games/posters/ds-3",
                     "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "mortal-kombat-4",
+                    "id": 137,
+                    "title": "Mortal Kombat 4",
+                    "poster": "../../assets/images/games/posters/mortal-kombat-4",
+                    "publisher": "NetherRealm Studios",
+                    "date": "2026-04-09T23:00:00Z"
+                },
+                {
+                    "slug": "mortal-kombat-x",
+                    "id": 138,
+                    "title": "Mortal Kombat X",
+                    "poster": "../../assets/images/games/posters/mortal-kombat-x",
+                    "publisher": "NetherRealm Studios",
+                    "date": "2026-04-09T23:00:00Z"
+                },
+                {
+                    "slug": "mortal-kombat-11",
+                    "id": 139,
+                    "title": "Mortal Kombat 11",
+                    "poster": "../../assets/images/games/posters/mortal-kombat-11",
+                    "publisher": "NetherRealm Studios",
+                    "date": "2026-04-09T23:00:00Z"
+                },
+                {
+                    "slug": "mortal-kombat-1",
+                    "id": 140,
+                    "title": "Mortal Kombat 1",
+                    "poster": "../../assets/images/games/posters/mortal-kombat-1",
+                    "publisher": "NetherRealm Studios",
+                    "date": "2026-04-09T23:00:00Z"
                 }
             ]
         },
