@@ -3180,6 +3180,66 @@
             "platform": "pc",
             "mediaPrefix": "ds-3",
             "mediaCount": 6
+        },
+        {
+            "slug": "mortal-kombat-4",
+            "title": "Mortal Kombat 4",
+            "publisher": "NetherRealm Studios",
+            "game_poster": "../../assets/images/games/logos/mortal-kombat-4.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.0",
+            "size": "407.6 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mortal-kombat-4.torrent",
+            "platform": "pc",
+            "mediaPrefix": "mortal-kombat-4",
+            "mediaCount": 2
+        },
+        {
+            "slug": "mortal-kombat-x",
+            "title": "Mortal Kombat X",
+            "publisher": "NetherRealm Studios",
+            "game_poster": "../../assets/images/games/logos/mortal-kombat-x.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.3.0.0",
+            "size": "21.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mortal-kombat-x.torrent",
+            "platform": "pc",
+            "mediaPrefix": "mortal-kombat-x",
+            "mediaCount": 6
+        },
+        {
+            "slug": "mortal-kombat-11",
+            "title": "Mortal Kombat 11",
+            "publisher": "NetherRealm Studios",
+            "game_poster": "../../assets/images/games/logos/mortal-kombat-11.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "09.29.2020.0",
+            "size": "74.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mortal-kombat-11.torrent",
+            "platform": "pc",
+            "mediaPrefix": "mortal-kombat-11",
+            "mediaCount": 9
+        },
+        {
+            "slug": "mortal-kombat-1",
+            "title": "Mortal Kombat 1",
+            "publisher": "NetherRealm Studios",
+            "game_poster": "../../assets/images/games/logos/mortal-kombat-1.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.28.0.0",
+            "size": "34.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/mortal-kombat-1.torrent",
+            "platform": "pc",
+            "mediaPrefix": "mortal-kombat-1",
+            "mediaCount": 10
         }
     ]
 }
