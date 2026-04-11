@@ -57,10 +57,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-.section-container:first-child .sec-style:first-child span:first-child {
-    color: rgb(255, 94, 0);
-}
-
 .sec-txt {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -124,10 +120,6 @@ i.fa-solid.fa-fire {
     min-height: 330px;
     width: 93%;
     overflow: hidden;
-}
-
-#games-container .section-container:first-child .section .game-card:first-child .game-details:first-child {
-    box-shadow: 0 0 8px rgb(245, 197, 75);
 }
 
 .section-container {
@@ -255,10 +247,6 @@ i.fa-solid.fa-fire {
     font-family: "Poppins", sans-serif;
 }
 
-.section-container:first-child .sec-style:first-child span:first-child {
-    color: rgb(255, 94, 0);
-}
-
 span:nth-child(2) {
     transition: transform 0.3s ease;
     font-weight: 800;
@@ -300,10 +288,6 @@ span:nth-child(2) {
     min-height: 330px;
     width: 93%;
     overflow: hidden;
-}
-
-#games-container .section-container:first-child .section .game-card:first-child .game-details:first-child {
-    box-shadow: 0 0 8px rgb(245, 197, 75);
 }
 
 .section-wrapper {

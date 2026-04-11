@@ -58,10 +58,86 @@ fetch('../data/json/games.json')
     .catch(err => console.error("Error fetching games:", err));
 
 // --- 4. عرض الأقسام ---
+
+function getRecentlyAddedGames(limit = 20) {
+    if (!allGamesData) return [];
+
+    let allGames = [];
+
+    Object.values(allGamesData).forEach(mainSection => {
+        Object.values(mainSection).forEach(subSection => {
+            if (!subSection || !subSection.games) return;
+
+            subSection.games.forEach(game => {
+                if (!game || game.title === "More Games") return;
+                if (!game.date) return;
+
+                allGames.push(game);
+            });
+        });
+    });
+
+    // ترتيب بالأحدث
+    allGames.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return allGames.slice(0, limit);
+}
+
 function renderSections(filterType = 'all') {
     if (!allGamesData) return;
     currentFilter = filterType;
     container.innerHTML = "";
+
+    // --- Recently Added Section ---
+    const recentGames = getRecentlyAddedGames();
+
+    if (recentGames.length > 0) {
+        const recentSection = document.createElement("div");
+        recentSection.classList.add("section-container");
+
+        recentSection.innerHTML = `
+    <div class="section-header">
+        <h2 class="sec-style">
+            <span class="sec-txt">
+                <i class="fa-solid fa-clock"></i>
+                Recently Added
+                <i class="fa-solid fa-chevron-right"></i>
+            </span>
+        </h2>
+    </div>
+
+    <div class="section-controls">
+        <i class="fa-solid fa-chevron-left fa scroll-btn left"></i>
+        <i class="fa-solid fa-chevron-right fa scroll-btn right"></i>
+    </div>
+
+    <div class="section">
+        ${recentGames.map(game => {
+            const isNew = isNewGame(game.date);
+
+            return `
+                <div class="game-card" data-slug="${game.slug}">
+                    <div class="game-details">
+                        ${isNew ? `<div class="badge-new">New</div>` : ""}
+
+                        <img 
+                            src="${game.poster ? game.poster + ".webp" : '../assets/images/game.jpg'}"
+                            alt="${game.title}"
+                            onerror="this.src='../assets/images/game.jpg'"
+                        >
+
+                        <div class="publisher">${game.publisher || WebsiteName}</div>
+                        <div class="title">${game.title}</div>
+                    </div>
+                </div>
+            `;
+        }).join('')}
+    </div>
+`;
+        container.appendChild(recentSection);
+        attachSectionEvents(recentSection, "Recently Added");
+
+    }
 
     for (const mainSectionName in allGamesData) {
         const mainSection = allGamesData[mainSectionName];
@@ -120,9 +196,9 @@ function renderSections(filterType = 'all') {
 
                 <div class="section">
                     ${homeGames.map(game => {
-                        const isNew = isNewGame(game.date);
+                const isNew = isNewGame(game.date);
 
-                        return `
+                return `
                             <div class="game-card" data-slug="${game.slug}">
                                 <div class="game-details">
 
@@ -138,7 +214,7 @@ function renderSections(filterType = 'all') {
                                 </div>
                             </div>
                         `;
-                    }).join('')}
+            }).join('')}
 
                     ${maxHomeIndex !== -1 ? `
                         <div class="game-card more-games">
