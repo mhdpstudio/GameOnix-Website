@@ -3244,17 +3244,32 @@
         {
             "slug": "the-forest",
             "title": "The Forest",
-            "publisher": "Studio Wildcard",
+            "publisher": "Endnight Games",
             "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-forest.webp",
             "gameType": "Survival",
             "gameTypeIcon": "fa-tree",
             "version": "1.5.75.0",
             "size": "2.5 GB",
             "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-forest.torrent",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/refs/heads/main/the-forest.torrent",
             "platform": "pc",
             "mediaPrefix": "the-forest",
             "mediaCount": 6
+        },
+        {
+            "slug": "stranded-deep",
+            "title": "Stranded Deep",
+            "publisher": "Beam Team",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/stranded-deep.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.0.6.0.17",
+            "size": "867.4 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/stranded-deep.torrent",
+            "platform": "pc",
+            "mediaPrefix": "stranded-deep",
+            "mediaCount": 8
         }
     ]
 }

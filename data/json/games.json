@@ -1528,6 +1528,14 @@
                     "poster": "../../assets/images/games/posters/the-forest",
                     "publisher": "Endnight Games",
                     "date": "2026-04-11T18:11:00Z"
+                },
+                {
+                    "slug": "stranded-deep",
+                    "id": 5,
+                    "title": "Stranded Deep",
+                    "poster": "../../assets/images/games/posters/stranded-deep",
+                    "publisher": "Beam Team",
+                    "date": "2026-04-11T18:35:00Z"
                 }
             ]
         },
