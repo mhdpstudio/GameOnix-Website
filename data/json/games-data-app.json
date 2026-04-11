@@ -3240,6 +3240,21 @@
             "platform": "pc",
             "mediaPrefix": "mortal-kombat-1",
             "mediaCount": 10
+        },
+        {
+            "slug": "the-forest",
+            "title": "The Forest",
+            "publisher": "Studio Wildcard",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/the-forest.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.5.75.0",
+            "size": "2.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/the-forest.torrent",
+            "platform": "pc",
+            "mediaPrefix": "the-forest",
+            "mediaCount": 6
         }
     ]
 }

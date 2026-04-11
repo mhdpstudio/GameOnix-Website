@@ -1503,6 +1503,14 @@
                     "title": "Minecraft: Bedrock Edition",
                     "poster": "https://gameonix.shop/assets/images/games/posters/minecraft-bedrock",
                     "publisher": "Mojang Studios"
+                },
+                {
+                    "slug": "the-forest",
+                    "id": 4,
+                    "title": "The Forest",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/the-forest",
+                    "publisher": "Endnight Games",
+                    "date": "2026-04-11T18:11:00Z"
                 }
             ]
         },
