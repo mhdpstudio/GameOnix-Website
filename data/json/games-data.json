@@ -3311,7 +3311,7 @@
             "version": "0.142.6.0",
             "size": "567.2 MB",
             "ico": "windows",
-            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/valheim.torrent",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/refs/heads/main/valheim.torrent",
             "platform": "pc",
             "mediaPrefix": "valheim",
             "mediaCount": 16
