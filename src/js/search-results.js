@@ -236,12 +236,12 @@ function processGames(data) {
         const posterBase = img.dataset.poster;
         if (posterBase) {
             // Try remote first (matching JSON format)
-const remoteUrl = `${posterBase}.webp`;
+            const remoteUrl = `${posterBase}.webp`;
             img.src = remoteUrl;
             img.onerror = () => {
                 console.log(`Image failed: ${remoteUrl}, trying local`);
                 // Fallback to local poster if exists
-const localPoster = `assets/images/games/posters/${posterBase.split('/').pop()}.webp`;
+                const localPoster = `assets/images/games/posters/${posterBase.split('/').pop()}.webp`;
                 img.src = localPoster;
                 img.onerror = () => {
                     console.log(`Local also failed, using placeholder`);
@@ -284,14 +284,23 @@ function processGames(data) {
 
     // دالة لاستخراج الألعاب مع تحديد نوع المنصة (PC أو PS)
     function collectGames(obj, platform = "PC") {
-        // تحديث نوع المنصة لو لقينا أيقونة بلايستيشن في القسم الرئيسي
         let currentPlatform = platform;
+
         if (obj.icon && obj.icon.toLowerCase().includes("playstation")) {
             currentPlatform = "PS";
         }
 
         if (obj.games && Array.isArray(obj.games)) {
             obj.games.forEach(g => {
+
+                // ✅ فلترة More Games + أي عنصر بايظ
+                if (
+                    !g ||
+                    !g.title ||
+                    g.title.toLowerCase().includes("more games") ||
+                    !g.slug // 👈 دي مهمة جداً
+                ) return;
+
                 allGames.push({ ...g, system: currentPlatform });
             });
         }
@@ -365,7 +374,7 @@ function lazyLoadPosters() {
     imgs.forEach(img => {
         const posterBase = img.dataset.poster;
         if (!posterBase) return;
-img.src = `${posterBase}.webp`;
+        img.src = `${posterBase}.webp`;
         img.onload = () => img.classList.remove('loading-img');
         img.onerror = () => { img.src = 'assets/images/game.jpg'; };
     });

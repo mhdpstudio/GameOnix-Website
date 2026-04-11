@@ -63,6 +63,7 @@ function getRecentlyAddedGames(limit = 20) {
     if (!allGamesData) return [];
 
     let allGames = [];
+    let seen = new Set();
 
     Object.values(allGamesData).forEach(mainSection => {
         Object.values(mainSection).forEach(subSection => {
@@ -72,6 +73,12 @@ function getRecentlyAddedGames(limit = 20) {
                 if (!game || game.title === "More Games") return;
                 if (!game.date) return;
 
+                // 🔑 مفتاح التكرار (غير الـ id)
+                const key = `${game.title}-${game.publisher}-${game.poster}`;
+
+                if (seen.has(key)) return; // ⛔ مكرر
+
+                seen.add(key); // ✅ أول مرة
                 allGames.push(game);
             });
         });

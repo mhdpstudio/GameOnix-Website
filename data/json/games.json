@@ -9,7 +9,8 @@
                     "id": 1,
                     "title": "Resident Evil Requiem",
                     "poster": "../../assets/images/games/posters/resident-evil-requiem",
-                    "publisher": "Capcom"
+                    "publisher": "Capcom",
+                    "date": "2026-04-11T23:05:00Z"
                 },
                 {
                     "slug": "gta-v",
@@ -741,7 +742,8 @@
                     "id": 96,
                     "title": "Resident Evil Requiem",
                     "poster": "../../assets/images/games/posters/resident-evil-requiem",
-                    "publisher": "Capcom"
+                    "publisher": "Capcom",
+                    "date": "2026-04-11T23:05:00Z"
                 },
                 {
                     "slug": "ghost-recon-future-soldier",
