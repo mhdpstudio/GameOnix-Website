@@ -1517,6 +1517,13 @@
                     "title": "Stranded Deep",
                     "poster": "https://gameonix.shop/assets/images/games/posters/stranded-deep",
                     "publisher": "Beam Team"
+                },
+                {
+                    "slug": "green-hell",
+                    "id": 6,
+                    "title": "Green Hell",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/green-hell",
+                    "publisher": "Creepy Jar"
                 }
             ]
         },

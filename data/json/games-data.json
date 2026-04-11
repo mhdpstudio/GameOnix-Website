@@ -3270,6 +3270,21 @@
             "platform": "pc",
             "mediaPrefix": "stranded-deep",
             "mediaCount": 8
+        },
+        {
+            "slug": "green-hell",
+            "title": "Green Hell",
+            "publisher": "Creepy Jar",
+            "game_poster": "../../assets/images/games/logos/green-hell.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.3.4.0",
+            "size": "3.7 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/green-hell.torrent",
+            "platform": "pc",
+            "mediaPrefix": "green-hell",
+            "mediaCount": 9
         }
     ]
 }
