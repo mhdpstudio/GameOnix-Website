@@ -3300,6 +3300,21 @@
             "platform": "pc",
             "mediaPrefix": "raft",
             "mediaCount": 10
+        },
+        {
+            "slug": "valheim",
+            "title": "Valheim",
+            "publisher": "Iron Gate Games",
+            "game_poster": "../../assets/images/games/logos/valheim.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "0.142.6.0",
+            "size": "567.2 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/valheim.torrent",
+            "platform": "pc",
+            "mediaPrefix": "valheim",
+            "mediaCount": 16
         }
     ]
 }

@@ -1529,9 +1529,15 @@
                     "slug": "raft",
                     "id": 7,
                     "title": "Raft",
-                    "poster": "../../assets/images/games/posters/raft",
-                    "publisher": "Redbeet Interactive",
-                    "date": "2026-04-11T23:40:00Z"
+                    "poster": "https://gameonix.shop/assets/images/games/posters/raft",
+                    "publisher": "Redbeet Interactive"
+                },
+                {
+                    "slug": "valheim",
+                    "id": 8,
+                    "title": "Valheim",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/valheim",
+                    "publisher": "Iron Gate Games"
                 }
             ]
         },
