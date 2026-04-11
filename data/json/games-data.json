@@ -3330,6 +3330,21 @@
             "platform": "pc",
             "mediaPrefix": "subnautica",
             "mediaCount": 8
+        },
+        {
+            "slug": "euro-truck-2-simulator",
+            "title": "Euro Truck Simulator 2",
+            "publisher": "SCS Software",
+            "game_poster": "../../assets/images/games/logos/euro-truck-2.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "1.57.2.2",
+            "size": "15.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/euro-truck-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "euro-truck-2",
+            "mediaCount": 8
         }
     ]
 }

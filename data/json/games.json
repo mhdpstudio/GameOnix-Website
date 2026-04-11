@@ -1437,6 +1437,14 @@
                     "poster": "../../assets/images/games/posters/the-sims-4",
                     "publisher": "Electronic Arts",
                     "date": "2026-04-01T16:54:00Z"
+                },
+                {
+                    "slug": "euro-truck-2-simulator",
+                    "id": 15,
+                    "title": "Euro Truck Simulator 2",
+                    "poster": "../../assets/images/games/posters/euro-truck-2",
+                    "publisher": "SCS Software",
+                    "date": "2026-04-12T00:54:00Z"
                 }
             ]
         },

@@ -1423,6 +1423,13 @@
                     "title": "The Sims 4",
                     "poster": "https://gameonix.shop/assets/images/games/posters/the-sims-4",
                     "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "euro-truck-2-simulator",
+                    "id": 15,
+                    "title": "Euro Truck Simulator 2",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/euro-truck-2",
+                    "publisher": "SCS Software"
                 }
             ]
         },
