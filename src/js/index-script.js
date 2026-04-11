@@ -375,9 +375,15 @@ function attachSectionEvents(sectionDiv, subSectionName) {
         });
 
         const updateVisibility = () => {
-            if (controls) {
-                controls.style.display = slider.scrollWidth > slider.clientWidth ? "flex" : "none";
-            }
+            if (!controls) return;
+
+            const canScroll = slider.scrollWidth > slider.clientWidth + 5;
+
+            // لا تخفي الأزرار نهائيًا
+            controls.style.display = "flex";
+            controls.style.visibility = "visible";
+            controls.style.opacity = canScroll ? "1" : "0.25";
+            controls.style.pointerEvents = canScroll ? "auto" : "none";
         };
 
         updateVisibility();
