@@ -1562,6 +1562,14 @@
                     "poster": "../../assets/images/games/posters/valheim",
                     "publisher": "Iron Gate Games",
                     "date": "2026-04-11T23:55:00Z"
+                },
+                {
+                    "slug": "subnautica",
+                    "id": 9,
+                    "title": "Subnautica",
+                    "poster": "../../assets/images/games/posters/subnautica",
+                    "publisher": "Unknown Worlds",
+                    "date": "2026-04-12T00:30:00Z"
                 }
             ]
         },

@@ -3315,6 +3315,21 @@
             "platform": "pc",
             "mediaPrefix": "valheim",
             "mediaCount": 16
+        },
+        {
+            "slug": "subnautica",
+            "title": "Subnautica",
+            "publisher": "Unknown Worlds",
+            "game_poster": "../../assets/images/games/logos/subnautica.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.786.32.16",
+            "size": "8.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/subnautica.torrent",
+            "platform": "pc",
+            "mediaPrefix": "subnautica",
+            "mediaCount": 8
         }
     ]
 }

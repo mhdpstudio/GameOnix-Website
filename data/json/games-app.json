@@ -1538,6 +1538,13 @@
                     "title": "Valheim",
                     "poster": "https://gameonix.shop/assets/images/games/posters/valheim",
                     "publisher": "Iron Gate Games"
+                },
+                {
+                    "slug": "subnautica",
+                    "id": 9,
+                    "title": "Subnautica",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/subnautica",
+                    "publisher": "Unknown Worlds"
                 }
             ]
         },
