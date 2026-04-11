@@ -3285,6 +3285,21 @@
             "platform": "pc",
             "mediaPrefix": "green-hell",
             "mediaCount": 9
+        },
+        {
+            "slug": "raft",
+            "title": "Raft",
+            "publisher": "Redbeet Interactive",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/raft.webp",
+            "gameType": "Survival",
+            "gameTypeIcon": "fa-tree",
+            "version": "1.0.0.0",
+            "size": "1.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/raft.torrent",
+            "platform": "pc",
+            "mediaPrefix": "raft",
+            "mediaCount": 10
         }
     ]
 }
