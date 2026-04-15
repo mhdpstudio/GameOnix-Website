@@ -9,17 +9,25 @@ input_folders = [
     {"path": r"E:\Program\Projects\Xhyper\assets\images\games\logos", "recursive": False},
     {"path": r"E:\Program\Projects\Xhyper\assets\images\games\banners", "recursive": False},
     {"path": r"E:\Program\Projects\Xhyper\assets\videos\pics\webp", "recursive": False},
-
     {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\banners", "recursive": False},
     {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\logos", "recursive": False},
     {"path": r"E:\Program\Projects\Xhyper\assets\images\games\ps\posters", "recursive": False},
-
     {"path": r"E:\Program\Projects\Xhyper\assets\images\recharge\icons", "recursive": False},
-
-    # 🔥 ده المهم (هيخش كل الفولدرات اللي جواه)
     {"path": r"E:\Program\Projects\Xhyper\assets\images\recharge\images", "recursive": True},
-
     {"path": r"E:\Program\Projects\Xhyper\assets\images\apps", "recursive": False},
+
+    # 🖥️ Computer
+
+    {"path": r"C:\Projects\Xhyper\assets\images\games\posters", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\games\logos", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\games\banners", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\videos\pics\webp", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\banners", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\logos", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\posters", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\recharge\icons", "recursive": False},
+    {"path": r"C:\Projects\Xhyper\assets\images\recharge\images", "recursive": True},
+    {"path": r"C:\Projects\Xhyper\assets\images\apps", "recursive": False},
 ]
 
 # إزالة limit التحذيري للصور الكبيرة

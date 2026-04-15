@@ -1484,6 +1484,14 @@
                     "title": "Limbo",
                     "poster": "https://gameonix.shop/assets/images/games/posters/limbo",
                     "publisher": "Playdead"
+                },
+                {
+                    "slug": "hollow-knight",
+                    "id": 8,
+                    "title": "Hollow Knight",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hollow-knight",
+                    "publisher": "Team Cherry",
+                    "date": "2026-04-15T20:14:00Z"
                 }
             ]
         },

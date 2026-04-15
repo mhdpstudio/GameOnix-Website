@@ -1504,6 +1504,14 @@
                     "poster": "../../assets/images/games/posters/limbo",
                     "publisher": "Playdead",
                     "date": "2026-04-07T20:58:00Z"
+                },
+                {
+                    "slug": "hollow-knight",
+                    "id": 8,
+                    "title": "Hollow Knight",
+                    "poster": "../../assets/images/games/posters/hollow-knight",
+                    "publisher": "Team Cherry",
+                    "date": "2026-04-15T20:14:00Z"
                 }
             ]
         },
