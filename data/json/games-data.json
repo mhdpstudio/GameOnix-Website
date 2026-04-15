@@ -3352,7 +3352,7 @@
             "publisher": "Team Cherry",
             "game_poster": "../../assets/images/games/logos/hollow-knight.webp",
             "gameType": "Adventure",
-            "gameTypeIcon": "fa-tree",
+            "gameTypeIcon": "fa-compass",
             "version": "1.0.3.7",
             "size": "1.8 GB",
             "ico": "windows",
