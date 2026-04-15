@@ -104,11 +104,10 @@ function renderSections(filterType = 'all') {
 
         recentSection.innerHTML = `
     <div class="section-header">
-        <h2 class="sec-style">
+        <h2 class="sec-style" style="cursor: default;">
             <span class="sec-txt">
                 <i class="fa-solid fa-clock"></i>
                 Recently Added
-                <i class="fa-solid fa-chevron-right"></i>
             </span>
         </h2>
     </div>
@@ -323,6 +322,8 @@ function attachSectionEvents(sectionDiv, subSectionName) {
 
     let platformType = "PC";
 
+    const isRecentlyAdded = subSectionName === "Recently Added";
+
     const mainHeader = sectionDiv.previousElementSibling;
     if (mainHeader && mainHeader.classList.contains("main-section-title")) {
         const iconClass = mainHeader.querySelector("i")?.className || "";
@@ -334,16 +335,18 @@ function attachSectionEvents(sectionDiv, subSectionName) {
     const targetSectionUrl = `html/section.html?section=${encodeURIComponent(subSectionName)}&type=${platformType}`;
 
     const secTxt = sectionDiv.querySelector(".sec-txt");
-    if (secTxt) {
+    if (secTxt && !isRecentlyAdded) {
         secTxt.addEventListener("click", () => {
             window.location.href = targetSectionUrl;
         });
     }
 
     sectionDiv.querySelectorAll(".more-games").forEach(btn => {
-        btn.addEventListener("click", () => {
-            window.location.href = targetSectionUrl;
-        });
+        if (!isRecentlyAdded) {
+            btn.addEventListener("click", () => {
+                window.location.href = targetSectionUrl;
+            });
+        }
     });
 
     sectionDiv.querySelectorAll(".game-card").forEach(card => {
@@ -379,7 +382,6 @@ function attachSectionEvents(sectionDiv, subSectionName) {
 
             const canScroll = slider.scrollWidth > slider.clientWidth + 5;
 
-            // لا تخفي الأزرار نهائيًا
             controls.style.display = "flex";
             controls.style.visibility = "visible";
             controls.style.opacity = canScroll ? "1" : "0.25";
