@@ -1490,8 +1490,21 @@
                     "id": 8,
                     "title": "Hollow Knight",
                     "poster": "https://gameonix.shop/assets/images/games/posters/hollow-knight",
-                    "publisher": "Team Cherry",
-                    "date": "2026-04-15T20:14:00Z"
+                    "publisher": "Team Cherry"
+                },
+                {
+                    "slug": "hollow-knight-silksong",
+                    "id": 9,
+                    "title": "Hollow Knight: Silksong",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/hollow-knight-silksong",
+                    "publisher": "Team Cherry"
+                },
+                {
+                    "slug": "inside",
+                    "id": 10,
+                    "title": "INSIDE",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/inside",
+                    "publisher": "Playdead"
                 }
             ]
         },

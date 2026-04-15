@@ -1512,6 +1512,22 @@
                     "poster": "../../assets/images/games/posters/hollow-knight",
                     "publisher": "Team Cherry",
                     "date": "2026-04-15T20:14:00Z"
+                },
+                {
+                    "slug": "hollow-knight-silksong",
+                    "id": 9,
+                    "title": "Hollow Knight: Silksong",
+                    "poster": "../../assets/images/games/posters/hollow-knight-silksong",
+                    "publisher": "Team Cherry",
+                    "date": "2026-04-15T20:35:00Z"
+                },
+                {
+                    "slug": "inside",
+                    "id": 10,
+                    "title": "INSIDE",
+                    "poster": "../../assets/images/games/posters/inside",
+                    "publisher": "Playdead",
+                    "date": "2026-04-15T21:00:00Z"
                 }
             ]
         },

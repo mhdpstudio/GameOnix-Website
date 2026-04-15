@@ -3360,6 +3360,36 @@
             "platform": "pc",
             "mediaPrefix": "hollow-knight",
             "mediaCount": 6
+        },
+        {
+            "slug": "hollow-knight-silksong",
+            "title": "Hollow Knight: Silksong",
+            "publisher": "Team Cherry",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/hollow-knight-silksong.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.28324.0",
+            "size": "1.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/hollow-knight-silksong.torrent",
+            "platform": "pc",
+            "mediaPrefix": "hollow-knight-silksong",
+            "mediaCount": 8
+        },
+        {
+            "slug": "inside",
+            "title": "INSIDE",
+            "publisher": "Playdead",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/inside.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.2.8.3",
+            "size": "939.02 MB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/inside.torrent",
+            "platform": "pc",
+            "mediaPrefix": "inside",
+            "mediaCount": 11
         }
     ]
 }
