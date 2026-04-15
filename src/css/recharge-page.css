@@ -11,7 +11,7 @@
 
 #recharge-page {
     border-bottom: 2px solid var(--color-text-primary);
-    
+
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -370,13 +370,24 @@
 
 /* ========================= Cards Style ========================= */
 
-.discover-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    color: var(--color-text-primary);
+.discover-products-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 10px;
 }
 
+.discover-title {
+    font-family: var(--font-display);
+    color: var(--color-text-primary);
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 14px 0;
+}
 
 /* CARD */
 .discover-card {
@@ -463,7 +474,8 @@
 .discover-card {
     position: relative;
     overflow: hidden;
-    flex: 0 0 auto; /* بيمنع الكارت إنه ينضغط ويخليه يحافظ على حجمه */
+    flex: 0 0 auto;
+    /* بيمنع الكارت إنه ينضغط ويخليه يحافظ على حجمه */
     width: 200px;
 }
 
@@ -530,7 +542,7 @@
     display: none;
 }
 
-.discover-grid{
+.discover-grid {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
