@@ -1677,6 +1677,14 @@
                     "title": "Crisol: Theater of Idols",
                     "poster": "../../assets/images/games/posters/crisol",
                     "publisher": "Vermila Studios"
+                },
+                {
+                    "slug": "cairo-metro-remastered",
+                    "id": 11,
+                    "title": "Cairo Metro Remastered",
+                    "poster": "../../assets/images/games/posters/cairo-metro",
+                    "publisher": "Twin Verse",
+                    "date": "2026-04-16T21:00:00Z"
                 }
             ]
         },

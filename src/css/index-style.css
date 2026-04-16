@@ -24,7 +24,13 @@
     gap: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
-    width: 1800px;
+    width: 100%; /* ✅ التعديل هنا */
+}
+
+.content {
+    flex: 1; /* ليأخذ باقي مساحة الشاشة بجانب السايد بار */
+    width: 100%;
+    overflow-x: hidden; /* لمنع ظهور سكرول عرضي بسبب الـ 1800px القديمة */
 }
 
 .more-games .title,

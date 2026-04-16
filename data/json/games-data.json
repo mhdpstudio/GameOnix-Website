@@ -3390,6 +3390,21 @@
             "platform": "pc",
             "mediaPrefix": "inside",
             "mediaCount": 11
+        },
+        {
+            "slug": "cairo-metro-remastered",
+            "title": "Cairo Metro Remastered",
+            "publisher": "Twin Verse",
+            "game_poster": "../../assets/images/games/logos/cairo-metro.webp",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "3.0.0.0",
+            "size": "2.1 GB",
+            "ico": "windows",
+            "gameLink": "https://drive.usercontent.google.com/download?id=11HJj3DBzSwkt4ZWKqB1SZnG8vzKyyZbN&export=download&authuser=0",
+            "platform": "pc",
+            "mediaPrefix": "cairo-metro",
+            "mediaCount": 5
         }
     ]
 }

@@ -59,6 +59,16 @@
                 </div>
 
             </div>
+            <div class="slider" id="slider">
+                <div class="slides">
+                    <img src="../assets/images/unities/twin-verse-gameonix.webp" class="slide">
+                </div>
+
+                <button class="arrow left" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="arrow right" id="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="dots" id="dots"></div>
+            </div>
             <div id="games-container">
 
             </div>
@@ -136,7 +146,8 @@
         "css/search-style.css",
         "css/theme-btn.css",
         "css/loading-screen.css",
-        "css/top-element.css"
+        "css/top-element.css",
+        "css/slider.css"
     ];
 
     cssFiles.forEach(file => {
@@ -155,7 +166,8 @@
     const jsFiles = [
         { src: "js/components/sidebar-comp.js", module: false },
         { src: "js/index-script.js", module: true },
-        { src: "js/icon.js", module: false }
+        { src: "js/icon.js", module: false },
+        { src: "js/slider.js", module: false }
     ];
 
     jsFiles.forEach(file => {
