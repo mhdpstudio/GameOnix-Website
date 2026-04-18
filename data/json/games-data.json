@@ -3420,6 +3420,36 @@
             "platform": "pc",
             "mediaPrefix": "koshary-simulator",
             "mediaCount": 6
+        },
+        {
+            "slug": "liars-bar",
+            "title": "Liar's Bar",
+            "publisher": "Curve Animation",
+            "game_poster": "../../assets/images/games/logos/liars-bar.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "0.9.0.0",
+            "size": "2.50 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/liars-bar.torrent",
+            "platform": "pc",
+            "mediaPrefix": "liars-bar",
+            "mediaCount": 11
+        },
+        {
+            "slug": "phasmophobia",
+            "title": "Phasmophobia",
+            "publisher": "Kinetic Games",
+            "game_poster": "../../assets/images/games/logos/phasmophobia.webp",
+            "gameType": "Horror",
+            "gameTypeIcon": "fa-ghost",
+            "version": "28.09.2020.0",
+            "size": "5.50 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/phasmophobia.torrent",
+            "platform": "pc",
+            "mediaPrefix": "phasmophobia",
+            "mediaCount": 16
         }
     ]
 }

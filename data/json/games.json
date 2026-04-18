@@ -1536,6 +1536,14 @@
                     "poster": "../../assets/images/games/posters/inside",
                     "publisher": "Playdead",
                     "date": "2026-04-15T21:00:00Z"
+                },
+                {
+                    "slug": "liars-bar",
+                    "id": 11,
+                    "title": "Liar's Bar",
+                    "poster": "../../assets/images/games/posters/liars-bar",
+                    "publisher": "Curve Animation",
+                    "date": "2026-04-19T01:10:00Z"
                 }
             ]
         },
@@ -1693,6 +1701,14 @@
                     "poster": "../../assets/images/games/posters/cairo-metro",
                     "publisher": "Twin Verse",
                     "date": "2026-04-16T21:00:00Z"
+                },
+                {
+                    "slug": "phasmophobia",
+                    "id": 12,
+                    "title": "Phasmophobia",
+                    "poster": "../../assets/images/games/posters/phasmophobia",
+                    "publisher": "Kinetic Games",
+                    "date": "2026-04-19T01:11:00Z"
                 }
             ]
         },
