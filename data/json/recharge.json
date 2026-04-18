@@ -279,6 +279,117 @@
         ]
     },
     {
+        "type": "Games Recharge",
+        "id": "delta-force",
+        "name": "Delta Force",
+        "image": "../../assets/images/recharge/icons/delta-force.webp",
+        "packs": [
+            {
+                "title": "18",
+                "price": "20.66",
+                "oldPrice": "25.78",
+                "img": "../../assets/images/recharge/images/delta-force/18.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "30",
+                "price": "34.66",
+                "img": "../../assets/images/recharge/images/delta-force/30.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": false
+            },
+            {
+                "title": "60",
+                "price": "62.42",
+                "oldPrice": "70.00",
+                "img": "../../assets/images/recharge/images/delta-force/60.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "300",
+                "price": "264.23",
+                "img": "../../assets/images/recharge/images/delta-force/300.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "420",
+                "price": "376.32",
+                "oldPrice": "403.30",
+                "img": "../../assets/images/recharge/images/delta-force/420.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "680",
+                "price": "532.12",
+                "img": "../../assets/images/recharge/images/delta-force/680.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": false
+            },
+            {
+                "title": "1280",
+                "price": "982.74",
+                "oldPrice": "1003.74",
+                "img": "../../assets/images/recharge/images/delta-force/1280.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": false
+            },
+            {
+                "title": "1680",
+                "price": "1223.50",
+                "img": "../../assets/images/recharge/images/delta-force/1680.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "3280",
+                "price": "2398.50",
+                "oldPrice": "2456.33",
+                "img": "../../assets/images/recharge/images/delta-force/3280.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "6480",
+                "price": "4747.32",
+                "img": "../../assets/images/recharge/images/delta-force/6480.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "12960",
+                "price": "9526.24",
+                "oldPrice": "9653.24",
+                "img": "../../assets/images/recharge/images/delta-force/12960.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": true
+            },
+            {
+                "title": "19440",
+                "price": "14336.50",
+                "oldPrice": "15365.31",
+                "img": "../../assets/images/recharge/images/delta-force/19440.webp",
+                "discoverSection": "Games",
+                "type": "M-Credits",
+                "popular": false
+            }
+        ]
+    },
+    {
         "type": "Gift Cards",
         "id": "steam-gift-cards",
         "name": "Steam Gift Cards",

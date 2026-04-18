@@ -93,13 +93,13 @@ for item in input_folders:
     if recursive:
         for root, dirs, files in os.walk(folder):
             for filename in files:
-                if filename.lower().endswith((".png", ".jpg", ".jpeg")):
+                if filename.lower().endswith((".png", ".jpg", ".jpeg", ".ico")):
                     convert_image(os.path.join(root, filename))
 
     # 🔹 لو عادي
     else:
         for filename in os.listdir(folder):
-            if filename.lower().endswith((".png", ".jpg", ".jpeg")):
+            if filename.lower().endswith((".png", ".jpg", ".jpeg", ".ico")):
                 convert_image(os.path.join(folder, filename))
 
 
