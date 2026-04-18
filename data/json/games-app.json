@@ -1430,6 +1430,13 @@
                     "title": "Euro Truck Simulator 2",
                     "poster": "https://gameonix.shop/assets/images/games/posters/euro-truck-2",
                     "publisher": "SCS Software"
+                },
+                {
+                    "slug": "koshary-simulator",
+                    "id": 16,
+                    "title": "Koshary Simulator",
+                    "poster": "../../assets/images/games/posters/koshary-simulator",
+                    "publisher": "Twin Verse"
                 }
             ]
         },

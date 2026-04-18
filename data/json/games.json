@@ -1445,6 +1445,14 @@
                     "poster": "../../assets/images/games/posters/euro-truck-2",
                     "publisher": "SCS Software",
                     "date": "2026-04-12T00:54:00Z"
+                },
+                {
+                    "slug": "koshary-simulator",
+                    "id": 16,
+                    "title": "Koshary Simulator",
+                    "poster": "../../assets/images/games/posters/koshary-simulator",
+                    "publisher": "Twin Verse",
+                    "date": "2026-04-18T20:42:00Z"
                 }
             ]
         },

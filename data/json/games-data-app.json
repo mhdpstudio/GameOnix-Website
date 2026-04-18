@@ -3390,6 +3390,21 @@
             "platform": "pc",
             "mediaPrefix": "inside",
             "mediaCount": 11
+        },
+        {
+            "slug": "koshary-simulator",
+            "title": "Koshary Simulator",
+            "publisher": "Twin Verse",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/koshary-simulator.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "1.0.0.0",
+            "size": "351.88 MB",
+            "ico": "windows",
+            "gameLink": "https://www.mediafire.com/file/wyrywudboeao65a/KosharySimulator.rar/file",
+            "platform": "pc",
+            "mediaPrefix": "koshary-simulator",
+            "mediaCount": 6
         }
     ]
 }
