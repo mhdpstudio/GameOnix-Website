@@ -323,9 +323,9 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
 }
 
 .detail-label {
-    color: var(--color-side-panel-details);
+    color: var(--color-text-primary);
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
