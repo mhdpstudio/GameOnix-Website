@@ -27,7 +27,7 @@ fetch("../../data/json/games-data.json")
                 : "../../assets/images/games/banners/";
 
             for (let i = 1; i <= game.mediaCount; i++) {
-mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.webp`);
+                mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.webp`);
             }
         } else {
             mediaImages = game.media || [];
@@ -36,92 +36,150 @@ mediaImages.push(`${basePath}${game.mediaPrefix}-${i}.webp`);
         // 🎯 بناء الصفحة
         page.innerHTML = `
 
-    <div class="game-container">
-        <div class="game-title">
-            <div class="game-name" id="goBack"><span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}</div>
-            <div class="details">
-                <div class="game-publisher"> ${game.publisher}</div>
-                <div class="game-type"><i class="fa-solid ${game.gameTypeIcon}"></i> ${game.gameType}</div>
-            </div>
+<div class="game-container">
+    <div class="game-title">
+        <div class="game-name" id="goBack">
+            <span style="font-size: 50px;" class="material-symbols-rounded">arrow_left_alt</span> ${game.title}
         </div>
+        <div class="details">
+            <div class="game-publisher"> ${game.publisher}</div>
+            <div class="game-type"><i class="fa-solid ${game.gameTypeIcon}"></i> ${game.gameType}</div>
+        </div>
+    </div>
 
-        <div class="game-layout">
+    <div class="game-layout">
+        <div class="left-column">
 
-            <div class="left-column">
+            <div class="media-row">
+                <div class="media-stack">
 
-                <div class="media-row">
-                    <div class="media-stack">
-                <div class="main-media">
-                    <img id="mainMedia" src="${mediaImages[0]}">
+                    <div class="main-media">
+                        <img id="mainMedia" src="${mediaImages[0]}">
 
-                    <div class="media-overlay">
-                        <div class="media-arrow left" id="mainLeft">
+                        <div class="media-overlay">
+                            <div class="media-arrow left" id="mainLeft">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+
+                            <div class="media-arrow right" id="mainRight">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thumb-wrapper">
+                        <div class="arrow" id="leftArrow">
                             <i class="fa-solid fa-chevron-left"></i>
                         </div>
 
-                        <div class="media-arrow right" id="mainRight">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="thumb-wrapper">
-                    <div class="arrow" id="leftArrow"><i class="fa-solid fa-chevron-left"></i></div>
-
-                    <div class="thumb-slider">
-                        <div class="thumb-slider-inner" id="thumbSlider">
+                        <div class="thumb-slider">
+                            <div class="thumb-slider-inner" id="thumbSlider">
 
 ${mediaImages.map((img, i) => `
     <div class="thumb ${i === 0 ? 'active' : ''}">
         <img src="${img}">
     </div>
 `).join('')}
+
+                            </div>
+                        </div>
+
+                        <div class="arrow" id="rightArrow">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </div>
                     </div>
 
-                    <div class="arrow" id="rightArrow" style="    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
-                </div>
+
                 <div class="side-panel">
                     <div class="game-logo-wrapper">
                         <img class="game-poster" src="${game.game_poster}" alt="${game.title}">
                     </div>
-    
+
                     <div class="commands-btns">
-                        <a href="${game.gameLink}" class="fa-download-good-for-now" target="_blank" rel="noopener noreferrer"><button class="btn download-btn"><i class="fa-solid fa-download"></i> Download</button></a>
-                        <button class="btn bug-btn"> <i class="fa-solid fa-bug"></i> </button>
-                        </div>
-                    <button class="btn share-btn"><i class="fa-solid fa-share"></i> Share</button>
+                        <!-- ✅ رجّع اللينك الحقيقي -->
+                        <a href="${game.gameLink}" class="fa-download-good-for-now download-trigger" target="_blank" rel="noopener noreferrer">
+                            <button class="btn download-btn">
+                                <i class="fa-solid fa-download"></i> Download
+                            </button>
+                        </a>
+
+                        <button class="btn bug-btn">
+                            <i class="fa-solid fa-bug"></i>
+                        </button>
+                    </div>
+
+                    <button class="btn share-btn">
+                        <i class="fa-solid fa-share"></i> Share
+                    </button>
 
                     <div class="epic-details-table">
-                    <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-code-branch"></i> Version</span>
-                        <span class="detail-value">${game.version}</span>
+                        <div class="detail-row">
+                            <span class="detail-label">
+                                <i class="fa-solid fa-code-branch"></i> Version
+                            </span>
+                            <span class="detail-value">${game.version}</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">
+                                <i class="fa-solid fa-database"></i> Size
+                            </span>
+                            <span class="detail-value">${game.size}</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">
+                                <i class="fa-solid fa-code"></i> Developer
+                            </span>
+                            <span class="detail-value">${game.publisher}</span>
+                        </div>
+
+                        <div class="detail-row">
+                            <span class="detail-label">
+                                <i class="fa-sharp fa-solid fa-layer-group"></i> Platform
+                            </span>
+                            <span class="detail-value">
+                                <i class="fa-brands fa-${game.ico}"></i>
+                            </span>
+                        </div>
                     </div>
-                    <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-database"></i> Size</span>
-                        <span class="detail-value">${game.size}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label"><i class="fa-solid fa-code"></i> Developer</span>
-                        <span class="detail-value">${game.publisher}</span>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-label"><i class="fa-sharp fa-solid fa-layer-group"></i> Platform</span>
-                        <span class="detail-value"><i class="fa-brands fa-${game.ico}"></i></span>
-                    </div>
-                </div>
-                </div>
+
                 </div>
             </div>
 
-
         </div>
     </div>
-    `;
+</div>
+`;
+
+
+        // ================= DOWNLOAD POPUP LOGIC =================
+
+        const downloadBtn = document.querySelector(".download-trigger");
+        const donatePopup = document.getElementById("donatePopup");
+        const cancelOutside = document.querySelector(".cancel-outside");
+
+        downloadBtn.addEventListener("click", () => {
+            // ❗ متحطش preventDefault هنا
+
+            // نسيب التحميل يحصل طبيعي
+            setTimeout(() => {
+                donatePopup.classList.add("active");
+            }, 500); // نص ثانية بعد ما التحميل يبدأ
+        });
+
+        // قفل البوب اب
+        cancelOutside.addEventListener("click", () => {
+            donatePopup.classList.remove("active");
+        });
+
+        // قفل لما تدوس برا
+        donatePopup.addEventListener("click", (e) => {
+            if (e.target === donatePopup) {
+                donatePopup.classList.remove("active");
+            }
+        });
 
 
         const shareBtn = document.querySelector(".share-btn");

@@ -475,6 +475,73 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
     color: white;
 }
 
+/* زرار cancel برا البوكس */
+.cancel-outside {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--color-bg-sidebar);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-text-primary);
+    box-shadow: 0 10px 25px var(--color-shadow);
+    transition: .2s;
+}
+
+.donate-btn{
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.donate-a{
+    text-decoration: none;
+}
+
+.cancel-outside:hover {
+    background: var(--color-hover-primary);
+    color: white;
+}
+
+.donate-btn:hover {
+    box-shadow: 0 0px 16px var(--color-hover-primary);
+}
+
+/* صورة التبرع */
+.donate-img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    margin: 15px auto;
+    display: block;
+}
+
+/* النص تحت الصورة */
+.donate-text {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 18px;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.donate-box {
+    background: var(--color-bg-sidebar);
+    padding: 30px;
+    border-radius: 18px;
+    width: 1200px;
+    box-shadow: 0 20px 40px var(--color-shadow);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    animation: popIn .3s ease;
+}
+
 /* ============================== Animations ============================== */
 
 @keyframes fadeIn {
@@ -682,4 +749,3 @@ body:not(.dark-theme) .game-logo-wrapper .game-poster {
         gap: 5px;
     }
 }
-
