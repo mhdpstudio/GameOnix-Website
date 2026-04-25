@@ -152,7 +152,7 @@
             <textarea name="details" placeholder="Additional Details..."></textarea>
 
             <button type="submit" class="submit-btn">
-                <span class="material-symbols-rounded">send</span> Submit
+                <i class="fa-solid fa-paper-plane"></i> Submit
             </button>
         `;
 
