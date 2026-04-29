@@ -26,8 +26,23 @@ async function loadVideo() {
       dislikes: data.dislikes,
       title: data.title,
       videoUrl: data.videoUrl,
-      thumbnail: data.thumbnail
+      thumbnail: data.thumbnail,
+      desc: data.desc || ""
     };
+
+    // تحميل الديسكربشن من الملف المحلي فقط
+    try {
+      const staticRes = await fetch('../../data/json/channel-data.json');
+      const staticVideos = await staticRes.json();
+
+      const localVideo = staticVideos.find(v => v.slug === slug);
+
+      if (localVideo && localVideo.desc) {
+        video.desc = localVideo.desc;
+      }
+    } catch (e) {
+      console.log("Failed to load local description", e);
+    }
 
     // Static fallback if API fails\n    if (!video || !video.title) {\n      console.log('API failed, using static fallback');\n      const staticRes = await fetch('../../backend/data/json/channel-data.json');\n      const staticVideos = await staticRes.json();\n      const staticVideo = staticVideos.find(v => v.slug === slug);\n      if (staticVideo) {\n        video = {\n          slug,\n          views: 0,\n          likes: 0,\n          dislikes: 0,\n          title: staticVideo.title,\n          videoUrl: staticVideo.videoUrl,\n          thumbnail: staticVideo.thumbnail\n        };\n      }\n    }\n\n    if (!video || !video.title) {\n      container.innerHTML = "<h2>Video not found</h2>";\n      return;\n    }
 
@@ -70,14 +85,53 @@ async function loadVideo() {
                 <span id="likesCount">${video.likes} Likes</span>
                 <span>|</span>
                 <span id="dislikesCount">${video.dislikes} Dislikes</span>
+                </div>
               </div>
-            </div>
+
           </div>
+                          <div class="video-description">
+    <p>${video.desc || "No description available"}</p>
+  </div>
         </div>
         <div class="video-sidebar" id="videoSidebar">
             <div>Loading recommended videos...</div>
         </div>
         `;
+
+    const descBox = document.querySelector(".video-description");
+    const descText = descBox.querySelector("p");
+
+    // نضيف زر صغير بس اختياري (مش ضروري)
+    descBox.insertAdjacentHTML(
+      "beforeend",
+      `<span class="read-more-btn">Read More</span>`
+    );
+
+    const btn = descBox.querySelector(".read-more-btn");
+
+    // function موحدة
+    function toggleDesc() {
+      descBox.classList.toggle("expanded");
+
+      if (descBox.classList.contains("expanded")) {
+        btn.textContent = "Read Less";
+      } else {
+        btn.textContent = "Read More";
+      }
+    }
+
+    // 👇 الضغط على المربع كله
+    descBox.addEventListener("click", (e) => {
+      // لو ضغط على زر منع التكرار (اختياري)
+      if (e.target.classList.contains("read-more-btn")) return;
+      toggleDesc();
+    });
+
+    // كمان الزر نفسه
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // مهم عشان ما يتنفذش مرتين
+      toggleDesc();
+    });
 
 
     async function sendAction(type) {
@@ -785,6 +839,7 @@ async function loadVideo() {
     // Load recommended videos sidebar
     const sidebar = document.getElementById('videoSidebar');
 
+    // 🔥 هات الفيديوهات
     const resVideos = await fetch("https://backend-videos-psi.vercel.app/api/videos");
     const otherVideos = await resVideos.json();
 
@@ -794,32 +849,14 @@ async function loadVideo() {
       [otherVideos[i], otherVideos[j]] = [otherVideos[j], otherVideos[i]];
     }
 
-    // خذ 8 فيديوهات عشوائية
+    // خذ 8 فيديوهات
     const recommended = otherVideos.slice(0, 8);
 
-    // 🔥 نجيب stats لكل فيديو (views الحقيقية)
-    const recommendedWithStats = await Promise.all(
-      recommended.map(async (v) => {
-        try {
-          const res = await fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${v.slug}`);
-          const stats = await res.json();
-
-          return {
-            ...v,
-            views: stats.views || v.views
-          };
-        } catch (err) {
-          return v; // fallback لو حصل خطأ
-        }
-      })
-    );
-
-    // عرض الفيديوهات
+    // ✅ اعرض فورًا (سريع جدًا)
     sidebar.innerHTML = `
   <h3 style="margin-bottom: 15px;" class="reco">Recommended Videos</h3>
-  ${recommendedWithStats.map(v => `
+  ${recommended.map(v => `
     <div class="video-sidebar-item ${v.slug === slug ? 'active' : ''}" 
-         data-slug="${v.slug}" 
          onclick="window.location.href='?slug=${v.slug}'">
 
       <img class="video-sidebar-thumbnail" 
@@ -829,14 +866,31 @@ async function loadVideo() {
 
       <div class="video-sidebar-info">
         <div class="video-sidebar-title">${v.title}</div>
-        <div class="video-sidebar-meta">
-          ${Math.floor(v.views || 0).toLocaleString()} views • ${formatDuration(v.duration)}
+        <div class="video-sidebar-meta" id="meta-${v.slug}">
+          ... loading
         </div>
       </div>
 
     </div>
   `).join('')}
 `;
+
+    // 🔥 حمّل الـ stats في الخلفية (بدون تأخير UI)
+    Promise.all(
+      recommended.map(v =>
+        fetch(`https://backend-videos-psi.vercel.app/api/stats?slug=${v.slug}`)
+          .then(res => res.json())
+          .then(stats => ({ slug: v.slug, views: stats.views || 0 }))
+          .catch(() => ({ slug: v.slug, views: 0 }))
+      )
+    ).then(results => {
+      results.forEach(r => {
+        const el = document.getElementById(`meta-${r.slug}`);
+        if (el) {
+          el.textContent = `${r.views.toLocaleString()} views`;
+        }
+      });
+    });
 
     function formatDuration(seconds) {
       const mins = Math.floor(seconds / 60);
@@ -856,6 +910,5 @@ async function loadVideo() {
     document.dispatchEvent(new CustomEvent('sidebar-ready'));
   }
 }
-
 
 loadVideo();
