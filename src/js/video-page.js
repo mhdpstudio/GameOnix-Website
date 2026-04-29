@@ -32,7 +32,7 @@ async function loadVideo() {
 
     // تحميل الديسكربشن من الملف المحلي فقط
     try {
-      const staticRes = await fetch('../../data/json/channel-data.json');
+      const staticRes = await fetch('https://raw.githubusercontent.com/mhdpstudio/GameOnix-Website/main/data/json/channel-data.json');
       const staticVideos = await staticRes.json();
 
       const localVideo = staticVideos.find(v => v.slug === slug);
