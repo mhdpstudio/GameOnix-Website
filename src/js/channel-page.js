@@ -59,19 +59,23 @@ async function loadChannelVideos() {
         const res = await fetch("../../data/json/channel-data.json");
         const data = await res.json();
 
-        // Render skeleton cards based on video count
-        renderSkeletonCards(data.length);
-
-        let totalViews = 0;
-        let totalLikes = 0;
-        let loadedCount = 0;
-
         // 🔥 ترتيب الفيديوهات من الجديد للأقدم
         data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        for (const video of data) {
+        // Render skeleton cards
+        renderSkeletonCards(data.length);
 
-            const stats = await getVideoStats(video.slug);
+        // 🔥 نجيب كل الـ stats مرة واحدة
+        const statsPromises = data.map(video => getVideoStats(video.slug));
+        const statsResults = await Promise.all(statsPromises);
+
+        let totalViews = 0;
+        let totalLikes = 0;
+
+        // 🔥 رندر بعد ما كل الداتا توصل
+        data.forEach((video, index) => {
+
+            const stats = statsResults[index] || {};
 
             const views = stats.views || 0;
             const likes = stats.likes || 0;
@@ -105,26 +109,23 @@ async function loadChannelVideos() {
                 window.location.href = `video.html?slug=${video.slug}`;
             });
 
-            // Replace skeleton card with actual card
-            const skeletonCard = container.children[loadedCount];
+            // Replace skeleton card
+            const skeletonCard = container.children[index];
             if (skeletonCard) {
                 container.replaceChild(videoCard, skeletonCard);
             } else {
                 container.appendChild(videoCard);
             }
-
-            loadedCount++;
-        }
+        });
 
         // ✅ إجمالي البروفايل
-        document.getElementById("watch").textContent = totalViews;
-        document.getElementById("likes").textContent = totalLikes;
-        document.getElementById("videos").textContent = data.length;
+        watchEl.textContent = totalViews;
+        likesEl.textContent = totalLikes;
+        videosEl.textContent = data.length;
 
-        // Ensure meta text is visible
-        document.getElementById("watch").style.visibility = 'visible';
-        document.getElementById("likes").style.visibility = 'visible';
-        document.getElementById("videos").style.visibility = 'visible';
+        watchEl.style.visibility = 'visible';
+        likesEl.style.visibility = 'visible';
+        videosEl.style.visibility = 'visible';
 
     } catch (error) {
         console.error(error);
