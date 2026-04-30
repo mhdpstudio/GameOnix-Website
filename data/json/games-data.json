@@ -3450,6 +3450,36 @@
             "platform": "pc",
             "mediaPrefix": "phasmophobia",
             "mediaCount": 16
+        },
+        {
+            "slug": "bright-memory",
+            "title": "Bright Memory",
+            "publisher": "FYQD Studio",
+            "game_poster": "../../assets/images/games/logos/bright-memory.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.0.0.0",
+            "size": "2.6 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bright-memory.torrent",
+            "platform": "pc",
+            "mediaPrefix": "bright-memory",
+            "mediaCount": 8
+        },
+        {
+            "slug": "bright-memory-inf",
+            "title": "Bright Memory: Infinite",
+            "publisher": "FYQD Studio",
+            "game_poster": "../../assets/images/games/logos/bright-memory-inf.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "Build 12410962",
+            "size": "6.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bright-memory-inf.torrent",
+            "platform": "pc",
+            "mediaPrefix": "bright-memory-inf",
+            "mediaCount": 14
         }
     ]
 }

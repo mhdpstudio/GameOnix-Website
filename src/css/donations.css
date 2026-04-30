@@ -2,7 +2,8 @@
 
 .section {
     flex: 1;
-    background-color: var(--color-bg-secondary);
+    background-color: transparent;
+    border: 1px solid var(--color-border-hr);
     border-radius: 8px;
     padding: 20px;
     display: flex;

@@ -18,17 +18,17 @@ input_folders = [
 
     # 🖥️ Computer
 
-    {"path": r"C:\Projects\Xhyper\assets\images\games\posters", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\games\logos", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\games\banners", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\videos\pics\webp", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\banners", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\logos", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\games\ps\posters", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\recharge\icons", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\recharge\images", "recursive": True},
-    {"path": r"C:\Projects\Xhyper\assets\images\apps", "recursive": False},
-    {"path": r"C:\Projects\Xhyper\assets\images\unities", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\posters", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\logos", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\banners", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\videos\pics\webp", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\ps\banners", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\ps\logos", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\games\ps\posters", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\recharge\icons", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\recharge\images", "recursive": True},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\apps", "recursive": False},
+    {"path": r"D:\Documents\Projects\Xhyper\assets\images\unities", "recursive": False},
 
 ]
 
