@@ -3465,6 +3465,21 @@
             "platform": "pc",
             "mediaPrefix": "bright-memory-inf",
             "mediaCount": 14
+        },
+        {
+            "slug": "bully",
+            "title": "Bully: Scholarship Edition",
+            "publisher": "Rockstar Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/bully.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.200.0.0",
+            "size": "2.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/bully.torrent",
+            "platform": "pc",
+            "mediaPrefix": "bully",
+            "mediaCount": 6
         }
     ]
 }
