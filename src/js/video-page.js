@@ -74,19 +74,26 @@ async function loadVideo() {
             <div class="video-info">
               <div class="title-row">
                 <h1 class="video-title">${video.title}</h1>
-                <div class="reactions">
-                  <button id="likeBtn"><i class="fas fa-thumbs-up"></i></button>
-                  <button id="dislikeBtn"><i class="fas fa-thumbs-down"></i></button>
+                <div class="video-actions">
+                  <div class="reactions">
+                    <button id="likeBtn"><i class="fas fa-thumbs-up"></i></button>
+                    <button id="dislikeBtn"><i class="fas fa-thumbs-down"></i></button>
+                  </div>
+
+                  <div class="donations">
+                    <a class="donation-link" href="donations.html" target="_blank" rel="noopener noreferrer"><button id="donateBtn"><span class="material-symbols-rounded">volunteer_activism</span> Support Me</button></a>
+                  </div>
                 </div>
               </div>
-              <div class="video-meta">
-                <span id="viewsCount">${video.views} Views</span>
-                <span>|</span>
-                <span id="likesCount">${video.likes} Likes</span>
-                <span>|</span>
-                <span id="dislikesCount">${video.dislikes} Dislikes</span>
+                <div class="video-meta">
+                  <span id="viewsCount">${video.views} Views</span>
+                  <span>|</span>
+                  <span id="likesCount">${video.likes} Likes</span>
+                  <span>|</span>
+                  <span id="dislikesCount">${video.dislikes} Dislikes</span>
+                  </div>
                 </div>
-              </div>
+
 
           </div>
                           <div class="video-description">

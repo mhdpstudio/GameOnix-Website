@@ -208,13 +208,20 @@
     gap: 10px;
 }
 
+.video-actions {
+    display: flex;
+    align-items: center;
+}
+
 .reactions {
     display: flex;
     align-items: center;
     gap: 5px;
+    border-right: 2px solid var(--color-border-hr);
+    padding-right: 10px;
 }
 
-.reactions button {
+.reactions button  , .donations button {
     border: none;
     cursor: pointer;
     font-size: 18px;
@@ -224,6 +231,19 @@
     height: 32px;
     background: var(--color-hover-primary);
     border-radius: 50%;
+}
+
+.donations button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 999px;
+    padding: 12px;
+}
+
+.donation-link{
+    text-decoration: none;
 }
 
 .reactions button.active-btn {
