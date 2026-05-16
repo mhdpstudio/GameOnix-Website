@@ -1088,6 +1088,62 @@
                     "poster": "../../assets/images/games/posters/bully",
                     "publisher": "Rockstar Games",
                     "date": "2026-04-30T16:25:00Z"
+                },
+                {
+                    "slug": "resident-evil-hd-remaster",
+                    "id": 144,
+                    "title": "Resident Evil HD Remaster",
+                    "poster": "../../assets/images/games/posters/re-re",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:30:00Z"
+                },
+                {
+                    "slug": "resident-evil-2",
+                    "id": 145,
+                    "title": "Resident Evil 2",
+                    "poster": "../../assets/images/games/posters/re-2",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:31:00Z"
+                },
+                {
+                    "slug": "resident-evil-3",
+                    "id": 146,
+                    "title": "Resident Evil 3",
+                    "poster": "../../assets/images/games/posters/re-3",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:32:00Z"
+                },
+                {
+                    "slug": "resident-evil-4",
+                    "id": 147,
+                    "title": "Resident Evil 4",
+                    "poster": "../../assets/images/games/posters/re-4",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:33:00Z"
+                },
+                {
+                    "slug": "resident-evil-5",
+                    "id": 148,
+                    "title": "Resident Evil 5",
+                    "poster": "../../assets/images/games/posters/re-5",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:34:00Z"
+                },
+                {
+                    "slug": "resident-evil-6",
+                    "id": 149,
+                    "title": "Resident Evil 6",
+                    "poster": "../../assets/images/games/posters/re-6",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:35:00Z"
+                },
+                {
+                    "slug": "resident-evil-village",
+                    "id": 150,
+                    "title": "Resident Evil Village",
+                    "poster": "../../assets/images/games/posters/re-village",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T19:36:00Z"
                 }
             ]
         },
