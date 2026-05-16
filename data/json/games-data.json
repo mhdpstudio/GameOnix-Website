@@ -3615,6 +3615,21 @@
             "platform": "pc",
             "mediaPrefix": "pragmata",
             "mediaCount": 12
+        },
+        {
+            "slug": "horizon-forbidden-west",
+            "title": "Horizon Forbidden West",
+            "publisher": "Guerrilla Games",
+            "game_poster": "../../assets/images/games/logos/horizon-forbidden-west.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.38.0",
+            "size": "98.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/horizon-forbidden-west.torrent",
+            "platform": "pc",
+            "mediaPrefix": "horizon-forbidden-west",
+            "mediaCount": 10
         }
     ]
 }

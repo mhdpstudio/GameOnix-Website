@@ -25,6 +25,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     width: 100%; /* ✅ التعديل هنا */
+    padding: 20px 20px; /* إضافة padding من الجانبين */
 }
 
 .content {

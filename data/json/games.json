@@ -1632,6 +1632,14 @@
                     "poster": "../../assets/images/games/posters/pragmata",
                     "publisher": "Capcom",
                     "date": "2026-05-16T20:10:00Z"
+                },
+                {
+                    "slug": "horizon-forbidden-west",
+                    "id": 13,
+                    "title": "Horizon Forbidden West",
+                    "poster": "../../assets/images/games/posters/horizon-forbidden-west",
+                    "publisher": "Guerrilla Games",
+                    "date": "2026-05-16T20:35:00Z"
                 }
             ]
         },
