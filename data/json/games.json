@@ -1656,6 +1656,14 @@
                     "poster": "../../assets/images/games/posters/death-stranding-2",
                     "publisher": "Kojima Productions",
                     "date": "2026-05-16T22:25:00Z"
+                },
+                {
+                    "slug": "death-stranding-1",
+                    "id": 15,
+                    "title": "Death Stranding 1",
+                    "poster": "../../assets/images/games/posters/death-stranding-1",
+                    "publisher": "Kojima Productions",
+                    "date": "2026-05-16T22:24:00Z"
                 }
             ]
         },

@@ -3647,6 +3647,21 @@
             "mediaCount": 14
         },
         {
+            "slug": "death-stranding-1",
+            "title": "Death Stranding 1",
+            "publisher": "Kojima Productions",
+            "game_poster": "../../assets/images/games/logos/death-stranding-1.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.003.0.0",
+            "size": "55.9 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/death-stranding-1.torrent",
+            "platform": "pc",
+            "mediaPrefix": "death-stranding-1",
+            "mediaCount": 15
+        },
+        {
             "slug": "death-stranding-2",
             "title": "Death Stranding 2: On The Beach",
             "publisher": "Kojima Productions",
