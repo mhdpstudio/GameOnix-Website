@@ -3600,6 +3600,21 @@
             "platform": "pc",
             "mediaPrefix": "horizon-forbidden-west",
             "mediaCount": 10
+        },
+        {
+            "slug": "forza-horizon-6",
+            "title": "Forza Horizon 6",
+            "publisher": "Playground Games",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/forza-6.webp",
+            "gameType": "Racing",
+            "gameTypeIcon": "fa-flag-checkered",
+            "version": "354.221.0.0",
+            "size": "99.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/forza-horizon-6.torrent",
+            "platform": "pc",
+            "mediaPrefix": "f-h-6",
+            "mediaCount": 14
         }
     ]
 }
