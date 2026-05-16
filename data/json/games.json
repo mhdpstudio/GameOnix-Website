@@ -1648,6 +1648,14 @@
                     "poster": "../../assets/images/games/posters/horizon-forbidden-west",
                     "publisher": "Guerrilla Games",
                     "date": "2026-05-16T20:35:00Z"
+                },
+                {
+                    "slug": "death-stranding-2",
+                    "id": 14,
+                    "title": "Death Stranding 2: On The Beach",
+                    "poster": "../../assets/images/games/posters/death-stranding-2",
+                    "publisher": "Kojima Productions",
+                    "date": "2026-05-16T22:25:00Z"
                 }
             ]
         },

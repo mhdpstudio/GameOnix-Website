@@ -3615,6 +3615,21 @@
             "platform": "pc",
             "mediaPrefix": "f-h-6",
             "mediaCount": 14
+        },
+        {
+            "slug": "death-stranding-2",
+            "title": "Death Stranding 2: On The Beach",
+            "publisher": "Kojima Productions",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/death-stranding-2.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.48.2",
+            "size": "78.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/death-stranding-2.torrent",
+            "platform": "pc",
+            "mediaPrefix": "death-stranding-2",
+            "mediaCount": 18
         }
     ]
 }
