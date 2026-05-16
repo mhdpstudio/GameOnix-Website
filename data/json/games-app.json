@@ -1264,6 +1264,14 @@
                     "title": "Need For Speed: The Run",
                     "poster": "https://gameonix.shop/assets/images/games/posters/nfs-the-run",
                     "publisher": "Electronic Arts"
+                },
+                {
+                    "slug": "forza-horizon-6",
+                    "id": 18,
+                    "title": "Forza Horizon 6",
+                    "poster": "../../assets/images/games/posters/f-h-6",
+                    "publisher": "Playground Games",
+                    "date": "2026-05-16T21:55:00Z"
                 }
             ]
         },
