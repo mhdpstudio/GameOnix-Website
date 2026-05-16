@@ -3600,6 +3600,21 @@
             "platform": "pc",
             "mediaPrefix": "re-village",
             "mediaCount": 15
+        },
+        {
+            "slug": "pragmata",
+            "title": "Pragmata",
+            "publisher": "Capcom",
+            "game_poster": "../../assets/images/games/logos/pragmata.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "2026.04.17.0",
+            "size": "26.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/pragmata.torrent",
+            "platform": "pc",
+            "mediaPrefix": "pragmata",
+            "mediaCount": 12
         }
     ]
 }

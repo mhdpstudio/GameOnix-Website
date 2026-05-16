@@ -1624,6 +1624,14 @@
                     "poster": "../../assets/images/games/posters/liars-bar",
                     "publisher": "Curve Animation",
                     "date": "2026-04-19T01:10:00Z"
+                },
+                {
+                    "slug": "pragmata",
+                    "id": 12,
+                    "title": "Pragmata",
+                    "poster": "../../assets/images/games/posters/pragmata",
+                    "publisher": "Capcom",
+                    "date": "2026-05-16T20:10:00Z"
                 }
             ]
         },
