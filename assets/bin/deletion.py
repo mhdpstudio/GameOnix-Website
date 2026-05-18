@@ -54,7 +54,7 @@ folders = [
 ]
 
 # 🔹 الامتدادات اللي هتتمسح
-extensions_to_delete = (".png", ".jpg", ".jpeg", ".ico")
+extensions_to_delete = (".png", ".jpg", ".jpeg", ".ico", ".avif")
 
 
 # =========================

@@ -3735,6 +3735,21 @@
             "platform": "pc",
             "mediaPrefix": "warcraft3-reforged",
             "mediaCount": 9
+        },
+        {
+            "slug": "retro-rewind-simulator",
+            "title": "Retro Rewind Simulator",
+            "publisher": "Retro Rewind",
+            "game_poster": "../../assets/images/games/logos/retro-rewind.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "2026.05.17.0",
+            "size": "1.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/retro-rewind.torrent",
+            "platform": "pc",
+            "mediaPrefix": "retro-rewind-simulator",
+            "mediaCount": 5
         }
     ]
 }

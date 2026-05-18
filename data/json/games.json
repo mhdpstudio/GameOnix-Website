@@ -1565,6 +1565,14 @@
                     "poster": "../../assets/images/games/posters/koshary-simulator",
                     "publisher": "Twin Verse",
                     "date": "2026-04-18T20:42:00Z"
+                },
+                {
+                    "slug": "retro-rewind-simulator",
+                    "id": 17,
+                    "title": "Retro Rewind Simulator",
+                    "poster": "../../assets/images/games/posters/retro-rewind",
+                    "publisher": "Blood Pact",
+                    "date": "2026-05-18T20:42:00Z"
                 }
             ]
         },

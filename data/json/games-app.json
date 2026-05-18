@@ -1547,8 +1547,16 @@
                     "slug": "koshary-simulator",
                     "id": 16,
                     "title": "Koshary Simulator",
-                    "poster": "../../assets/images/games/posters/koshary-simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/koshary-simulator",
                     "publisher": "Twin Verse"
+                },
+                {
+                    "slug": "retro-rewind-simulator",
+                    "id": 17,
+                    "title": "Retro Rewind Simulator",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/retro-rewind",
+                    "publisher": "Blood Pact",
+                    "date": "2026-05-18T20:42:00Z"
                 }
             ]
         },
