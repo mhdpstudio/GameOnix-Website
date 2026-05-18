@@ -3650,7 +3650,7 @@
             "slug": "batman-arkham-knight",
             "title": "Batman: Arkham Knight",
             "publisher": "Rocksteady Studios",
-            "game_poster": "../../assets/images/games/logos/b-arkham-knight.webp",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/b-arkham-knight.webp",
             "gameType": "Action",
             "gameTypeIcon": "fa-gun",
             "version": "1.999.0.0",
@@ -3660,6 +3660,21 @@
             "platform": "pc",
             "mediaPrefix": "b-arkham-knight",
             "mediaCount": 11
+        },
+        {
+            "slug": "b-arkham-asylum",
+            "title": "Batman: Arkham Asylum",
+            "publisher": "Rocksteady Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/b-arkham-asylum.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "2010.03.26.0",
+            "size": "4.8 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/batman-ar-asylum.torrent",
+            "platform": "pc",
+            "mediaPrefix": "b-arkham-asylum",
+            "mediaCount": 7
         }
     ]
 }
