@@ -1150,6 +1150,14 @@
                     "poster": "https://www.gameonix.shop/assets/images/games/posters/b-arkham-asylum",
                     "publisher": "Rocksteady Studios",
                     "date": "2026-05-18T19:40:00Z"
+                },
+                {
+                    "slug": "batman-arkham-origins",
+                    "id": 153,
+                    "title": "Batman: Arkham Origins",
+                    "poster": "https://www.gameonix.shop/assets/images/games/posters/b-arkham-origins",
+                    "publisher": "Rocksteady Studios",
+                    "date": "2026-05-18T20:05:00Z"
                 }
             ]
         },
