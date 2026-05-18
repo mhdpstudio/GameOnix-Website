@@ -3720,6 +3720,21 @@
             "platform": "pc",
             "mediaPrefix": "b-arkham-origins",
             "mediaCount": 12
+        },
+        {
+            "slug": "warcraft3-reforged",
+            "title": "Warcraft 3: Reforged",
+            "publisher": "Blizzard Entertainment",
+            "game_poster": "../../assets/images/games/logos/warcraft3-reforged.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.32.10.18820",
+            "size": "33.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/warcraft3-reforged.torrent",
+            "platform": "pc",
+            "mediaPrefix": "warcraft3-reforged",
+            "mediaCount": 9
         }
     ]
 }

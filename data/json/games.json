@@ -1688,6 +1688,14 @@
                     "poster": "../../assets/images/games/posters/death-stranding-1",
                     "publisher": "Kojima Productions",
                     "date": "2026-05-16T22:24:00Z"
+                },
+                {
+                    "slug": "warcraft3-reforged",
+                    "id": 154,
+                    "title": "Warcraft 3: Reforged",
+                    "poster": "../../assets/images/games/posters/warcraft3-reforged",
+                    "publisher": "Blizzard Entertainment",
+                    "date": "2026-05-18T20:15:00Z"
                 }
             ]
         },
