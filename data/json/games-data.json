@@ -3675,6 +3675,21 @@
             "platform": "pc",
             "mediaPrefix": "death-stranding-2",
             "mediaCount": 18
+        },
+        {
+            "slug": "batman-arkham-knight",
+            "title": "Batman: Arkham Knight",
+            "publisher": "Rocksteady Studios",
+            "game_poster": "../../assets/images/games/logos/b-arkham-knight.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.999.0.0",
+            "size": "37.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/batman-ar-kn.torrent",
+            "platform": "pc",
+            "mediaPrefix": "b-arkham-knight",
+            "mediaCount": 11
         }
     ]
 }

@@ -1144,6 +1144,14 @@
                     "poster": "../../assets/images/games/posters/re-village",
                     "publisher": "Capcom",
                     "date": "2026-05-16T19:36:00Z"
+                },
+                {
+                    "slug": "batman-arkham-knight",
+                    "id": 151,
+                    "title": "Batman: Arkham Knight",
+                    "poster": "../../assets/images/games/posters/b-arkham-knight",
+                    "publisher": "Rocksteady Studios",
+                    "date": "2026-05-18T19:25:00Z"
                 }
             ]
         },
