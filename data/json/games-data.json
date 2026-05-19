@@ -3750,6 +3750,21 @@
             "platform": "pc",
             "mediaPrefix": "retro-rewind-simulator",
             "mediaCount": 12
+        },
+        {
+            "slug": "nine-sols",
+            "title": "Nine Sols",
+            "publisher": "Amanita Design",
+            "game_poster": "../../assets/images/games/logos/nine-sols.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "2024.12.16.1711",
+            "size": "2.5 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/nine-sols.torrent",
+            "platform": "pc",
+            "mediaPrefix": "nine-sols",
+            "mediaCount": 11
         }
     ]
 }

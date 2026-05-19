@@ -1680,6 +1680,14 @@
                     "poster": "https://www.gameonix.shop/assets/images/games/posters/warcraft3-reforged",
                     "publisher": "Blizzard Entertainment",
                     "date": "2026-05-18T20:15:00Z"
+                },
+                {
+                    "slug": "nine-sols",
+                    "id": 17,
+                    "title": "Nine Sols",
+                    "poster": "../../assets/images/games/posters/nine-sols",
+                    "publisher": "Amanita Design",
+                    "date": "2026-05-19T21:22:00Z"
                 }
             ]
         },
