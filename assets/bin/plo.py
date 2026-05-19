@@ -42,8 +42,7 @@ SUPPORTED_EXTENSIONS = (
     ".jpg",
     ".jpeg",
     ".ico",
-    ".avif",
-    ".webp"
+    ".avif"
 )
 
 # =========================
@@ -55,11 +54,6 @@ def convert_image(input_path):
 
     name_without_ext = os.path.splitext(filename)[0]
     output_path = os.path.join(folder, f"{name_without_ext}.webp")
-
-    # تجاهل لو الملف أصلاً webp
-    if input_path.lower().endswith(".webp"):
-        print(f"⏭ Already WEBP: {filename}")
-        return
 
     # تجاهل لو موجود
     if os.path.exists(output_path):
