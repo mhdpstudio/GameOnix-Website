@@ -16,19 +16,51 @@ function isNewGame(gameDate) {
     return diffHours <= 36;
 }
 
-// --- 1. تحسين موضع أزرار التحكم ---
-function updateControlsPosition() {
-    const sidebar = document.querySelector('.sb');
-    if (!sidebar) return;
-    const isOpen = !sidebar.classList.contains('closed');
-    const sidebarWidth = sidebar.offsetWidth;
+// --- 1. تحسين موضع أزرار التحكم (نسخة قوية) ---
+function updateControlsPosition(force = false) {
+    requestAnimationFrame(() => {
 
-    document.querySelectorAll('.section-controls').forEach(ctrl => {
-        ctrl.style.right = isOpen ? (sidebarWidth + 40) + 'px' : "150px";
-    });
+        const sidebar = document.querySelector('.sb');
+        const isOpen = sidebar && !sidebar.classList.contains('closed');
 
-    document.querySelectorAll('.section').forEach(sec => {
-        sec.style.paddingRight = isOpen ? "170px" : "20px";
+        let sidebarWidth = 0;
+
+        if (sidebar && isOpen) {
+            sidebarWidth = sidebar.getBoundingClientRect().width || 0;
+        }
+
+        document.querySelectorAll('.section-container').forEach(container => {
+
+            const controls = container.querySelector('.section-controls');
+            const section = container.querySelector('.section');
+
+            if (!controls || !section) return;
+
+            // إجبار إعادة الحساب
+            controls.style.display = "none";
+            controls.offsetHeight;
+            controls.style.display = "flex";
+
+            // تثبيت المكان
+            controls.style.position = "absolute";
+            controls.style.zIndex = "9999";
+
+            controls.style.right = isOpen
+                ? `${Math.max(sidebarWidth + 40, 150)}px`
+                : "150px";
+
+            section.style.paddingRight = isOpen ? "170px" : "20px";
+
+            // تحديث حالة الأزرار
+            const canScroll = section.scrollWidth > section.clientWidth + 5;
+
+            controls.style.visibility = "visible";
+            controls.style.opacity = canScroll ? "1" : "0.2";
+            controls.style.pointerEvents = canScroll ? "auto" : "none";
+
+            // إجبار repaint
+            controls.style.transform = "translateZ(0)";
+        });
     });
 }
 
@@ -53,6 +85,10 @@ fetch('../data/json/games.json')
 
         preloadAds();
         renderSections('all');
+        setTimeout(updateControlsPosition, 100);
+        setTimeout(updateControlsPosition, 300);
+        setTimeout(updateControlsPosition, 700);
+        setTimeout(updateControlsPosition, 1500);
         setupFilterListeners();
     })
     .catch(err => console.error("Error fetching games:", err));
@@ -428,7 +464,18 @@ function toggleActiveFilter(el) {
 
 // --- 7. Sidebar ---
 document.querySelectorAll('.sb-toggle').forEach(btn => {
-    btn.addEventListener('click', () => setTimeout(updateControlsPosition, 400));
+    btn.addEventListener('click', () => {
+
+        updateControlsPosition(true);
+
+        setTimeout(() => updateControlsPosition(true), 50);
+        setTimeout(() => updateControlsPosition(true), 150);
+        setTimeout(() => updateControlsPosition(true), 300);
+        setTimeout(() => updateControlsPosition(true), 500);
+        setTimeout(() => updateControlsPosition(true), 800);
+    });
 });
 
-window.addEventListener("resize", updateControlsPosition);
+window.addEventListener("resize", () => {
+    updateControlsPosition(true);
+});
