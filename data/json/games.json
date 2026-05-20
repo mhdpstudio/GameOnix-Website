@@ -1168,6 +1168,14 @@
                     "poster": "../../assets/images/games/posters/b-arkham-origins",
                     "publisher": "Rocksteady Studios",
                     "date": "2026-05-18T20:05:00Z"
+                },
+                {
+                    "slug": "ready-or-not",
+                    "id": 154,
+                    "title": "Ready or Not",
+                    "poster": "../../assets/images/games/posters/ready-or-not",
+                    "publisher": "VOID Interactive",
+                    "date": "2026-05-20T21:10:00Z"
                 }
             ]
         },

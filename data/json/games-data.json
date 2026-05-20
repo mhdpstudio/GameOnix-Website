@@ -3765,6 +3765,21 @@
             "platform": "pc",
             "mediaPrefix": "nine-sols",
             "mediaCount": 11
+        },
+        {
+            "slug": "ready-or-not",
+            "title": "Ready or Not",
+            "publisher": "VOID Interactive",
+            "game_poster": "../../assets/images/games/logos/ready-or-not.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.4.1.0 (v112610)",
+            "size": "25.3 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/ready-or-not.torrent",
+            "platform": "pc",
+            "mediaPrefix": "ready-or-not",
+            "mediaCount": 10
         }
     ]
 }
