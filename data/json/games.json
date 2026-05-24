@@ -1720,6 +1720,14 @@
                     "poster": "../../assets/images/games/posters/nine-sols",
                     "publisher": "Amanita Design",
                     "date": "2026-05-19T21:22:00Z"
+                },
+                {
+                    "slug": "a-way-out",
+                    "id": 18,
+                    "title": "A Way Out",
+                    "poster": "../../assets/images/games/posters/a-way-out",
+                    "publisher": "Hazelight Studios",
+                    "date": "2026-05-24T18:45:00Z"
                 }
             ]
         },

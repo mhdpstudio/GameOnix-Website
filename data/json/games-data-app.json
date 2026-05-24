@@ -3750,6 +3750,21 @@
             "platform": "pc",
             "mediaPrefix": "ready-or-not",
             "mediaCount": 10
+        },
+        {
+            "slug": "a-way-out",
+            "title": "A Way Out",
+            "publisher": "Hazelight Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/a-way-out.webp",
+            "gameType": "Adventure",
+            "gameTypeIcon": "fa-compass",
+            "version": "1.0.62.0",
+            "size": "14.2 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/a-way-out.torrent",
+            "platform": "pc",
+            "mediaPrefix": "a-way-out",
+            "mediaCount": 9
         }
     ]
 }
