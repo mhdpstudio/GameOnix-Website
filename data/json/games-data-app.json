@@ -3765,6 +3765,21 @@
             "platform": "pc",
             "mediaPrefix": "a-way-out",
             "mediaCount": 9
+        },
+        {
+            "slug": "goat-simulator-3",
+            "title": "Goat Simulator 3",
+            "publisher": "Coffee Stain Studios",
+            "game_poster": "https://www.gameonix.shop/assets/images/games/logos/goat-simulator-3.webp",
+            "gameType": "Simulation",
+            "gameTypeIcon": "fa-gamepad",
+            "version": "1.2.0.0 (451194)",
+            "size": "4.4 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/goat-simulator-3.torrent",
+            "platform": "pc",
+            "mediaPrefix": "goat-simulator-3",
+            "mediaCount": 11
         }
     ]
 }

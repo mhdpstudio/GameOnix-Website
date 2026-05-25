@@ -1565,6 +1565,14 @@
                     "poster": "https://gameonix.shop/assets/images/games/posters/retro-rewind",
                     "publisher": "Blood Pact",
                     "date": "2026-05-18T20:42:00Z"
+                },
+                {
+                    "slug": "goat-simulator-3",
+                    "id": 18,
+                    "title": "Goat Simulator 3",
+                    "poster": "https://gameonix.shop/assets/images/games/posters/goat-simulator-3",
+                    "publisher": "Coffee Stain Studios",
+                    "date": "2026-05-25T19:05:00Z"
                 }
             ]
         },
