@@ -1176,6 +1176,14 @@
                     "poster": "../../assets/images/games/posters/ready-or-not",
                     "publisher": "VOID Interactive",
                     "date": "2026-05-20T21:10:00Z"
+                },
+                {
+                    "slug": "fallout-3",
+                    "id": 155,
+                    "title": "Fallout 3",
+                    "poster": "../../assets/images/games/posters/fallout-3",
+                    "publisher": "Bethesda Softworks",
+                    "date": "2026-06-12T12:20:00Z"
                 }
             ]
         },

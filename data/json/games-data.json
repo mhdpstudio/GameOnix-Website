@@ -3810,6 +3810,21 @@
             "platform": "pc",
             "mediaPrefix": "goat-simulator-3",
             "mediaCount": 11
+        },
+        {
+            "slug": "fallout-3",
+            "title": "Fallout 3",
+            "publisher": "Bethesda Softworks",
+            "game_poster": "../../assets/images/games/logos/fallout-3.webp",
+            "gameType": "Action",
+            "gameTypeIcon": "fa-gun",
+            "version": "1.7.0.4",
+            "size": "16.1 GB",
+            "ico": "windows",
+            "gameLink": "https://raw.githubusercontent.com/mhdpstudio/GameOnix/main/fallout-3.torrent",
+            "platform": "pc",
+            "mediaPrefix": "fallout-3",
+            "mediaCount": 8
         }
     ]
 }
